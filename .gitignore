@@ -2,3 +2,5 @@
 /tmp/restart.txt
 /.env
 /.powenv
+/shared/unicorn.log
+/shared/unicorn.pid
