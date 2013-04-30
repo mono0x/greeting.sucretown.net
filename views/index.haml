@@ -1,6 +1,6 @@
 %article
   %h1= schedule.date.strftime('%m/%d のグリーティング')
-  - schedule.greetings.each do |greeting|
+  - schedule.greetings.order(:start_at).each do |greeting|
     %section
       %header
         %time{datetime: greeting.start_at.iso8601}= greeting.start_at.strftime('%H:%M')
