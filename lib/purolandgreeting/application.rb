@@ -28,10 +28,19 @@ module PurolandGreeting
     end
 
     get '/' do
-      schedule = Schedule.where('date = ?', Date.today).first or not_found
+      schedules = Schedule.order('date DESC')
       haml :index, locals: {
+        schedules: schedules,
+      }
+    end
+
+    get %r{\A/schedule/(\d{4})/(\d{2})/(\d{2})/\z} do |year, month, day|
+      date = Date.new(year.to_i, month.to_i, day.to_i)
+      schedule = Schedule.where('date = ?', date).first or not_found
+      haml :schedule, locals: {
         schedule: schedule,
       }
     end
+
   end
 end

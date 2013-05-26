@@ -1,12 +1,5 @@
-%article
-  %h1= schedule.date.strftime('%m/%d のグリーティング')
-  - schedule.greetings.order(:start_at).each do |greeting|
-    %section
-      %header
-        %time{datetime: greeting.start_at.iso8601}= greeting.start_at.strftime('%H:%M')
-        -
-        %time{datetime: greeting.end_at.iso8601}= greeting.end_at.strftime('%H:%M')
-        %h1= greeting.place.name
-      %ul
-        - greeting.characters.all.each do |character|
-          %li= character.name
+%ul
+  - schedules.each do |schedule|
+    %li
+      %a{href: schedule.date.strftime('/schedule/%Y/%m/%d/')}
+        = schedule.date.strftime('%m/%d のグリーティング')
