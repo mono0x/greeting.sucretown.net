@@ -11,3 +11,10 @@ namespace :crawler do
     PurolandGreeting::Crawler.new.update
   end
 end
+
+namespace :db do
+  task :backup do
+    system 'pg_dump --inserts -h localhost -U puro puroland-greeting | xz > /tmp/puroland-greeting.sql.xz'
+    system 'dropbox-api put /tmp/puroland-greeting.sql.xz dropbox:/work/greeting.sucretown.net/data/database.sql.xz'
+  end
+end

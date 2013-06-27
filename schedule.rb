@@ -15,8 +15,16 @@ end
 
 scheduler = Rufus::Scheduler.start_new
 
-scheduler.cron '0 * * * *' do
+scheduler.cron '0 0-7,11-23 * * *' do
   execute_command 'bundle exec rake crawler:update'
+end
+
+scheduler.cron '*/10 8-10 * * *' do
+  execute_command 'bundle exec rake crawler:update'
+end
+
+scheduler.cron '15 4 * * *' do
+  execute_command 'bundle exec rake db:backup'
 end
 
 scheduler.join
