@@ -8,6 +8,7 @@ module PurolandGreeting
       agent.user_agent_alias = 'iPhone'
 
       index_page = agent.get('http://www.puroland.co.jp/chara_gre/')
+      #index_page = agent.get('http://www.puroland.co.jp/chara_gre/?para=20130627')
       return [] if index_page.forms.empty?
 
       m = index_page.search('p[align="center"] font[size="-1"]').first.text.match(/\A\s*(\d+)年(\d+)月(\d+)日\([日月火水木金土]\)\s*\z/) or exit
