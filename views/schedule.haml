@@ -2,16 +2,16 @@
   %h1= schedule.date.strftime('%m/%d のグリーティング')
 
   - unless in_session.empty?
-    %section
+    %section.greetings.greetings-in-session
       %h1 開催中のグリーティング
       != haml :'_partial/greetings', layout: false, locals: { greetings: in_session }
 
   - unless before_the_start.empty?
-    %section
+    %section.greetings.greetings-before-the-start
       %h1 開始前のグリーティング
       != haml :'_partial/greetings', layout: false, locals: { greetings: before_the_start }
 
   - unless after_the_end.empty?
-    %section
+    %section.greetings.greetings-after-the-end
       %h1 終了したグリーティング
       != haml :'_partial/greetings', layout: false, locals: { greetings: after_the_end }

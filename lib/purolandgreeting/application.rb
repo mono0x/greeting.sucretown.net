@@ -27,6 +27,8 @@ module PurolandGreeting
       sprockets.append_path 'assets/stylesheets'
     end
 
+    helpers Sprockets::Helpers
+
     get '/' do
       schedules = Schedule.order('date DESC')
       haml :index, locals: {
