@@ -1,12 +1,17 @@
 %article
   %h1= schedule.date.strftime('%m/%d のグリーティング')
-  - schedule.greetings.order(:start_at).each do |greeting|
+
+  - unless in_session.empty?
     %section
-      %header
-        %time{datetime: greeting.start_at.iso8601}= greeting.start_at.strftime('%H:%M')
-        -
-        %time{datetime: greeting.end_at.iso8601}= greeting.end_at.strftime('%H:%M')
-        %h1= greeting.place.name
-      %ul
-        - greeting.characters.all.each do |character|
-          %li= character.name
+      %h1 開催中のグリーティング
+      != haml :'_partial/greetings', layout: false, locals: { greetings: in_session }
+
+  - unless before_the_start.empty?
+    %section
+      %h1 開始前のグリーティング
+      != haml :'_partial/greetings', layout: false, locals: { greetings: before_the_start }
+
+  - unless after_the_end.empty?
+    %section
+      %h1 終了したグリーティング
+      != haml :'_partial/greetings', layout: false, locals: { greetings: after_the_end }

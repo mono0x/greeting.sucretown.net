@@ -1,0 +1,12 @@
+- greetings.order(:start_at).each do |greeting|
+  %section
+    %header
+      %h1= greeting.place.name
+      %p
+        %time{datetime: greeting.start_at.iso8601}= greeting.start_at.strftime('%H:%M')
+        \-
+        %time{datetime: greeting.end_at.iso8601}= greeting.end_at.strftime('%H:%M')
+  %ul
+    - greeting.characters.all.each do |character|
+      %li= character.name
+
