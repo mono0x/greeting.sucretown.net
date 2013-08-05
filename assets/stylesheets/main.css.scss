@@ -5,3 +5,15 @@
 .greetings-after-the-end {
   background-color: #eee;
 }
+
+.greetings {
+  section header {
+    h1 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+}
