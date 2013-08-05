@@ -9,6 +9,8 @@ module PurolandGreeting
     set :assets_prefix, '/assets'
     set :sprockets, Sprockets::Environment.new
 
+    set :haml, format: :html5, escape_html: true, attr_wrapper: '"'
+
     configure do
       Database.connect
 
