@@ -31,10 +31,31 @@ module PurolandGreeting
 
     helpers Sprockets::Helpers
 
+    helpers do
+      def calendar(month, &block)
+        next_month = month >> 1
+        days = [ nil ] * month.wday + (1..(next_month - month)).to_a + [ nil ] * ((7 - next_month.wday) % 7)
+
+        haml :'_partial/calendar', layout: false, locals: {
+          month: month,
+          days: days,
+          block: block,
+        }
+      end
+    end
+
     get '/' do
+      today = Date.today
+      today_schedule = Schedule.find_by_date(today)
+      months = Schedule.months
       schedules = Schedule.order('date DESC')
+      characters = Character.order('name ASC')
       haml :index, locals: {
+        today: today,
+        today_schedule: today_schedule,
+        months: months,
         schedules: schedules,
+        characters: characters,
       }
     end
 
@@ -47,6 +68,13 @@ module PurolandGreeting
         before_the_start: schedule.greetings.before_the_start(time),
         in_session: schedule.greetings.in_session(time),
         after_the_end: schedule.greetings.after_the_end(time),
+      }
+    end
+
+    get %r{\A/character/([^/]+)/\z} do |name|
+      character = Character.where('name = ?', name).first or not_found
+      haml :character, locals: {
+        character: character,
       }
     end
 

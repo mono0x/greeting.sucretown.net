@@ -1,5 +1,30 @@
-%ul
-  - schedules.each do |schedule|
-    %li
-      %a{href: schedule.date.strftime('/schedule/%Y/%m/%d/')}
-        = schedule.date.strftime('%m/%d のグリーティング')
+
+%section
+  %h1 本日のグリーティング
+  - if today_schedule
+    %ul
+      %li
+        %a{href: today_schedule.date.strftime('/schedule/%Y/%m/%d/')}
+          #{today.strftime('%m/%d')} のグリーティング
+  - else
+    %ul
+      %li
+        #{today.strftime('%m/%d')} のグリーティング
+
+%section
+  %h1 過去のグリーティング
+
+  %section
+    %h1 日付別
+    - months.each do |month|
+      - dates = schedules.by_month(month).map(&:date)
+      %section
+        %h1= month.strftime('%Y/%m')
+        != calendar(month) {|date| dates.include?(date) && { href: date.strftime('/schedule/%Y/%m/%d/') } }
+
+  %section
+    %h1 キャラクター別
+    %ul
+      - characters.each do |character|
+        %li
+          %a{href: "/character/#{character.name}/"}= character.name

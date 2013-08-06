@@ -8,5 +8,6 @@
         %time{datetime: greeting.end_at.iso8601}= greeting.end_at.strftime('%H:%M')
   %ul
     - greeting.characters.all.each do |character|
-      %li= character.name
+      %li
+        %a{href: "/character/#{character.name}/"}= character.name
 

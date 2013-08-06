@@ -1,0 +1,21 @@
+%table.calendar
+  %tr.calendar-header
+    %th.calendar-header-sunday 日
+    %th.calendar-header-monday 月
+    %th.calendar-header-tuesday 火
+    %th.calendar-header-wednesday 水
+    %th.calendar-header-thursday 木
+    %th.calendar-header-friday 金
+    %th.calendar-header-saturday 土
+  - days.each_slice(7) do |list|
+    %tr
+      - list.each do |day|
+        - if day
+          - if item = block.call(month + (day - 1))
+            %td.calendar-cell-active
+              %a{:href => item[:href]} #{day.to_s}
+          - else
+            %td.calendar-cell-inactive #{day.to_s}
+        - else
+          %td.calender-cell-empty
+

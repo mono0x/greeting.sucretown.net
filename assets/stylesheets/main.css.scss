@@ -17,3 +17,24 @@
     }
   }
 }
+
+.calendar {
+  td {
+    width: 40px;
+    height: 30px;
+
+    text-align: center;
+  }
+}
+
+.calendar-header-sunday {
+  color: red;
+}
+
+.calendar-header-saturday {
+  color: blue;
+}
+
+.calendar-cell-active {
+  background-color: #eef0ff;
+}
