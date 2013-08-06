@@ -59,6 +59,18 @@ module PurolandGreeting
       }
     end
 
+    get '/export' do
+      content_type 'text/csv'
+      Appearance.order('greeting_id ASC, character_id ASC').map {|a|
+        [
+          a.character.name,
+          a.greeting.place.name,
+          a.greeting.start_at,
+          a.greeting.end_at,
+        ].join(',')
+      }.join("\n")
+    end
+
     get %r{\A/schedule/(\d{4})/(\d{2})/(\d{2})/\z} do |year, month, day|
       date = Date.new(year.to_i, month.to_i, day.to_i)
       schedule = Schedule.where('date = ?', date).first or not_found
