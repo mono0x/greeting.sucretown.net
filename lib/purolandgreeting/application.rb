@@ -60,14 +60,14 @@ module PurolandGreeting
     end
 
     get '/export' do
-      content_type 'text/csv'
+      content_type 'text/ltsv'
       Appearance.order('greeting_id ASC, character_id ASC').map {|a|
-        [
-          a.character.name,
-          a.greeting.place.name,
-          a.greeting.start_at,
-          a.greeting.end_at,
-        ].join(',')
+        LTSV.dump({
+          character: a.character.name,
+          place: a.greeting.place.name,
+          start_at: a.greeting.start_at,
+          end_at: a.greeting.end_at,
+        })
       }.join("\n")
     end
 

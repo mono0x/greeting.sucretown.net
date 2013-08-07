@@ -75,6 +75,7 @@ GEM
     i18n (0.6.4)
     kgio (2.8.0)
     listen (0.7.3)
+    ltsv (0.1.0)
     lumberjack (1.0.3)
     mail (2.5.3)
       i18n (>= 0.4.0)
@@ -193,6 +194,7 @@ DEPENDENCIES
   guard-rspec
   haml
   hashie
+  ltsv
   mechanize
   pg
   pry

@@ -22,6 +22,7 @@ gem 'sprockets-helpers'
 gem 'foreman'
 gem 'mechanize'
 gem 'uglifier'
+gem 'ltsv'
 
 group :schedule do
   gem 'rufus-scheduler', :require => 'rufus/scheduler'
