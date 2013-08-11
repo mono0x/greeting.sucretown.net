@@ -1,3 +1,5 @@
+require 'set'
+
 module PurolandGreeting
   class Application < Sinatra::Base
     register Sinatra::ActiveRecordExtension
@@ -35,10 +37,12 @@ module PurolandGreeting
       def calendar(month, &block)
         next_month = month >> 1
         days = [ nil ] * month.wday + (1..(next_month - month)).to_a + [ nil ] * ((7 - next_month.wday) % 7)
+        workdays = Schedule.where('date >= ? AND date < ?', month, next_month).pluck(:date).to_set
 
         haml :'_partial/calendar', layout: false, locals: {
           month: month,
           days: days,
+          workdays: workdays,
           block: block,
         }
       end
