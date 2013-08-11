@@ -59,18 +59,6 @@ module PurolandGreeting
       }
     end
 
-    get '/export' do
-      content_type 'text/ltsv'
-      Appearance.order('greeting_id ASC, character_id ASC').map {|a|
-        LTSV.dump({
-          character: a.character.name,
-          place: a.greeting.place.name,
-          start_at: a.greeting.start_at,
-          end_at: a.greeting.end_at,
-        })
-      }.join("\n")
-    end
-
     get %r{\A/schedule/(\d{4})/(\d{2})/(\d{2})/\z} do |year, month, day|
       date = Date.new(year.to_i, month.to_i, day.to_i)
       schedule = Schedule.where('date = ?', date).first or not_found
