@@ -21,6 +21,10 @@ namespace :db do
     STDOUT.puts PurolandGreeting::Database.export
   end
 
+  task :normalize do
+    PurolandGreeting::Database.normalize
+  end
+
   task :backup do
     system 'pg_dump --inserts -x -h localhost -U puro puroland-greeting | xz > /tmp/puroland-greeting.sql.xz'
     system 'dropbox-api put /tmp/puroland-greeting.sql.xz dropbox:/work/greeting.sucretown.net/data/database.sql.xz'

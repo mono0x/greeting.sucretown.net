@@ -40,5 +40,21 @@ module PurolandGreeting
         })
       }.join("\n")
     end
+
+    def self.normalize
+      normalizer = Normalizer.new
+      normalizer.character_table.each do |before, after|
+        before_character = Character.find_by_name(before) or next
+        after_character = Character.where(name: after).first_or_create
+        Appearance.where('character_id = ?', before_character.id).update_all character_id: after_character.id
+        before_character.destroy
+      end
+      normalizer.place_table.each do |before, after|
+        before_place = Place.find_by_name(before) or next
+        after_place = Place.where(name: after).first_or_create
+        Greeting.where('place_id = ?', before_place.id).update_all character_id: after_place.id
+        before_place.destroy
+      end
+    end
   end
 end
