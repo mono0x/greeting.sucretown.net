@@ -39,6 +39,8 @@ module PurolandGreeting
           place: a.greeting.raw_place_name,
           start_at: a.greeting.start_at,
           end_at: a.greeting.end_at,
+          normalized_character: a.character.name,
+          normalized_place: a.greeting.place.name,
         })
       }.join("\n")
     end
