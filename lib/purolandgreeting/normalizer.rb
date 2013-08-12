@@ -13,13 +13,19 @@ module PurolandGreeting
     end
 
     def character(name)
-      name = NKF.nkf('-W1 -Ww', name)
+      name = convert(name)
       @character_table[name] || name
     end
 
     def place(name)
-      name = NKF.nkf('-W1 -Ww', name)
+      name = convert(name)
       @place_table[name] || name
+    end
+
+    private
+
+    def convert(s)
+      NKF.nkf '-W1 -Ww -m0Z1', s
     end
   end
 end
