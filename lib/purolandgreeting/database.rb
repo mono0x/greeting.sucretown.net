@@ -1,7 +1,10 @@
+require 'logger'
+
 module PurolandGreeting
   class Database
     def self.connect
       ActiveRecord::Base.establish_connection ENV['DATABASE_URL']
+      ActiveRecord::Base.logger = Logger.new(STDERR)
     end
 
     def self.import(src)
