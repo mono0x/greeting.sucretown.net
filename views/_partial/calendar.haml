@@ -12,7 +12,9 @@
       - list.each do |day|
         - if day
           - date = month + (day - 1)
-          - if item = block.call(date)
+          - if date < first || date > last
+            %td.calendar-cell-unavailable= day
+          - elsif item = block.call(date)
             %td.calendar-cell-active
               %a{:href => item[:href]} #{day.to_s}
           - elsif !workdays.include?(date)
