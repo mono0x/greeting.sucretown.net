@@ -5,6 +5,7 @@ class CreateTables < ActiveRecord::Migration
       t.datetime :end_at,     null: false
       t.integer  :place_id,   null: false
       t.integer  :schedule_id, null: false
+      t.string   :raw_place_name, null: false
     end
     add_index :greetings, :start_at
     add_index :greetings, :place_id
@@ -22,6 +23,7 @@ class CreateTables < ActiveRecord::Migration
     create_table :appearances do |t|
       t.integer :greeting_id
       t.integer :character_id
+      t.string  :raw_character_name, null: false
     end
     add_index :appearances, :greeting_id
     add_index :appearances, :character_id

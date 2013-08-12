@@ -1,5 +1,4 @@
 require 'mechanize'
-require 'nkf'
 
 module PurolandGreeting
   class Fetcher
@@ -11,27 +10,29 @@ module PurolandGreeting
       #index_page = agent.get('http://www.puroland.co.jp/chara_gre/?para=20130627')
       return [] if index_page.forms.empty?
 
-      m = index_page.search('p[align="center"] font[size="-1"]').first.text.match(/\A\s*(\d+)年(\d+)月(\d+)日\([日月火水木金土]\)\s*\z/) or exit
-      year = Integer(m[1])
-      month = Integer(m[2])
-      day = Integer(m[3])
+      t = index_page.search('p[align="center"] font[size="-1"]').first.text
+      t.match(/\A\s*(?<year>\d+)年(?<month>\d+)月(?<day>\d+)日\([日月火水木金土]\)\s*\z/) do |m|
+        year = Integer(m[:year])
+        month = Integer(m[:month])
+        day = Integer(m[:day])
 
-      menu_page = agent.submit(index_page.forms.first)
+        menu_page = agent.submit(index_page.forms.first)
 
-      result = []
-      menu_page.links_with(:href => /^chara_sche\.asp\?/).each do |link|
-        schedule_page = agent.click(link)
-        character = link.text
-        schedule_page.search('p[align="left"] font[size="-1"]').each do |font|
-          m = font.text.match(/\A\s*(\d+):(\d+)-(\d+):(\d+)\s*(.+)\s*\z/) or next
-          start_at = Time.local(year, month, day, Integer(m[1]), Integer(m[2]))
-          end_at = Time.local(year, month, day, Integer(m[3]), Integer(m[4]))
-          place = NKF.nkf('-W1 -Ww', m[5])
-          result << { character: character, place: place, start_at: start_at, end_at: end_at }
+        result = []
+        menu_page.links_with(:href => /^chara_sche\.asp\?/).each do |link|
+          schedule_page = agent.click(link)
+          character = link.text
+          schedule_page.search('p[align="left"] font[size="-1"]').each do |font|
+            font.text.match(/\A\s*(?<start_hour>\d+):(?<start_minute>\d+)-(?<end_hour>\d+):(?<end_minute>\d+)\s*(?<place>.+)\s*\z/) do |m|
+              start_at = Time.local(year, month, day, Integer(m[:start_hour]), Integer(m[:start_minute]))
+              end_at = Time.local(year, month, day, Integer(m[:end_hour]), Integer(m[:end_minute]))
+              result << { character: character, place: m[:place], start_at: start_at, end_at: end_at }
+            end
+          end
+          agent.back
         end
-        agent.back
+        result
       end
-      result
     end
   end
 end
