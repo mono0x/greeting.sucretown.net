@@ -15,3 +15,8 @@
     %section.greetings.greetings-after-the-end
       %h1 終了したグリーティング
       != haml :'_partial/greetings', layout: false, locals: { greetings: after_the_end }
+
+  - unless deleted.empty?
+    %section.greetings.greetings-deleted
+      %h1 中止されたグリーティング
+      != haml :'_partial/greetings', layout: false, locals: { greetings: deleted }

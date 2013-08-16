@@ -6,11 +6,12 @@ class CreateTables < ActiveRecord::Migration
       t.integer  :place_id,   null: false
       t.integer  :schedule_id, null: false
       t.string   :raw_place_name, null: false
+      t.boolean  :deleted, null: false
     end
     add_index :greetings, :start_at
     add_index :greetings, :place_id
     add_index :greetings, [ :start_at, :end_at ]
-    add_index :greetings, [ :start_at, :end_at, :place_id, :schedule_id ], unique: true, name: 'index_greetings_uniqueness'
+    add_index :greetings, [ :start_at, :end_at, :place_id, :schedule_id, :deleted ], unique: true, name: 'index_greetings_uniqueness'
 
     create_table :characters do |t|
       t.string :name, null: false, unique: true

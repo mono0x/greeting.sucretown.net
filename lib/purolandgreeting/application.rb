@@ -78,9 +78,10 @@ module PurolandGreeting
       time = Time.now
       haml :schedule, locals: {
         schedule: schedule,
-        before_the_start: schedule.greetings.before_the_start(time),
-        in_session: schedule.greetings.in_session(time),
-        after_the_end: schedule.greetings.after_the_end(time),
+        before_the_start: schedule.greetings.without_deleted.before_the_start(time),
+        in_session: schedule.greetings.without_deleted.in_session(time),
+        after_the_end: schedule.greetings.without_deleted.after_the_end(time),
+        deleted: schedule.greetings.only_deleted
       }
     end
 
