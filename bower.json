@@ -1,0 +1,8 @@
+{
+  "name": "Puroland Greeting",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.0.0",
+    "bootswatch": "~3.0.0"
+  }
+}

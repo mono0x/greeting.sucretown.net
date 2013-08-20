@@ -1,38 +1,21 @@
 body {
-  font-family: sans-serif;
+  padding-top: 50px;
 }
 
-.greetings-in-session {
-  background-color: #fee;
+h1 {
+  font-size: 32px;
 }
 
-.greetings-after-the-end {
-  background-color: #eee;
+h2 {
+  font-size: 28px;
 }
 
-.greetings-deleted {
-  background-color: silver;
+.calendar-header, .calendar-cell {
+  text-align: center;
 }
 
-.greetings {
-  section header {
-    h1 {
-      margin-bottom: 0;
-    }
-
-    p {
-      margin-top: 0;
-    }
-  }
-}
-
-.calendar {
-  td {
-    width: 40px;
-    height: 30px;
-
-    text-align: center;
-  }
+.calendar-cell a {
+  display: block;
 }
 
 .calendar-header-sunday {
@@ -43,10 +26,6 @@ body {
   color: blue;
 }
 
-.calendar-cell-active {
-  background-color: #eef0ff;
-}
-
 .calendar-cell-holiday {
   color: red;
 }
@@ -54,3 +33,4 @@ body {
 .calendar-cell-unavailable {
   color: silver;
 }
+

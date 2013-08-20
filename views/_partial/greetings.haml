@@ -1,13 +1,13 @@
 - greetings.order('end_at, start_at').each do |greeting|
-  %section
-    %header
-      %h1= greeting.place.name
-      %p
+  %section.panel{class: panel}
+    .panel-heading
+      %h3.panel-title
+        = greeting.place.name
+      %small
         %time{datetime: greeting.start_at.iso8601}= greeting.start_at.strftime('%H:%M')
         \-
         %time{datetime: greeting.end_at.iso8601}= greeting.end_at.strftime('%H:%M')
-  %ul
-    - greeting.characters.all.each do |character|
-      %li
-        %a{href: "/character/#{character.name}/"}= character.name
+    .list-group
+      - greeting.characters.all.each do |character|
+        %a.list-group-item{href: "/character/#{character.name}/"}= character.name
 

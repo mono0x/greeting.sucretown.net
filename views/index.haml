@@ -1,30 +1,25 @@
+%header.page-header
+  %h1 Puroland Greeting
 
-%section
-  %h1 本日のグリーティング
+%p
   - if today_schedule
-    %ul
-      %li
-        %a{href: today_schedule.date.strftime('/schedule/%Y/%m/%d/')}
-          #{today.strftime('%m/%d')} のグリーティング
+    %a.btn.btn-primary.btn-lg{href: today_schedule.date.strftime('/schedule/%Y/%m/%d/')}
+      #{today.strftime('%Y/%m/%d')} の予定
   - else
-    %ul
-      %li
-        #{today.strftime('%m/%d')} のグリーティング
+    %a.btn.btn-primary.btn-lg.disabled
+      #{today.strftime('%Y/%m/%d')} の予定
 
 %section
-  %h1 過去のグリーティング
-
-  %section
-    %h1 日付別
+  %h2 カレンダー
+  .row
     - months.each do |month|
       - dates = schedules.by_month(month).map(&:date)
-      %section
-        %h1= month.strftime('%Y/%m')
+      %section.col-sm-6.col-md-4
+        %h3= month.strftime('%Y/%m')
         != calendar(month) {|date| dates.include?(date) && { href: date.strftime('/schedule/%Y/%m/%d/') } }
 
-  %section
-    %h1 キャラクター別
-    %ul
-      - characters.each do |character|
-        %li
-          %a{href: "/character/#{character.name}/"}= character.name
+%section
+  %h2 キャラクター
+  .list-group
+    - characters.each do |character|
+      %a.list-group-item{href: "/character/#{character.name}/"}= character.name

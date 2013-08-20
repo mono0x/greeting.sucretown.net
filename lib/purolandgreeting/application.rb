@@ -26,6 +26,7 @@ module PurolandGreeting
         config.digest = true
       end
 
+      sprockets.append_path 'bower_components'
       sprockets.append_path 'assets/images'
       sprockets.append_path 'assets/javascripts'
       sprockets.append_path 'assets/stylesheets'
@@ -76,6 +77,7 @@ module PurolandGreeting
       date = Date.new(year.to_i, month.to_i, day.to_i)
       schedule = Schedule.where('date = ?', date).first or not_found
       time = Time.now
+      @title = date.strftime('%Y/%m/%d')
       haml :schedule, locals: {
         schedule: schedule,
         before_the_start: schedule.greetings.without_deleted.before_the_start(time),
@@ -87,6 +89,7 @@ module PurolandGreeting
 
     get %r{\A/character/([^/]+)/\z} do |name|
       character = Character.where('name = ?', name).first or not_found
+      @title = character.name
       haml :character, locals: {
         character: character,
       }
