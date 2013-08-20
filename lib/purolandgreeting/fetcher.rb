@@ -4,7 +4,7 @@ module PurolandGreeting
   class Fetcher
     def self.fetch
       agent = Mechanize.new
-      agent.user_agent_alias = 'iPhone'
+      agent.user_agent = 'iPhone (Ruby; http://greeting.sucretown.net/)'
 
       index_page = agent.get('http://www.puroland.co.jp/chara_gre/')
       #index_page = agent.get('http://www.puroland.co.jp/chara_gre/?para=20130627')
