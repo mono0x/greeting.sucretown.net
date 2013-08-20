@@ -7,8 +7,12 @@ $:.push File.expand_path('lib', __dir__)
 require 'purolandgreeting'
 
 namespace :crawler do
+  task :register do
+    PurolandGreeting::Crawler.register
+  end
+
   task :update do
-    PurolandGreeting::Crawler.new.update
+    PurolandGreeting::Crawler.update
   end
 end
 
