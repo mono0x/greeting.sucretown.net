@@ -17,7 +17,9 @@ module PurolandGreeting
         before = Appearance.joins(greeting: :schedule).where('schedules.date IN ( ? )', dates).map {|a|
             Hash[keys.zip([ a.raw_character_name, a.greeting.raw_place_name, a.greeting.start_at, a.greeting.end_at, a.greeting.deleted ])]
         }.to_set
-        after = items.to_set
+        after = items.map {|item|
+          item.merge deleted: false
+        }.to_set
 
         (before - after).select {|item| !item[:deleted] }.each do |item|
           character = Character.where(name: normalizer.character(item[:character])).first
