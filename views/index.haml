@@ -1,13 +1,13 @@
 %header.page-header
   %h1 Puroland Greeting
 
-%p
-  - if today_schedule
-    %a.btn.btn-primary.btn-lg{href: today_schedule.date.strftime('/schedule/%Y/%m/%d/')}
+- if today_schedule
+  %div
+    %a.btn.btn-block.btn-primary.btn-lg{href: today_schedule.date.strftime('/schedule/%Y/%m/%d/')}
       #{today.strftime('%Y/%m/%d')} の予定
-  - else
-    %a.btn.btn-primary.btn-lg.disabled
-      #{today.strftime('%Y/%m/%d')} の予定
+- else
+  .well
+    #{today.strftime('%Y/%m/%d')} の予定は公開されていません。
 
 %section
   %h2 カレンダー
