@@ -5,6 +5,7 @@
       %title= [ @title, 'Puroland Greeting' ].flatten.compact.join(' - ')
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %link{rel: 'stylesheet', type: 'text/css', href: stylesheet_path('application')}
+    %script{type: 'text/javascript', src: javascript_path('application')}
     :javascript
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,6 +18,19 @@
     .navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
+          %button.navbar-toggle{type: 'button', data: { toggle: 'collapse', target: '.navbar-ex1-collapse' }}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
           %a.navbar-brand{href: '/'} Puroland Greeting
+        .collapse.navbar-collapse.navbar-ex1-collapse.navbar-right
+          %ul.nav.navbar-nav
+            %li.dropdown
+              %a.dropdown-toggle{href: '#', data: { toggle: 'dropdown' }} リンク <b class="caret"></b>
+              %ul.dropdown-menu
+                %li
+                  %a{href: 'http://www.puroland.jp/'} サンリオピューロランド
+                  %a{href: 'http://www.puroland.co.jp/chara_gre/'} キャラクターグリーティング情報
     .container
       != yield
