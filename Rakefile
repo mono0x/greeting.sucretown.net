@@ -31,6 +31,11 @@ namespace :db do
 
   task :backup do
     system 'pg_dump --inserts -x -h localhost -U puro puroland-greeting | xz > /tmp/puroland-greeting.sql.xz'
+    open('/tmp/puroland-greeting.ltsv', 'w') do |f|
+      f << PurolandGreeting::Database.export
+    end
+    system 'xz /tmp/puroland-greeting.ltsv'
     system 'dropbox-api put /tmp/puroland-greeting.sql.xz dropbox:/work/greeting.sucretown.net/data/database.sql.xz'
+    system 'dropbox-api put /tmp/puroland-greeting.ltsv.xz dropbox:/work/greeting.sucretown.net/data/database.ltsv.xz'
   end
 end
