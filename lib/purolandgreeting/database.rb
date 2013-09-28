@@ -4,7 +4,9 @@ module PurolandGreeting
   class Database
     def self.connect
       ActiveRecord::Base.establish_connection ENV['DATABASE_URL']
-      ActiveRecord::Base.logger = Logger.new(STDERR)
+      logger = Logger.new(STDERR)
+      logger.level = Logger::WARN
+      ActiveRecord::Base.logger = logger
     end
 
     def self.register(items)
