@@ -16,6 +16,7 @@ class CreateTables < ActiveRecord::Migration
     create_table :characters do |t|
       t.string :name, null: false, unique: true
     end
+    add_index :characters, :name
 
     create_table :places do |t|
       t.string :name, null: false, unique: true
