@@ -8,6 +8,6 @@
         \-
         %time{datetime: greeting.end_at.iso8601}= greeting.end_at.strftime('%H:%M')
     .list-group
-      - greeting.characters.all.each do |character|
+      - greeting.characters.order('name ASC').all.each do |character|
         %a.list-group-item{href: "/character/#{character.name}/"}= character.name
 
