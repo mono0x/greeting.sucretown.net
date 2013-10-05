@@ -14,6 +14,9 @@ module PurolandGreeting
 
       keys = [ :character, :place, :start_at, :end_at, :deleted ]
 
+      deleted_items = nil
+      added_items = nil
+
       ActiveRecord::Base.transaction do
         dates = items.map {|item| item[:start_at].to_date }.uniq
         before = Appearance.joins(greeting: :schedule).where('schedules.date IN ( ? )', dates).map {|a|
@@ -23,7 +26,8 @@ module PurolandGreeting
           item.merge deleted: false
         }.to_set
 
-        (before - after).select {|item| !item[:deleted] }.each do |item|
+        deleted_items = (before - after).select {|item| !item[:deleted] }
+        deleted_items.each do |item|
           character = Character.where(name: normalizer.character(item[:character])).first
           place = Place.where(name: normalizer.place(item[:place])).first
           schedule = Schedule.where(date: item[:start_at].to_date).first
@@ -50,6 +54,7 @@ module PurolandGreeting
           greeting.destroy if greeting.characters.empty?
         end
 
+        added_items = []
         (after - before).each do |item|
           character = Character.where(name: normalizer.character(item[:character])).first_or_create
           place = Place.where(name: normalizer.place(item[:place])).first_or_create
@@ -64,9 +69,13 @@ module PurolandGreeting
           appearance = Appearance.where(
             character_id: character.id,
             greeting_id: greeting.id,
-            raw_character_name: item[:character]).first_or_create
+            raw_character_name: item[:character]).first_or_create {
+            added_items << item
+          }
         end
       end
+
+      [ added_items, deleted_items, ]
     end
 
     def self.import(src)

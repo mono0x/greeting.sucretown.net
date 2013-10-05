@@ -9,11 +9,11 @@ require 'purolandgreeting'
 
 namespace :crawler do
   task :register do
-    PurolandGreeting::Crawler.register
+    PurolandGreeting::CrawlerTask.register
   end
 
   task :update do
-    PurolandGreeting::Crawler.update
+    PurolandGreeting::CrawlerTask.update
   end
 end
 
