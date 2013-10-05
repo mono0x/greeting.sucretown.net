@@ -22,16 +22,19 @@ module PurolandGreeting
         today = Date.today
         characters = added_items.map {|item| normalizer.character item[:character] }.uniq.sort
 
-        header = "#{today.strftime('%Y/%m/%d')} の登場キャラクター #{ENV['ROOT_URI']}#{today.strftime('/schedule/%Y/%m/%d/')}"
+        uri = "#{ENV['ROOT_URI']}#{today.strftime('/schedule/%Y/%m/%d/')}"
+        header = "#{today.strftime('%Y/%m/%d')} の登場キャラクター "
+        footer = " #{uri}"
         separator = ' '
 
         header_size = header.size + 8 # ' (n/m): '
         separator_size = separator.size
+        footer_size = 1 + twitter.short_url_length
 
         groups = []
         group = []
         characters.each do |character|
-          if header_size + group.map(&:size).inject(0, &:+) + group.size * separator_size + character.size > 140
+          if header_size + footer_size + group.map(&:size).inject(0, &:+) + group.size * separator_size + character.size > 140
             groups << group
             group = []
           else
@@ -41,7 +44,7 @@ module PurolandGreeting
         groups << group unless group.empty?
 
         groups.each_with_index do |group, i|
-          twitter.update "#{header} (#{i + 1}/#{groups.size}): #{group.join(separator)}"
+          twitter.update "#{header}(#{i + 1}/#{groups.size}): #{group.join(separator)}#{footer}"
         end
 
       end
