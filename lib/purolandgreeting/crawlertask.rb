@@ -38,6 +38,7 @@ module PurolandGreeting
             group << character
           end
         end
+        groups << group unless group.empty?
 
         groups.each_with_index do |group, i|
           twitter.update "#{header} (#{i + 1}/#{groups.size}): #{group.join(separator)}"
