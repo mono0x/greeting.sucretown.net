@@ -7,7 +7,7 @@ module PurolandGreeting
     end
 
     def self.update(register = false)
-      added_items, deleted_items, registered = p(Crawler.update(register))
+      added_items, deleted_items, registered = Crawler.update(register)
 
       twitter = Twitter::REST::Client.new do |config|
         config.consumer_key = ENV['TWITTER_CONSUMER_KEY']
