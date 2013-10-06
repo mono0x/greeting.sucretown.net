@@ -23,7 +23,7 @@ module PurolandGreeting
             Hash[keys.zip([ a.raw_character_name, a.greeting.raw_place_name, a.greeting.start_at, a.greeting.end_at, a.greeting.deleted ])]
         }.to_set
         after = items.map {|item|
-          item.merge deleted: false
+          { deleted: false }.merge item
         }.to_set
 
         deleted_items = (before - after).select {|item| !item[:deleted] }
