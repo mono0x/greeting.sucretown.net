@@ -1,4 +1,5 @@
 require 'mechanize'
+require 'nkf'
 
 module PurolandGreeting
   class Fetcher
@@ -10,7 +11,7 @@ module PurolandGreeting
       #index_page = agent.get('http://www.puroland.co.jp/chara_gre/?para=20130627')
       return [] if index_page.forms.empty?
 
-      t = index_page.search('p[align="center"] font[size="-1"]').first.text
+      t = self.normalize_date(index_page.search('p[align="center"] font[size="-1"]').first.text)
       t.match(/\A\s*(?<year>\d+)年(?<month>\d+)月(?<day>\d+)日\([日月火水木金土]\)\s*\z/) do |m|
         year = Integer(m[:year])
         month = Integer(m[:month])
@@ -23,7 +24,8 @@ module PurolandGreeting
           schedule_page = agent.click(link)
           character = link.text
           schedule_page.search('p[align="left"] font[size="-1"]').each do |font|
-            font.text.match(/\A\s*(?<start_hour>\d+):(?<start_minute>\d+)-(?<end_hour>\d+):(?<end_minute>\d+)\s*(?<place>.+)\s*\z/) do |m|
+            t = self.normalize_date(font.text)
+            t.match(/\A\s*(?<start_hour>\d+):(?<start_minute>\d+)-(?<end_hour>\d+):(?<end_minute>\d+)\s*(?<place>.+)\s*\z/) do |m|
               start_at = Time.local(year, month, day, Integer(m[:start_hour]), Integer(m[:start_minute]))
               end_at = Time.local(year, month, day, Integer(m[:end_hour]), Integer(m[:end_minute]))
               result << { character: character, place: m[:place], start_at: start_at, end_at: end_at }
@@ -33,6 +35,10 @@ module PurolandGreeting
         end
         result
       end
+    end
+
+    def self.normalize_date(s)
+      NKF.nkf '-W1 -Ww -m0Z1', s
     end
   end
 end
