@@ -12,7 +12,7 @@ module PurolandGreeting
       return [] if index_page.forms.empty?
 
       t = self.normalize_date(index_page.search('p[align="center"] font[size="-1"]').first.text)
-      t.match(/\A\s*(?<year>\d+)年(?<month>\d+)月(?<day>\d+)日\([日月火水木金土]\)\s*\z/) do |m|
+      t.match(/^\s*(?<year>\d+)年(?<month>\d+)月(?<day>\d+)日\([日月火水木金土]\)\s*$/) do |m|
         year = Integer(m[:year])
         month = Integer(m[:month])
         day = Integer(m[:day])
