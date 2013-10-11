@@ -1,9 +1,22 @@
 require 'bundler'
 Bundler.require :schedule
 
+require 'logger'
+
 def execute_command(command)
+  logger = Logger.new('shared/schedule.log')
+  logger.info command
+
   result = `#{command} 2>&1`
+  logger.error "status = #$?" unless $? == 0
   return if result.empty?
+
+  if $? == 0
+    logger.info result
+  else
+    logger.error result
+  end
+
   STDERR.puts result
   gmail = Gmail.new(ENV['GMAIL_ADDRESS'], ENV['GMAIL_PASSWORD'])
   gmail.deliver do
