@@ -28,11 +28,15 @@ end
 
 scheduler = Rufus::Scheduler.start_new
 
-scheduler.cron '0 0-7,10-23 * * *' do
+scheduler.cron '0 11-21 * * *' do
   execute_command 'bundle exec rake crawler:update'
 end
 
-scheduler.cron '*/5 8-9 * * *' do
+scheduler.cron '*/5 8-10 * * 1-5' do
+  execute_command 'bundle exec rake crawler:register'
+end
+
+scheduler.cron '*/15 8-10 * * 0,6' do
   execute_command 'bundle exec rake crawler:register'
 end
 
