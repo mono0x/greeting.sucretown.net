@@ -59,7 +59,7 @@ module PurolandGreeting
       characters.each do |character|
         if header_size + footer_size + group.map(&:size).inject(0, &:+) + group.size * separator_size + character.size > 140
           groups << group
-          group = []
+          group = [ character ]
         else
           group << character
         end
