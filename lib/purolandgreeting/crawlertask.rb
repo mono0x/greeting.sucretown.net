@@ -32,15 +32,15 @@ module PurolandGreeting
         unless added_items.empty? && deleted_items.empty?
           twitter.update "#{today.strftime('%Y/%m/%d')} の予定が変更されました。 #{uri}"
 
-          unless added_items.empty?
-            characters = added_items.map {|item| normalizer.character item[:character] }.uniq.sort
-            header = "#{today.strftime('%Y/%m/%d')} の追加対象キャラクター"
-            self.update_characters twitter, characters, header
-          end
+          added_characters = SortedSet.new(added_items.map {|item| normalizer.character item[:character] })
+          deleted_characters = SortedSet.new(deleted_items.map {|item| normalizer.character item[:character] })
+          modified_characters = added_characters & deleted_characters
+          added_characters -= modified_characters
+          deleted_characters -= modified_characters
 
-          unless deleted_items.empty?
-            characters = deleted_items.map {|item| normalizer.character item[:character] }.uniq.sort
-            header = "#{today.strftime('%Y/%m/%d')} の中止対象キャラクター"
+          [ '追加', '変更', '中止' ].zip([ added_characters, modified_characters, deleted_characters ]).each do |title, characters|
+            next if characters.empty?
+            header = "#{today.strftime('%Y/%m/%d')} の#{title}対象キャラクター"
             self.update_characters twitter, characters, header
           end
         end
