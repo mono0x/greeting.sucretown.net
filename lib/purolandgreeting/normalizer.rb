@@ -14,7 +14,8 @@ module PurolandGreeting
 
     def character(name)
       name = convert(name)
-      @character_table[name] || name
+      character, costume = name.match(/\A(.+?)(?:\((.+)\))?\z/).to_a.values_at(1, 2)
+      [ @character_table[character] || character, costume ]
     end
 
     def place(name)

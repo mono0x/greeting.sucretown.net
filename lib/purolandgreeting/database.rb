@@ -28,7 +28,9 @@ module PurolandGreeting
 
         deleted_items = (before - after).select {|item| !item[:deleted] }
         deleted_items.each do |item|
-          character = Character.where(name: normalizer.character(item[:character])).first
+          character_name, costume_name = normalizer.character(item[:character])
+          character = Character.where(name: character_name).first
+          costume = Costume.where(name: costume_name).first if costume_name
           place = Place.where(name: normalizer.place(item[:place])).first
           schedule = Schedule.where(date: item[:start_at].to_date).first
           greeting = Greeting.where(
@@ -40,6 +42,7 @@ module PurolandGreeting
 
           appearance = Appearance.where(
             character_id: character.id,
+            costume_id: costume && costume.id,
             greeting_id: greeting.id).first or next
 
           deleted_greeting = Greeting.where(
@@ -56,7 +59,9 @@ module PurolandGreeting
 
         added_items = []
         (after - before).each do |item|
-          character = Character.where(name: normalizer.character(item[:character])).first_or_create
+          character_name, costume_name = normalizer.character(item[:character])
+          character = Character.where(name: character_name).first_or_create
+          costume = Costume.where(name: costume_name).first_or_create if costume_name
           place = Place.where(name: normalizer.place(item[:place])).first_or_create
           schedule = Schedule.where(date: item[:start_at].to_date).first_or_create
           greeting = Greeting.where(
@@ -68,6 +73,7 @@ module PurolandGreeting
             deleted: item[:deleted]).first_or_create
           appearance = Appearance.where(
             character_id: character.id,
+            costume_id: costume && costume.id,
             greeting_id: greeting.id,
             raw_character_name: item[:character]).first_or_create {
             added_items << item

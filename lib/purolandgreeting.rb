@@ -7,6 +7,7 @@ end
 require 'purolandgreeting/database'
 require 'purolandgreeting/schedule'
 require 'purolandgreeting/character'
+require 'purolandgreeting/costume'
 require 'purolandgreeting/greeting'
 require 'purolandgreeting/place'
 require 'purolandgreeting/appearance'

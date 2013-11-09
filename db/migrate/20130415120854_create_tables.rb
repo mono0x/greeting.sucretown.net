@@ -18,18 +18,25 @@ class CreateTables < ActiveRecord::Migration
     end
     add_index :characters, :name
 
+    create_table :costumes do |t|
+      t.string :name, null: false, unique: true
+    end
+    add_index :costumes, :name
+
     create_table :places do |t|
       t.string :name, null: false, unique: true
     end
 
     create_table :appearances do |t|
-      t.integer :greeting_id
-      t.integer :character_id
+      t.integer :greeting_id, null: false
+      t.integer :character_id, null: false
+      t.integer :costume_id
       t.string  :raw_character_name, null: false
     end
     add_index :appearances, :greeting_id
     add_index :appearances, :character_id
-    add_index :appearances, [ :greeting_id, :character_id ], unique: true
+    add_index :appearances, [ :greeting_id, :character_id, :costume_id ], unique: true, name: 'index_appearances_uniqueness'
+    add_index :appearances, [ :character_id, :costume_id ]
 
     create_table :schedules do |t|
       t.date :date, null: false, unique: true
