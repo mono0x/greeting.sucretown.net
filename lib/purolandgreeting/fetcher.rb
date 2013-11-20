@@ -32,11 +32,13 @@ module PurolandGreeting
           }
           character = link.text
           schedule_page.search('p[align="left"] font[size="-1"]').each do |font|
-            t = self.normalize_date(font.text)
-            t.match(/\A\s*(?<start_hour>\d+):(?<start_minute>\d+)-(?<end_hour>\d+):(?<end_minute>\d+)\s*(?<place>.+)\s*\z/) do |m|
+            next unless font.children.size == 3
+            time, br, place = font.children
+            next unless br.name == 'br'
+            self.normalize_date(time.text).match(/\A\s*(?<start_hour>\d+):(?<start_minute>\d+)-(?<end_hour>\d+):(?<end_minute>\d+)\z/) do |m|
               start_at = Time.local(year, month, day, Integer(m[:start_hour]), Integer(m[:start_minute]))
               end_at = Time.local(year, month, day, Integer(m[:end_hour]), Integer(m[:end_minute]))
-              result << { character: character, place: m[:place], start_at: start_at, end_at: end_at }
+              result << { character: character, place: self.normalize_date(place.text), start_at: start_at, end_at: end_at }
             end
           end
           agent.back
