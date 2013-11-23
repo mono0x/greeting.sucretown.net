@@ -24,7 +24,7 @@ module PurolandGreeting
       if registered
         twitter.update "#{today.strftime('%Y/%m/%d')} の予定が公開されました。 #{uri}"
 
-        characters = added_items.map {|item| normalizer.character item[:character] }.uniq.sort
+        characters = added_items.map {|item| normalizer.character(item[:character])[0] }.uniq.sort
 
         header = "#{today.strftime('%Y/%m/%d')} の登場キャラクター"
         self.update_characters twitter, characters, header
@@ -32,8 +32,8 @@ module PurolandGreeting
         unless added_items.empty? && deleted_items.empty?
           twitter.update "#{today.strftime('%Y/%m/%d')} の予定が変更されました。 #{uri}"
 
-          added_characters = SortedSet.new(added_items.map {|item| normalizer.character item[:character] })
-          deleted_characters = SortedSet.new(deleted_items.map {|item| normalizer.character item[:character] })
+          added_characters = SortedSet.new(added_items.map {|item| normalizer.character(item[:character])[0] })
+          deleted_characters = SortedSet.new(deleted_items.map {|item| normalizer.character(item[:character])[0] })
           modified_characters = added_characters & deleted_characters
           added_characters -= modified_characters
           deleted_characters -= modified_characters
