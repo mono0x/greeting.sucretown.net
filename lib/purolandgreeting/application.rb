@@ -108,7 +108,7 @@ module PurolandGreeting
       }
     end
 
-    get '/statistics' do
+    get '/statistics/' do
       count_by_month = Appearance.count_by_month
       ranking = Character.ranking
 
