@@ -9,10 +9,7 @@
 
     %dl
       %dt 登場日数
-      %dd
-        = character.greetings.joins(:schedule).count('DISTINCT schedules.date')
-        \/
-        = PurolandGreeting::Schedule.count('DISTINCT date')
+      %dd #{appearance_count.to_s} / #{date_count.to_s} (#{'%.1f' % (100.0 * appearance_count / date_count)} %)
       %dt 登場回数
       %dd= character.greetings.count
 

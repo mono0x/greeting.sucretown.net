@@ -98,6 +98,8 @@ module PurolandGreeting
       @title = character.name
       haml :character, locals: {
         character: character,
+        appearance_count: character.greetings.joins(:schedule).count('DISTINCT schedules.date'),
+        date_count: Schedule.count('DISTINCT date'),
         greetings_by_month: {
           columns: [
             { type: 'string', name: '月', },
