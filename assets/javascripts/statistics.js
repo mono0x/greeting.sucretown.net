@@ -30,9 +30,8 @@ $(function() {
   };
 
   var registerCharts = function() {
-    $('.chart-bar').each(function() {
-      registerChart(this, 'BarChart');
-    });
+    $('.chart-bar').each(function() { registerChart(this, 'BarChart'); });
+    $('.chart-pie').each(function() { registerChart(this, 'PieChart'); });
   };
 
   window.onGoogleApiReady = function() {

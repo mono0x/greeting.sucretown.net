@@ -93,6 +93,8 @@ module PurolandGreeting
 
       greetings_by_month = character.greetings.without_deleted.joins(:schedule).order("year, month").group("year, month").select("DATE_PART('year', date) AS year, DATE_PART('month', date) AS month, COUNT(greetings.id) AS count")
 
+      places = character.place_ranking
+
       @title = character.name
       haml :character, locals: {
         character: character,
@@ -103,6 +105,15 @@ module PurolandGreeting
           ],
           rows: greetings_by_month.map {|item|
             [ "#{item.year}/#{item.month}", item.count.to_i, ]
+          },
+        }.to_json,
+        places: {
+          columns: [
+            { type: 'string', name: '場所', },
+            { type: 'number', name: '登場回数', },
+          ],
+          rows: places.map {|item|
+            [ item.name, item.score, ]
           },
         }.to_json,
       }

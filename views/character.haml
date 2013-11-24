@@ -20,6 +20,10 @@
     %h3 月別
     .chart.chart-bar{data: {chart: greetings_by_month}}
 
+  %section
+    %h3 場所別
+    .chart.chart-pie{data: {chart: places, options: {legend: {position: 'labeled'}}.to_json}}
+
 %section
   %h2 カレンダー
   - food_machine_restaurant = PurolandGreeting::Place.find_by_name('フードマシンレストラン(4F)').id
