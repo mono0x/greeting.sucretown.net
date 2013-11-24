@@ -88,10 +88,50 @@ module PurolandGreeting
     end
 
     get %r{\A/character/([^/]+)/\z} do |name|
+      today = Date.today
       character = Character.where('name = ?', name).first or not_found
+
+      greetings_by_month = character.greetings.without_deleted.joins(:schedule).order("year, month").group("year, month").select("DATE_PART('year', date) AS year, DATE_PART('month', date) AS month, COUNT(greetings.id) AS count")
+
       @title = character.name
       haml :character, locals: {
         character: character,
+        greetings_by_month: {
+          columns: [
+            { type: 'string', name: '月', },
+            { type: 'number', name: '登場回数', },
+          ],
+          rows: greetings_by_month.map {|item|
+            [ "#{item.year}/#{item.month}", item.count.to_i, ]
+          },
+        }.to_json,
+      }
+    end
+
+    get '/statistics' do
+      count_by_month = Appearance.count_by_month
+      ranking = Character.ranking
+
+      @title = '統計'
+      haml :statistics, locals: {
+        count_by_month: {
+          columns: [
+            { type: 'string', name: '月', },
+            { type: 'number', name: '登場回数', },
+          ],
+          rows: count_by_month.map {|item|
+            [ "#{item.year}/#{item.month}", item.appearances, ]
+          },
+        }.to_json,
+        ranking: {
+          columns: [
+            { type: 'string', name: 'キャラクター', },
+            { type: 'number', name: '登場回数', },
+          ],
+          rows: ranking.map {|item|
+            [ item.name, item.score, ]
+          },
+        }.to_json,
       }
     end
 

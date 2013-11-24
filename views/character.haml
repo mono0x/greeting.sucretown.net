@@ -2,6 +2,25 @@
   %h1= character.name
 
 %section
+  %h2 統計
+
+  %section
+    %h3 概要
+
+    %dl
+      %dt 登場日数
+      %dd
+        = character.greetings.joins(:schedule).count('DISTINCT schedules.date')
+        \/
+        = PurolandGreeting::Schedule.count('DISTINCT date')
+      %dt 登場回数
+      %dd= character.greetings.count
+
+  %section
+    %h3 月別
+    .chart.chart-bar{data: {chart: greetings_by_month}}
+
+%section
   %h2 カレンダー
   - food_machine_restaurant = PurolandGreeting::Place.find_by_name('フードマシンレストラン(4F)').id
   .row

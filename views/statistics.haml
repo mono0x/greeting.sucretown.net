@@ -1,0 +1,13 @@
+%header
+  %h1.page-header 統計
+
+%section
+  %h2 グリーティング数
+
+  %section
+    %h3 月別
+    .chart.chart-bar{data: {chart: count_by_month, options: {}.to_json}}
+
+  %section
+    %h3 キャラクター別
+    .chart.chart-bar{data: {chart: ranking, options: { height: 1000 }.to_json}}

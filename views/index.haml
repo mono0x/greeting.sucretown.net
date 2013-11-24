@@ -23,3 +23,8 @@
   .list-group
     - characters.each do |character|
       %a.list-group-item{href: "/character/#{character.name}/"}= character.name
+
+%section
+  %h2 その他
+  .list-group
+    %a.list-group-item{href: '/statistics'} 統計
