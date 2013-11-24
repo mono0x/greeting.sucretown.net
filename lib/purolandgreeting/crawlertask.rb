@@ -7,6 +7,9 @@ module PurolandGreeting
     end
 
     def self.update(register = false)
+      now = Time.now
+      today = Date.today
+
       added_items, deleted_items, registered = Crawler.update(register)
 
       twitter = Twitter::REST::Client.new do |config|
@@ -18,7 +21,6 @@ module PurolandGreeting
 
       normalizer = Normalizer.new
 
-      today = Date.today
       uri = "#{ENV['ROOT_URI']}#{today.strftime('/schedule/%Y/%m/%d/')}"
 
       if registered
@@ -30,7 +32,7 @@ module PurolandGreeting
         self.update_characters twitter, characters, header
       else
         unless added_items.empty? && deleted_items.empty?
-          twitter.update "#{today.strftime('%Y/%m/%d')} の予定が変更されました。 #{uri}"
+          twitter.update "#{today.strftime('%Y/%m/%d')} の予定が変更されました。 (#{now.strftime('%H:%M')}) #{uri}"
 
           added_characters = SortedSet.new(added_items.map {|item| normalizer.character(item[:character])[0] })
           deleted_characters = SortedSet.new(deleted_items.map {|item| normalizer.character(item[:character])[0] })
@@ -40,7 +42,7 @@ module PurolandGreeting
 
           [ '追加', '変更', '中止' ].zip([ added_characters, modified_characters, deleted_characters ]).each do |title, characters|
             next if characters.empty?
-            header = "#{today.strftime('%Y/%m/%d')} の#{title}対象キャラクター"
+            header = "#{today.strftime('%Y/%m/%d')} の#{title}対象キャラクター (#{now.strftime('%H:%M')})"
             self.update_characters twitter, characters, header
           end
         end
