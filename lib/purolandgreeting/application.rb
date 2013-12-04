@@ -91,15 +91,34 @@ module PurolandGreeting
       today = Date.today
       character = Character.where('name = ?', name).first or not_found
 
+      timespans = [
+        { label: '1週間以内', from: today - 7, },
+        { label: '1ヶ月以内', from: today << 1, },
+        { label: '3ヶ月以内', from: today << 3, },
+        { label: '6ヶ月以内', from: today << 6, },
+        { label: '1年以内',   from: today << 12, },
+      ].map {|item|
+        from = item[:from]
+        appearances = character.greetings.joins(:schedule).where('schedules.date >= ?', from).count('DISTINCT schedules.date')
+        dates = Schedule.where('date >= ?', from).count('DISTINCT date')
+        appearance_dates = character.greetings.joins(:schedule).where('schedules.date >= ?', from).count
+        appearance_probability  = Rational(appearances, dates)
+        item.merge(
+          appearances: appearances,
+          dates: dates,
+          appearance_dates: appearance_dates,
+          appearance_probability: appearance_probability)
+      }
+
       greetings_by_month = character.greetings.without_deleted.joins(:schedule).order("year, month").group("year, month").select("DATE_PART('year', date) AS year, DATE_PART('month', date) AS month, COUNT(greetings.id) AS count")
 
       places = character.place_ranking
 
       @title = character.name
       haml :character, locals: {
+        today: today,
         character: character,
-        appearance_count: character.greetings.joins(:schedule).count('DISTINCT schedules.date'),
-        date_count: Schedule.count('DISTINCT date'),
+        timespans: timespans,
         greetings_by_month: {
           columns: [
             { type: 'string', name: '月', },

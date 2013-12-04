@@ -7,11 +7,19 @@
   %section
     %h3 概要
 
-    %dl
-      %dt 登場日数
-      %dd #{appearance_count.to_s} / #{date_count.to_s} (#{'%.1f' % (100.0 * appearance_count / date_count)} %)
-      %dt 登場回数
-      %dd= character.greetings.count
+    %table.table
+      %tr
+        %th 期間
+        %th 登場日数
+        %th 登場確率 [%]
+        %th 登場回数
+
+      - timespans.each do |item|
+        %tr
+          %td= item[:label]
+          %td= item[:appearances]
+          %td= '%.1f' % (item[:appearance_probability] * 100)
+          %td= item[:appearance_dates]
 
   %section
     %h3 月別
