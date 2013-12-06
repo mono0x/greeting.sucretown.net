@@ -99,9 +99,9 @@ module PurolandGreeting
         { label: '1年以内',   from: today << 12, },
       ].map {|item|
         from = item[:from]
-        appearances = character.greetings.joins(:schedule).where('schedules.date >= ?', from).count('DISTINCT schedules.date')
-        dates = Schedule.where('date >= ?', from).count('DISTINCT date')
-        appearance_dates = character.greetings.joins(:schedule).where('schedules.date >= ?', from).count
+        appearances = character.greetings.joins(:schedule).where('schedules.date > ?', from).count('DISTINCT schedules.date')
+        dates = Schedule.where('date > ?', from).count('DISTINCT date')
+        appearance_dates = character.greetings.joins(:schedule).where('schedules.date > ?', from).count
         appearance_probability  = Rational(appearances, dates)
         item.merge(
           appearances: appearances,
