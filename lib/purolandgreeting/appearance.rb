@@ -7,6 +7,10 @@ class PurolandGreeting::Appearance < ActiveRecord::Base
 
   delegate :schedule, to: :greeting
 
+  def greeting
+    PurolandGreeting::Greeting.unscoped { super }
+  end
+
   def character_with_costume
     costume ? "#{character.name} (#{costume.name})" : character.name
   end
