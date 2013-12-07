@@ -80,10 +80,10 @@ module PurolandGreeting
       @title = date.strftime('%Y/%m/%d')
       haml :schedule, locals: {
         schedule: schedule,
-        before_the_start: schedule.greetings.without_deleted.before_the_start(time),
-        in_session: schedule.greetings.without_deleted.in_session(time),
-        after_the_end: schedule.greetings.without_deleted.after_the_end(time),
-        deleted: schedule.greetings.only_deleted
+        before_the_start: schedule.greetings.before_the_start(time),
+        in_session: schedule.greetings.in_session(time),
+        after_the_end: schedule.greetings.after_the_end(time),
+        deleted: schedule.greetings.deleted
       }
     end
 
@@ -99,9 +99,9 @@ module PurolandGreeting
         { label: '1年以内',   from: today << 12, },
       ].map {|item|
         from = item[:from]
-        appearances = character.greetings.without_deleted.joins(:schedule).where('schedules.date > ?', from).count('DISTINCT schedules.date')
+        appearances = character.greetings.joins(:schedule).where('schedules.date > ?', from).count('DISTINCT schedules.date')
         dates = Schedule.where('date > ?', from).count('DISTINCT date')
-        appearance_dates = character.greetings.without_deleted.joins(:schedule).where('schedules.date > ?', from).count
+        appearance_dates = character.greetings.joins(:schedule).where('schedules.date > ?', from).count
         appearance_probability  = Rational(appearances, dates)
         item.merge(
           appearances: appearances,
@@ -110,7 +110,7 @@ module PurolandGreeting
           appearance_probability: appearance_probability)
       }
 
-      greetings_by_month = character.greetings.without_deleted.joins(:schedule).order("year, month").group("year, month").select("DATE_PART('year', date) AS year, DATE_PART('month', date) AS month, COUNT(greetings.id) AS count")
+      greetings_by_month = character.greetings.joins(:schedule).order("year, month").group("year, month").select("DATE_PART('year', date) AS year, DATE_PART('month', date) AS month, COUNT(greetings.id) AS count")
 
       places = character.place_ranking
 

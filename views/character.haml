@@ -35,7 +35,7 @@
   .row
     - PurolandGreeting::Schedule.months.each do |month|
       - next_month = month >> 1
-      - schedule_days = character.greetings.without_deleted.joins(:schedule).where('date >= ? AND date < ?', month, next_month).select("DATE_PART('day', date) AS day").group("DATE_PART('day', date)").where('place_id <> ?', food_machine_restaurant).order('day').map {|c| month + (c.day.to_i - 1) }
+      - schedule_days = character.greetings.joins(:schedule).where('date >= ? AND date < ?', month, next_month).select("DATE_PART('day', date) AS day").group("DATE_PART('day', date)").where('place_id <> ?', food_machine_restaurant).order('day').map {|c| month + (c.day.to_i - 1) }
       %section.col-sm-6.col-md-4
         %h3= month.strftime('%Y/%m')
         != calendar(month) {|day| schedule_days.include?(day) && { href: day.strftime('/schedule/%Y/%m/%d/') } }

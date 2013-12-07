@@ -7,11 +7,10 @@ class PurolandGreeting::Greeting < ActiveRecord::Base
   belongs_to :place, class_name: 'PurolandGreeting::Place'
   belongs_to :schedule, class_name: 'PurolandGreeting::Schedule'
 
-  scope :only_deleted, -> {
-    where('deleted = TRUE')
-  }
-  scope :without_deleted, -> {
-    where('deleted = FALSE')
+  default_scope where(:deleted => false)
+
+  scope :deleted, -> {
+    where(:deleted => true)
   }
 
   def self.before_the_start(time = Time.now)
