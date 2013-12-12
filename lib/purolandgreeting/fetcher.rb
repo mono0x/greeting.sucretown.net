@@ -3,13 +3,20 @@ require 'nkf'
 
 module PurolandGreeting
   class Fetcher
+    BASE_URI = 'http://www.puroland.co.jp/chara_gre/'
+
     def self.fetch
       agent = Mechanize.new
       agent.user_agent = 'iPhone (Ruby; http://greeting.sucretown.net/)'
 
       index_page = self.try_request {|i|
-        agent.get('http://www.puroland.co.jp/chara_gre/')
+        agent.get(BASE_URI)
       }
+      if index_page.search('p').any? {|p| p.text.include? '本日のｷｬﾗｸﾀｰ情報は公開されておりません。P' }
+        index_page = self.try_request {|i|
+          agent.get("#{BASE_URI}?para=#{Date.today.strftime('%Y%m%d')}")
+        }
+      end
       #index_page = agent.get('http://www.puroland.co.jp/chara_gre/?para=20130627')
       return [] if index_page.forms.empty?
 
