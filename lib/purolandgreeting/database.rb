@@ -7,6 +7,7 @@ module PurolandGreeting
       logger = Logger.new(STDERR)
       logger.level = Logger::WARN
       ActiveRecord::Base.logger = logger
+      ActiveRecord::Base.default_timezone = :local
     end
 
     def self.register(items)
