@@ -102,7 +102,7 @@ module PurolandGreeting
         appearances = character.greetings.joins(:schedule).where('schedules.date > ?', from).count('DISTINCT schedules.date')
         dates = Schedule.where('date > ?', from).count('DISTINCT date')
         appearance_dates = character.greetings.joins(:schedule).where('schedules.date > ?', from).count
-        appearance_probability  = Rational(appearances, dates)
+        appearance_probability = dates > 0 ? Rational(appearances, dates) : 0
         item.merge(
           appearances: appearances,
           dates: dates,
@@ -125,7 +125,7 @@ module PurolandGreeting
             { type: 'number', name: '登場回数', },
           ],
           rows: greetings_by_month.map {|item|
-            [ "#{item.year}/#{item.month}", item.count.to_i, ]
+            [ "#{item.year.to_i}/#{item.month.to_i}", item.count.to_i, ]
           },
         }.to_json,
         places: {

@@ -1,6 +1,4 @@
 class PurolandGreeting::Schedule < ActiveRecord::Base
-  attr_accessible :date
-
   has_many :greetings, class_name: 'PurolandGreeting::Greeting'
   has_many :appearances, class_name: 'PurolandGreeting::Appearance', through: :greetings
 
@@ -9,6 +7,7 @@ class PurolandGreeting::Schedule < ActiveRecord::Base
   }
 
   def self.months
-    select("DATE_TRUNC('month', date) AS month").group("DATE_TRUNC('month', date)").order('month DESC').map { |c| Date.parse(c.month) }
+    #select("DATE_TRUNC('month', date) AS month").group("DATE_TRUNC('month', date)").order('month DESC').map { |c| Date.parse(c.month) }
+    select("DATE_TRUNC('month', date) AS month").group("DATE_TRUNC('month', date)").order('month DESC').map { |c| c.month.to_date }
   end
 end
