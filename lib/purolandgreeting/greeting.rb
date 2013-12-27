@@ -5,7 +5,9 @@ class PurolandGreeting::Greeting < ActiveRecord::Base
   belongs_to :place, class_name: 'PurolandGreeting::Place'
   belongs_to :schedule, class_name: 'PurolandGreeting::Schedule'
 
-  default_scope where(:deleted => false)
+  default_scope {
+    where(:deleted => false)
+  }
 
   scope :deleted, -> {
     where(:deleted => true)
