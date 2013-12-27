@@ -22,6 +22,10 @@ namespace :db do
     PurolandGreeting::Database.import STDIN
   end
 
+  task :import_ohtake_csv do
+    PurolandGreeting::Database.import_ohtake_csv STDIN
+  end
+
   task :export do
     STDOUT.puts PurolandGreeting::Database.export
   end

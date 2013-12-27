@@ -1,4 +1,5 @@
 require 'logger'
+require 'csv'
 
 module PurolandGreeting
   class Database
@@ -93,6 +94,20 @@ module PurolandGreeting
           start_at: Time.parse(item[:start_at]),
           end_at: Time.parse(item[:end_at]),
           deleted: (item[:deleted] == 'true') || false,
+        }
+      })
+    end
+
+    def self.import_ohtake_csv(src)
+      src = src.each_line.to_a[1..-1].join
+      csv = CSV.new(src, headers: true, header_converters: :symbol)
+      register(csv.map {|item|
+        {
+          character: item[:name],
+          place: item[:location],
+          start_at: Time.parse(item[:start]),
+          end_at: Time.parse(item[:end]),
+          deleted: false,
         }
       })
     end
