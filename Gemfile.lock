@@ -229,7 +229,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
+  activerecord (~> 4.0.2)
   activesupport
   coffee-script
   compass
