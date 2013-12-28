@@ -175,8 +175,8 @@ GEM
     rspec-mocks (3.0.0.beta1)
     rspec-support (3.0.0.beta1)
     ruby_gntp (0.3.4)
-    rufus-scheduler (3.0.3)
-      tzinfo
+    rufus-scheduler (2.0.24)
+      tzinfo (>= 0.3.22)
     sass (3.2.13)
     shared-mime-info (0.2.5)
     simple_oauth (0.2.0)
@@ -255,7 +255,7 @@ DEPENDENCIES
   rspec
   ruby-gmail!
   ruby_gntp
-  rufus-scheduler
+  rufus-scheduler (~> 2.0.24)
   sass
   simplecov
   sinatra

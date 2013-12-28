@@ -25,7 +25,7 @@ gem 'uglifier'
 gem 'ltsv'
 
 group :schedule do
-  gem 'rufus-scheduler', :require => 'rufus/scheduler'
+  gem 'rufus-scheduler', '~> 2.0.24', :require => 'rufus/scheduler'
   gem 'ruby-gmail', :require => 'gmail', :git => 'https://github.com/dcparker/ruby-gmail'
 end
 
