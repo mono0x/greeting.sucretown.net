@@ -7,22 +7,6 @@ GIT
       thor (>= 0.13.6)
 
 GIT
-  remote: git://github.com/sferik/twitter.git
-  revision: 2b7c6f361e926e3c09e7e13bedacf8d39214605d
-  specs:
-    twitter (5.4.1)
-      addressable (~> 2.3)
-      buftok (~> 0.2.0)
-      descendants_tracker (~> 0.0.3)
-      equalizer (~> 0.0.9)
-      faraday (>= 0.8, < 0.10)
-      http (~> 0.5.0)
-      http_parser.rb (~> 0.6.0)
-      json (~> 1.8)
-      memoizable (~> 0.4.0)
-      simple_oauth (~> 0.2.0)
-
-GIT
   remote: https://github.com/dcparker/ruby-gmail
   revision: 2ae0827b67826d5015777efc83d57749a8d53ab0
   specs:
@@ -212,6 +196,17 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    twitter (5.4.1)
+      addressable (~> 2.3)
+      buftok (~> 0.2.0)
+      descendants_tracker (~> 0.0.3)
+      equalizer (~> 0.0.9)
+      faraday (>= 0.8, < 0.10)
+      http (~> 0.5.0)
+      http_parser.rb (~> 0.6.0)
+      json (~> 1.8)
+      memoizable (~> 0.4.0)
+      simple_oauth (~> 0.2.0)
     tzinfo (0.3.38)
     uglifier (2.4.0)
       execjs (>= 0.3.0)
@@ -264,7 +259,7 @@ DEPENDENCIES
   sprockets-helpers
   sprockets-sass
   sqlite3
-  twitter!
+  twitter (~> 5.4.1)
   uglifier
   unicorn
   varnish-client!
