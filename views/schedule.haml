@@ -1,22 +1,22 @@
 %header.page-header
   %h1= schedule.date.strftime('%Y/%m/%d')
 
-- unless in_session.empty?
-  %section.greetings.greetings-in-session
-    %h2 開催中
+%section.greeting-category.greeting-category-in-session
+  %h2 開催中
+  .greetings
     != haml :'_partial/greetings', layout: false, locals: { greetings: in_session, panel: 'panel-primary' }
 
-- unless before_the_start.empty?
-  %section.greetings.greetings-before-the-start
-    %h2 開始前
+%section.greeting-category.greeting-category-before-the-start
+  %h2 開始前
+  .greetings
     != haml :'_partial/greetings', layout: false, locals: { greetings: before_the_start, panel: 'panel-info' }
 
-- unless after_the_end.empty?
-  %section.greetings.greetings-after-the-end
-    %h2 終了
+%section.greeting-category.greeting-category-after-the-end
+  %h2 終了
+  .greetings
     != haml :'_partial/greetings', layout: false, locals: { greetings: after_the_end, panel: 'panel-success' }
 
-- unless deleted.empty?
-  %section.greetings.greetings-deleted
-    %h2 中止
+%section.greeting-category.greeting-category-deleted
+  %h2 中止
+  .greetings
     != haml :'_partial/greetings', layout: false, locals: { greetings: deleted, panel: 'panel-default' }

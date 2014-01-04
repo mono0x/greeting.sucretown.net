@@ -1,5 +1,5 @@
 - greetings.order('end_at, start_at').group_by {|g| [ g.start_at, g.end_at ] }.each do |t, greetings|
-  .row
+  .row.greeting-group{data: {start_at: t[0].iso8601, end_at: t[1].iso8601}}
     - greetings.each do |greeting|
       %section.col-sm6.col-md-4
         .panel{class: panel}
