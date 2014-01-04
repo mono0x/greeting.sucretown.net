@@ -6,22 +6,28 @@ $(function() {
   var time = Math.floor(+new Date() / 600) * 600;
 
   var update = function() {
-    $('.greeting-group').each(function() {
-      var element = $(this);
-      var start = new Date(element.data('start-at'));
-      var end = new Date(element.data('end-at'));
-      if (time < start && !element.hasClass('greeting-category-before-the-start')) {
-        $('.greeting-category-before-the-start .greetings').append(this);
-        element.find('.panel').attr('class', 'panel panel-info');
+    $('.greeting-category').each(function() {
+      var category = $(this);
+      if (category.hasClass('greeting-category-deleted')) {
+        return true; // continue
       }
-      else if (time >= start && time < end && !element.hasClass('greeting-category-in-session')) {
-        $('.greeting-category-in-session .greetings').append(this);
-        element.find('.panel').attr('class', 'panel panel-primary');
-      }
-      else if (time > end && !element.hasClass('greeting-category-after-th-end')) {
-        $('.greeting-category-after-the-end .greetings').append(this);
-        element.find('.panel').attr('class', 'panel panel-success');
-      }
+      category.find('.greeting-group').each(function() {
+        var element = $(this);
+        var start = new Date(element.data('start-at'));
+        var end = new Date(element.data('end-at'));
+        if (time < start && !category.hasClass('greeting-category-before-the-start')) {
+          category.find('.greetings').append(this);
+          element.find('.panel').attr('class', 'panel panel-info');
+        }
+        else if (time >= start && time < end && !category.hasClass('greeting-category-in-session')) {
+          category.find('.greetings').append(this);
+          element.find('.panel').attr('class', 'panel panel-primary');
+        }
+        else if (time > end && !category.hasClass('greeting-category-after-th-end')) {
+          category.find('.greetings').append(this);
+          element.find('.panel').attr('class', 'panel panel-success');
+        }
+      });
     });
 
     $('.greeting-category').each(function() {
