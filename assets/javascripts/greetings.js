@@ -3,7 +3,7 @@ $(function() {
     return;
   }
 
-  var time = Math.floor(+new Date() / 600) * 600;
+  var time = Math.floor(+new Date() / 60000) * 60000;
 
   var update = function() {
     $('.greeting-category').each(function() {
