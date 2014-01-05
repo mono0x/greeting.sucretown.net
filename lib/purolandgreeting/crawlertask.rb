@@ -81,7 +81,7 @@ module PurolandGreeting
 
       groups.each_with_index do |group, i|
         pager = " (#{i + 1}/#{groups.size})" if groups.size >= 2
-        twitter.update [ "#{header}#{pager}: #{group.join(separator)}", footer ].compact.join("\n")
+        twitter.update [ "#{header}#{pager}:", group, footer ].flatten.compact.join(separator)
       end
     end
   end
