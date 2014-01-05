@@ -18,6 +18,11 @@ module PurolandGreeting
       [ @character_table[character] || character, costume ]
     end
 
+    def character_full_name(name)
+      normalized = character(name)
+      %{#{normalized[0]}#{" (#{normalized[1]})" if normalized[1]}}
+    end
+
     def place(name)
       name = convert(name)
       @place_table[name] || name
