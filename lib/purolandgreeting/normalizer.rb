@@ -1,13 +1,15 @@
 require 'nkf'
+require 'set'
 
 module PurolandGreeting
   class Normalizer
-    attr_reader :character_table, :place_table
+    attr_reader :character_table, :ignore_costume_table, :place_table
 
     def initialize
       open('data/normalize.json') do |f|
         json = JSON.parse(f.read)
         @character_table = json['character']
+        @ignore_costume_table = json['ignore_costume'].to_set
         @place_table = json['place']
       end
     end
@@ -15,7 +17,7 @@ module PurolandGreeting
     def character(name)
       name = convert(name)
       character, costume = name.match(/\A(.+?)(?:\((.+)\))?\z/).to_a.values_at(1, 2)
-      [ @character_table[character] || character, costume ]
+      [ @character_table[character] || character, @ignore_costume_table.include?(costume) ? nil : costume ]
     end
 
     def character_full_name(name)
