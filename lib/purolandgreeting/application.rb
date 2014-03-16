@@ -56,15 +56,9 @@ module PurolandGreeting
     get '/' do
       today = Date.today
       today_schedule = Schedule.find_by_date(today)
-      months = Schedule.months
-      schedules = Schedule.order('date DESC')
-      characters = Character.order('name ASC')
       haml :index, locals: {
         today: today,
         today_schedule: today_schedule,
-        months: months,
-        schedules: schedules,
-        characters: characters,
       }
     end
 
@@ -83,6 +77,15 @@ module PurolandGreeting
       end
     end
 
+    get '/schedule/' do
+      months = Schedule.months
+      schedules = Schedule.order('date DESC')
+      haml :schedules, locals: {
+        months: months,
+        schedules: schedules,
+      }
+    end
+
     get %r{\A/schedule/(\d{4})/(\d{2})/(\d{2})/\z} do |year, month, day|
       date = Date.new(year.to_i, month.to_i, day.to_i)
       schedule = Schedule.where('date = ?', date).first or not_found
@@ -94,6 +97,13 @@ module PurolandGreeting
         in_session: schedule.greetings.in_session(time),
         after_the_end: schedule.greetings.after_the_end(time),
         deleted: schedule.greetings.deleted
+      }
+    end
+
+    get '/character/' do
+      characters = Character.order('name ASC')
+      haml :characters, locals: {
+        characters: characters,
       }
     end
 

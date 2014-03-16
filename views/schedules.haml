@@ -1,0 +1,10 @@
+%header.page-header
+  %h1 カレンダー
+
+.row
+  - months.each do |month|
+    - dates = schedules.by_month(month).map(&:date)
+    %section.col-sm-6.col-md-4
+      %h3= month.strftime('%Y/%m')
+      != calendar(month) {|date| dates.include?(date) && { href: date.strftime('/schedule/%Y/%m/%d/') } }
+

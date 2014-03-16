@@ -1,0 +1,6 @@
+%header.page-header
+  %h1 キャラクター
+
+.list-group
+  - characters.each do |character|
+    %a.list-group-item{href: "/character/#{character.name}/"}= character.name

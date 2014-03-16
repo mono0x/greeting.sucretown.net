@@ -10,21 +10,8 @@
     #{today.strftime('%Y/%m/%d')} の予定は公開されていません。
 
 %section
-  %h2 カレンダー
-  .row
-    - months.each do |month|
-      - dates = schedules.by_month(month).map(&:date)
-      %section.col-sm-6.col-md-4
-        %h3= month.strftime('%Y/%m')
-        != calendar(month) {|date| dates.include?(date) && { href: date.strftime('/schedule/%Y/%m/%d/') } }
-
-%section
-  %h2 キャラクター
+  %h2 過去のデータ
   .list-group
-    - characters.each do |character|
-      %a.list-group-item{href: "/character/#{character.name}/"}= character.name
-
-%section
-  %h2 その他
-  .list-group
+    %a.list-group-item{href: '/schedule/'} スケジュール
+    %a.list-group-item{href: '/character/'} キャラクター
     %a.list-group-item{href: '/statistics/'} 統計
