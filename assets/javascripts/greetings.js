@@ -19,7 +19,7 @@ $(function() {
 
     var target = $('*[name="' + decodeURI(hash.substring(1)) + '"]');
     if (target.size() > 0) {
-      $.scrollTo(target, 100);
+      $.scrollTo(target);
     }
 
     return false;
