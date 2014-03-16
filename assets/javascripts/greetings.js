@@ -17,7 +17,7 @@ $(function() {
     $('#character').toggle(isCharacter);
     $('#character-tab').toggleClass('active', isCharacter);
 
-    var target = $('*[name="' + hash.substring(1) + '"]');
+    var target = $('*[name="' + decodeURI(hash.substring(1)) + '"]');
     if (target.size() > 0) {
       $.scrollTo(target, 100);
     }
