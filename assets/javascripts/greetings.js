@@ -3,6 +3,28 @@ $(function() {
     return;
   }
 
+  $(window).on('hashchange', function() {
+    var hash = location.hash;
+    var isTimetable = hash.startsWith('#timetable/');
+    var isCharacter = hash.startsWith('#character/');
+
+    if (!isTimetable && !isCharacter) {
+      isTimetable = true;
+    }
+
+    $('#timetable').toggle(isTimetable);
+    $('#timetable-tab').toggleClass('active', isTimetable);
+    $('#character').toggle(isCharacter);
+    $('#character-tab').toggleClass('active', isCharacter);
+
+    var target = $('*[name="' + hash.substring(1) + '"]');
+    if (target.size() > 0) {
+      $.scrollTo(target, 100);
+    }
+
+    return false;
+  }).triggerHandler('hashchange');
+
   var time = Math.floor(+new Date() / 60000) * 60000;
 
   var update = function() {

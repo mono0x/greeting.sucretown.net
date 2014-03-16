@@ -1,7 +1,7 @@
 - greetings.order('end_at, start_at').group_by {|g| [ g.start_at, g.end_at ] }.each do |t, greetings|
   .row.greeting-group{data: {start_at: t[0].iso8601, end_at: t[1].iso8601}}
     - greetings.each do |greeting|
-      %section.col-sm6.col-md-4
+      %section.col-sm6.col-md-4{name: "timetable/#{greeting.start_at.strftime('%H%M')}-#{greeting.end_at.strftime('%H%M')}-#{greeting.place.name}/"}
         .panel{class: panel}
           .panel-heading
             %h3.panel-title
@@ -11,5 +11,5 @@
               \-
               %time{datetime: greeting.end_at.iso8601}= greeting.end_at.strftime('%H:%M')
           .list-group
-            - greeting.appearances.all.map {|a| [ a.character, a.character_with_costume ] }.sort_by {|character, name| name }.each do |character, name|
-              %a.list-group-item{href: "/character/#{character.name}/"}= name
+            - greeting.characters.uniq.each do |character|
+              %a.list-group-item{href: "#character/#{character.name}/"}= character.name

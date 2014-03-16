@@ -89,10 +89,12 @@ module PurolandGreeting
     get %r{\A/schedule/(\d{4})/(\d{2})/(\d{2})/\z} do |year, month, day|
       date = Date.new(year.to_i, month.to_i, day.to_i)
       schedule = Schedule.where('date = ?', date).first or not_found
+      characters = schedule.characters.uniq
       time = Time.now
       @title = date.strftime('%Y/%m/%d')
       haml :schedule, locals: {
         schedule: schedule,
+        characters: characters,
         before_the_start: schedule.greetings.before_the_start(time),
         in_session: schedule.greetings.in_session(time),
         after_the_end: schedule.greetings.after_the_end(time),

@@ -1,22 +1,52 @@
 %header.page-header
   %h1= schedule.date.strftime('%Y/%m/%d')
 
-%section.greeting-category.greeting-category-in-session
-  %h2 開催中
-  .greetings
-    != haml :'_partial/greetings', layout: false, locals: { greetings: in_session, panel: 'panel-primary' }
+%ul.nav.nav-tabs.nav-justified
+  %li#timetable-tab
+    %a{href: '#timetable/'} タイムテーブル
+  %li#character-tab
+    %a{href: '#character/'} キャラクター
 
-%section.greeting-category.greeting-category-before-the-start
-  %h2 開始前
-  .greetings
-    != haml :'_partial/greetings', layout: false, locals: { greetings: before_the_start, panel: 'panel-info' }
+#timetable
+  %section.greeting-category.greeting-category-in-session
+    %h2 開催中
+    .greetings
+      != haml :'_partial/greetings', layout: false, locals: { greetings: in_session, panel: 'panel-primary' }
 
-%section.greeting-category.greeting-category-after-the-end
-  %h2 終了
-  .greetings
-    != haml :'_partial/greetings', layout: false, locals: { greetings: after_the_end, panel: 'panel-success' }
+  %section.greeting-category.greeting-category-before-the-start
+    %h2 開始前
+    .greetings
+      != haml :'_partial/greetings', layout: false, locals: { greetings: before_the_start, panel: 'panel-info' }
 
-%section.greeting-category.greeting-category-deleted
-  %h2 中止
-  .greetings
-    != haml :'_partial/greetings', layout: false, locals: { greetings: deleted, panel: 'panel-default' }
+  %section.greeting-category.greeting-category-after-the-end
+    %h2 終了
+    .greetings
+      != haml :'_partial/greetings', layout: false, locals: { greetings: after_the_end, panel: 'panel-success' }
+
+  %section.greeting-category.greeting-category-deleted
+    %h2 中止
+    .greetings
+      != haml :'_partial/greetings', layout: false, locals: { greetings: deleted, panel: 'panel-default' }
+
+#character
+  %section
+    %h2 登場キャラクター
+    .list-group
+      - characters.each do |character|
+        %a.list-group-item{href: "#character/#{character.name}/"}= character.name
+
+  %section
+    %h2 スケジュール
+    - characters.each do |character|
+      .panel.panel-info{name: "character/#{character.name}/"}
+        .panel-heading
+          %h3.panel-title= character.name
+        .list-group
+          - schedule.greetings.joins(:characters).where('characters.id = ?', character.id).each do |greeting|
+            %a.list-group-item{href: "#timetable/#{greeting.start_at.strftime('%H%M')}-#{greeting.end_at.strftime('%H%M')}-#{greeting.place.name}/"}
+              %time{datetime: greeting.start_at.iso8601}= greeting.start_at.strftime('%H:%M')
+              \-
+              %time{datetime: greeting.end_at.iso8601}= greeting.end_at.strftime('%H:%M')
+              = greeting.place.name
+
+
