@@ -5,8 +5,8 @@ $(function() {
 
   $(window).on('hashchange', function() {
     var hash = location.hash;
-    var isTimetable = hash.startsWith('#timetable/');
-    var isCharacter = hash.startsWith('#character/');
+    var isTimetable = (hash.indexOf('#timetable/') === 0);
+    var isCharacter = (hash.indexOf('#character/') === 0);
 
     if (!isTimetable && !isCharacter) {
       isTimetable = true;
