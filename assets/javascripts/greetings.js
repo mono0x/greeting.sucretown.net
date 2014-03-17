@@ -3,8 +3,7 @@ $(function() {
     return;
   }
 
-  $(window).on('hashchange', function() {
-    var hash = location.hash;
+  var updateTab = function(hash) {
     var isTimetable = (hash.indexOf('#timetable/') === 0);
     var isCharacter = (hash.indexOf('#character/') === 0);
 
@@ -16,14 +15,29 @@ $(function() {
     $('#timetable-tab').toggleClass('active', isTimetable);
     $('#character').toggle(isCharacter);
     $('#character-tab').toggleClass('active', isCharacter);
+  };
+
+  var hashchange = function() {
+    updateTab(location.hash);
+  };
+
+  $(window).on('hashchange', hashchange).triggerHandler('hashchange');
+
+  $('a[href^="#"]').on('click', function() {
+    var hash = $(this).attr('href');
+
+    updateTab(hash);
+
+    $(window).off('hashchange', hashchange);
+    location.hash = hash;
+    $(window).on('hashchange', hashchange);
 
     var target = $('*[name="' + decodeURI(hash.substring(1)) + '"]');
     if (target.size() > 0) {
       $.scrollTo(target);
     }
-
     return false;
-  }).triggerHandler('hashchange');
+  });
 
   var time = Math.floor(+new Date() / 60000) * 60000;
 
