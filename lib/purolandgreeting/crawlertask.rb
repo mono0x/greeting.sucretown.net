@@ -43,11 +43,11 @@ module PurolandGreeting
           header = "#{today.strftime('%Y/%m/%d')} の変更対象キャラクター (#{time})"
           self.update_items twitter, characters.to_a, header
 
-          characters.each do |character|
-            tables.each do |title, table|
-              header = "#{character} の#{title}分 (#{time})"
-              if items = table[character]
-                parts = items.map {|item|
+          tables.each do |title, table|
+            characters.map {|character| [ character, table[character] ] }.group_by(&:last).each do |item, ch|
+              header = "#{ch.join('・')} の#{title}分 (#{time})"
+              if item
+                parts = item.map {|item|
                   "#{item[:start_at].strftime('%H:%M')}-#{item[:end_at].strftime('%H:%M')} #{normalizer.place(item[:place])}"
                 }
                 self.update_items twitter, parts, header
