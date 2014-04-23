@@ -44,7 +44,7 @@ module PurolandGreeting
           self.update_items twitter, characters.to_a, header
 
           tables.each do |title, table|
-            characters.map {|character| [ character, table[character] ] }.group_by(&:last).each do |item, ch|
+            table.group_by {|c, i| i }.each do |item, ch|
               header = "#{ch.join('・')} の#{title}分 (#{time})"
               if item
                 parts = item.map {|item|
