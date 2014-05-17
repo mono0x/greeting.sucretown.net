@@ -20,40 +20,40 @@ module PurolandGreeting
       end
 
       normalizer = Normalizer.new
+      diff = Difference.new(normalizer.items(added_items), normalizer.items(deleted_items))
 
       uri = "#{ENV['ROOT_URI']}#{today.strftime('/schedule/%Y/%m/%d/')}"
 
       if registered
         twitter.update "#{today.strftime('%Y/%m/%d')} の予定が公開されました。 #{uri}"
 
-        characters = added_items.map {|item| normalizer.character_full_name item[:character] }.uniq.sort
-
         header = "#{today.strftime('%Y/%m/%d')} の登場キャラクター"
-        self.update_items twitter, characters, header
+        self.update_items twitter, diff.characters.to_a, header
       else
-        unless added_items.empty? && deleted_items.empty?
+        unless diff.empty?
           time = now.strftime('%H:%M')
           twitter.update "#{today.strftime('%Y/%m/%d')} の予定が変更されました。 (#{time}) #{uri}"
 
-          tables = [ '追加', '中止' ].zip([ added_items, deleted_items ].map {|items|
-            items.group_by {|item| normalizer.character_full_name item[:character] }
-          })
-          characters = tables.map {|t| t[1].keys }.inject(&:|).sort
-
           header = "#{today.strftime('%Y/%m/%d')} の変更対象キャラクター (#{time})"
-          self.update_items twitter, characters.to_a, header
+          self.update_items twitter, diff.characters.to_a, header
+
+          tables = [ '追加', '中止' ].zip([ diff.added_by_greeting, diff.deleted_by_greeting ])
 
           tables.each do |title, table|
-            table.group_by {|c, i| i }.each do |item, ch|
-              header = "#{ch.join('・')} の#{title}分 (#{time})"
-              if item
-                parts = item.map {|item|
-                  "#{item[:start_at].strftime('%H:%M')}-#{item[:end_at].strftime('%H:%M')} #{normalizer.place(item[:place])}"
-                }
-                self.update_items twitter, parts, header
-              else
-                twitter.update "#{header}:\nなし"
-              end
+            table.group_by {|greeting, characters|
+              characters
+            }.map {|characters, pairs|
+              [ characters, pairs.map {|pair| pair[0] }.to_a ]
+            }.sort_by {|characters, greetings|
+              greetings.map {|g|
+                g.values_at(:end_at, :start_at)
+              }.flatten
+            }.each do |characters, greetings|
+              header = "#{characters.join('と')} の#{title}分 (#{time})"
+              parts = greetings.sort_by {|greeting| greeting.values_at(:end_at, :start_at) }.map {|greeting|
+                "#{greeting[:start_at].strftime('%H:%M')}-#{greeting[:end_at].strftime('%H:%M')} #{greeting[:place]}"
+              }
+              self.update_items twitter, parts, header
             end
           end
         end

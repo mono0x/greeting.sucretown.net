@@ -14,6 +14,15 @@ module PurolandGreeting
       end
     end
 
+    def items(items)
+      items.map {|item|
+        item.merge(
+          character: character_full_name(item[:character]),
+          place: place(item[:place]),
+        )
+      }
+    end
+
     def character(name)
       name = convert(name)
       character, costume = name.match(/\A(.+?)(?:\((.+)\))?\z/).to_a.values_at(1, 2)
