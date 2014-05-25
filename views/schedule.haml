@@ -46,9 +46,7 @@
         .list-group
           - schedule.greetings.joins(:characters).where('characters.id = ?', character.id).each do |greeting|
             %a.list-group-item{href: "#timetable/#{greeting.start_at.strftime('%H%M')}-#{greeting.end_at.strftime('%H%M')}-#{greeting.place.name}/"}
-              %time{datetime: greeting.start_at.iso8601}= greeting.start_at.strftime('%H:%M')
-              \-
-              %time{datetime: greeting.end_at.iso8601}= greeting.end_at.strftime('%H:%M')
+              #{greeting.start_at.strftime('%H:%M')}-#{greeting.end_at.strftime('%H:%M')}
               = greeting.place.name
 
 
