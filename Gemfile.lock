@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/dcparker/ruby-gmail.git
+  revision: 44fc2252848b0faa44570542e90dc7900514aee1
+  specs:
+    ruby-gmail (0.3.1)
+      mail (>= 2.2.1)
+      mime (>= 0.1)
+      shared-mime-info
+
+GIT
   remote: git://github.com/ddollar/foreman.git
   revision: 1905a7c310ded5f9ffab9b8911d9795d7924697d
   specs:
@@ -7,16 +16,7 @@ GIT
       thor (>= 0.13.6)
 
 GIT
-  remote: https://github.com/dcparker/ruby-gmail
-  revision: 2ae0827b67826d5015777efc83d57749a8d53ab0
-  specs:
-    ruby-gmail (0.2.2)
-      mail (>= 2.2.1)
-      mime (>= 0.1)
-      shared-mime-info
-
-GIT
-  remote: https://github.com/mono0x/varnish-client.git
+  remote: git://github.com/mono0x/varnish-client.git
   revision: 1f64794b1302699a929dc9e9c81984f6a3754174
   specs:
     varnish-client (0.0.1)
@@ -104,9 +104,8 @@ GEM
       rb-inotify (>= 0.9)
     ltsv (0.1.0)
     lumberjack (1.0.4)
-    mail (2.5.4)
-      mime-types (~> 1.16)
-      treetop (~> 1.4.8)
+    mail (2.6.0)
+      mime-types (>= 1.16, < 3)
     mechanize (2.7.2)
       domain_name (~> 0.5, >= 0.5.1)
       http-cookie (~> 1.0.0)
@@ -119,7 +118,7 @@ GEM
     memoizable (0.4.0)
       thread_safe (~> 0.1.3)
     method_source (0.8.2)
-    mime (0.2.0)
+    mime (0.4.1)
     mime-types (1.25.1)
     mini_portile (0.5.2)
     minitest (4.7.5)
@@ -131,7 +130,6 @@ GEM
       mini_portile (~> 0.5.0)
     ntlm-http (0.1.1)
     pg (0.17.1)
-    polyglot (0.3.3)
     pry (0.9.12.4)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -193,9 +191,6 @@ GEM
       atomic
     tilt (1.4.1)
     timers (1.1.0)
-    treetop (1.4.15)
-      polyglot
-      polyglot (>= 0.3.1)
     twitter (5.4.1)
       addressable (~> 2.3)
       buftok (~> 0.2.0)

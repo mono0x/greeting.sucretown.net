@@ -14,7 +14,7 @@ gem 'escape_utils'
 gem 'twitter', '~> 5.4.1'
 gem 'rake'
 gem 'hashie'
-gem 'varnish-client', :git => 'https://github.com/mono0x/varnish-client.git'
+gem 'varnish-client', :github => 'mono0x/varnish-client'
 gem 'coffee-script'
 gem 'sprockets', '~> 2.10.0'
 gem 'sprockets-sass'
@@ -26,7 +26,7 @@ gem 'ltsv'
 
 group :schedule do
   gem 'rufus-scheduler', '~> 2.0.24', :require => 'rufus/scheduler'
-  gem 'ruby-gmail', :require => 'gmail', :git => 'https://github.com/dcparker/ruby-gmail'
+  gem 'ruby-gmail', :require => 'gmail', :github => 'dcparker/ruby-gmail'
 end
 
 group :development do
