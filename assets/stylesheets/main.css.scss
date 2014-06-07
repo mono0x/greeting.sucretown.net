@@ -40,3 +40,19 @@ h2 {
 .greeting-category-empty {
   display: none;
 }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0px;
+  overflow: hidden;
+
+  > * {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

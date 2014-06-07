@@ -27,11 +27,30 @@
           %a.navbar-brand{href: '/'} Puroland Greeting
         .collapse.navbar-collapse.navbar-ex1-collapse.navbar-right
           %ul.nav.navbar-nav
+            %li
+              %a{href: '/schedule/today'} Today</b>
+            %li.dropdown
+              %a.dropdown-toggle{href: '#', data: { toggle: 'dropdown' }} 読み物 <b class="caret"></b>
+              %ul.dropdown-menu
+                %li
+                  %a{href: '/introduction/'} はじめに
+                %li
+                  %a{href: '/about/'} このサイトについて
+            %li.dropdown
+              %a.dropdown-toggle{href: '#', data: { toggle: 'dropdown' }} データ <b class="caret"></b>
+              %ul.dropdown-menu
+                %li
+                  %a{href: '/schedule/'} スケジュール
+                %li
+                  %a{href: '/character/'} キャラクター
+                %li
+                  %a{href: '/statistics/'} 統計
             %li.dropdown
               %a.dropdown-toggle{href: '#', data: { toggle: 'dropdown' }} リンク <b class="caret"></b>
               %ul.dropdown-menu
                 %li
                   %a{href: 'http://www.puroland.jp/'} サンリオピューロランド
+                %li
                   %a{href: 'http://www.puroland.co.jp/chara_gre/'} キャラクターグリーティング情報
     .container
       != yield

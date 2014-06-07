@@ -62,6 +62,16 @@ module PurolandGreeting
       }
     end
 
+    get '/introduction/' do
+      @title = 'はじめに'
+      haml :introduction
+    end
+
+    get '/about/' do
+      @title = 'このサイトについて'
+      haml :about
+    end
+
     get '/export' do
       content_type 'text/ltsv'
       Database.export
