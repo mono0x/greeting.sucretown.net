@@ -23,7 +23,7 @@ $(function() {
 
   $(window).on('hashchange', hashchange).triggerHandler('hashchange');
 
-  $('a[href^="#"]').on('click', function() {
+  $('#timetable, #character').find(' a[href^="#"]').on('click', function() {
     var hash = $(this).attr('href');
 
     updateTab(hash);
