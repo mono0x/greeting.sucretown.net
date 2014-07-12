@@ -37,7 +37,7 @@ scheduler.cron '5,10,20,25,35,40,50,55 8-10 * * *' do
 end
 
 scheduler.cron '15 4 * * *' do
-  execute_command 'bundle exec rake db:backup'
+  execute_command 'bundle exec rake backup:run'
 end
 
 scheduler.join
