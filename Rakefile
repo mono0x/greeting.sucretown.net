@@ -2,6 +2,7 @@ require 'bundler'
 Bundler.require
 require 'sinatra/activerecord/rake'
 require 'tmpdir'
+require 'uri'
 
 $:.push File.expand_path('lib', __dir__)
 
@@ -58,8 +59,9 @@ namespace :backup do
       ltsv = File.join(dir, 'database.ltsv')
 
       dropbox_dir = '/work/greeting.sucretown.net/data'
+      database_url = URI.parse(ENV['DATABASE_URL'])
 
-      system "pg_dump --inserts -x -h localhost -U greeting puroland-greeting | xz > #{sql}.xz"
+      system "pg_dump --inserts -x -h #{database_url.host} -U #{database_url.user} #{database_url.path.delete('/')} | xz > #{sql}.xz"
       open(ltsv, 'w') do |f|
         f << PurolandGreeting::Database.export
       end
