@@ -33,21 +33,45 @@ namespace :db do
   task :normalize do
     PurolandGreeting::Database.normalize
   end
+end
 
-  task :backup do
+namespace :backup do
+  task :setup do
+    flow = DropboxOAuth2FlowNoRedirect.new(ENV['DROPBOX_CONSUMER_KEY'], ENV['DROPBOX_CONSUMER_SECRET'])
+    authorize_url = flow.start()
+
+    # Have the user sign in and authorize this app
+    STDERR.puts '1. Go to: ' + authorize_url
+    STDERR.puts '2. Click "Allow" (you might have to log in first)'
+    STDERR.puts '3. Copy the authorization code'
+    STDERR.print 'Enter the authorization code here: '
+    code = STDIN.gets.strip
+
+    # This will fail if the user gave us an invalid authorization code
+    access_token, user_id = flow.finish(code)
+    puts access_token
+  end
+
+  task :run do
     Dir.mktmpdir do |dir|
       sql = File.join(dir, 'database.sql')
       ltsv = File.join(dir, 'database.ltsv')
 
-      dropbox_dir = 'dropbox:/work/greeting.sucretown.net/data'
+      dropbox_dir = '/work/greeting.sucretown.net/data'
 
-      system "pg_dump --inserts -x -h localhost -U puro puroland-greeting | xz > #{sql}.xz"
+      system "pg_dump --inserts -x -h localhost -U greeting puroland-greeting | xz > #{sql}.xz"
       open(ltsv, 'w') do |f|
         f << PurolandGreeting::Database.export
       end
       system "xz #{ltsv}"
-      system "dropbox-api put #{sql}.xz #{File.join(dropbox_dir, 'database.sql.xz')}"
-      system "dropbox-api put #{ltsv}.xz #{File.join(dropbox_dir, 'database.ltsv.xz')}"
+
+      dropbox = DropboxClient.new(ENV['DROPBOX_ACCESS_TOKEN'])
+      open("#{sql}.xz") do |f|
+        dropbox.put_file File.join(dropbox_dir, 'database.sql.xz'), f, true
+      end
+      open("#{ltsv}.xz") do |f|
+        dropbox.put_file File.join(dropbox_dir, 'database.ltsv.xz'), f, true
+      end
     end
   end
 end
