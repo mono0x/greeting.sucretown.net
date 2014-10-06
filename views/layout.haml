@@ -4,6 +4,12 @@
     %meta{charset: 'UTF-8'}
     %title= [ @title, 'Puroland Greeting: サンリオピューロランドでキャラクターと遊ぼう！' ].flatten.compact.join(' - ')
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    - if @description
+      %meta{name: 'teitter:card', content: 'summary'}
+      %meta{name: 'twitter:site', content: '@puro_greeting'}
+      %meta{name: 'twitter:creator', content: '@mono0x'}
+      %meta{name: 'twitter:title', content: @title || 'Puroland Greeting'}
+      %meta{name: 'twitter:description', content: @description}
     %link{rel: 'stylesheet', type: 'text/css', href: stylesheet_path('application')}
     %link{rel: 'shortcut icon', type: 'image/png', href: image_path('favicon.png')}
     %script{type: 'text/javascript', src: javascript_path('application')}
