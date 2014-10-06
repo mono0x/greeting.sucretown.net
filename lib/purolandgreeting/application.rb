@@ -91,8 +91,8 @@ module PurolandGreeting
       schedule = Schedule.where('date = ?', date).first or not_found
       characters = schedule.characters.uniq
       time = Time.now
-      @title = date.strftime('%Y/%m/%d')
-      @description = "登場キャラクター: #{characters.map(&:name).join(' ')}"
+      @title = "#{date.strftime('%Y/%m/%d')} の予定"
+      @description = "登場キャラクター: #{characters.map(&:name).join(' ')}"[0, 200]
       haml :schedule, locals: {
         schedule: schedule,
         characters: characters,
