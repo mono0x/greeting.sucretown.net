@@ -25,14 +25,14 @@ module PurolandGreeting
       uri = "#{ENV['ROOT_URI']}#{today.strftime('/schedule/%Y/%m/%d/')}"
 
       if registered
-        twitter.update "#{today.strftime('%Y/%m/%d')} の予定が公開されました。 #{uri}"
+        twitter.update "#{today.strftime('%Y/%m/%d')} の予定が公開されました。 #ピューロランド #{uri}"
 
         header = "#{today.strftime('%Y/%m/%d')} の登場キャラクター"
         self.update_items twitter, diff.characters.to_a, header
       else
         unless diff.empty?
           time = now.strftime('%H:%M')
-          twitter.update "#{today.strftime('%Y/%m/%d')} の予定が変更されました。 (#{time}) #{uri}"
+          twitter.update "#{today.strftime('%Y/%m/%d')} の予定が変更されました。 (#{time}) #ピューロランド #{uri}"
 
           header = "#{today.strftime('%Y/%m/%d')} の変更対象キャラクター (#{time})"
           self.update_items twitter, diff.characters.to_a, header
