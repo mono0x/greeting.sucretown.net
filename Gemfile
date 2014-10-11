@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 gem 'rack'
 gem 'rack-contrib', :require => 'rack/contrib'
+gem 'rack-timeout'
 gem 'activerecord', '~> 4.0.2'
 gem 'sinatra', :require => 'sinatra/base'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'

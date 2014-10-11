@@ -12,6 +12,9 @@ when 'production'
   use Unicorn::OobGC
 end
 
+use Rack::Timeout
+Rack::Timeout.timeout = 20
+
 map '/assets' do
   run PurolandGreeting::Application.sprockets
 end
