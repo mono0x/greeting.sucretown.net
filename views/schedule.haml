@@ -35,7 +35,7 @@
       - characters.each do |character|
         %a.list-group-item{href: "#character/#{character.name}/"}
           = character.name
-          %span.badge= schedule.greetings.joins(:characters).where('characters.id = ?', character.id).count
+          %span.badge= schedule.greetings.joins(:characters).where('characters.id = ?', character.id).count(:id)
 
   %section
     %h2 スケジュール

@@ -9,9 +9,13 @@ class CreateTables < ActiveRecord::Migration
       t.boolean  :deleted, null: false
     end
     add_index :greetings, :start_at
-    add_index :greetings, :place_id
-    add_index :greetings, [ :start_at, :end_at ]
+    add_index :greetings, :place_id, where: 'deleted', name: 'index_greetings_place_id_deleted'
+    add_index :greetings, :place_id, where: 'NOT deleted', name: 'index_greetings_place_id_not_deleted'
+    add_index :greetings, [ :start_at, :end_at ], where: 'deleted', name: 'index_greetings_time_deleted'
+    add_index :greetings, [ :start_at, :end_at ], where: 'NOT deleted', name: 'index_greetings_time_not_deleted'
     add_index :greetings, [ :start_at, :end_at, :place_id, :schedule_id, :deleted ], unique: true, name: 'index_greetings_uniqueness'
+    add_index :greetings, :id, where: 'NOT deleted'
+    add_index :greetings, :schedule_id, where: 'NOT deleted'
 
     create_table :characters do |t|
       t.string :name, null: false, unique: true
