@@ -1,6 +1,5 @@
 /bower_components
 /database.yml
-/db/*.sqlite3
 /tmp/restart.txt
 /.env
 /.sass-cache
