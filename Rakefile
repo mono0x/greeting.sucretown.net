@@ -3,6 +3,7 @@ Bundler.require
 require 'sinatra/activerecord/rake'
 require 'tmpdir'
 require 'uri'
+require 'yaml'
 
 $:.push File.expand_path('lib', __dir__)
 
@@ -33,6 +34,31 @@ namespace :db do
 
   task :normalize do
     PurolandGreeting::Database.normalize
+  end
+
+  namespace :schema do
+    task :config do
+      database_url = URI.parse(ENV['DATABASE_URL'])
+
+      open('database.yml', 'w') do |f|
+        YAML.dump({
+          'adapter' => 'postgresql',
+          'encoding' => 'utf8',
+          'host' => database_url.host,
+          'port' => 5432,
+          'database' => database_url.path.delete('/'),
+          'username' => database_url.user,
+        }, f)
+      end
+    end
+
+    task :export do
+      system 'ridgepole -c database.yml --o Schemafile --export'
+    end
+
+    task :apply do
+      system 'ridgepole -c database.yml --o Schemafile --apply'
+    end
   end
 end
 

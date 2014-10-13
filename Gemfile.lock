@@ -153,6 +153,8 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    ridgepole (0.4.9)
+      activerecord
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -253,6 +255,7 @@ DEPENDENCIES
   rake
   rb-fsevent
   rb-inotify
+  ridgepole
   rspec
   ruby-gmail!
   ruby_gntp
