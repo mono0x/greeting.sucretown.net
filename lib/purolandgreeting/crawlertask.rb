@@ -25,17 +25,17 @@ module PurolandGreeting
       uri = "#{ENV['ROOT_URI']}#{today.strftime('/schedule/%Y/%m/%d/')}"
 
       if registered
-        twitter.update "#{today.strftime('%Y/%m/%d')} の予定が公開されました。 #ピューロランド #{uri}"
+        tweet = twitter.update("#{today.strftime('%Y/%m/%d')} の予定が公開されました。 #{uri} #ピューロランド")
 
         header = "#{today.strftime('%Y/%m/%d')} の登場キャラクター"
-        self.update_items twitter, diff.characters.to_a, header
+        self.update_items twitter, diff.characters.to_a, header, tweet
       else
         unless diff.empty?
           time = now.strftime('%H:%M')
-          twitter.update "#{today.strftime('%Y/%m/%d')} の予定が変更されました。 (#{time}) #ピューロランド #{uri}"
+          tweet = twitter.update("#{today.strftime('%Y/%m/%d')} の予定が変更されました。 (#{time}) #{uri} #ピューロランド")
 
           header = "#{today.strftime('%Y/%m/%d')} の変更対象キャラクター (#{time})"
-          self.update_items twitter, diff.characters.to_a, header
+          tweet = self.update_items(twitter, diff.characters.to_a, header, tweet)
 
           tables = [ '追加', '中止' ].zip([ diff.added_by_greeting, diff.deleted_by_greeting ])
 
@@ -53,14 +53,14 @@ module PurolandGreeting
               parts = greetings.sort_by {|greeting| greeting.values_at(:end_at, :start_at) }.map {|greeting|
                 "#{greeting[:start_at].strftime('%H:%M')}-#{greeting[:end_at].strftime('%H:%M')} #{greeting[:place]}"
               }
-              self.update_items twitter, parts, header
+              self.update_items twitter, parts, header, tweet
             end
           end
         end
       end
     end
 
-    def self.update_items(twitter, items, header, footer = nil)
+    def self.update_items(twitter, items, header, footer = nil, tweet)
       separator = "\n"
       separator_size = separator.size
 
@@ -81,8 +81,10 @@ module PurolandGreeting
 
       groups.each_with_index do |group, i|
         pager = " (#{i + 1}/#{groups.size})" if groups.size >= 2
-        twitter.update [ "#{header}#{pager}:", group, footer ].flatten.compact.join(separator)
+        tweet = twitter.update([ "#{header}#{pager}:", group, footer ].flatten.compact.join(separator), in_reply_to_status: tweet)
       end
+
+      tweet
     end
   end
 end
