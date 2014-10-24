@@ -3,7 +3,7 @@ require 'nkf'
 
 module PurolandGreeting
   class Fetcher
-    BASE_URI = 'http://www.puroland.co.jp/chara_gre/'
+    BASE_URI = 'http://www.puroland.co.jp/chara_gre/mobile/'
 
     def self.fetch
       agent = Mechanize.new
