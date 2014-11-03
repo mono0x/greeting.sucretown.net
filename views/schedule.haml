@@ -44,7 +44,7 @@
         .panel-heading
           %h3.panel-title= character.name
         .list-group
-          - schedule.greetings.joins(:characters).where('characters.id = ?', character.id).each do |greeting|
+          - schedule.greetings.joins(:characters).where('characters.id = ?', character.id).order('end_at, start_at').each do |greeting|
             %a.list-group-item{href: "#timetable/#{greeting.start_at.strftime('%H%M')}-#{greeting.end_at.strftime('%H%M')}-#{greeting.place.name}/"}
               #{greeting.start_at.strftime('%H:%M')}-#{greeting.end_at.strftime('%H:%M')}
               = greeting.place.name
