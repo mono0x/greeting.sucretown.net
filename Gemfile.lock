@@ -234,6 +234,7 @@ DEPENDENCIES
   activesupport
   coffee-script
   compass
+  dotenv
   dropbox-sdk
   escape_utils
   factory_girl

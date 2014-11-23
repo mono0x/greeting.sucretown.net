@@ -26,6 +26,7 @@ gem 'mechanize'
 gem 'uglifier'
 gem 'ltsv'
 gem 'dropbox-sdk', :require => 'dropbox_sdk'
+gem 'dotenv'
 
 group :schedule do
   gem 'rufus-scheduler', '~> 2.0.24', :require => 'rufus/scheduler'
