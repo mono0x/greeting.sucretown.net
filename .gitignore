@@ -3,6 +3,4 @@
 /tmp/restart.txt
 /.env
 /.sass-cache
-/shared/schedule.log
-/shared/unicorn.log
 /shared/unicorn.pid

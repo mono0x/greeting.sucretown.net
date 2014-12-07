@@ -4,7 +4,7 @@ Bundler.require :schedule
 require 'logger'
 
 def execute_command(command)
-  logger = Logger.new('shared/schedule.log')
+  logger = Logger.new(STDERR)
   logger.info command
 
   result = `#{command} 2>&1`
@@ -17,9 +17,8 @@ def execute_command(command)
     logger.error result
   end
 
-  STDERR.puts result
-  gmail = Gmail.new(ENV['GMAIL_ADDRESS'], ENV['GMAIL_PASSWORD'])
-  gmail.deliver do
+  gmail = Gmail.connect!(ENV['GMAIL_ADDRESS'], ENV['GMAIL_PASSWORD'])
+  gmail.deliver! do
     to      ENV['GMAIL_ADDRESS']
     subject "Schedule #{command}"
     body    result

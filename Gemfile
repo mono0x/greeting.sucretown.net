@@ -29,7 +29,7 @@ gem 'dotenv'
 
 group :schedule do
   gem 'rufus-scheduler', :require => 'rufus/scheduler'
-  gem 'ruby-gmail', :require => 'gmail'
+  gem 'gmail'
 end
 
 group :development do
