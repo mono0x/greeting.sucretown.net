@@ -6,7 +6,7 @@ module PurolandGreeting
     attr_reader :character_table, :ignore_costume_table, :place_table
 
     def initialize
-      open('data/normalize.json') do |f|
+      open('data/normalize.json', 'r:utf-8') do |f|
         json = JSON.parse(f.read)
         @character_table = json['character']
         @ignore_costume_table = json['ignore_costume'].to_set
