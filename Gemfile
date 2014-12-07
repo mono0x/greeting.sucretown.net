@@ -26,6 +26,7 @@ gem 'uglifier'
 gem 'ltsv'
 gem 'dropbox-sdk', :require => 'dropbox_sdk'
 gem 'dotenv'
+gem 'varnish-client', :github => 'mono0x/varnish-client'
 
 group :schedule do
   gem 'rufus-scheduler', :require => 'rufus/scheduler'

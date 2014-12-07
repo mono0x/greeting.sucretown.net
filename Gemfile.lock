@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/mono0x/varnish-client.git
+  revision: 1f64794b1302699a929dc9e9c81984f6a3754174
+  specs:
+    varnish-client (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -263,3 +269,4 @@ DEPENDENCIES
   twitter
   uglifier
   unicorn
+  varnish-client!
