@@ -103,3 +103,9 @@ namespace :backup do
     end
   end
 end
+
+namespace :varnish do
+  task :purge do
+    PurolandGreeting::VarnishCachePurger.new.run if ENV['VARNISH_URL']
+  end
+end

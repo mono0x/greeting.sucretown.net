@@ -39,4 +39,8 @@ scheduler.cron '15 4 * * *' do
   execute_command 'bundle exec rake backup:run'
 end
 
+scheduler.cron '0 0 * * *' do
+  execute_command 'bundle exec rake varnish:purge'
+end
+
 scheduler.join
