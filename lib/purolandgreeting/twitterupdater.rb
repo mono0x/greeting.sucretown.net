@@ -74,6 +74,5 @@ module PurolandGreeting
 
       tweet
     end
-    end
   end
 end
