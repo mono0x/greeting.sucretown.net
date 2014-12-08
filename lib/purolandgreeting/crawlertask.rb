@@ -20,7 +20,7 @@ module PurolandGreeting
       sub_tasks << VarnishCachePurger.new if ENV['VARNISH_URL']
 
       sub_tasks.each do |task|
-        task.run registered, diff
+        task.run today, now, registered, diff
       end
     end
   end
