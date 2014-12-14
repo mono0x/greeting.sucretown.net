@@ -14,14 +14,14 @@ module PurolandGreeting
         tweet = twitter.update("#{today.strftime('%Y/%m/%d')} の予定が公開されました。 #{uri} #ピューロランド")
 
         header = "#{today.strftime('%Y/%m/%d')} の登場キャラクター"
-        self.update_items twitter, diff.characters.to_a, header, tweet
+        update_items twitter, diff.characters.to_a, header, tweet
       else
         unless diff.empty?
           time = now.strftime('%H:%M')
           tweet = twitter.update("#{today.strftime('%Y/%m/%d')} の予定が変更されました。 (#{time}) #{uri} #ピューロランド")
 
           header = "#{today.strftime('%Y/%m/%d')} の変更対象キャラクター (#{time})"
-          tweet = self.update_items(twitter, diff.characters.to_a, header, tweet)
+          tweet = update_items(twitter, diff.characters.to_a, header, tweet)
 
           tables = [ '追加', '中止' ].zip([ diff.added_by_greeting, diff.deleted_by_greeting ])
 
@@ -39,7 +39,7 @@ module PurolandGreeting
               parts = greetings.sort_by {|greeting| greeting.values_at(:end_at, :start_at) }.map {|greeting|
                 "#{greeting[:start_at].strftime('%H:%M')}-#{greeting[:end_at].strftime('%H:%M')} #{greeting[:place]}"
               }
-              self.update_items twitter, parts, header, tweet
+              update_items twitter, parts, header, tweet
             end
           end
         end
