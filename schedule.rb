@@ -35,7 +35,7 @@ scheduler.cron '5,10,20,25,35,40,50,55 8-10 * * *' do
   execute_command 'bundle exec rake crawler:register'
 end
 
-scheduler.cron '15 4 * * *' do
+scheduler.cron '30 3 * * *' do
   execute_command 'bundle exec rake backup:run'
 end
 
