@@ -34,13 +34,15 @@ end
 
 group :development do
   gem 'pry'
+end
 
-  group :test do
-    gem 'rspec'
-    gem 'rack-test', :require => 'rack/test'
-    gem 'simplecov'
-    gem 'factory_girl'
-  end
+group :test do
+  gem 'rr', :require => false
+  gem 'test-unit', '~> 3.0', :require => false
+  gem 'test-unit-rr', :require => false
+  gem 'rack-test', :require => 'rack/test'
+  gem 'simplecov', :require => false
+  gem 'factory_girl'
 end
 
 gem 'pg'

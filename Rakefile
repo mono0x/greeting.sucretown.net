@@ -3,10 +3,22 @@ Bundler.require
 require 'tmpdir'
 require 'uri'
 require 'yaml'
+require 'rake/testtask'
 
 $:.push File.expand_path('lib', __dir__)
 
 require 'purolandgreeting'
+
+Rake::TestTask.new do |t|
+  t.libs << 'test'
+  t.test_files = Dir['test/**/test_*.rb'].sort
+  t.verbose = true
+end
+
+task :coverage do |t|
+  ENV['SIMPLE_COV'] = '1'
+  Rake::Task['test'].invoke
+end
 
 namespace :crawler do
   task :register do
