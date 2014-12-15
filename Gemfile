@@ -33,14 +33,6 @@ group :schedule do
 end
 
 group :development do
-  gem 'sqlite3'
-  gem 'guard', :require => false
-  gem 'guard-bundler', :require => false
-  gem 'guard-pow', :require => false
-  gem 'guard-rspec', :require => false
-  gem 'rb-inotify', :require => false
-  gem 'rb-fsevent', :require => false
-  gem 'ruby_gntp', :require => false
   gem 'pry'
 
   group :test do
@@ -51,8 +43,5 @@ group :development do
   end
 end
 
-group :production do
-  gem 'pg'
-  gem 'unicorn'
-end
-
+gem 'pg'
+gem 'unicorn'
