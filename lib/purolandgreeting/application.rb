@@ -2,8 +2,6 @@ require 'set'
 
 module PurolandGreeting
   class Application < Sinatra::Base
-    register Sinatra::ActiveRecordExtension
-
     set :session, false
 
     set :root, PurolandGreeting.root
