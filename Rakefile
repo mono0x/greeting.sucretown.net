@@ -1,5 +1,6 @@
 require 'bundler'
 Bundler.require
+require 'pry'
 require 'tmpdir'
 require 'uri'
 require 'yaml'
@@ -18,6 +19,11 @@ end
 task :coverage do |t|
   ENV['SIMPLE_COV'] = '1'
   Rake::Task['test'].invoke
+end
+
+task :console do |t|
+  TOPLEVEL_BINDING.eval 'include PurolandGreeting'
+  Pry.start
 end
 
 namespace :crawler do
