@@ -12,7 +12,7 @@ when 'production'
   require 'unicorn/worker_killer'
   use GC::OOB::UnicornMiddleware
   use Unicorn::WorkerKiller::MaxRequests
-  use Unicorn::WorkerKiller::Oom, 64 * (1024 ** 2), 96 * (1024 ** 2)
+  use Unicorn::WorkerKiller::Oom, 128 * (1024 ** 2), 256 * (1024 ** 2)
 end
 
 use Rack::Timeout
