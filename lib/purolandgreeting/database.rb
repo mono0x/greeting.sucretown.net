@@ -113,7 +113,7 @@ module PurolandGreeting
     end
 
     def self.dump
-      Appearance.order('greeting_id ASC, character_id ASC').map {|a|
+      Appearance.includes(:character, greeting: :place).order('greeting_id ASC, character_id ASC').map {|a|
         {
           character: a.raw_character_name,
           place: a.greeting.raw_place_name,
