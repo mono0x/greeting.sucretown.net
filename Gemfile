@@ -45,5 +45,7 @@ group :test do
   gem 'factory_girl'
 end
 
+gem 'gctools'
 gem 'pg'
 gem 'unicorn'
+gem 'unicorn-worker-killer', :require => false

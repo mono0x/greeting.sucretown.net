@@ -8,8 +8,11 @@ require 'purolandgreeting'
 
 case ENV['RACK_ENV']
 when 'production'
-  require 'unicorn/oob_gc'
-  use Unicorn::OobGC
+  require 'gctools/oob'
+  require 'unicorn/worker_killer'
+  use GC::OOB::UnicornMiddleware
+  use Unicorn::WorkerKiller::MaxRequests
+  use Unicorn::WorkerKiller::Oom, 64 * (1024 ** 2), 96 * (1024 ** 2)
 end
 
 use Rack::Timeout
