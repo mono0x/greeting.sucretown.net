@@ -88,16 +88,18 @@ module PurolandGreeting
       date = Date.new(year.to_i, month.to_i, day.to_i)
       schedule = Schedule.where('date = ?', date).first or not_found
       characters = schedule.characters.uniq
+      greetings = schedule.greetings.eager_load(:place)
       time = Time.now
       @title = "#{date.strftime('%Y/%m/%d')} の予定"
       @description = "登場キャラクター: #{characters.map(&:name).join(' ')}"[0, 200]
       haml :schedule, locals: {
         schedule: schedule,
         characters: characters,
-        before_the_start: schedule.greetings.before_the_start(time),
-        in_session: schedule.greetings.in_session(time),
-        after_the_end: schedule.greetings.after_the_end(time),
-        deleted: schedule.greetings.deleted
+        greetings: greetings,
+        before_the_start: greetings.before_the_start(time),
+        in_session: greetings.in_session(time),
+        after_the_end: greetings.after_the_end(time),
+        deleted: greetings.deleted
       }
     end
 
