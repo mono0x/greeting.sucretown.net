@@ -88,7 +88,7 @@ module PurolandGreeting
       date = Date.new(year.to_i, month.to_i, day.to_i)
       schedule = Schedule.where('date = ?', date).first or not_found
       characters = schedule.characters.uniq
-      greetings = schedule.greetings.eager_load(:place)
+      greetings = schedule.greetings.active.eager_load(:place)
       time = Time.now
       @title = "#{date.strftime('%Y/%m/%d')} の予定"
       @description = "登場キャラクター: #{characters.map(&:name).join(' ')}"[0, 200]
@@ -99,7 +99,7 @@ module PurolandGreeting
         before_the_start: greetings.before_the_start(time),
         in_session: greetings.in_session(time),
         after_the_end: greetings.after_the_end(time),
-        deleted: greetings.deleted
+        deleted: schedule.greetings.deleted
       }
     end
 
@@ -122,9 +122,11 @@ module PurolandGreeting
         { label: '1年以内',   from: today << 12, },
       ].map {|item|
         from = item[:from]
-        appearances = character.greetings.joins(:schedule).where('schedules.date > ?', from).count('DISTINCT schedules.date')
+        greetings = character.greetings.active
+        a = greetings.active.joins(:schedule).where('schedules.date > ?', from)
+        appearances = a.count('DISTINCT schedules.date')
         dates = Schedule.where('date > ?', from).count('DISTINCT date')
-        appearance_dates = character.greetings.joins(:schedule).where('schedules.date > ?', from).count
+        appearance_dates = a.count
         appearance_probability = dates > 0 ? Rational(appearances, dates) : 0
         item.merge(
           appearances: appearances,
@@ -133,7 +135,7 @@ module PurolandGreeting
           appearance_probability: appearance_probability)
       }
 
-      greetings_by_month = character.greetings.joins(:schedule).order("year, month").group("year, month").select("DATE_PART('year', date) AS year, DATE_PART('month', date) AS month, COUNT(greetings.id) AS count")
+      greetings_by_month = character.greetings.active.joins(:schedule).order("year, month").group("year, month").select("DATE_PART('year', date) AS year, DATE_PART('month', date) AS month, COUNT(greetings.id) AS count")
 
       places = character.place_ranking
 

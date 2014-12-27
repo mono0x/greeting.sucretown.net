@@ -17,7 +17,7 @@ class PurolandGreeting::Character < ActiveRecord::Base
   end
 
   def place_ranking
-    greetings.joins(:place).where('greetings.deleted = FALSE').group('place_name').order('score DESC').select("places.name AS place_name, COUNT(place_id) AS score").map {|item|
+    greetings.active.joins(:place).where('greetings.deleted = FALSE').group('place_name').order('score DESC').select("places.name AS place_name, COUNT(place_id) AS score").map {|item|
       Hashie::Mash.new(
         name: item.place_name,
         score: item.score.to_i
