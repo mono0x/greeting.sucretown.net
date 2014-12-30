@@ -33,9 +33,14 @@
   %h2 カレンダー
   - food_machine_restaurant = PurolandGreeting::Place.find_by_name('フードマシンレストラン(4F)').id
   .row
-    - PurolandGreeting::Schedule.months.each do |month|
+    - PurolandGreeting::Schedule.months.each_with_index do |month, index|
       - next_month = month >> 1
       - schedule_days = character.greetings.active.joins(:schedule).where('date >= ? AND date < ?', month, next_month).select("DATE_PART('day', date) AS day").group("DATE_PART('day', date)").where('place_id <> ?', food_machine_restaurant).order('day').map {|c| month + (c.day.to_i - 1) }
       %section.col-sm-6.col-md-4
         %h3= month.strftime('%Y/%m')
         != calendar(month) {|day| schedule_days.include?(day) && { href: day.strftime('/schedule/%Y/%m/%d/') } }
+
+      - if index % 3 == 2
+        .clearfix.visible-md-block.visible-lg-block
+      - if index % 2 == 1
+        .clearfix.visible-sm-block
