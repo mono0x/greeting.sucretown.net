@@ -2,9 +2,12 @@
   %h1 スケジュール
 
 .row
-  - months.each do |month|
+  - months.each_with_index do |month, index|
     - dates = schedules.by_month(month).map(&:date)
     %section.col-sm-6.col-md-4
       %h3= month.strftime('%Y/%m')
       != calendar(month) {|date| dates.include?(date) && { href: date.strftime('/schedule/%Y/%m/%d/') } }
-
+    - if index % 3 == 2
+      .clearfix.visible-md-block.visible-lg-block
+    - if index % 2 == 1
+      .clearfix.visible-sm-block

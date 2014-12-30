@@ -1,6 +1,6 @@
 - greetings.order('end_at, start_at').group_by {|g| [ g.start_at, g.end_at ] }.each do |t, greetings|
   .row.greeting-group{data: {start_at: t[0].iso8601, end_at: t[1].iso8601}}
-    - greetings.each do |greeting|
+    - greetings.each_with_index do |greeting, index|
       %section.col-sm-6.col-md-4{name: "timetable/#{greeting.start_at.strftime('%H%M')}-#{greeting.end_at.strftime('%H%M')}-#{greeting.place.name}/"}
         .panel{class: panel}
           .panel-heading
@@ -13,3 +13,7 @@
           .list-group
             - greeting.characters.uniq.each do |character|
               %a.list-group-item{href: "#character/#{character.name}/"}= character.name
+      - if index % 3 == 2
+        .clearfix.visible-md-block.visible-lg-block
+      - if index % 2 == 1
+        .clearfix.visible-sm-block
