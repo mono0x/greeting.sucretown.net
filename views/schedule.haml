@@ -30,7 +30,7 @@
 
 #character
   %section
-    %h2 登場キャラクター
+    %h2 キャラクター
     .list-group
       - characters.each do |character|
         %a.list-group-item{href: "#character/#{character.name}/"}
@@ -39,14 +39,19 @@
 
   %section
     %h2 スケジュール
-    - characters.each do |character|
-      .panel.panel-info{name: "character/#{character.name}/"}
-        .panel-heading
-          %h3.panel-title= character.name
-        .list-group
-          - greetings.joins(:characters).where('characters.id = ?', character.id).order('end_at, start_at').each do |greeting|
-            %a.list-group-item{href: "#timetable/#{greeting.start_at.strftime('%H%M')}-#{greeting.end_at.strftime('%H%M')}-#{greeting.place.name}/"}
-              #{greeting.start_at.strftime('%H:%M')}-#{greeting.end_at.strftime('%H:%M')}
-              = greeting.place.name
-
-
+    .row
+      - characters.each_with_index do |character, index|
+        %section.col-sm-6.col-md-4{name: "character/#{character.name}/"}
+          .panel.panel-info
+            .panel-heading
+              %h3.panel-title= character.name
+            .list-group
+              - greetings.joins(:characters).where('characters.id = ?', character.id).order('end_at, start_at').each do |greeting|
+                %a.list-group-item{href: "#timetable/#{greeting.start_at.strftime('%H%M')}-#{greeting.end_at.strftime('%H%M')}-#{greeting.place.name}/"}
+                  = greeting.place.name
+                  %br
+                  %small #{greeting.start_at.strftime('%H:%M')}-#{greeting.end_at.strftime('%H:%M')}
+        - if index % 3 == 2
+          .clearfix.visible-md-block.visible-lg-block
+        - if index % 2 == 1
+          .clearfix.visible-sm-block
