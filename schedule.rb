@@ -26,12 +26,13 @@ def execute_command(command)
 end
 
 scheduler = Rufus::Scheduler.start_new
+mutex = Mutex.new
 
-scheduler.cron '*/15 8-21 * * *' do
+scheduler.cron '*/15 8-21 * * *', mutex: mutex do
   execute_command 'bundle exec rake crawler:update'
 end
 
-scheduler.cron '5,10,20,25,35,40,50,55 8-10 * * *' do
+scheduler.cron '1-14,16-29,31-44,46-59 8-10 * * *', mutex: mutex do
   execute_command 'bundle exec rake crawler:register'
 end
 
