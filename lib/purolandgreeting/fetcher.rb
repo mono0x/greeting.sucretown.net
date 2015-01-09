@@ -10,11 +10,11 @@ module PurolandGreeting
       agent = Mechanize.new
       agent.user_agent = 'iPhone (Ruby; http://greeting.sucretown.net/)'
 
-      index_page = self.try_request {|i|
+      index_page = self.try_request {
         agent.get(BASE_URI)
       }
       if index_page.search('p').any? {|p| p.text.include? '本日のｷｬﾗｸﾀｰ情報は公開されておりません。P' }
-        index_page = self.try_request {|i|
+        index_page = self.try_request {
           agent.get("#{BASE_URI}?para=#{Date.today.strftime('%Y%m%d')}")
         }
       end
@@ -23,7 +23,7 @@ module PurolandGreeting
 
       date = self.parse_date(index_page) or return []
 
-      menu_page = self.try_request {|i|
+      menu_page = self.try_request {
         agent.submit(index_page.forms.first)
       }
 
@@ -33,7 +33,7 @@ module PurolandGreeting
 
         tchk = form.search('input[name="TCHK"]').first['value']
         c_key = form.search('input[name="C_KEY"]').first['value']
-        schedule_page = self.try_request {|i|
+        schedule_page = self.try_request {
           agent.get("#{BASE_URI}chara_sche.asp?TCHK=#{tchk}&C_KEY=#{c_key}")
         }
         character = schedule_page.search('#date3').first.text
@@ -65,14 +65,17 @@ module PurolandGreeting
     end
 
     def self.try_request(n = 10, &block)
-      n.times do |i|
-        begin
-          return block.call(i)
-        rescue
-          sleep [ 2 ** i, 30 ].min
+      delays = (0...n).map {|i| [ 2 ** i, 30 ].min }
+      begin
+        return block.call
+      rescue
+        if delay = delays.shift
+          sleep delay
+          retry
+        else
+          raise
         end
       end
-      raise $!
     end
   end
 end
