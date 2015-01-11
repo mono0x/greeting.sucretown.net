@@ -34,17 +34,15 @@ module PurolandGreeting
       date = parse_date(index_page) or return []
 
       menu_page = try_request {
-        agent.submit(index_page.forms.first)
+        agent.submit(index_page.forms.find {|form| form.action == 'chara_sentaku.asp' })
       }
 
       result = []
-      menu_page.search('form[action="chara_sche.asp"]').each do |form|
+      menu_page.forms.select {|form| form.action == 'chara_sche.asp' }.each do |form|
         sleep INTERVAL
 
-        tchk = form.search('input[name="TCHK"]').first['value']
-        c_key = form.search('input[name="C_KEY"]').first['value']
         schedule_page = try_request {
-          agent.get("#{BASE_URI}chara_sche.asp?TCHK=#{tchk}&C_KEY=#{c_key}")
+          agent.submit(form)
         }
         character = schedule_page.search('#date3').first.text
         schedule_page.search('#date').each do |div|
