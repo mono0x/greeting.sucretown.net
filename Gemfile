@@ -45,4 +45,6 @@ group :test do
   gem 'simplecov', :require => false
   gem 'test-unit', '~> 3.0', :require => false
   gem 'test-unit-rr', :require => false
+  gem 'vcr'
+  gem 'webmock'
 end

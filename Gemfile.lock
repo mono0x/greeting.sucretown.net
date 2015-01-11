@@ -31,6 +31,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     docile (1.1.5)
     domain_name (0.5.21)
       unf (>= 0.0.5, < 1.0.0)
@@ -117,6 +119,7 @@ GEM
     rr (1.1.2)
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
+    safe_yaml (1.0.4)
     sass (3.4.5)
     simple_oauth (0.2.0)
     simplecov (0.9.1)
@@ -171,6 +174,10 @@ GEM
       raindrops (~> 0.7)
     unicorn-worker-killer (0.4.2)
       unicorn (~> 4)
+    vcr (2.9.3)
+    webmock (1.20.4)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
     webrobots (0.1.1)
 
 PLATFORMS
@@ -214,3 +221,5 @@ DEPENDENCIES
   unicorn
   unicorn-worker-killer
   varnish-client!
+  vcr
+  webmock
