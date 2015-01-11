@@ -7,8 +7,8 @@ module PurolandGreeting
     BASE_URI = 'http://www.puroland.co.jp/chara_gre/'
     INTERVAL = 0.5
 
-    def self.fetch
-      self.new.fetch
+    def self.fetch(wait = true)
+      self.new.fetch wait
     end
 
     def create_agent
@@ -17,7 +17,7 @@ module PurolandGreeting
       agent
     end
 
-    def fetch
+    def fetch(wait = true)
       agent = create_agent
 
       index_page = try_request {
@@ -39,7 +39,7 @@ module PurolandGreeting
 
       result = []
       menu_page.forms.select {|form| form.action == 'chara_sche.asp' }.each do |form|
-        sleep INTERVAL
+        sleep INTERVAL if wait
 
         schedule_page = try_request {
           agent.submit(form)
