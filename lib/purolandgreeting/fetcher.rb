@@ -5,6 +5,7 @@ require 'nkf'
 module PurolandGreeting
   class Fetcher
     BASE_URI = 'http://www.puroland.co.jp/chara_gre/'
+    INTERVAL = 0.5
 
     def self.fetch
       self.new.fetch
@@ -38,7 +39,7 @@ module PurolandGreeting
 
       result = []
       menu_page.search('form[action="chara_sche.asp"]').each do |form|
-        sleep 10
+        sleep INTERVAL
 
         tchk = form.search('input[name="TCHK"]').first['value']
         c_key = form.search('input[name="C_KEY"]').first['value']
