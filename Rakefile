@@ -26,6 +26,10 @@ task :console do |t|
   Pry.start
 end
 
+task :server do |t|
+  system "unicorn -c unicorn.conf -E #{ENV['RACK_ENV']} -p #{ENV['PORT']}"
+end
+
 namespace :crawler do
   task :register do
     PurolandGreeting::CrawlerTask.register

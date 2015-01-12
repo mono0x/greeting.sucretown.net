@@ -11,6 +11,11 @@ module PurolandGreeting
 
     set :haml, format: :html5, escape_html: true, attr_wrapper: '"'
 
+    configure :development do
+      Bundler.require :development
+      register Sinatra::Reloader
+    end
+
     configure do
       Database.connect
 

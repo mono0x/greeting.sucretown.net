@@ -36,6 +36,7 @@ group :schedule do
 end
 
 group :development do
+  gem 'sinatra-contrib', require: 'sinatra/reloader'
   gem 'pry'
 end
 
