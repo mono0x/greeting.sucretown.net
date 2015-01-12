@@ -1,7 +1,6 @@
 /bower_components
 /coverage
 /database.yml
-/tmp/restart.txt
 /.env
 /.sass-cache
 /shared/unicorn.pid
