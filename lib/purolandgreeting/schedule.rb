@@ -1,5 +1,5 @@
 class PurolandGreeting::Schedule < ActiveRecord::Base
-  has_many :greetings, class_name: 'PurolandGreeting::Greeting'
+  has_many :greetings, class_name: 'PurolandGreeting::Greeting', dependent: :delete_all
   has_many :appearances, class_name: 'PurolandGreeting::Appearance', through: :greetings
   has_many :characters, class_name: 'PurolandGreeting::Character', through: :appearances
 

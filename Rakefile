@@ -74,11 +74,11 @@ namespace :db do
     end
 
     task :export do
-      system 'ridgepole -c database.yml --o Schemafile --export'
+      system 'ridgepole -c database.yml --o Schemafile --enable-foreigner --export'
     end
 
     task :apply do
-      system 'ridgepole -c database.yml --o Schemafile --apply'
+      system 'ridgepole -c database.yml --o Schemafile --enable-foreigner --apply'
     end
   end
 end

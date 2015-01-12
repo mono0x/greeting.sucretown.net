@@ -49,3 +49,9 @@ create_table "schedules", force: true do |t|
 end
 
 add_index "schedules", ["date"], name: "index_schedules_on_date", using: :btree
+
+add_foreign_key "appearances", "characters", name: "foreign_key_appearances_characters", dependent: :delete
+add_foreign_key "appearances", "costumes", name: "foreign_key_appearances_costumes", dependent: :delete
+add_foreign_key "appearances", "greetings", name: "foreign_key_appearnaces_greetings", dependent: :delete
+add_foreign_key "greetings", "places", name: "foreign_key_greetings_places", dependent: :delete
+add_foreign_key "greetings", "schedules", name: "foreign_key_greetings_schedules", dependent: :delete
