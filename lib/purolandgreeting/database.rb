@@ -142,7 +142,7 @@ module PurolandGreeting
         normalizer.place_table.each do |before, after|
           before_place = Place.find_by_name(before) or next
           after_place = Place.where(name: after).first_or_create
-          Greeting.where('place_id = ?', before_place.id).update_all character_id: after_place.id
+          Greeting.where('place_id = ?', before_place.id).update_all place_id: after_place.id
           before_place.destroy
         end
       end
