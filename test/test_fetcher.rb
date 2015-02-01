@@ -4,7 +4,7 @@ class TestFetcher < Test::Unit::TestCase
   def test_fetch
     VCR.use_cassette('test_fetch') do
       result = PurolandGreeting::Fetcher.fetch(false)
-      assert_equal result.size, 81
+      assert_equal result.size, 76
     end
   end
 

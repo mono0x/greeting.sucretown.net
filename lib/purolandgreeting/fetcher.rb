@@ -4,7 +4,7 @@ require 'nkf'
 
 module PurolandGreeting
   class Fetcher
-    BASE_URI = 'http://www.puroland.co.jp/chara_gre/'
+    BASE_URI = 'http://www.puroland.co.jp/chara_gre/mobile/'
     INTERVAL = 0.5
 
     def self.fetch(wait = true)
@@ -34,20 +34,20 @@ module PurolandGreeting
       date = parse_date(index_page) or return []
 
       menu_page = try_request {
-        agent.submit(index_page.forms.find {|form| form.action == 'chara_sentaku.asp' })
+        agent.submit(index_page.forms.first)
       }
 
       result = []
-      menu_page.forms.select {|form| form.action == 'chara_sche.asp' }.each do |form|
+      menu_page.links_with(:href => /^chara_sche\.asp\?/).each do |link|
         sleep INTERVAL if wait
 
         schedule_page = try_request {
-          agent.submit(form)
+          agent.click(link)
         }
-        character = schedule_page.search('#date3').first.text
-        schedule_page.search('#date').each do |div|
-          next unless div.children.size >= 3
-          time, br, place = div.children
+        character = link.text
+        schedule_page.search('p[align="left"] font[size="-1"]').each do |font|
+          next unless font.children.size == 3
+          time, br, place = font.children
           next unless br.name == 'br'
           normalize_string(time.text).match(/\A\s*(?<start_hour>\d+):(?<start_minute>\d+)-(?<end_hour>\d+):(?<end_minute>\d+)\z/) do |m|
             start_at = Time.local(date.year, date.month, date.day, Integer(m[:start_hour]), Integer(m[:start_minute]))
@@ -61,7 +61,7 @@ module PurolandGreeting
     end
 
     def parse_date(index_page)
-      t = normalize_string(index_page.search('#date').first.text)
+      t = normalize_string(index_page.search('p[align="center"] font[size="-1"]').first.text)
       t.match(/(?<year>\d+)年(?<month>\d+)月(?<day>\d+)日\([日月火水木金土]\)\s*/) do |m|
         return Date.new(Integer(m[:year]), Integer(m[:month]), Integer(m[:day]))
       end
