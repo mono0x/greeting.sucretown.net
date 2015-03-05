@@ -48,7 +48,22 @@ create_table "schedules", force: true do |t|
   t.date "date", null: false
 end
 
-add_index "schedules", ["date"], name: "index_schedules_on_date", using: :btree
+add_index "schedules", ["date"], name: "index_schedules_on_date", unique: true, using: :btree
+
+create_table "temporary_schedules", force: true do |t|
+  t.date "date", null: false
+end
+
+add_index "temporary_schedules", ["date"], name: "index_temporary_schedules_on_date", unique: true, using: :btree
+
+create_table "temporary_appearances", force: true do |t|
+  t.integer "character_id",          null: false
+  t.integer "temporary_schedule_id", null: false
+  t.string  "raw_character_name",    null: false
+  t.boolean "deleted",               null: false, default: false
+end
+
+add_index "temporary_appearances", ["character_id", "temporary_schedule_id"], name: "index_temporary_appearances_uniqueness", unique: true, using: :btree
 
 add_foreign_key "appearances", "characters", name: "foreign_key_appearances_characters", dependent: :delete
 add_foreign_key "appearances", "costumes", name: "foreign_key_appearances_costumes", dependent: :delete

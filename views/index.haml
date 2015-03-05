@@ -1,10 +1,16 @@
 - if today_schedule
-  %div
+  %p
     %a.btn.btn-block.btn-primary.btn-lg{href: today_schedule.date.strftime('/schedule/%Y/%m/%d/')}
-      #{today.strftime('%Y/%m/%d')} の予定
+      #{today_schedule.date.strftime('%Y/%m/%d')} の予定
 - else
   .well
     #{today.strftime('%Y/%m/%d')} の予定は公開されていません。
+
+- if temporary_schedule
+  %p
+    %a.btn.btn-block.btn-default.btn-lg{href: temporary_schedule.date.strftime('/schedule/%Y/%m/%d/character')}
+      %small
+        #{temporary_schedule.date.strftime('%Y/%m/%d')} の登場キャラクター
 
 %section
   %h2 データ

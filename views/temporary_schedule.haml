@@ -1,0 +1,18 @@
+- if today_schedule
+  %p
+    %a.btn.btn-block.btn-primary.btn-lg{href: today_schedule.date.strftime('/schedule/%Y/%m/%d/')}
+      #{today_schedule.date.strftime('%Y/%m/%d')} の予定
+
+%header.page-header
+  %h1 #{temporary_schedule.date.strftime('%Y/%m/%d')} の登場キャラクター
+
+- unless characters.empty?
+  .list-group
+    - characters.each do |character|
+      .list-group-item= character.name
+
+- unless deleted_characters.empty?
+  %h2 中止
+  .list-group
+    - deleted_characters.each do |character|
+      .list-group-item= character.name

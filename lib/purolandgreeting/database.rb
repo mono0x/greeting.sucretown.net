@@ -11,10 +11,11 @@ module PurolandGreeting
       ActiveRecord::Base.default_timezone = :local
     end
 
-    def self.register(items)
+    def self.register(items = [], nextday_items = [])
       normalizer = Normalizer.new
 
-      keys = [ :character, :place, :start_at, :end_at, :deleted ]
+      keys = [ :character, :place, :start_at, :end_at, :deleted ].freeze
+      nextday_keys = [ :character, :date, :deleted ].freeze
 
       deleted_items = nil
       added_items = nil
@@ -81,6 +82,35 @@ module PurolandGreeting
             added_items << item
           }
         end
+
+        unless nextday_items.empty?
+          dates = nextday_items.map {|item| item[:date] }.uniq
+          before_nextday = TemporaryAppearance.joins(:temporary_schedule).where('temporary_schedules.date IN ( ? )', dates).map {|a|
+            Hash[nextday_keys.zip([ a.raw_character_name, a.temporary_schedule.date, a.deleted ])]
+          }.to_set
+          after_nextday = nextday_items.map {|item|
+            { deleted: false }.merge item
+          }.to_set
+
+          (before_nextday - after_nextday).select {|item| !item[:deleted] }.each do |item|
+            character_name, costume_name = normalizer.character(item[:character])
+            character = Character.where(name: character_name).first_or_create
+            schedule = TemporarySchedule.where(date: item[:date]).first_or_create
+            TemporaryAppearance.where(character_id: character.id, temporary_schedule_id: schedule.id).update_attribute :deleted, true
+          end
+
+          (after_nextday - before_nextday).each do |item|
+            character_name, costume_name = normalizer.character(item[:character])
+            character = Character.where(name: character_name).first_or_create
+            schedule = TemporarySchedule.where(date: item[:date]).first_or_create
+            TemporaryAppearance.where(character_id: character.id, temporary_schedule_id: schedule.id, raw_character_name: item[:character], deleted: item[:deleted]).first_or_create
+          end
+
+          nextday_items.map {|item| item[:date] }.uniq.each do |date|
+            TemporarySchedule.where(date: date).first_or_create
+          end
+        end
+
       end
 
       [ added_items, deleted_items, ]

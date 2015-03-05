@@ -37,9 +37,9 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Set-Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI; path=/
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB; path=/
       Date:
-      - Sun, 01 Feb 2015 14:50:14 GMT
+      - Tue, 03 Mar 2015 14:09:59 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -65,7 +65,7 @@ http_interactions:
         bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
         PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
         LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UD48
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UD48
         Rk9OVCBDT0xPUj0iIzAwODA4MCIgc2l6ZT0tMT6DVoOHgVuIyIpPgsWDTIOD
         g4mDToNegVuCyYnvgqaC6YF5j+qPioF6gsaBeY6eitSBeoLwkrKC14LpgrGC
         xoKqj2+XiILcgreBQjwvRk9OVD48L1A+DQo8UD48Qj48Rk9OVCBDT0xPUj0i
@@ -75,7 +75,7 @@ http_interactions:
         PjwvUD4NCjxDRU5URVI+DQo8Rk9STSBhY3Rpb249ImNoYXJhX3NlbnRha3Uu
         YXNwIj4NCgk8SU5QVVQgdHlwZT0ic3VibWl0IiB2YWx1ZT0il7mPs4K3guki
         Pg0KCTxJTlBVVCB0eXBlPSJoaWRkZW4iIG5hbWU9IlRDSEsiIHZhbHVlPSIy
-        MDE1MTIiPg0KCTxJTlBVVCB0eXBlPSJoaWRkZW4iIG5hbWU9ImxhbmciIHZh
+        MDE1MzMiPg0KCTxJTlBVVCB0eXBlPSJoaWRkZW4iIG5hbWU9ImxhbmciIHZh
         bHVlPSIiPg0KCTwhLS08SU5QVVQgdHlwZT0iaGlkZGVuIiBuYW1lPSJwYXJh
         IiB2YWx1ZT0iIj4tLT4NCjwvRk9STT4NCjwvQ0VOVEVSPg0KPEEgaHJlZj0i
         L2kvaW5kZXguYXNwP2xhbmc9Ij5CYWNrPC9BPjxCUj4NCg0KICAgIDxkaXYg
@@ -88,10 +88,10 @@ http_interactions:
         aWR0aD0iMSIgaGVpZ2h0PSIxIj4NCgk8L2lmcmFtZT4NCgk8L25vc2NyaXB0
         Pg0KDQo8IS0tjJ+P2INeg08tLT4NCjwvYm9keT4NCjwvaHRtbD4NCg==
     http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:14 GMT
+  recorded_at: Tue, 03 Mar 2015 14:09:59 GMT
 - request:
     method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sentaku.asp?TCHK=201512&lang=
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sentaku.asp?TCHK=201533&lang=
     body:
       encoding: US-ASCII
       string: ''
@@ -107,7 +107,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
       Host:
       - www.puroland.co.jp
       Referer:
@@ -144,13 +144,13 @@ http_interactions:
       Cache-Control:
       - private
       Content-Length:
-      - '4268'
+      - '3371'
       Content-Type:
       - text/html
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sun, 01 Feb 2015 14:50:14 GMT
+      - Tue, 03 Mar 2015 14:10:01 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -176,11 +176,11 @@ http_interactions:
         bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
         PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
         LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQoNCjxQ
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQoNCjxQ
         PjxGT05UIFNpemU9LTEgY29sb3I9IiMwMDgwZmYiPoNWg4eBW4jIik+CxYNM
         g4ODiYNOg16BW4LJie+CpoLpgXmP6o+KgXqCxoF5jp6K1IF6gvCSsoLXgumC
         sYLGgqqCxYKrgtyCt4FCPC9GT05UPjwvUD4NCjxQPjxGT05UIFNpemU9LTE+
-        PEEgaHJlZj0ic3BvdC5hc3A/VENISz0yMDE1MTIiPo/qj4qCzJDglr48L0E+
+        PEEgaHJlZj0ic3BvdC5hc3A/VENISz0yMDE1MzMiPo/qj4qCzJDglr48L0E+
         PC9GT05UPjwvUD4NCjxIUj4NCg0KPFA+PEZPTlQgQ09MT1I9IiNBOEJBRjAi
         IHNpemU9LTE+gXmWe5P6ie+CpoLpg0yDg4OJg06DXoFbgs2CsYK/gueBejwv
         Rk9OVD48QlI+DQoNCjxQPjxGT05UIFNpemU9Ii0xIj6Bmo6fgsyDT4OKgVuD
@@ -189,71 +189,51 @@ http_interactions:
         8YFCPC9GT05UPjwvUD4NCjxCUj4NCjxGT05UIHNpemU9LTE+gZqDTIODg4mD
         ToNegVuWvILwiZ+Ct4LGgUGCooLCgseCsYLFie+CpoLpgqmC7YKpgumC5iEh
         PC9QPg0KPFA+DQo8Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2NoZS5h
-        c3A/VENISz0yMDE1MTImQ19LRVk9MT6DTINlg0KBRYN6g4+DQ4NnPC9BPjwv
+        c3A/VENISz0yMDE1MzMmQ19LRVk9Mz6DX4Nqg0eDi4FFg1iDXoFbPC9BPjwv
         Rk9OVD48QlI+PEZPTlQgU2l6ZT0tMT48QSBocmVmPWNoYXJhX3NjaGUuYXNw
-        P1RDSEs9MjAxNTEyJkNfS0VZPTI+g36DfoNCgUWDeoOPg0ODZzwvQT48L0ZP
-        TlQ+PEJSPjxGT05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9U
-        Q0hLPTIwMTUxMiZDX0tFWT0zPoNfg2qDR4OLgUWDWINegVs8L0E+PC9GT05U
-        PjxCUj48Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2NoZS5hc3A/VENI
-        Sz0yMDE1MTImQ19LRVk9ND6DV4OHgVuDV4FFg3qDj4NDg2cog3CDcCk8L0E+
-        PC9GT05UPjxCUj48Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2NoZS5h
-        c3A/VENISz0yMDE1MTImQ19LRVk9MjA+g0GDk4Ncg2qBW4FFg3qDj4NDg2co
-        gqiCtoKigr+C4YLxKTwvQT48L0ZPTlQ+PEJSPjxGT05UIFNpemU9LTE+PEEg
-        aHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIwMTUxMiZDX0tFWT02PoN9gVuD
-        S4OMg2KDZ4FFg3qDj4NDg2cogqiCzoKggr+C4YLxKTwvQT48L0ZPTlQ+PEJS
-        PjxGT05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIw
-        MTUxMiZDX0tFWT0zMz6DiYOJg4mDdIONgVuDiTwvQT48L0ZPTlQ+PEJSPjxG
-        T05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIwMTUx
-        MiZDX0tFWT0xNj6C6YLxgumC8YOLg4s8L0E+PC9GT05UPjxCUj48Rk9OVCBT
-        aXplPS0xPjxBIGhyZWY9Y2hhcmFfc2NoZS5hc3A/VENISz0yMDE1MTImQ19L
-        RVk9NDk+g36Di4NMgVuDfoN+PC9BPjwvRk9OVD48QlI+PEZPTlQgU2l6ZT0t
-        MT48QSBocmVmPWNoYXJhX3NjaGUuYXNwP1RDSEs9MjAxNTEyJkNfS0VZPTg+
-        g4uDcoFbPC9BPjwvRk9OVD48QlI+PEZPTlQgU2l6ZT0tMT48QSBocmVmPWNo
-        YXJhX3NjaGUuYXNwP1RDSEs9MjAxNTEyJkNfS0VZPTk+g1SDdINCgVs8L0E+
-        PC9GT05UPjxCUj48Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2NoZS5h
-        c3A/VENISz0yMDE1MTImQ19LRVk9Mzk+g0eDk4NXg0aDiTwvQT48L0ZPTlQ+
-        PEJSPjxGT05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hL
-        PTIwMTUxMiZDX0tFWT03Mz6Di4Fbg0E8L0E+PC9GT05UPjxCUj48Rk9OVCBT
-        aXplPS0xPjxBIGhyZWY9Y2hhcmFfc2NoZS5hc3A/VENISz0yMDE1MTImQ19L
-        RVk9Nz6DfYNDg4GDjYNmg0I8L0E+PC9GT05UPjxCUj48Rk9OVCBTaXplPS0x
-        PjxBIGhyZWY9Y2hhcmFfc2NoZS5hc3A/VENISz0yMDE1MTImQ19LRVk9NDg+
-        g06DjYN+PC9BPjwvRk9OVD48QlI+PEZPTlQgU2l6ZT0tMT48QSBocmVmPWNo
-        YXJhX3NjaGUuYXNwP1RDSEs9MjAxNTEyJkNfS0VZPTMyPoOKg2eDi4Njg0OD
-        k4NYg16BW4NZPC9BPjwvRk9OVD48QlI+PEZPTlQgU2l6ZT0tMT48QSBocmVm
-        PWNoYXJhX3NjaGUuYXNwP1RDSEs9MjAxNTEyJkNfS0VZPTUzPoNFg0KDYoNW
-        g4WDfoFbg4GDizwvQT48L0ZPTlQ+PEJSPjxGT05UIFNpemU9LTE+PEEgaHJl
-        Zj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIwMTUxMiZDX0tFWT05Nz6DfYNDg1iD
-        RYNCgVuDZ4Nzg0GDbTwvQT48L0ZPTlQ+PEJSPjxGT05UIFNpemU9LTE+PEEg
-        aHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIwMTUxMiZDX0tFWT01Mj6DVoNp
-        g4KDkzwvQT48L0ZPTlQ+PEJSPjxGT05UIFNpemU9LTE+PEEgaHJlZj1jaGFy
-        YV9zY2hlLmFzcD9UQ0hLPTIwMTUxMiZDX0tFWT0xOT6DgoNKPC9BPjwvRk9O
+        P1RDSEs9MjAxNTMzJkNfS0VZPTMzPoOJg4mDiYN0g42BW4OJPC9BPjwvRk9O
         VD48QlI+PEZPTlQgU2l6ZT0tMT48QSBocmVmPWNoYXJhX3NjaGUuYXNwP1RD
-        SEs9MjAxNTEyJkNfS0VZPTI2PoN8g4CDfIOAg3aDioOTPC9BPjwvRk9OVD48
+        SEs9MjAxNTMzJkNfS0VZPTg2PoLagvGC2oLxguiC2oLxPC9BPjwvRk9OVD48
         QlI+PEZPTlQgU2l6ZT0tMT48QSBocmVmPWNoYXJhX3NjaGUuYXNwP1RDSEs9
-        MjAxNTEyJkNfS0VZPTYxPoNvg2KDaILOgsKK2zwvQT48L0ZPTlQ+PEJSPjxG
-        T05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIwMTUx
-        MiZDX0tFWT0zNT6IyY9XiUCDcIOTg1+DbzwvQT48L0ZPTlQ+PEJSPjxGT05U
-        IFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIwMTUxMiZD
-        X0tFWT0xMj6CtYLrgqSCs4GVgq2C64KkgrM8L0E+PC9GT05UPjxCUj48Rk9O
-        VCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2NoZS5hc3A/VENISz0yMDE1MTIm
-        Q19LRVk9Mjg+g3yDYIODg2KDUjwvQT48L0ZPTlQ+PEJSPjxGT05UIFNpemU9
-        LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIwMTUxMiZDX0tFWT00
-        ND6DbYOJg2yDUoOJg5ODaDwvQT48L0ZPTlQ+PEJSPjxGT05UIFNpemU9LTE+
-        PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIwMTUxMiZDX0tFWT01MD6D
-        V4ODg1iDcIFbPC9BPjwvRk9OVD48QlI+DQo8L1A+DQoNCiAgICA8ZGl2IGlk
-        PSJkYXRlNSI+JmNvcHk7MjAxNCBTQU5SSU8gRU5URVJUQUlOTUVOVCBDTy4s
-        TFRELjwvZGl2Pg0KIA0KCTwhLS2Mn4/Yg16DTy0tPg0KCTxzY3JpcHQgbGFu
-        Z3VhZ2U9IkphdmFTY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3Jj
-        PSIvL28uYWR2Zy5qcC9vanM/YWlkPTEwMTM2JnBpZD0xJmtleT0iIGNoYXJz
-        ZXQ9IlVURi04Ij4NCgk8L3NjcmlwdD4NCg0KCTxub3NjcmlwdD4NCgk8aWZy
-        YW1lIHNyYz0iLy9vLmFkdmcuanAvb2lmP2FpZD0xMDEzNiZwaWQ9MSIgd2lk
-        dGg9IjEiIGhlaWdodD0iMSI+DQoJPC9pZnJhbWU+DQoJPC9ub3NjcmlwdD4N
-        Cg0KPCEtLYyfj9iDXoNPLS0+DQo8L2JvZHk+DQo8L2h0bWw+DQo=
+        MjAxNTMzJkNfS0VZPTE2PoLpgvGC6YLxg4uDizwvQT48L0ZPTlQ+PEJSPjxG
+        T05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIwMTUz
+        MyZDX0tFWT04PoOLg3KBWzwvQT48L0ZPTlQ+PEJSPjxGT05UIFNpemU9LTE+
+        PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIwMTUzMyZDX0tFWT0zOT6D
+        R4OTg1eDRoOJPC9BPjwvRk9OVD48QlI+PEZPTlQgU2l6ZT0tMT48QSBocmVm
+        PWNoYXJhX3NjaGUuYXNwP1RDSEs9MjAxNTMzJkNfS0VZPTczPoOLgVuDQTwv
+        QT48L0ZPTlQ+PEJSPjxGT05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zY2hl
+        LmFzcD9UQ0hLPTIwMTUzMyZDX0tFWT03PoN9g0ODgYONg2aDQjwvQT48L0ZP
+        TlQ+PEJSPjxGT05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9U
+        Q0hLPTIwMTUzMyZDX0tFWT0zMj6DioNng4uDY4NDg5ODWINegVuDWTwvQT48
+        L0ZPTlQ+PEJSPjxGT05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFz
+        cD9UQ0hLPTIwMTUzMyZDX0tFWT01Mz6DRYNCg2KDVoOFg36BW4OBg4s8L0E+
+        PC9GT05UPjxCUj48Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2NoZS5h
+        c3A/VENISz0yMDE1MzMmQ19LRVk9MjY+g3yDgIN8g4CDdoOKg5M8L0E+PC9G
+        T05UPjxCUj48Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2NoZS5hc3A/
+        VENISz0yMDE1MzMmQ19LRVk9NjE+g2+DYoNogs6CworbPC9BPjwvRk9OVD48
+        QlI+PEZPTlQgU2l6ZT0tMT48QSBocmVmPWNoYXJhX3NjaGUuYXNwP1RDSEs9
+        MjAxNTMzJkNfS0VZPTE0PoLgguCCpIKzgZWCzYLIgqSCszwvQT48L0ZPTlQ+
+        PEJSPjxGT05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hL
+        PTIwMTUzMyZDX0tFWT0zMT6CqIKzgumCzILggvGCq4K/PC9BPjwvRk9OVD48
+        QlI+PEZPTlQgU2l6ZT0tMT48QSBocmVmPWNoYXJhX3NjaGUuYXNwP1RDSEs9
+        MjAxNTMzJkNfS0VZPTI5PpZ7ldyMxZXgjYGWezwvQT48L0ZPTlQ+PEJSPjxG
+        T05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIwMTUz
+        MyZDX0tFWT0zMD6VqpWUi3aJ1DwvQT48L0ZPTlQ+PEJSPjxGT05UIFNpemU9
+        LTE+PEEgaHJlZj1jaGFyYV9zY2hlLmFzcD9UQ0hLPTIwMTUzMyZDX0tFWT01
+        MD6DV4ODg1iDcIFbPC9BPjwvRk9OVD48QlI+DQo8L1A+DQoNCiAgICA8ZGl2
+        IGlkPSJkYXRlNSI+JmNvcHk7MjAxNCBTQU5SSU8gRU5URVJUQUlOTUVOVCBD
+        Ty4sTFRELjwvZGl2Pg0KIA0KCTwhLS2Mn4/Yg16DTy0tPg0KCTxzY3JpcHQg
+        bGFuZ3VhZ2U9IkphdmFTY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIg
+        c3JjPSIvL28uYWR2Zy5qcC9vanM/YWlkPTEwMTM2JnBpZD0xJmtleT0iIGNo
+        YXJzZXQ9IlVURi04Ij4NCgk8L3NjcmlwdD4NCg0KCTxub3NjcmlwdD4NCgk8
+        aWZyYW1lIHNyYz0iLy9vLmFkdmcuanAvb2lmP2FpZD0xMDEzNiZwaWQ9MSIg
+        d2lkdGg9IjEiIGhlaWdodD0iMSI+DQoJPC9pZnJhbWU+DQoJPC9ub3Njcmlw
+        dD4NCg0KPCEtLYyfj9iDXoNPLS0+DQo8L2JvZHk+DQo8L2h0bWw+DQo=
     http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:15 GMT
+  recorded_at: Tue, 03 Mar 2015 14:10:00 GMT
 - request:
     method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=1&TCHK=201512
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=3&TCHK=201533
     body:
       encoding: US-ASCII
       string: ''
@@ -269,7 +249,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
       Host:
       - www.puroland.co.jp
       Referer:
@@ -280,188 +260,10 @@ http_interactions:
         host: www.puroland.co.jp
         port: 80
         path: "/chara_gre/mobile/chara_sentaku.asp"
-        query: TCHK=201512&lang=
+        query: TCHK=201533&lang=
         opaque: 
         fragment: 
         parser: *1
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '2083'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:15 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DTINlg0KBRYN6g4+DQ4NnPC9G
-        T05UPjwvUD4NCjxIUj4NCjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6C
-        UIJPgUaCT4JPgXyCUIJPgUaCUYJPPEJSPoNyg4yDYoNXgWmCUIJlgWo8L0ZP
-        TlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCUIFG
-        gk+CT4F8glCCUIFGglKCTzxCUj6OypBegsyDfoNqg3aDiYOTg2eBaYJQgmWB
-        ajwvRk9OVD48L1A+PEJSPjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6C
-        UIJUgUaCT4JPgXyCUIJUgUaCUoJPPEJSPo7KkF6CzIN+g2qDdoOJg5ODZ4Fp
-        glCCZYFqPC9GT05UPjwvUD48QlI+PEhSPjxCUj48UCBhbGlnbj1sZWZ0PjxG
-        T05UIFNpemU9LTE+PEEgaHJlZj1odHRwOi8vd3d3LnB1cm9sYW5kLmpwL3Nh
-        bnJpb3Rvd24vbGFkeWtpdHR5aG91c2UuaHRtbD63w6i93sqzvYLJguCXVoLR
-        gsmXiILEgss8L0E+PEJSPjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT48
-        QSBocmVmPWh0dHA6Ly93d3cucHVyb2xhbmQuanAvY2hhcmFjdGVyL2hlbGxv
-        X2tpdHR5PrfDqIKqj2+JiYK1gsSCooLpvK6wgsyP7pXxPC9BPg0KDQo8QlI+
-        PEJSPg0KPFAgYWxpZ249Y2VudGVyPjxGT05UIFNpemU9LTE+PEEgaHJlZj1j
-        aGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUxMj6W34LpPC9BPjwvRk9OVD48
-        L1A+DQoNCg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4mY29weTsyMDE0IFNBTlJJ
-        TyBFTlRFUlRBSU5NRU5UIENPLixMVEQuPC9kaXY+DQogDQoJPCEtLYyfj9iD
-        XoNPLS0+DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCIgdHlwZT0i
-        dGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii8vby5hZHZnLmpwL29qcz9haWQ9MTAx
-        MzYmcGlkPTEma2V5PSIgY2hhcnNldD0iVVRGLTgiPg0KCTwvc2NyaXB0Pg0K
-        DQoJPG5vc2NyaXB0Pg0KCTxpZnJhbWUgc3JjPSIvL28uYWR2Zy5qcC9vaWY/
-        YWlkPTEwMTM2JnBpZD0xIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIj4NCgk8L2lm
-        cmFtZT4NCgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P2INeg08tLT4NCjwvYm9k
-        eT4NCjwvaHRtbD4NCg==
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:15 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=2&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1652'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:15 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DfoN+g0KBRYN6g4+DQ4NnPC9G
-        T05UPjwvUD4NCjxIUj4NCjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6C
-        UIJPgUaCT4JPgXyCUIJPgUaCUYJPPEJSPoNyg4yDYoNXgWmCUIJlgWo8L0ZP
-        TlQ+PC9QPjxCUj4NCg0KPEJSPjxCUj4NCjxQIGFsaWduPWNlbnRlcj48Rk9O
-        VCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2VudGFrdS5hc3A/VENISz0yMDE1
-        MTI+lt+C6TwvQT48L0ZPTlQ+PC9QPg0KDQoNCiAgICA8ZGl2IGlkPSJkYXRl
-        NSI+JmNvcHk7MjAxNCBTQU5SSU8gRU5URVJUQUlOTUVOVCBDTy4sTFRELjwv
-        ZGl2Pg0KIA0KCTwhLS2Mn4/Yg16DTy0tPg0KCTxzY3JpcHQgbGFuZ3VhZ2U9
-        IkphdmFTY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIvL28u
-        YWR2Zy5qcC9vanM/YWlkPTEwMTM2JnBpZD0xJmtleT0iIGNoYXJzZXQ9IlVU
-        Ri04Ij4NCgk8L3NjcmlwdD4NCg0KCTxub3NjcmlwdD4NCgk8aWZyYW1lIHNy
-        Yz0iLy9vLmFkdmcuanAvb2lmP2FpZD0xMDEzNiZwaWQ9MSIgd2lkdGg9IjEi
-        IGhlaWdodD0iMSI+DQoJPC9pZnJhbWU+DQoJPC9ub3NjcmlwdD4NCg0KPCEt
-        LYyfj9iDXoNPLS0+DQo8L2JvZHk+DQo8L2h0bWw+DQo=
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:16 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=3&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
       Connection:
       - keep-alive
       Keep-Alive:
@@ -480,7 +282,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sun, 01 Feb 2015 14:50:15 GMT
+      - Tue, 03 Mar 2015 14:10:01 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -506,14 +308,14 @@ http_interactions:
         bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
         PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
         LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
         bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DX4Nqg0eDi4FFg1iDXoFbPC9G
         T05UPjwvUD4NCjxIUj4NCjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6C
-        UIJPgUaCU4JPgXyCUIJQgUaCT4JPPEJSPoN0gVuDaIN9g1aDk4OMg1iDZ4OJ
+        UIJQgUaCUIJUgXyCUIJQgUaCUoJUPEJSPoN0gVuDaIN9g1aDk4OMg1iDZ4OJ
         g5OBaYJTgmWBajwvRk9OVD48QlI+PEZPTlQgQ29sb3I9I0ZGMDAwMCBTaXpl
         PS0xPsywxN7PvN3avcTX3YLMl5iXcIKqj/CMjzwvRk9OVD48L1A+PEJSPg0K
         DQo8QlI+PEJSPg0KPFAgYWxpZ249Y2VudGVyPjxGT05UIFNpemU9LTE+PEEg
-        aHJlZj1jaGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUxMj6W34LpPC9BPjwv
+        aHJlZj1jaGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUzMz6W34LpPC9BPjwv
         Rk9OVD48L1A+DQoNCg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4mY29weTsyMDE0
         IFNBTlJJTyBFTlRFUlRBSU5NRU5UIENPLixMVEQuPC9kaXY+DQogDQoJPCEt
         LYyfj9iDXoNPLS0+DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCIg
@@ -524,10 +326,10 @@ http_interactions:
         Cgk8L2lmcmFtZT4NCgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P2INeg08tLT4N
         CjwvYm9keT4NCjwvaHRtbD4NCg==
     http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:16 GMT
+  recorded_at: Tue, 03 Mar 2015 14:10:01 GMT
 - request:
     method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=4&TCHK=201512
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=33&TCHK=201533
     body:
       encoding: US-ASCII
       string: ''
@@ -543,1602 +345,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1852'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:15 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DV4OHgVuDV4FFg3qDj4NDg2eB
-        aYNwg3CBajwvRk9OVD48L1A+DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05U
-        IFNpemU9LTE+glCCUYFGglKCT4F8glCCUYFGglSCTzxCUj6DVIOTg4qDSYNe
-        g0WDk4JRgmWBaYJRgmWBajwvRk9OVD48L1A+PEJSPjxQIGFsaWduPWxlZnQ+
-        PEZPTlQgU2l6ZT0tMT6CUIJSgUaCU4JPgXyCUIJTgUaCT4JPPEJSPoNyg4yD
-        YoNXgWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05U
-        IFNpemU9LTE+glCCVYFGglOCT4F8glCCVoFGgk+CTzxCUj6DVIOTg4qDSYNe
-        g0WDk4JRgmWBaYJRgmWBajwvRk9OVD48L1A+PEJSPg0KDQo8QlI+PEJSPg0K
-        PFAgYWxpZ249Y2VudGVyPjxGT05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9z
-        ZW50YWt1LmFzcD9UQ0hLPTIwMTUxMj6W34LpPC9BPjwvRk9OVD48L1A+DQoN
-        Cg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4mY29weTsyMDE0IFNBTlJJTyBFTlRF
-        UlRBSU5NRU5UIENPLixMVEQuPC9kaXY+DQogDQoJPCEtLYyfj9iDXoNPLS0+
-        DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCIgdHlwZT0idGV4dC9q
-        YXZhc2NyaXB0IiBzcmM9Ii8vby5hZHZnLmpwL29qcz9haWQ9MTAxMzYmcGlk
-        PTEma2V5PSIgY2hhcnNldD0iVVRGLTgiPg0KCTwvc2NyaXB0Pg0KDQoJPG5v
-        c2NyaXB0Pg0KCTxpZnJhbWUgc3JjPSIvL28uYWR2Zy5qcC9vaWY/YWlkPTEw
-        MTM2JnBpZD0xIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIj4NCgk8L2lmcmFtZT4N
-        Cgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P2INeg08tLT4NCjwvYm9keT4NCjwv
-        aHRtbD4NCg==
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:16 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=20&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1672'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:16 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DQYOTg1yDaoFbgUWDeoOPg0OD
-        Z4FpgqiCtoKigr+C4YLxgWo8L0ZPTlQ+PC9QPg0KPEhSPg0KPFAgYWxpZ249
-        bGVmdD48Rk9OVCBTaXplPS0xPoJQglKBRoJTgk+BfIJQglOBRoJPgk88QlI+
-        g3KDjINig1eBaYJQgmWBajwvRk9OVD48L1A+PEJSPg0KDQo8QlI+PEJSPg0K
-        PFAgYWxpZ249Y2VudGVyPjxGT05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9z
-        ZW50YWt1LmFzcD9UQ0hLPTIwMTUxMj6W34LpPC9BPjwvRk9OVD48L1A+DQoN
-        Cg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4mY29weTsyMDE0IFNBTlJJTyBFTlRF
-        UlRBSU5NRU5UIENPLixMVEQuPC9kaXY+DQogDQoJPCEtLYyfj9iDXoNPLS0+
-        DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCIgdHlwZT0idGV4dC9q
-        YXZhc2NyaXB0IiBzcmM9Ii8vby5hZHZnLmpwL29qcz9haWQ9MTAxMzYmcGlk
-        PTEma2V5PSIgY2hhcnNldD0iVVRGLTgiPg0KCTwvc2NyaXB0Pg0KDQoJPG5v
-        c2NyaXB0Pg0KCTxpZnJhbWUgc3JjPSIvL28uYWR2Zy5qcC9vaWY/YWlkPTEw
-        MTM2JnBpZD0xIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIj4NCgk8L2lmcmFtZT4N
-        Cgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P2INeg08tLT4NCjwvYm9keT4NCjwv
-        aHRtbD4NCg==
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:16 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=6&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1674'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:16 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DfYFbg0uDjINig2eBRYN6g4+D
-        Q4NngWmCqILOgqCCv4LhgvGBajwvRk9OVD48L1A+DQo8SFI+DQo8UCBhbGln
-        bj1sZWZ0PjxGT05UIFNpemU9LTE+glCCUoFGglOCT4F8glCCU4FGgk+CTzxC
-        Uj6DcoOMg2KDV4FpglCCZYFqPC9GT05UPjwvUD48QlI+DQoNCjxCUj48QlI+
-        DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0tMT48QSBocmVmPWNoYXJh
-        X3NlbnRha3UuYXNwP1RDSEs9MjAxNTEyPpbfguk8L0E+PC9GT05UPjwvUD4N
-        Cg0KDQogICAgPGRpdiBpZD0iZGF0ZTUiPiZjb3B5OzIwMTQgU0FOUklPIEVO
-        VEVSVEFJTk1FTlQgQ08uLExURC48L2Rpdj4NCiANCgk8IS0tjJ+P2INeg08t
-        LT4NCgk8c2NyaXB0IGxhbmd1YWdlPSJKYXZhU2NyaXB0IiB0eXBlPSJ0ZXh0
-        L2phdmFzY3JpcHQiIHNyYz0iLy9vLmFkdmcuanAvb2pzP2FpZD0xMDEzNiZw
-        aWQ9MSZrZXk9IiBjaGFyc2V0PSJVVEYtOCI+DQoJPC9zY3JpcHQ+DQoNCgk8
-        bm9zY3JpcHQ+DQoJPGlmcmFtZSBzcmM9Ii8vby5hZHZnLmpwL29pZj9haWQ9
-        MTAxMzYmcGlkPTEiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPg0KCTwvaWZyYW1l
-        Pg0KCTwvbm9zY3JpcHQ+DQoNCjwhLS2Mn4/Yg16DTy0tPg0KPC9ib2R5Pg0K
-        PC9odG1sPg0K
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:17 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=33&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1840'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:18 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DiYOJg4mDdIONgVuDiTwvRk9O
-        VD48L1A+DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCC
-        UoFGgk+CT4F8glCCUoFGglGCTzxCUj6DVIOTg4qDSYNeg0WDk4JRgmWBaYJR
-        gmWBajwvRk9OVD48L1A+PEJSPjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0t
-        MT6CUIJTgUaCT4JPgXyCUIJTgUaCUYJPPEJSPoNyg4yDYoNXgWmCUIJlgWo8
-        L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCC
-        VIFGglKCT4F8glCCVIFGglSCTzxCUj6DVIOTg4qDSYNeg0WDk4JRgmWBaYJR
-        gmWBajwvRk9OVD48L1A+PEJSPg0KDQo8QlI+PEJSPg0KPFAgYWxpZ249Y2Vu
-        dGVyPjxGT05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zZW50YWt1LmFzcD9U
-        Q0hLPTIwMTUxMj6W34LpPC9BPjwvRk9OVD48L1A+DQoNCg0KICAgIDxkaXYg
-        aWQ9ImRhdGU1Ij4mY29weTsyMDE0IFNBTlJJTyBFTlRFUlRBSU5NRU5UIENP
-        LixMVEQuPC9kaXY+DQogDQoJPCEtLYyfj9iDXoNPLS0+DQoJPHNjcmlwdCBs
-        YW5ndWFnZT0iSmF2YVNjcmlwdCIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBz
-        cmM9Ii8vby5hZHZnLmpwL29qcz9haWQ9MTAxMzYmcGlkPTEma2V5PSIgY2hh
-        cnNldD0iVVRGLTgiPg0KCTwvc2NyaXB0Pg0KDQoJPG5vc2NyaXB0Pg0KCTxp
-        ZnJhbWUgc3JjPSIvL28uYWR2Zy5qcC9vaWY/YWlkPTEwMTM2JnBpZD0xIiB3
-        aWR0aD0iMSIgaGVpZ2h0PSIxIj4NCgk8L2lmcmFtZT4NCgk8L25vc2NyaXB0
-        Pg0KDQo8IS0tjJ+P2INeg08tLT4NCjwvYm9keT4NCjwvaHRtbD4NCg==
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:18 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=16&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1858'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:18 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6C6YLxgumC8YOLg4s8L0ZPTlQ+
-        PC9QPg0KPEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQglOB
-        RoJPgk+BfIJQglOBRoJSgk88QlI+jsqQXoLMg36DaoN2g4mDk4NngWmCUIJl
-        gWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+
-        glCCVIFGglKCT4F8glCCVYFGgk+CTzxCUj6OypBegsyDfoNqg3aDiYOTg2eB
-        aYJQgmWBajwvRk9OVD48L1A+PEJSPjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6
-        ZT0tMT6CUIJWgUaCU4JPgXyCUIJXgUaCT4JPPEJSPoNHg5ODXoFbg2WDQ4OB
-        g5ODZ4N6gVuDi5P8jPuBaYJQgmWBajwvRk9OVD48L1A+PEJSPg0KDQo8QlI+
-        PEJSPg0KPFAgYWxpZ249Y2VudGVyPjxGT05UIFNpemU9LTE+PEEgaHJlZj1j
-        aGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUxMj6W34LpPC9BPjwvRk9OVD48
-        L1A+DQoNCg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4mY29weTsyMDE0IFNBTlJJ
-        TyBFTlRFUlRBSU5NRU5UIENPLixMVEQuPC9kaXY+DQogDQoJPCEtLYyfj9iD
-        XoNPLS0+DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCIgdHlwZT0i
-        dGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii8vby5hZHZnLmpwL29qcz9haWQ9MTAx
-        MzYmcGlkPTEma2V5PSIgY2hhcnNldD0iVVRGLTgiPg0KCTwvc2NyaXB0Pg0K
-        DQoJPG5vc2NyaXB0Pg0KCTxpZnJhbWUgc3JjPSIvL28uYWR2Zy5qcC9vaWY/
-        YWlkPTEwMTM2JnBpZD0xIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIj4NCgk8L2lm
-        cmFtZT4NCgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P2INeg08tLT4NCjwvYm9k
-        eT4NCjwvaHRtbD4NCg==
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:18 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=49&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1838'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:18 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DfoOLg0yBW4N+g348L0ZPTlQ+
-        PC9QPg0KPEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQglKB
-        RoJPgk+BfIJQglKBRoJRgk88QlI+g1SDk4OKg0mDXoNFg5OCUYJlgWmCUYJl
-        gWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+
-        glCCU4FGgk+CT4F8glCCU4FGglGCTzxCUj6DcoOMg2KDV4FpglCCZYFqPC9G
-        T05UPjwvUD48QlI+PFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQglSB
-        RoJSgk+BfIJQglSBRoJUgk88QlI+g1SDk4OKg0mDXoNFg5OCUYJlgWmCUYJl
-        gWo8L0ZPTlQ+PC9QPjxCUj4NCg0KPEJSPjxCUj4NCjxQIGFsaWduPWNlbnRl
-        cj48Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2VudGFrdS5hc3A/VENI
-        Sz0yMDE1MTI+lt+C6TwvQT48L0ZPTlQ+PC9QPg0KDQoNCiAgICA8ZGl2IGlk
-        PSJkYXRlNSI+JmNvcHk7MjAxNCBTQU5SSU8gRU5URVJUQUlOTUVOVCBDTy4s
-        TFRELjwvZGl2Pg0KIA0KCTwhLS2Mn4/Yg16DTy0tPg0KCTxzY3JpcHQgbGFu
-        Z3VhZ2U9IkphdmFTY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3Jj
-        PSIvL28uYWR2Zy5qcC9vanM/YWlkPTEwMTM2JnBpZD0xJmtleT0iIGNoYXJz
-        ZXQ9IlVURi04Ij4NCgk8L3NjcmlwdD4NCg0KCTxub3NjcmlwdD4NCgk8aWZy
-        YW1lIHNyYz0iLy9vLmFkdmcuanAvb2lmP2FpZD0xMDEzNiZwaWQ9MSIgd2lk
-        dGg9IjEiIGhlaWdodD0iMSI+DQoJPC9pZnJhbWU+DQoJPC9ub3NjcmlwdD4N
-        Cg0KPCEtLYyfj9iDXoNPLS0+DQo8L2JvZHk+DQo8L2h0bWw+DQo=
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:18 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=8&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1923'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:19 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6Di4NygVs8L0ZPTlQ+PC9QPg0K
-        PEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQgk+BRoJPgk+B
-        fIJQgk+BRoJRgk88QlI+g3KDjINig1eBaYJQgmWBajwvRk9OVD48L1A+PEJS
-        PjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJQgUaCUoJPgXyCUIJR
-        gUaCT4JPPEJSPo7KkF6CzIN+g2qDdoOJg5ODZ4FpglCCZYFqPC9GT05UPjwv
-        UD48QlI+PFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQglWBRoJQgk+B
-        fIJQglWBRoJSgk88QlI+g4yDQ4OTg3uBW4N6gVuDi4FpglKCZYFqPC9GT05U
-        PjwvUD48QlI+PFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQglaBRoJQ
-        gk+BfIJQglaBRoJSgk88QlI+g4yDQ4OTg3uBW4N6gVuDi4FpglKCZYFqPC9G
-        T05UPjwvUD48QlI+DQoNCjxCUj48QlI+DQo8UCBhbGlnbj1jZW50ZXI+PEZP
-        TlQgU2l6ZT0tMT48QSBocmVmPWNoYXJhX3NlbnRha3UuYXNwP1RDSEs9MjAx
-        NTEyPpbfguk8L0E+PC9GT05UPjwvUD4NCg0KDQogICAgPGRpdiBpZD0iZGF0
-        ZTUiPiZjb3B5OzIwMTQgU0FOUklPIEVOVEVSVEFJTk1FTlQgQ08uLExURC48
-        L2Rpdj4NCiANCgk8IS0tjJ+P2INeg08tLT4NCgk8c2NyaXB0IGxhbmd1YWdl
-        PSJKYXZhU2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9v
-        LmFkdmcuanAvb2pzP2FpZD0xMDEzNiZwaWQ9MSZrZXk9IiBjaGFyc2V0PSJV
-        VEYtOCI+DQoJPC9zY3JpcHQ+DQoNCgk8bm9zY3JpcHQ+DQoJPGlmcmFtZSBz
-        cmM9Ii8vby5hZHZnLmpwL29pZj9haWQ9MTAxMzYmcGlkPTEiIHdpZHRoPSIx
-        IiBoZWlnaHQ9IjEiPg0KCTwvaWZyYW1lPg0KCTwvbm9zY3JpcHQ+DQoNCjwh
-        LS2Mn4/Yg16DTy0tPg0KPC9ib2R5Pg0KPC9odG1sPg0K
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:19 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=9&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1654'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:19 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DVIN0g0KBWzwvRk9OVD48L1A+
-        DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCVYFGglCC
-        T4F8glCCVYFGglKCTzxCUj6DVIOTg4qDSYNeg0WDk4JRgmWBaYJRgmWBajwv
-        Rk9OVD48L1A+PEJSPg0KDQo8QlI+PEJSPg0KPFAgYWxpZ249Y2VudGVyPjxG
-        T05UIFNpemU9LTE+PEEgaHJlZj1jaGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIw
-        MTUxMj6W34LpPC9BPjwvRk9OVD48L1A+DQoNCg0KICAgIDxkaXYgaWQ9ImRh
-        dGU1Ij4mY29weTsyMDE0IFNBTlJJTyBFTlRFUlRBSU5NRU5UIENPLixMVEQu
-        PC9kaXY+DQogDQoJPCEtLYyfj9iDXoNPLS0+DQoJPHNjcmlwdCBsYW5ndWFn
-        ZT0iSmF2YVNjcmlwdCIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii8v
-        by5hZHZnLmpwL29qcz9haWQ9MTAxMzYmcGlkPTEma2V5PSIgY2hhcnNldD0i
-        VVRGLTgiPg0KCTwvc2NyaXB0Pg0KDQoJPG5vc2NyaXB0Pg0KCTxpZnJhbWUg
-        c3JjPSIvL28uYWR2Zy5qcC9vaWY/YWlkPTEwMTM2JnBpZD0xIiB3aWR0aD0i
-        MSIgaGVpZ2h0PSIxIj4NCgk8L2lmcmFtZT4NCgk8L25vc2NyaXB0Pg0KDQo8
-        IS0tjJ+P2INeg08tLT4NCjwvYm9keT4NCjwvaHRtbD4NCg==
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:20 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=39&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1768'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:19 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DR4OTg1eDRoOJPC9GT05UPjwv
-        UD4NCjxIUj4NCjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJPgUaC
-        UoJPgXyCUIJQgUaCT4JPPEJSPoNug2KDc4Fbgs2CwYLSgWCDb4Fbg1iDZoFb
-        gnKCZ4JugnaBaYJQgmWBajwvRk9OVD48QlI+PEZPTlQgQ29sb3I9I0ZGMDAw
-        MCBTaXplPS0xPmh0dHA6Ly93d3cucHVyb2xhbmQuanAvbGl2ZXNob3cvaGFw
-        cHlfaGFwcHlfYmlydGhkYXlfc2hvdzwvRk9OVD48L1A+PEJSPg0KDQo8QlI+
-        PEJSPg0KPFAgYWxpZ249Y2VudGVyPjxGT05UIFNpemU9LTE+PEEgaHJlZj1j
-        aGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUxMj6W34LpPC9BPjwvRk9OVD48
-        L1A+DQoNCg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4mY29weTsyMDE0IFNBTlJJ
-        TyBFTlRFUlRBSU5NRU5UIENPLixMVEQuPC9kaXY+DQogDQoJPCEtLYyfj9iD
-        XoNPLS0+DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCIgdHlwZT0i
-        dGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii8vby5hZHZnLmpwL29qcz9haWQ9MTAx
-        MzYmcGlkPTEma2V5PSIgY2hhcnNldD0iVVRGLTgiPg0KCTwvc2NyaXB0Pg0K
-        DQoJPG5vc2NyaXB0Pg0KCTxpZnJhbWUgc3JjPSIvL28uYWR2Zy5qcC9vaWY/
-        YWlkPTEwMTM2JnBpZD0xIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIj4NCgk8L2lm
-        cmFtZT4NCgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P2INeg08tLT4NCjwvYm9k
-        eT4NCjwvaHRtbD4NCg==
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:20 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=73&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1764'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:19 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6Di4Fbg0E8L0ZPTlQ+PC9QPg0K
-        PEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQgk+BRoJSgk+B
-        fIJQglCBRoJPgk88QlI+g26DYoNzgVuCzYLBgtKBYINvgVuDWINmgVuCcoJn
-        gm6CdoFpglCCZYFqPC9GT05UPjxCUj48Rk9OVCBDb2xvcj0jRkYwMDAwIFNp
-        emU9LTE+aHR0cDovL3d3dy5wdXJvbGFuZC5qcC9saXZlc2hvdy9oYXBweV9o
-        YXBweV9iaXJ0aGRheV9zaG93PC9GT05UPjwvUD48QlI+DQoNCjxCUj48QlI+
-        DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0tMT48QSBocmVmPWNoYXJh
-        X3NlbnRha3UuYXNwP1RDSEs9MjAxNTEyPpbfguk8L0E+PC9GT05UPjwvUD4N
-        Cg0KDQogICAgPGRpdiBpZD0iZGF0ZTUiPiZjb3B5OzIwMTQgU0FOUklPIEVO
-        VEVSVEFJTk1FTlQgQ08uLExURC48L2Rpdj4NCiANCgk8IS0tjJ+P2INeg08t
-        LT4NCgk8c2NyaXB0IGxhbmd1YWdlPSJKYXZhU2NyaXB0IiB0eXBlPSJ0ZXh0
-        L2phdmFzY3JpcHQiIHNyYz0iLy9vLmFkdmcuanAvb2pzP2FpZD0xMDEzNiZw
-        aWQ9MSZrZXk9IiBjaGFyc2V0PSJVVEYtOCI+DQoJPC9zY3JpcHQ+DQoNCgk8
-        bm9zY3JpcHQ+DQoJPGlmcmFtZSBzcmM9Ii8vby5hZHZnLmpwL29pZj9haWQ9
-        MTAxMzYmcGlkPTEiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPg0KCTwvaWZyYW1l
-        Pg0KCTwvbm9zY3JpcHQ+DQoNCjwhLS2Mn4/Yg16DTy0tPg0KPC9ib2R5Pg0K
-        PC9odG1sPg0K
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:20 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=7&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '2173'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:20 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DfYNDg4GDjYNmg0I8L0ZPTlQ+
-        PC9QPg0KPEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQgk+B
-        RoJSgk+BfIJQgk+BRoJUgk88QlI+g32DioFbg4mDk4Nog3SDSINng0eDioNB
-        gWmCU4JlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNp
-        emU9LTE+glCCT4FGglSCT4F8glCCUIFGglCCTzxCUj6DR4OTg16BW4Nlg0OD
-        gYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGln
-        bj1sZWZ0PjxGT05UIFNpemU9LTE+glCCUYFGgk+CT4F8glCCUYFGglGCTzxC
-        Uj6DfYOKgVuDiYOTg2iDdINIg2eDR4OKg0GBaYJTgmWBajwvRk9OVD48L1A+
-        PEJSPjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJTgUaCT4JPgXyC
-        UIJTgUaCUYJPPEJSPoN9g4qBW4OJg5ODaIN0g0iDZ4NHg4qDQYFpglOCZYFq
-        PC9GT05UPjwvUD48QlI+PFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQ
-        glSBRoJSgk+BfIJQglSBRoJUgk88QlI+g32DioFbg4mDk4Nog3SDSINng0eD
-        ioNBgWmCU4JlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05U
-        IFNpemU9LTE+glCCVoFGgk+CT4F8glCCVoFGglGCTzxCUj6DfYOKgVuDiYOT
-        g2iDdINIg2eDR4OKg0GBaYJTgmWBajwvRk9OVD48L1A+PEJSPg0KDQo8QlI+
-        PEJSPg0KPFAgYWxpZ249Y2VudGVyPjxGT05UIFNpemU9LTE+PEEgaHJlZj1j
-        aGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUxMj6W34LpPC9BPjwvRk9OVD48
-        L1A+DQoNCg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4mY29weTsyMDE0IFNBTlJJ
-        TyBFTlRFUlRBSU5NRU5UIENPLixMVEQuPC9kaXY+DQogDQoJPCEtLYyfj9iD
-        XoNPLS0+DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCIgdHlwZT0i
-        dGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii8vby5hZHZnLmpwL29qcz9haWQ9MTAx
-        MzYmcGlkPTEma2V5PSIgY2hhcnNldD0iVVRGLTgiPg0KCTwvc2NyaXB0Pg0K
-        DQoJPG5vc2NyaXB0Pg0KCTxpZnJhbWUgc3JjPSIvL28uYWR2Zy5qcC9vaWY/
-        YWlkPTEwMTM2JnBpZD0xIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIj4NCgk8L2lm
-        cmFtZT4NCgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P2INeg08tLT4NCjwvYm9k
-        eT4NCjwvaHRtbD4NCg==
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:20 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=48&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1965'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:20 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DToONg348L0ZPTlQ+PC9QPg0K
-        PEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQgk+BRoJSgk+B
-        fIJQgk+BRoJUgk88QlI+g0eDk4NegVuDZYNDg4GDk4Nng3qBW4OLk/yM+4Fp
-        glCCZYFqPC9GT05UPjwvUD48QlI+PFAgYWxpZ249bGVmdD48Rk9OVCBTaXpl
-        PS0xPoJQglCBRoJSgk+BfIJQglCBRoJUgk88QlI+g32DioFbg4mDk4Nog3SD
-        SINng0eDioNBgWmCU4JlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0
-        PjxGT05UIFNpemU9LTE+glCCUYFGglKCT4F8glCCUYFGglSCTzxCUj6DfYOK
-        gVuDiYOTg2iDdINIg2eDR4OKg0GBaYJTgmWBajwvRk9OVD48L1A+PEJSPjxQ
-        IGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJTgUaCUoJPgXyCUIJTgUaC
-        VIJPPEJSPoN9g4qBW4OJg5ODaIN0g0iDZ4NHg4qDQYFpglOCZYFqPC9GT05U
-        PjwvUD48QlI+DQoNCjxCUj48QlI+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQg
-        U2l6ZT0tMT48QSBocmVmPWNoYXJhX3NlbnRha3UuYXNwP1RDSEs9MjAxNTEy
-        Ppbfguk8L0E+PC9GT05UPjwvUD4NCg0KDQogICAgPGRpdiBpZD0iZGF0ZTUi
-        PiZjb3B5OzIwMTQgU0FOUklPIEVOVEVSVEFJTk1FTlQgQ08uLExURC48L2Rp
-        dj4NCiANCgk8IS0tjJ+P2INeg08tLT4NCgk8c2NyaXB0IGxhbmd1YWdlPSJK
-        YXZhU2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9vLmFk
-        dmcuanAvb2pzP2FpZD0xMDEzNiZwaWQ9MSZrZXk9IiBjaGFyc2V0PSJVVEYt
-        OCI+DQoJPC9zY3JpcHQ+DQoNCgk8bm9zY3JpcHQ+DQoJPGlmcmFtZSBzcmM9
-        Ii8vby5hZHZnLmpwL29pZj9haWQ9MTAxMzYmcGlkPTEiIHdpZHRoPSIxIiBo
-        ZWlnaHQ9IjEiPg0KCTwvaWZyYW1lPg0KCTwvbm9zY3JpcHQ+DQoNCjwhLS2M
-        n4/Yg16DTy0tPg0KPC9ib2R5Pg0KPC9odG1sPg0K
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:21 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=32&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '2096'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:20 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DioNng4uDY4NDg5ODWINegVuD
-        WTwvRk9OVD48L1A+DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9
-        LTE+glCCUIFGglSCT4F8glCCUYFGglCCTzxCUj6DR4OTg16BW4Nlg0ODgYOT
-        g2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1s
-        ZWZ0PjxGT05UIFNpemU9LTE+glCCUoFGglKCT4F8glCCUoFGglSCTzxCUj6D
-        R4OTg16BW4Nlg0ODgYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9Q
-        PjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCU4FGglKCT4F8
-        glCCU4FGglSCTzxCUj6DR4OTg16BW4Nlg0ODgYOTg2eDeoFbg4uT/Iz7gWmC
-        UIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9
-        LTE+glCCVIFGglKCT4F8glCCVIFGglSCTzxCUj6DR4OTg16BW4Nlg0ODgYOT
-        g2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1s
-        ZWZ0PjxGT05UIFNpemU9LTE+glCCVoFGglGCT4F8glCCVoFGglOCTzxCUj6D
-        R4OTg16BW4Nlg0ODgYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9Q
-        PjxCUj4NCg0KPEJSPjxCUj4NCjxQIGFsaWduPWNlbnRlcj48Rk9OVCBTaXpl
-        PS0xPjxBIGhyZWY9Y2hhcmFfc2VudGFrdS5hc3A/VENISz0yMDE1MTI+lt+C
-        6TwvQT48L0ZPTlQ+PC9QPg0KDQoNCiAgICA8ZGl2IGlkPSJkYXRlNSI+JmNv
-        cHk7MjAxNCBTQU5SSU8gRU5URVJUQUlOTUVOVCBDTy4sTFRELjwvZGl2Pg0K
-        IA0KCTwhLS2Mn4/Yg16DTy0tPg0KCTxzY3JpcHQgbGFuZ3VhZ2U9IkphdmFT
-        Y3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIvL28uYWR2Zy5q
-        cC9vanM/YWlkPTEwMTM2JnBpZD0xJmtleT0iIGNoYXJzZXQ9IlVURi04Ij4N
-        Cgk8L3NjcmlwdD4NCg0KCTxub3NjcmlwdD4NCgk8aWZyYW1lIHNyYz0iLy9v
-        LmFkdmcuanAvb2lmP2FpZD0xMDEzNiZwaWQ9MSIgd2lkdGg9IjEiIGhlaWdo
-        dD0iMSI+DQoJPC9pZnJhbWU+DQoJPC9ub3NjcmlwdD4NCg0KPCEtLYyfj9iD
-        XoNPLS0+DQo8L2JvZHk+DQo8L2h0bWw+DQo=
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:21 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=53&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1755'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:20 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DRYNCg2KDVoOFg36BW4OBg4s8
-        L0ZPTlQ+PC9QPg0KPEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0x
-        PoJQglKBRoJQgk+BfIJQglKBRoJSgk88QlI+g4yDQ4OTg3uBW4N6gVuDi4Fp
-        glKCZYFqPC9GT05UPjwvUD48QlI+PFAgYWxpZ249bGVmdD48Rk9OVCBTaXpl
-        PS0xPoJQglWBRoJSgk+BfIJQglWBRoJUgk88QlI+g4yDQ4OTg3uBW4N6gVuD
-        i4FpglKCZYFqPC9GT05UPjwvUD48QlI+DQoNCjxCUj48QlI+DQo8UCBhbGln
-        bj1jZW50ZXI+PEZPTlQgU2l6ZT0tMT48QSBocmVmPWNoYXJhX3NlbnRha3Uu
-        YXNwP1RDSEs9MjAxNTEyPpbfguk8L0E+PC9GT05UPjwvUD4NCg0KDQogICAg
-        PGRpdiBpZD0iZGF0ZTUiPiZjb3B5OzIwMTQgU0FOUklPIEVOVEVSVEFJTk1F
-        TlQgQ08uLExURC48L2Rpdj4NCiANCgk8IS0tjJ+P2INeg08tLT4NCgk8c2Ny
-        aXB0IGxhbmd1YWdlPSJKYXZhU2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3Jp
-        cHQiIHNyYz0iLy9vLmFkdmcuanAvb2pzP2FpZD0xMDEzNiZwaWQ9MSZrZXk9
-        IiBjaGFyc2V0PSJVVEYtOCI+DQoJPC9zY3JpcHQ+DQoNCgk8bm9zY3JpcHQ+
-        DQoJPGlmcmFtZSBzcmM9Ii8vby5hZHZnLmpwL29pZj9haWQ9MTAxMzYmcGlk
-        PTEiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPg0KCTwvaWZyYW1lPg0KCTwvbm9z
-        Y3JpcHQ+DQoNCjwhLS2Mn4/Yg16DTy0tPg0KPC9ib2R5Pg0KPC9odG1sPg0K
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:21 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=97&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1773'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:21 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DfYNDg1iDRYNCgVuDZ4Nzg0GD
-        bTwvRk9OVD48L1A+DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9
-        LTE+glCCUIFGgk+CT4F8glCCUIFGglGCTzxCUj6DfYOKgVuDiYOTg2iDdINI
-        g2eDR4OKg0GBaYJTgmWBajwvRk9OVD48L1A+PEJSPjxQIGFsaWduPWxlZnQ+
-        PEZPTlQgU2l6ZT0tMT6CUIJUgUaCT4JPgXyCUIJUgUaCUYJPPEJSPoN9g4qB
-        W4OJg5ODaIN0g0iDZ4NHg4qDQYFpglOCZYFqPC9GT05UPjwvUD48QlI+DQoN
-        CjxCUj48QlI+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0tMT48QSBo
-        cmVmPWNoYXJhX3NlbnRha3UuYXNwP1RDSEs9MjAxNTEyPpbfguk8L0E+PC9G
-        T05UPjwvUD4NCg0KDQogICAgPGRpdiBpZD0iZGF0ZTUiPiZjb3B5OzIwMTQg
-        U0FOUklPIEVOVEVSVEFJTk1FTlQgQ08uLExURC48L2Rpdj4NCiANCgk8IS0t
-        jJ+P2INeg08tLT4NCgk8c2NyaXB0IGxhbmd1YWdlPSJKYXZhU2NyaXB0IiB0
-        eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9vLmFkdmcuanAvb2pzP2Fp
-        ZD0xMDEzNiZwaWQ9MSZrZXk9IiBjaGFyc2V0PSJVVEYtOCI+DQoJPC9zY3Jp
-        cHQ+DQoNCgk8bm9zY3JpcHQ+DQoJPGlmcmFtZSBzcmM9Ii8vby5hZHZnLmpw
-        L29pZj9haWQ9MTAxMzYmcGlkPTEiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPg0K
-        CTwvaWZyYW1lPg0KCTwvbm9zY3JpcHQ+DQoNCjwhLS2Mn4/Yg16DTy0tPg0K
-        PC9ib2R5Pg0KPC9odG1sPg0K
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:21 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=52&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '2084'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:21 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DVoNpg4KDkzwvRk9OVD48L1A+
-        DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCUIFGglCC
-        T4F8glCCUIFGglKCTzxCUj6DR4OTg16BW4Nlg0ODgYOTg2eDeoFbg4uT/Iz7
-        gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNp
-        emU9LTE+glCCUYFGglCCT4F8glCCUYFGglKCTzxCUj6DR4OTg16BW4Nlg0OD
-        gYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGln
-        bj1sZWZ0PjxGT05UIFNpemU9LTE+glCCUoFGglSCT4F8glCCU4FGglCCTzxC
-        Uj6DR4OTg16BW4Nlg0ODgYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+
-        PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCU4FGglSC
-        T4F8glCCVIFGglCCTzxCUj6DR4OTg16BW4Nlg0ODgYOTg2eDeoFbg4uT/Iz7
-        gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNp
-        emU9LTE+glCCVYFGglCCT4F8glCCVYFGglKCTzxCUj6DR4OTg16BW4Nlg0OD
-        gYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj4NCg0KPEJS
-        PjxCUj4NCjxQIGFsaWduPWNlbnRlcj48Rk9OVCBTaXplPS0xPjxBIGhyZWY9
-        Y2hhcmFfc2VudGFrdS5hc3A/VENISz0yMDE1MTI+lt+C6TwvQT48L0ZPTlQ+
-        PC9QPg0KDQoNCiAgICA8ZGl2IGlkPSJkYXRlNSI+JmNvcHk7MjAxNCBTQU5S
-        SU8gRU5URVJUQUlOTUVOVCBDTy4sTFRELjwvZGl2Pg0KIA0KCTwhLS2Mn4/Y
-        g16DTy0tPg0KCTxzY3JpcHQgbGFuZ3VhZ2U9IkphdmFTY3JpcHQiIHR5cGU9
-        InRleHQvamF2YXNjcmlwdCIgc3JjPSIvL28uYWR2Zy5qcC9vanM/YWlkPTEw
-        MTM2JnBpZD0xJmtleT0iIGNoYXJzZXQ9IlVURi04Ij4NCgk8L3NjcmlwdD4N
-        Cg0KCTxub3NjcmlwdD4NCgk8aWZyYW1lIHNyYz0iLy9vLmFkdmcuanAvb2lm
-        P2FpZD0xMDEzNiZwaWQ9MSIgd2lkdGg9IjEiIGhlaWdodD0iMSI+DQoJPC9p
-        ZnJhbWU+DQoJPC9ub3NjcmlwdD4NCg0KPCEtLYyfj9iDXoNPLS0+DQo8L2Jv
-        ZHk+DQo8L2h0bWw+DQo=
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:22 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=19&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1650'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:21 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DgoNKPC9GT05UPjwvUD4NCjxI
-        Uj4NCjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJQgUaCUoJPgXyC
-        UIJRgUaCT4JPPEJSPoNUg5ODioNJg16DRYOTglGCZYFpglGCZYFqPC9GT05U
-        PjwvUD48QlI+DQoNCjxCUj48QlI+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQg
-        U2l6ZT0tMT48QSBocmVmPWNoYXJhX3NlbnRha3UuYXNwP1RDSEs9MjAxNTEy
-        Ppbfguk8L0E+PC9GT05UPjwvUD4NCg0KDQogICAgPGRpdiBpZD0iZGF0ZTUi
-        PiZjb3B5OzIwMTQgU0FOUklPIEVOVEVSVEFJTk1FTlQgQ08uLExURC48L2Rp
-        dj4NCiANCgk8IS0tjJ+P2INeg08tLT4NCgk8c2NyaXB0IGxhbmd1YWdlPSJK
-        YXZhU2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9vLmFk
-        dmcuanAvb2pzP2FpZD0xMDEzNiZwaWQ9MSZrZXk9IiBjaGFyc2V0PSJVVEYt
-        OCI+DQoJPC9zY3JpcHQ+DQoNCgk8bm9zY3JpcHQ+DQoJPGlmcmFtZSBzcmM9
-        Ii8vby5hZHZnLmpwL29pZj9haWQ9MTAxMzYmcGlkPTEiIHdpZHRoPSIxIiBo
-        ZWlnaHQ9IjEiPg0KCTwvaWZyYW1lPg0KCTwvbm9zY3JpcHQ+DQoNCjwhLS2M
-        n4/Yg16DTy0tPg0KPC9ib2R5Pg0KPC9odG1sPg0K
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:22 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=26&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '1955'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:23 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DfIOAg3yDgIN2g4qDkzwvRk9O
-        VD48L1A+DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCC
-        T4FGglKCT4F8glCCUIFGgk+CTzxCUj6OypBegsyDfoNqg3aDiYOTg2eBaYJQ
-        gmWBajwvRk9OVD48L1A+PEJSPjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0t
-        MT6CUIJRgUaCT4JPgXyCUIJRgUaCUoJPPEJSPo7KkF6CzIN+g2qDdoOJg5OD
-        Z4FpglCCZYFqPC9GT05UPjwvUD48QlI+PFAgYWxpZ249bGVmdD48Rk9OVCBT
-        aXplPS0xPoJQglOBRoJSgk+BfIJQglSBRoJPgk88QlI+jsqQXoLMg36DaoN2
-        g4mDk4NngWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxG
-        T05UIFNpemU9LTE+glCCVIFGglSCT4F8glCCVYFGglCCTzxCUj6DR4OTg16B
-        W4Nlg0ODgYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj4N
-        Cg0KPEJSPjxCUj4NCjxQIGFsaWduPWNlbnRlcj48Rk9OVCBTaXplPS0xPjxB
-        IGhyZWY9Y2hhcmFfc2VudGFrdS5hc3A/VENISz0yMDE1MTI+lt+C6TwvQT48
-        L0ZPTlQ+PC9QPg0KDQoNCiAgICA8ZGl2IGlkPSJkYXRlNSI+JmNvcHk7MjAx
-        NCBTQU5SSU8gRU5URVJUQUlOTUVOVCBDTy4sTFRELjwvZGl2Pg0KIA0KCTwh
-        LS2Mn4/Yg16DTy0tPg0KCTxzY3JpcHQgbGFuZ3VhZ2U9IkphdmFTY3JpcHQi
-        IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIvL28uYWR2Zy5qcC9vanM/
-        YWlkPTEwMTM2JnBpZD0xJmtleT0iIGNoYXJzZXQ9IlVURi04Ij4NCgk8L3Nj
-        cmlwdD4NCg0KCTxub3NjcmlwdD4NCgk8aWZyYW1lIHNyYz0iLy9vLmFkdmcu
-        anAvb2lmP2FpZD0xMDEzNiZwaWQ9MSIgd2lkdGg9IjEiIGhlaWdodD0iMSI+
-        DQoJPC9pZnJhbWU+DQoJPC9ub3NjcmlwdD4NCg0KPCEtLYyfj9iDXoNPLS0+
-        DQo8L2JvZHk+DQo8L2h0bWw+DQo=
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:23 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=61&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
       Host:
       - www.puroland.co.jp
       Referer:
@@ -2161,7 +368,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sun, 01 Feb 2015 14:50:23 GMT
+      - Tue, 03 Mar 2015 14:10:02 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -2187,12 +394,12 @@ http_interactions:
         bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
         PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
         LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6Db4Nig2iCzoLCits8L0ZPTlQ+
-        PC9QPg0KPEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQgk+B
-        RoJQgk+BfIJQgk+BRoJSgk88QlI+g3KDjINig1eBaYJQgmWBajwvRk9OVD48
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DiYOJg4mDdIONgVuDiTwvRk9O
+        VD48L1A+DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+gliB
+        RoJUglSBfIJQgk+BRoJQglQ8QlI+g3KDjINig1eBaYJQgmWBajwvRk9OVD48
         L1A+PEJSPg0KDQo8QlI+PEJSPg0KPFAgYWxpZ249Y2VudGVyPjxGT05UIFNp
-        emU9LTE+PEEgaHJlZj1jaGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUxMj6W
+        emU9LTE+PEEgaHJlZj1jaGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUzMz6W
         34LpPC9BPjwvRk9OVD48L1A+DQoNCg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4m
         Y29weTsyMDE0IFNBTlJJTyBFTlRFUlRBSU5NRU5UIENPLixMVEQuPC9kaXY+
         DQogDQoJPCEtLYyfj9iDXoNPLS0+DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2
@@ -2203,10 +410,10 @@ http_interactions:
         Z2h0PSIxIj4NCgk8L2lmcmFtZT4NCgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P
         2INeg08tLT4NCjwvYm9keT4NCjwvaHRtbD4NCg==
     http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:23 GMT
+  recorded_at: Tue, 03 Mar 2015 14:10:02 GMT
 - request:
     method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=35&TCHK=201512
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=86&TCHK=201533
     body:
       encoding: US-ASCII
       string: ''
@@ -2222,7 +429,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
       Host:
       - www.puroland.co.jp
       Referer:
@@ -2239,13 +446,13 @@ http_interactions:
       Cache-Control:
       - private
       Content-Length:
-      - '2615'
+      - '1670'
       Content-Type:
       - text/html
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sun, 01 Feb 2015 14:50:23 GMT
+      - Tue, 03 Mar 2015 14:10:04 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -2271,34 +478,13 @@ http_interactions:
         bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
         PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
         LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6IyY9XiUCDcIOTg1+DbzwvRk9O
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6C2oLxgtqC8YLogtqC8TwvRk9O
         VD48L1A+DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCC
-        UIFGgk+CT4F8glCCUIFGglKCTzxCUj6C04LtgtOC7YOJg5ODaIFpglCCZYFq
-        PC9GT05UPjxCUj48Rk9OVCBDb2xvcj0jRkYwMDAwIFNpemU9LTE+gtOC7YLT
-        gu2DiYOTg2iCzJeYl3CCqo/wjI8okeWQbILMlfuCzIKyk/yP6oLNgqiVdJNZ
-        gqKCzJX7gsyC3YLGgrOCuYLEkriCq4LcgreBQik8L0ZPTlQ+PC9QPjxCUj48
-        UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCUYFGgk+CT4F8glCCUYFG
-        glKCTzxCUj6C04LtgtOC7YOJg5ODaIFpglCCZYFqPC9GT05UPjxCUj48Rk9O
-        VCBDb2xvcj0jRkYwMDAwIFNpemU9LTE+gtOC7YLTgu2DiYOTg2iCzJeYl3CC
-        qo/wjI8okeWQbILMlfuCzIKyk/yP6oLNgqiVdJNZgqKCzJX7gsyC3YLGgrOC
-        uYLEkriCq4LcgreBQik8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxG
-        T05UIFNpemU9LTE+glCCU4FGgk+CT4F8glCCU4FGglKCTzxCUj6C04LtgtOC
-        7YOJg5ODaIFpglCCZYFqPC9GT05UPjxCUj48Rk9OVCBDb2xvcj0jRkYwMDAw
-        IFNpemU9LTE+gtOC7YLTgu2DiYOTg2iCzJeYl3CCqo/wjI8okeWQbILMlfuC
-        zIKyk/yP6oLNgqiVdJNZgqKCzJX7gsyC3YLGgrOCuYLEkriCq4LcgreBQik8
-        L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCC
-        VIFGgk+CT4F8glCCVIFGglKCTzxCUj6C04LtgtOC7YOJg5ODaIFpglCCZYFq
-        PC9GT05UPjxCUj48Rk9OVCBDb2xvcj0jRkYwMDAwIFNpemU9LTE+gtOC7YLT
-        gu2DiYOTg2iCzJeYl3CCqo/wjI8okeWQbILMlfuCzIKyk/yP6oLNgqiVdJNZ
-        gqKCzJX7gsyC3YLGgrOCuYLEkriCq4LcgreBQik8L0ZPTlQ+PC9QPjxCUj48
-        UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCVoFGgk+CT4F8glCCVoFG
-        glKCTzxCUj6C04LtgtOC7YOJg5ODaIFpglCCZYFqPC9GT05UPjxCUj48Rk9O
-        VCBDb2xvcj0jRkYwMDAwIFNpemU9LTE+gtOC7YLTgu2DiYOTg2iCzJeYl3CC
-        qo/wjI8okeWQbILMlfuCzIKyk/yP6oLNgqiVdJNZgqKCzJX7gsyC3YLGgrOC
-        uYLEkriCq4LcgreBQik8L0ZPTlQ+PC9QPjxCUj4NCg0KPEJSPjxCUj4NCjxQ
+        VYFGglKCT4F8glCCVYFGglSCTzxCUj6DR4OTg16BW4Nlg0ODgYOTg2eDeoFb
+        g4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj4NCg0KPEJSPjxCUj4NCjxQ
         IGFsaWduPWNlbnRlcj48Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2Vu
-        dGFrdS5hc3A/VENISz0yMDE1MTI+lt+C6TwvQT48L0ZPTlQ+PC9QPg0KDQoN
+        dGFrdS5hc3A/VENISz0yMDE1MzM+lt+C6TwvQT48L0ZPTlQ+PC9QPg0KDQoN
         CiAgICA8ZGl2IGlkPSJkYXRlNSI+JmNvcHk7MjAxNCBTQU5SSU8gRU5URVJU
         QUlOTUVOVCBDTy4sTFRELjwvZGl2Pg0KIA0KCTwhLS2Mn4/Yg16DTy0tPg0K
         CTxzY3JpcHQgbGFuZ3VhZ2U9IkphdmFTY3JpcHQiIHR5cGU9InRleHQvamF2
@@ -2309,10 +495,10 @@ http_interactions:
         PC9ub3NjcmlwdD4NCg0KPCEtLYyfj9iDXoNPLS0+DQo8L2JvZHk+DQo8L2h0
         bWw+DQo=
     http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:24 GMT
+  recorded_at: Tue, 03 Mar 2015 14:10:03 GMT
 - request:
     method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=12&TCHK=201512
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=16&TCHK=201533
     body:
       encoding: US-ASCII
       string: ''
@@ -2328,7 +514,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
       Host:
       - www.puroland.co.jp
       Referer:
@@ -2345,13 +531,13 @@ http_interactions:
       Cache-Control:
       - private
       Content-Length:
-      - '1925'
+      - '1856'
       Content-Type:
       - text/html
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sun, 01 Feb 2015 14:50:23 GMT
+      - Tue, 03 Mar 2015 14:10:05 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -2377,32 +563,31 @@ http_interactions:
         bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
         PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
         LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6CtYLrgqSCs4GVgq2C64KkgrM8
-        L0ZPTlQ+PC9QPg0KPEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0x
-        PoJQglCBRoJPgk+BfIJQglCBRoJRgk88QlI+g3KDjINig1eBaYJQgmWBajwv
-        Rk9OVD48L1A+PEJSPjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJR
-        gUaCUoJPgXyCUIJRgUaCVIJPPEJSPoOMg0ODk4N7gVuDeoFbg4uBaYJSgmWB
-        ajwvRk9OVD48L1A+PEJSPjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6C
-        UIJTgUaCT4JPgXyCUIJTgUaCUYJPPEJSPoNyg4yDYoNXgWmCUIJlgWo8L0ZP
-        TlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCVIFG
-        gk+CT4F8glCCVIFGglKCTzxCUj6DjINDg5ODe4Fbg3qBW4OLgWmCUoJlgWo8
-        L0ZPTlQ+PC9QPjxCUj4NCg0KPEJSPjxCUj4NCjxQIGFsaWduPWNlbnRlcj48
-        Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2VudGFrdS5hc3A/VENISz0y
-        MDE1MTI+lt+C6TwvQT48L0ZPTlQ+PC9QPg0KDQoNCiAgICA8ZGl2IGlkPSJk
-        YXRlNSI+JmNvcHk7MjAxNCBTQU5SSU8gRU5URVJUQUlOTUVOVCBDTy4sTFRE
-        LjwvZGl2Pg0KIA0KCTwhLS2Mn4/Yg16DTy0tPg0KCTxzY3JpcHQgbGFuZ3Vh
-        Z2U9IkphdmFTY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIv
-        L28uYWR2Zy5qcC9vanM/YWlkPTEwMTM2JnBpZD0xJmtleT0iIGNoYXJzZXQ9
-        IlVURi04Ij4NCgk8L3NjcmlwdD4NCg0KCTxub3NjcmlwdD4NCgk8aWZyYW1l
-        IHNyYz0iLy9vLmFkdmcuanAvb2lmP2FpZD0xMDEzNiZwaWQ9MSIgd2lkdGg9
-        IjEiIGhlaWdodD0iMSI+DQoJPC9pZnJhbWU+DQoJPC9ub3NjcmlwdD4NCg0K
-        PCEtLYyfj9iDXoNPLS0+DQo8L2JvZHk+DQo8L2h0bWw+DQo=
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6C6YLxgumC8YOLg4s8L0ZPTlQ+
+        PC9QPg0KPEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJYgUaC
+        VIJUgXyCUIJPgUaCUIJUPEJSPoNyg4yDYoNXgWmCUIJlgWo8L0ZPTlQ+PC9Q
+        PjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCVIFGglCCT4F8
+        glCCVIFGglKCTzxCUj6DR4OTg16BW4Nlg0ODgYOTg2eDeoFbg4uT/Iz7gWmC
+        UIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9
+        LTE+glCCVYFGglCCT4F8glCCVYFGglKCTzxCUj6DR4OTg16BW4Nlg0ODgYOT
+        g2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj4NCg0KPEJSPjxC
+        Uj4NCjxQIGFsaWduPWNlbnRlcj48Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hh
+        cmFfc2VudGFrdS5hc3A/VENISz0yMDE1MzM+lt+C6TwvQT48L0ZPTlQ+PC9Q
+        Pg0KDQoNCiAgICA8ZGl2IGlkPSJkYXRlNSI+JmNvcHk7MjAxNCBTQU5SSU8g
+        RU5URVJUQUlOTUVOVCBDTy4sTFRELjwvZGl2Pg0KIA0KCTwhLS2Mn4/Yg16D
+        Ty0tPg0KCTxzY3JpcHQgbGFuZ3VhZ2U9IkphdmFTY3JpcHQiIHR5cGU9InRl
+        eHQvamF2YXNjcmlwdCIgc3JjPSIvL28uYWR2Zy5qcC9vanM/YWlkPTEwMTM2
+        JnBpZD0xJmtleT0iIGNoYXJzZXQ9IlVURi04Ij4NCgk8L3NjcmlwdD4NCg0K
+        CTxub3NjcmlwdD4NCgk8aWZyYW1lIHNyYz0iLy9vLmFkdmcuanAvb2lmP2Fp
+        ZD0xMDEzNiZwaWQ9MSIgd2lkdGg9IjEiIGhlaWdodD0iMSI+DQoJPC9pZnJh
+        bWU+DQoJPC9ub3NjcmlwdD4NCg0KPCEtLYyfj9iDXoNPLS0+DQo8L2JvZHk+
+        DQo8L2h0bWw+DQo=
     http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:24 GMT
+  recorded_at: Tue, 03 Mar 2015 14:10:05 GMT
 - request:
     method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=28&TCHK=201512
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=8&TCHK=201533
     body:
       encoding: US-ASCII
       string: ''
@@ -2418,7 +603,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
       Host:
       - www.puroland.co.jp
       Referer:
@@ -2435,13 +620,13 @@ http_interactions:
       Cache-Control:
       - private
       Content-Length:
-      - '2086'
+      - '1642'
       Content-Type:
       - text/html
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sun, 01 Feb 2015 14:50:23 GMT
+      - Tue, 03 Mar 2015 14:10:06 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -2467,36 +652,26 @@ http_interactions:
         bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
         PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
         LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DfINgg4ODYoNSPC9GT05UPjwv
-        UD4NCjxIUj4NCjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJQgUaC
-        UoJPgXyCUIJQgUaCVIJPPEJSPoNHg5ODXoFbg2WDQ4OBg5ODZ4N6gVuDi5P8
-        jPuBaYJQgmWBajwvRk9OVD48L1A+PEJSPjxQIGFsaWduPWxlZnQ+PEZPTlQg
-        U2l6ZT0tMT6CUIJRgUaCUoJPgXyCUIJRgUaCVIJPPEJSPoNHg5ODXoFbg2WD
-        Q4OBg5ODZ4N6gVuDi5P8jPuBaYJQgmWBajwvRk9OVD48L1A+PEJSPjxQIGFs
-        aWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJTgUaCUIJPgXyCUIJTgUaCUoJP
-        PEJSPoNHg5ODXoFbg2WDQ4OBg5ODZ4N6gVuDi5P8jPuBaYJQgmWBajwvRk9O
-        VD48L1A+PEJSPjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJUgUaC
-        UIJPgXyCUIJUgUaCUoJPPEJSPoNHg5ODXoFbg2WDQ4OBg5ODZ4N6gVuDi5P8
-        jPuBaYJQgmWBajwvRk9OVD48L1A+PEJSPjxQIGFsaWduPWxlZnQ+PEZPTlQg
-        U2l6ZT0tMT6CUIJWgUaCT4JPgXyCUIJWgUaCUYJPPEJSPoNHg5ODXoFbg2WD
-        Q4OBg5ODZ4N6gVuDi5P8jPuBaYJQgmWBajwvRk9OVD48L1A+PEJSPg0KDQo8
-        QlI+PEJSPg0KPFAgYWxpZ249Y2VudGVyPjxGT05UIFNpemU9LTE+PEEgaHJl
-        Zj1jaGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUxMj6W34LpPC9BPjwvRk9O
-        VD48L1A+DQoNCg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4mY29weTsyMDE0IFNB
-        TlJJTyBFTlRFUlRBSU5NRU5UIENPLixMVEQuPC9kaXY+DQogDQoJPCEtLYyf
-        j9iDXoNPLS0+DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCIgdHlw
-        ZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii8vby5hZHZnLmpwL29qcz9haWQ9
-        MTAxMzYmcGlkPTEma2V5PSIgY2hhcnNldD0iVVRGLTgiPg0KCTwvc2NyaXB0
-        Pg0KDQoJPG5vc2NyaXB0Pg0KCTxpZnJhbWUgc3JjPSIvL28uYWR2Zy5qcC9v
-        aWY/YWlkPTEwMTM2JnBpZD0xIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIj4NCgk8
-        L2lmcmFtZT4NCgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P2INeg08tLT4NCjwv
-        Ym9keT4NCjwvaHRtbD4NCg==
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6Di4NygVs8L0ZPTlQ+PC9QPg0K
+        PEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQglOBRoJTgk+B
+        fIJQglSBRoJPgk88QlI+g3KDjINig1eBaYJQgmWBajwvRk9OVD48L1A+PEJS
+        Pg0KDQo8QlI+PEJSPg0KPFAgYWxpZ249Y2VudGVyPjxGT05UIFNpemU9LTE+
+        PEEgaHJlZj1jaGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUzMz6W34LpPC9B
+        PjwvRk9OVD48L1A+DQoNCg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4mY29weTsy
+        MDE0IFNBTlJJTyBFTlRFUlRBSU5NRU5UIENPLixMVEQuPC9kaXY+DQogDQoJ
+        PCEtLYyfj9iDXoNPLS0+DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlw
+        dCIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii8vby5hZHZnLmpwL29q
+        cz9haWQ9MTAxMzYmcGlkPTEma2V5PSIgY2hhcnNldD0iVVRGLTgiPg0KCTwv
+        c2NyaXB0Pg0KDQoJPG5vc2NyaXB0Pg0KCTxpZnJhbWUgc3JjPSIvL28uYWR2
+        Zy5qcC9vaWY/YWlkPTEwMTM2JnBpZD0xIiB3aWR0aD0iMSIgaGVpZ2h0PSIx
+        Ij4NCgk8L2lmcmFtZT4NCgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P2INeg08t
+        LT4NCjwvYm9keT4NCjwvaHRtbD4NCg==
     http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:24 GMT
+  recorded_at: Tue, 03 Mar 2015 14:10:06 GMT
 - request:
     method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=44&TCHK=201512
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=39&TCHK=201533
     body:
       encoding: US-ASCII
       string: ''
@@ -2512,113 +687,7 @@ http_interactions:
       Accept-Language:
       - en-us,en;q=0.5
       Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
-      Host:
-      - www.puroland.co.jp
-      Referer:
-      - *2
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private
-      Content-Length:
-      - '2615'
-      Content-Type:
-      - text/html
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sun, 01 Feb 2015 14:50:24 GMT
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
-        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
-        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
-        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
-        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
-        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
-        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
-        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
-        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
-        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
-        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
-        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
-        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
-        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
-        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
-        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
-        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
-        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
-        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
-        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
-        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
-        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DbYOJg2yDUoOJg5ODaDwvRk9O
-        VD48L1A+DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCC
-        UIFGglKCT4F8glCCUYFGgk+CTzxCUj6C04LtgtOC7YOJg5ODaIFpglCCZYFq
-        PC9GT05UPjxCUj48Rk9OVCBDb2xvcj0jRkYwMDAwIFNpemU9LTE+gtOC7YLT
-        gu2DiYOTg2iCzJeYl3CCqo/wjI8okeWQbILMlfuCzIKyk/yP6oLNgqiVdJNZ
-        gqKCzJX7gsyC3YLGgrOCuYLEkriCq4LcgreBQik8L0ZPTlQ+PC9QPjxCUj48
-        UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCUoFGglKCT4F8glCCU4FG
-        gk+CTzxCUj6C04LtgtOC7YOJg5ODaIFpglCCZYFqPC9GT05UPjxCUj48Rk9O
-        VCBDb2xvcj0jRkYwMDAwIFNpemU9LTE+gtOC7YLTgu2DiYOTg2iCzJeYl3CC
-        qo/wjI8okeWQbILMlfuCzIKyk/yP6oLNgqiVdJNZgqKCzJX7gsyC3YLGgrOC
-        uYLEkriCq4LcgreBQik8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxG
-        T05UIFNpemU9LTE+glCCU4FGglKCT4F8glCCVIFGgk+CTzxCUj6C04LtgtOC
-        7YOJg5ODaIFpglCCZYFqPC9GT05UPjxCUj48Rk9OVCBDb2xvcj0jRkYwMDAw
-        IFNpemU9LTE+gtOC7YLTgu2DiYOTg2iCzJeYl3CCqo/wjI8okeWQbILMlfuC
-        zIKyk/yP6oLNgqiVdJNZgqKCzJX7gsyC3YLGgrOCuYLEkriCq4LcgreBQik8
-        L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCC
-        VIFGglKCT4F8glCCVYFGgk+CTzxCUj6C04LtgtOC7YOJg5ODaIFpglCCZYFq
-        PC9GT05UPjxCUj48Rk9OVCBDb2xvcj0jRkYwMDAwIFNpemU9LTE+gtOC7YLT
-        gu2DiYOTg2iCzJeYl3CCqo/wjI8okeWQbILMlfuCzIKyk/yP6oLNgqiVdJNZ
-        gqKCzJX7gsyC3YLGgrOCuYLEkriCq4LcgreBQik8L0ZPTlQ+PC9QPjxCUj48
-        UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCVoFGglKCT4F8glCCV4FG
-        gk+CTzxCUj6C04LtgtOC7YOJg5ODaIFpglCCZYFqPC9GT05UPjxCUj48Rk9O
-        VCBDb2xvcj0jRkYwMDAwIFNpemU9LTE+gtOC7YLTgu2DiYOTg2iCzJeYl3CC
-        qo/wjI8okeWQbILMlfuCzIKyk/yP6oLNgqiVdJNZgqKCzJX7gsyC3YLGgrOC
-        uYLEkriCq4LcgreBQik8L0ZPTlQ+PC9QPjxCUj4NCg0KPEJSPjxCUj4NCjxQ
-        IGFsaWduPWNlbnRlcj48Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2Vu
-        dGFrdS5hc3A/VENISz0yMDE1MTI+lt+C6TwvQT48L0ZPTlQ+PC9QPg0KDQoN
-        CiAgICA8ZGl2IGlkPSJkYXRlNSI+JmNvcHk7MjAxNCBTQU5SSU8gRU5URVJU
-        QUlOTUVOVCBDTy4sTFRELjwvZGl2Pg0KIA0KCTwhLS2Mn4/Yg16DTy0tPg0K
-        CTxzY3JpcHQgbGFuZ3VhZ2U9IkphdmFTY3JpcHQiIHR5cGU9InRleHQvamF2
-        YXNjcmlwdCIgc3JjPSIvL28uYWR2Zy5qcC9vanM/YWlkPTEwMTM2JnBpZD0x
-        JmtleT0iIGNoYXJzZXQ9IlVURi04Ij4NCgk8L3NjcmlwdD4NCg0KCTxub3Nj
-        cmlwdD4NCgk8aWZyYW1lIHNyYz0iLy9vLmFkdmcuanAvb2lmP2FpZD0xMDEz
-        NiZwaWQ9MSIgd2lkdGg9IjEiIGhlaWdodD0iMSI+DQoJPC9pZnJhbWU+DQoJ
-        PC9ub3NjcmlwdD4NCg0KPCEtLYyfj9iDXoNPLS0+DQo8L2JvZHk+DQo8L2h0
-        bWw+DQo=
-    http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:24 GMT
-- request:
-    method: get
-    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=50&TCHK=201512
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept:
-      - "*/*"
-      User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Cookie:
-      - ASPSESSIONIDSCTARACS=DFLBNLADNEHGJGLDDCNOBHCI
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
       Host:
       - www.puroland.co.jp
       Referer:
@@ -2641,7 +710,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sun, 01 Feb 2015 14:50:24 GMT
+      - Tue, 03 Mar 2015 14:10:08 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -2667,15 +736,15 @@ http_interactions:
         bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
         PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
         LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4xk/ook/opDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
-        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DV4ODg1iDcIFbPC9GT05UPjwv
-        UD4NCjxIUj4NCjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJPgUaC
-        UoJPgXyCUIJQgUaCT4JPPEJSPoNug2KDc4Fbgs2CwYLSgWCDb4Fbg1iDZoFb
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DR4OTg1eDRoOJPC9GT05UPjwv
+        UD4NCjxIUj4NCjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJQgUaC
+        T4JPgXyCUIJQgUaCUoJPPEJSPoNug2KDc4Fbgs2CwYLSgWCDb4Fbg1iDZoFb
         gnKCZ4JugnaBaYJQgmWBajwvRk9OVD48QlI+PEZPTlQgQ29sb3I9I0ZGMDAw
         MCBTaXplPS0xPmh0dHA6Ly93d3cucHVyb2xhbmQuanAvbGl2ZXNob3cvaGFw
         cHlfaGFwcHlfYmlydGhkYXlfc2hvdzwvRk9OVD48L1A+PEJSPg0KDQo8QlI+
         PEJSPg0KPFAgYWxpZ249Y2VudGVyPjxGT05UIFNpemU9LTE+PEEgaHJlZj1j
-        aGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUxMj6W34LpPC9BPjwvRk9OVD48
+        aGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUzMz6W34LpPC9BPjwvRk9OVD48
         L1A+DQoNCg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4mY29weTsyMDE0IFNBTlJJ
         TyBFTlRFUlRBSU5NRU5UIENPLixMVEQuPC9kaXY+DQogDQoJPCEtLYyfj9iD
         XoNPLS0+DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCIgdHlwZT0i
@@ -2686,5 +755,1133 @@ http_interactions:
         cmFtZT4NCgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P2INeg08tLT4NCjwvYm9k
         eT4NCjwvaHRtbD4NCg==
     http_version: 
-  recorded_at: Sun, 01 Feb 2015 14:50:24 GMT
+  recorded_at: Tue, 03 Mar 2015 14:10:08 GMT
+- request:
+    method: get
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=73&TCHK=201533
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - iPhone (Ruby; http://greeting.sucretown.net/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
+      Host:
+      - www.puroland.co.jp
+      Referer:
+      - *2
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '1764'
+      Content-Type:
+      - text/html
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 03 Mar 2015 14:10:09 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
+        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
+        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
+        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
+        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
+        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
+        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
+        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
+        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
+        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
+        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
+        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
+        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
+        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
+        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
+        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
+        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
+        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
+        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
+        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
+        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
+        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6Di4Fbg0E8L0ZPTlQ+PC9QPg0K
+        PEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQglCBRoJPgk+B
+        fIJQglCBRoJSgk88QlI+g26DYoNzgVuCzYLBgtKBYINvgVuDWINmgVuCcoJn
+        gm6CdoFpglCCZYFqPC9GT05UPjxCUj48Rk9OVCBDb2xvcj0jRkYwMDAwIFNp
+        emU9LTE+aHR0cDovL3d3dy5wdXJvbGFuZC5qcC9saXZlc2hvdy9oYXBweV9o
+        YXBweV9iaXJ0aGRheV9zaG93PC9GT05UPjwvUD48QlI+DQoNCjxCUj48QlI+
+        DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0tMT48QSBocmVmPWNoYXJh
+        X3NlbnRha3UuYXNwP1RDSEs9MjAxNTMzPpbfguk8L0E+PC9GT05UPjwvUD4N
+        Cg0KDQogICAgPGRpdiBpZD0iZGF0ZTUiPiZjb3B5OzIwMTQgU0FOUklPIEVO
+        VEVSVEFJTk1FTlQgQ08uLExURC48L2Rpdj4NCiANCgk8IS0tjJ+P2INeg08t
+        LT4NCgk8c2NyaXB0IGxhbmd1YWdlPSJKYXZhU2NyaXB0IiB0eXBlPSJ0ZXh0
+        L2phdmFzY3JpcHQiIHNyYz0iLy9vLmFkdmcuanAvb2pzP2FpZD0xMDEzNiZw
+        aWQ9MSZrZXk9IiBjaGFyc2V0PSJVVEYtOCI+DQoJPC9zY3JpcHQ+DQoNCgk8
+        bm9zY3JpcHQ+DQoJPGlmcmFtZSBzcmM9Ii8vby5hZHZnLmpwL29pZj9haWQ9
+        MTAxMzYmcGlkPTEiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPg0KCTwvaWZyYW1l
+        Pg0KCTwvbm9zY3JpcHQ+DQoNCjwhLS2Mn4/Yg16DTy0tPg0KPC9ib2R5Pg0K
+        PC9odG1sPg0K
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 14:10:09 GMT
+- request:
+    method: get
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=7&TCHK=201533
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - iPhone (Ruby; http://greeting.sucretown.net/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
+      Host:
+      - www.puroland.co.jp
+      Referer:
+      - *2
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '1664'
+      Content-Type:
+      - text/html
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 03 Mar 2015 14:10:10 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
+        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
+        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
+        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
+        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
+        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
+        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
+        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
+        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
+        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
+        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
+        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
+        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
+        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
+        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
+        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
+        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
+        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
+        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
+        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
+        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
+        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DfYNDg4GDjYNmg0I8L0ZPTlQ+
+        PC9QPg0KPEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQgk+B
+        RoJSgk+BfIJQgk+BRoJUgk88QlI+g32DioFbg4mDk4Nog3SDSINng0eDioNB
+        gWmCU4JlgWo8L0ZPTlQ+PC9QPjxCUj4NCg0KPEJSPjxCUj4NCjxQIGFsaWdu
+        PWNlbnRlcj48Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2VudGFrdS5h
+        c3A/VENISz0yMDE1MzM+lt+C6TwvQT48L0ZPTlQ+PC9QPg0KDQoNCiAgICA8
+        ZGl2IGlkPSJkYXRlNSI+JmNvcHk7MjAxNCBTQU5SSU8gRU5URVJUQUlOTUVO
+        VCBDTy4sTFRELjwvZGl2Pg0KIA0KCTwhLS2Mn4/Yg16DTy0tPg0KCTxzY3Jp
+        cHQgbGFuZ3VhZ2U9IkphdmFTY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlw
+        dCIgc3JjPSIvL28uYWR2Zy5qcC9vanM/YWlkPTEwMTM2JnBpZD0xJmtleT0i
+        IGNoYXJzZXQ9IlVURi04Ij4NCgk8L3NjcmlwdD4NCg0KCTxub3NjcmlwdD4N
+        Cgk8aWZyYW1lIHNyYz0iLy9vLmFkdmcuanAvb2lmP2FpZD0xMDEzNiZwaWQ9
+        MSIgd2lkdGg9IjEiIGhlaWdodD0iMSI+DQoJPC9pZnJhbWU+DQoJPC9ub3Nj
+        cmlwdD4NCg0KPCEtLYyfj9iDXoNPLS0+DQo8L2JvZHk+DQo8L2h0bWw+DQo=
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 14:10:10 GMT
+- request:
+    method: get
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=32&TCHK=201533
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - iPhone (Ruby; http://greeting.sucretown.net/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
+      Host:
+      - www.puroland.co.jp
+      Referer:
+      - *2
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '1781'
+      Content-Type:
+      - text/html
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 03 Mar 2015 14:10:12 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
+        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
+        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
+        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
+        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
+        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
+        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
+        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
+        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
+        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
+        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
+        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
+        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
+        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
+        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
+        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
+        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
+        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
+        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
+        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
+        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
+        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DioNng4uDY4NDg5ODWINegVuD
+        WTwvRk9OVD48L1A+DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9
+        LTE+glCCU4FGglKCT4F8glCCU4FGglSCTzxCUj6DR4OTg16BW4Nlg0ODgYOT
+        g2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1s
+        ZWZ0PjxGT05UIFNpemU9LTE+glCCVIFGglKCT4F8glCCVIFGglSCTzxCUj6D
+        R4OTg16BW4Nlg0ODgYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9Q
+        PjxCUj4NCg0KPEJSPjxCUj4NCjxQIGFsaWduPWNlbnRlcj48Rk9OVCBTaXpl
+        PS0xPjxBIGhyZWY9Y2hhcmFfc2VudGFrdS5hc3A/VENISz0yMDE1MzM+lt+C
+        6TwvQT48L0ZPTlQ+PC9QPg0KDQoNCiAgICA8ZGl2IGlkPSJkYXRlNSI+JmNv
+        cHk7MjAxNCBTQU5SSU8gRU5URVJUQUlOTUVOVCBDTy4sTFRELjwvZGl2Pg0K
+        IA0KCTwhLS2Mn4/Yg16DTy0tPg0KCTxzY3JpcHQgbGFuZ3VhZ2U9IkphdmFT
+        Y3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIvL28uYWR2Zy5q
+        cC9vanM/YWlkPTEwMTM2JnBpZD0xJmtleT0iIGNoYXJzZXQ9IlVURi04Ij4N
+        Cgk8L3NjcmlwdD4NCg0KCTxub3NjcmlwdD4NCgk8aWZyYW1lIHNyYz0iLy9v
+        LmFkdmcuanAvb2lmP2FpZD0xMDEzNiZwaWQ9MSIgd2lkdGg9IjEiIGhlaWdo
+        dD0iMSI+DQoJPC9pZnJhbWU+DQoJPC9ub3NjcmlwdD4NCg0KPCEtLYyfj9iD
+        XoNPLS0+DQo8L2JvZHk+DQo8L2h0bWw+DQo=
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 14:10:11 GMT
+- request:
+    method: get
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=53&TCHK=201533
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - iPhone (Ruby; http://greeting.sucretown.net/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
+      Host:
+      - www.puroland.co.jp
+      Referer:
+      - *2
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '1779'
+      Content-Type:
+      - text/html
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 03 Mar 2015 14:10:12 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
+        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
+        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
+        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
+        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
+        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
+        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
+        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
+        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
+        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
+        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
+        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
+        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
+        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
+        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
+        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
+        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
+        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
+        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
+        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
+        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
+        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DRYNCg2KDVoOFg36BW4OBg4s8
+        L0ZPTlQ+PC9QPg0KPEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0x
+        PoJQglCBRoJTgk+BfIJQglGBRoJPgk88QlI+g0eDk4NegVuDZYNDg4GDk4Nn
+        g3qBW4OLk/yM+4FpglCCZYFqPC9GT05UPjwvUD48QlI+PFAgYWxpZ249bGVm
+        dD48Rk9OVCBTaXplPS0xPoJQglGBRoJTgk+BfIJQglKBRoJPgk88QlI+g0eD
+        k4NegVuDZYNDg4GDk4Nng3qBW4OLk/yM+4FpglCCZYFqPC9GT05UPjwvUD48
+        QlI+DQoNCjxCUj48QlI+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0t
+        MT48QSBocmVmPWNoYXJhX3NlbnRha3UuYXNwP1RDSEs9MjAxNTMzPpbfguk8
+        L0E+PC9GT05UPjwvUD4NCg0KDQogICAgPGRpdiBpZD0iZGF0ZTUiPiZjb3B5
+        OzIwMTQgU0FOUklPIEVOVEVSVEFJTk1FTlQgQ08uLExURC48L2Rpdj4NCiAN
+        Cgk8IS0tjJ+P2INeg08tLT4NCgk8c2NyaXB0IGxhbmd1YWdlPSJKYXZhU2Ny
+        aXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9vLmFkdmcuanAv
+        b2pzP2FpZD0xMDEzNiZwaWQ9MSZrZXk9IiBjaGFyc2V0PSJVVEYtOCI+DQoJ
+        PC9zY3JpcHQ+DQoNCgk8bm9zY3JpcHQ+DQoJPGlmcmFtZSBzcmM9Ii8vby5h
+        ZHZnLmpwL29pZj9haWQ9MTAxMzYmcGlkPTEiIHdpZHRoPSIxIiBoZWlnaHQ9
+        IjEiPg0KCTwvaWZyYW1lPg0KCTwvbm9zY3JpcHQ+DQoNCjwhLS2Mn4/Yg16D
+        Ty0tPg0KPC9ib2R5Pg0KPC9odG1sPg0K
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 14:10:12 GMT
+- request:
+    method: get
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=26&TCHK=201533
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - iPhone (Ruby; http://greeting.sucretown.net/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
+      Host:
+      - www.puroland.co.jp
+      Referer:
+      - *2
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '2050'
+      Content-Type:
+      - text/html
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 03 Mar 2015 14:10:13 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
+        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
+        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
+        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
+        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
+        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
+        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
+        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
+        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
+        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
+        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
+        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
+        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
+        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
+        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
+        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
+        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
+        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
+        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
+        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
+        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
+        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DfIOAg3yDgIN2g4qDkzwvRk9O
+        VD48L1A+DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCC
+        UIFGglGCT4F8glCCUIFGglOCTzxCUj6DR4OTg16BW4Nlg0ODgYOTg2eDeoFb
+        g4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxG
+        T05UIFNpemU9LTE+glCCUYFGglGCT4F8glCCUYFGglOCTzxCUj6DR4OTg16B
+        W4Nlg0ODgYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48
+        UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCUoFGglGCT4F8glCCUoFG
+        glOCTzxCUj6DR4OTg16BW4Nlg0ODgYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8
+        L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCC
+        VIFGgk+CT4F8glCCVIFGglGCTzxCUj6DcoOMg2KDV4FpglCCZYFqPC9GT05U
+        PjwvUD48QlI+PFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQglWBRoJP
+        gk+BfIJQglWBRoJRgk88QlI+g3KDjINig1eBaYJQgmWBajwvRk9OVD48L1A+
+        PEJSPg0KDQo8QlI+PEJSPg0KPFAgYWxpZ249Y2VudGVyPjxGT05UIFNpemU9
+        LTE+PEEgaHJlZj1jaGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUzMz6W34Lp
+        PC9BPjwvRk9OVD48L1A+DQoNCg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4mY29w
+        eTsyMDE0IFNBTlJJTyBFTlRFUlRBSU5NRU5UIENPLixMVEQuPC9kaXY+DQog
+        DQoJPCEtLYyfj9iDXoNPLS0+DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNj
+        cmlwdCIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii8vby5hZHZnLmpw
+        L29qcz9haWQ9MTAxMzYmcGlkPTEma2V5PSIgY2hhcnNldD0iVVRGLTgiPg0K
+        CTwvc2NyaXB0Pg0KDQoJPG5vc2NyaXB0Pg0KCTxpZnJhbWUgc3JjPSIvL28u
+        YWR2Zy5qcC9vaWY/YWlkPTEwMTM2JnBpZD0xIiB3aWR0aD0iMSIgaGVpZ2h0
+        PSIxIj4NCgk8L2lmcmFtZT4NCgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P2INe
+        g08tLT4NCjwvYm9keT4NCjwvaHRtbD4NCg==
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 14:10:13 GMT
+- request:
+    method: get
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=61&TCHK=201533
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - iPhone (Ruby; http://greeting.sucretown.net/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
+      Host:
+      - www.puroland.co.jp
+      Referer:
+      - *2
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '1658'
+      Content-Type:
+      - text/html
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 03 Mar 2015 14:10:14 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
+        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
+        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
+        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
+        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
+        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
+        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
+        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
+        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
+        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
+        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
+        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
+        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
+        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
+        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
+        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
+        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
+        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
+        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
+        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
+        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
+        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6Db4Nig2iCzoLCits8L0ZPTlQ+
+        PC9QPg0KPEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQglSB
+        RoJSgk+BfIJQglSBRoJUgk88QlI+g1SDk4OKg0mDXoNFg5OCUIJlgWmCUIJl
+        gWo8L0ZPTlQ+PC9QPjxCUj4NCg0KPEJSPjxCUj4NCjxQIGFsaWduPWNlbnRl
+        cj48Rk9OVCBTaXplPS0xPjxBIGhyZWY9Y2hhcmFfc2VudGFrdS5hc3A/VENI
+        Sz0yMDE1MzM+lt+C6TwvQT48L0ZPTlQ+PC9QPg0KDQoNCiAgICA8ZGl2IGlk
+        PSJkYXRlNSI+JmNvcHk7MjAxNCBTQU5SSU8gRU5URVJUQUlOTUVOVCBDTy4s
+        TFRELjwvZGl2Pg0KIA0KCTwhLS2Mn4/Yg16DTy0tPg0KCTxzY3JpcHQgbGFu
+        Z3VhZ2U9IkphdmFTY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3Jj
+        PSIvL28uYWR2Zy5qcC9vanM/YWlkPTEwMTM2JnBpZD0xJmtleT0iIGNoYXJz
+        ZXQ9IlVURi04Ij4NCgk8L3NjcmlwdD4NCg0KCTxub3NjcmlwdD4NCgk8aWZy
+        YW1lIHNyYz0iLy9vLmFkdmcuanAvb2lmP2FpZD0xMDEzNiZwaWQ9MSIgd2lk
+        dGg9IjEiIGhlaWdodD0iMSI+DQoJPC9pZnJhbWU+DQoJPC9ub3NjcmlwdD4N
+        Cg0KPCEtLYyfj9iDXoNPLS0+DQo8L2JvZHk+DQo8L2h0bWw+DQo=
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 14:10:14 GMT
+- request:
+    method: get
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=14&TCHK=201533
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - iPhone (Ruby; http://greeting.sucretown.net/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
+      Host:
+      - www.puroland.co.jp
+      Referer:
+      - *2
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '1874'
+      Content-Type:
+      - text/html
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 03 Mar 2015 14:10:16 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
+        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
+        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
+        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
+        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
+        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
+        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
+        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
+        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
+        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
+        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
+        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
+        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
+        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
+        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
+        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
+        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
+        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
+        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
+        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
+        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
+        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6C4ILggqSCs4GVgs2CyIKkgrM8
+        L0ZPTlQ+PC9QPg0KPEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0x
+        PoJQglGBRoJPgk+BfIJQglGBRoJRgk88QlI+g0eDk4NegVuDZYNDg4GDk4Nn
+        g3qBW4OLk/yM+4FpglCCZYFqPC9GT05UPjwvUD48QlI+PFAgYWxpZ249bGVm
+        dD48Rk9OVCBTaXplPS0xPoJQglKBRoJSgk+BfIJQglOBRoJPgk88QlI+g1SD
+        k4OKg0mDXoNFg5OCUYJlgWmCUYJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGln
+        bj1sZWZ0PjxGT05UIFNpemU9LTE+glCCU4FGglSCT4F8glCCVIFGglCCTzxC
+        Uj6DR4OTg16BW4Nlg0ODgYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+
+        PC9QPjxCUj4NCg0KPEJSPjxCUj4NCjxQIGFsaWduPWNlbnRlcj48Rk9OVCBT
+        aXplPS0xPjxBIGhyZWY9Y2hhcmFfc2VudGFrdS5hc3A/VENISz0yMDE1MzM+
+        lt+C6TwvQT48L0ZPTlQ+PC9QPg0KDQoNCiAgICA8ZGl2IGlkPSJkYXRlNSI+
+        JmNvcHk7MjAxNCBTQU5SSU8gRU5URVJUQUlOTUVOVCBDTy4sTFRELjwvZGl2
+        Pg0KIA0KCTwhLS2Mn4/Yg16DTy0tPg0KCTxzY3JpcHQgbGFuZ3VhZ2U9Ikph
+        dmFTY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIvL28uYWR2
+        Zy5qcC9vanM/YWlkPTEwMTM2JnBpZD0xJmtleT0iIGNoYXJzZXQ9IlVURi04
+        Ij4NCgk8L3NjcmlwdD4NCg0KCTxub3NjcmlwdD4NCgk8aWZyYW1lIHNyYz0i
+        Ly9vLmFkdmcuanAvb2lmP2FpZD0xMDEzNiZwaWQ9MSIgd2lkdGg9IjEiIGhl
+        aWdodD0iMSI+DQoJPC9pZnJhbWU+DQoJPC9ub3NjcmlwdD4NCg0KPCEtLYyf
+        j9iDXoNPLS0+DQo8L2JvZHk+DQo8L2h0bWw+DQo=
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 14:10:15 GMT
+- request:
+    method: get
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=31&TCHK=201533
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - iPhone (Ruby; http://greeting.sucretown.net/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
+      Host:
+      - www.puroland.co.jp
+      Referer:
+      - *2
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '2082'
+      Content-Type:
+      - text/html
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 03 Mar 2015 14:10:20 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
+        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
+        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
+        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
+        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
+        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
+        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
+        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
+        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
+        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
+        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
+        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
+        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
+        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
+        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
+        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
+        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
+        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
+        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
+        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
+        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
+        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6CqIKzgumCzILggvGCq4K/PC9G
+        T05UPjwvUD4NCjxIUj4NCjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6C
+        UIJTgUaCUoJPgXyCUIJUgUaCT4JPPEJSPoLTgu2C04Ltg4mDk4NogWmCUIJl
+        gWo8L0ZPTlQ+PEJSPjxGT05UIENvbG9yPSNGRjAwMDAgU2l6ZT0tMT6C04Lt
+        gtOC7YOJg5ODaILMl5iXcIKqj/CMjyiR5ZBsgsyV+4LMgrKT/I/qgs2CqJV0
+        k1mCooLMlfuCzILdgsaCs4K5gsSSuIKrgtyCt4FCKTwvRk9OVD48L1A+PEJS
+        PjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJUgUaCUoJPgXyCUIJV
+        gUaCT4JPPEJSPoLTgu2C04Ltg4mDk4NogWmCUIJlgWo8L0ZPTlQ+PEJSPjxG
+        T05UIENvbG9yPSNGRjAwMDAgU2l6ZT0tMT6C04LtgtOC7YOJg5ODaILMl5iX
+        cIKqj/CMjyiR5ZBsgsyV+4LMgrKT/I/qgs2CqJV0k1mCooLMlfuCzILdgsaC
+        s4K5gsSSuIKrgtyCt4FCKTwvRk9OVD48L1A+PEJSPjxQIGFsaWduPWxlZnQ+
+        PEZPTlQgU2l6ZT0tMT6CUIJVgUaCT4JPgXyCUIJVgUaCUYJPPEJSPoNUg5OD
+        ioNJg16DRYOTglCCZYFpglCCZYFqPC9GT05UPjwvUD48QlI+DQoNCjxCUj48
+        QlI+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0tMT48QSBocmVmPWNo
+        YXJhX3NlbnRha3UuYXNwP1RDSEs9MjAxNTMzPpbfguk8L0E+PC9GT05UPjwv
+        UD4NCg0KDQogICAgPGRpdiBpZD0iZGF0ZTUiPiZjb3B5OzIwMTQgU0FOUklP
+        IEVOVEVSVEFJTk1FTlQgQ08uLExURC48L2Rpdj4NCiANCgk8IS0tjJ+P2INe
+        g08tLT4NCgk8c2NyaXB0IGxhbmd1YWdlPSJKYXZhU2NyaXB0IiB0eXBlPSJ0
+        ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9vLmFkdmcuanAvb2pzP2FpZD0xMDEz
+        NiZwaWQ9MSZrZXk9IiBjaGFyc2V0PSJVVEYtOCI+DQoJPC9zY3JpcHQ+DQoN
+        Cgk8bm9zY3JpcHQ+DQoJPGlmcmFtZSBzcmM9Ii8vby5hZHZnLmpwL29pZj9h
+        aWQ9MTAxMzYmcGlkPTEiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPg0KCTwvaWZy
+        YW1lPg0KCTwvbm9zY3JpcHQ+DQoNCjwhLS2Mn4/Yg16DTy0tPg0KPC9ib2R5
+        Pg0KPC9odG1sPg0K
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 14:10:20 GMT
+- request:
+    method: get
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=29&TCHK=201533
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - iPhone (Ruby; http://greeting.sucretown.net/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
+      Host:
+      - www.puroland.co.jp
+      Referer:
+      - *2
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '1878'
+      Content-Type:
+      - text/html
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 03 Mar 2015 14:10:21 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
+        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
+        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
+        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
+        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
+        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
+        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
+        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
+        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
+        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
+        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
+        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
+        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
+        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
+        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
+        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
+        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
+        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
+        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
+        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
+        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
+        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6We5XcjMWV4I2Blns8L0ZPTlQ+
+        PC9QPg0KPEhSPg0KPFAgYWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQglCB
+        RoJPgk+BfIJQglCBRoJRgk88QlI+g0eDk4NegVuDZYNDg4GDk4Nng3qBW4OL
+        k/yM+4FpglCCZYFqPC9GT05UPjwvUD48QlI+PFAgYWxpZ249bGVmdD48Rk9O
+        VCBTaXplPS0xPoJQglKBRoJPgk+BfIJQglKBRoJRgk88QlI+g0eDk4NegVuD
+        ZYNDg4GDk4Nng3qBW4OLk/yM+4FpglCCZYFqPC9GT05UPjwvUD48QlI+PFAg
+        YWxpZ249bGVmdD48Rk9OVCBTaXplPS0xPoJQglSBRoJUgk+BfIJQglWBRoJQ
+        gk88QlI+g0eDk4NegVuDZYNDg4GDk4Nng3qBW4OLk/yM+4FpglCCZYFqPC9G
+        T05UPjwvUD48QlI+DQoNCjxCUj48QlI+DQo8UCBhbGlnbj1jZW50ZXI+PEZP
+        TlQgU2l6ZT0tMT48QSBocmVmPWNoYXJhX3NlbnRha3UuYXNwP1RDSEs9MjAx
+        NTMzPpbfguk8L0E+PC9GT05UPjwvUD4NCg0KDQogICAgPGRpdiBpZD0iZGF0
+        ZTUiPiZjb3B5OzIwMTQgU0FOUklPIEVOVEVSVEFJTk1FTlQgQ08uLExURC48
+        L2Rpdj4NCiANCgk8IS0tjJ+P2INeg08tLT4NCgk8c2NyaXB0IGxhbmd1YWdl
+        PSJKYXZhU2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLy9v
+        LmFkdmcuanAvb2pzP2FpZD0xMDEzNiZwaWQ9MSZrZXk9IiBjaGFyc2V0PSJV
+        VEYtOCI+DQoJPC9zY3JpcHQ+DQoNCgk8bm9zY3JpcHQ+DQoJPGlmcmFtZSBz
+        cmM9Ii8vby5hZHZnLmpwL29pZj9haWQ9MTAxMzYmcGlkPTEiIHdpZHRoPSIx
+        IiBoZWlnaHQ9IjEiPg0KCTwvaWZyYW1lPg0KCTwvbm9zY3JpcHQ+DQoNCjwh
+        LS2Mn4/Yg16DTy0tPg0KPC9ib2R5Pg0KPC9odG1sPg0K
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 14:10:20 GMT
+- request:
+    method: get
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=30&TCHK=201533
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - iPhone (Ruby; http://greeting.sucretown.net/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
+      Host:
+      - www.puroland.co.jp
+      Referer:
+      - *2
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '1874'
+      Content-Type:
+      - text/html
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 03 Mar 2015 14:10:21 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
+        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
+        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
+        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
+        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
+        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
+        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
+        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
+        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
+        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
+        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
+        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
+        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
+        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
+        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
+        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
+        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
+        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
+        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
+        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
+        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
+        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6VqpWUi3aJ1DwvRk9OVD48L1A+
+        DQo8SFI+DQo8UCBhbGlnbj1sZWZ0PjxGT05UIFNpemU9LTE+glCCUIFGgk+C
+        T4F8glCCUIFGglGCTzxCUj6DR4OTg16BW4Nlg0ODgYOTg2eDeoFbg4uT/Iz7
+        gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGlnbj1sZWZ0PjxGT05UIFNp
+        emU9LTE+glCCUoFGgk+CT4F8glCCUoFGglGCTzxCUj6DR4OTg16BW4Nlg0OD
+        gYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+PC9QPjxCUj48UCBhbGln
+        bj1sZWZ0PjxGT05UIFNpemU9LTE+glCCVIFGglSCT4F8glCCVYFGglCCTzxC
+        Uj6DR4OTg16BW4Nlg0ODgYOTg2eDeoFbg4uT/Iz7gWmCUIJlgWo8L0ZPTlQ+
+        PC9QPjxCUj4NCg0KPEJSPjxCUj4NCjxQIGFsaWduPWNlbnRlcj48Rk9OVCBT
+        aXplPS0xPjxBIGhyZWY9Y2hhcmFfc2VudGFrdS5hc3A/VENISz0yMDE1MzM+
+        lt+C6TwvQT48L0ZPTlQ+PC9QPg0KDQoNCiAgICA8ZGl2IGlkPSJkYXRlNSI+
+        JmNvcHk7MjAxNCBTQU5SSU8gRU5URVJUQUlOTUVOVCBDTy4sTFRELjwvZGl2
+        Pg0KIA0KCTwhLS2Mn4/Yg16DTy0tPg0KCTxzY3JpcHQgbGFuZ3VhZ2U9Ikph
+        dmFTY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIvL28uYWR2
+        Zy5qcC9vanM/YWlkPTEwMTM2JnBpZD0xJmtleT0iIGNoYXJzZXQ9IlVURi04
+        Ij4NCgk8L3NjcmlwdD4NCg0KCTxub3NjcmlwdD4NCgk8aWZyYW1lIHNyYz0i
+        Ly9vLmFkdmcuanAvb2lmP2FpZD0xMDEzNiZwaWQ9MSIgd2lkdGg9IjEiIGhl
+        aWdodD0iMSI+DQoJPC9pZnJhbWU+DQoJPC9ub3NjcmlwdD4NCg0KPCEtLYyf
+        j9iDXoNPLS0+DQo8L2JvZHk+DQo8L2h0bWw+DQo=
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 14:10:21 GMT
+- request:
+    method: get
+    uri: http://www.puroland.co.jp/chara_gre/mobile/chara_sche.asp?C_KEY=50&TCHK=201533
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - iPhone (Ruby; http://greeting.sucretown.net/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
+      Host:
+      - www.puroland.co.jp
+      Referer:
+      - *2
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '1768'
+      Content-Type:
+      - text/html
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 03 Mar 2015 14:10:22 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQo8SFRNTCBsYW5nPSJqYSI+DQo8SEVBRD4NCjxNRVRBIGh0dHAtZXF1aXY9
+        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXNo
+        aWZ0X2ppcyI+DQo8TUVUQSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lk
+        dGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2Nh
+        bGU9MiI+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0K
+        ICB2YXIgX2dhcSA9IF9nYXEgfHwgW107DQogIF9nYXEucHVzaChbJ19zZXRB
+        Y2NvdW50JywgJ1VBLTMzNTg0NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsn
+        X3NldERvbWFpbk5hbWUnLCAncHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVz
+        aChbJ190cmFja1BhZ2V2aWV3J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAg
+        ICB2YXIgZ2EgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsg
+        Z2EudHlwZSA9DQondGV4dC9qYXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVl
+        Ow0KICAgIGdhLnNyYyA9ICgnaHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlv
+        bi5wcm90b2NvbCA/ICdodHRwczovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSAr
+        ICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0g
+        ZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0K
+        cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoN
+        Cjwvc2NyaXB0Pg0KPFRJVExFPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NP
+        j+6V8TwvVElUTEU+DQo8U1RZTEUgVFlQRT0idGV4dC9jc3MiPiANCjwhLS0N
+        CklOUFVULnplbmtha3UgeyBpbWUtbW9kZTogYWN0aXZlIH0NCklOUFVULmhh
+        bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
+        PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
+        LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
+        DQo8QlI+DQoyMDE1lE4zjI4zk/ooic4pDQo8L0ZPTlQ+PC9QPg0KDQo8UCBh
+        bGlnbj1jZW50ZXI+PEZPTlQgc2l6ZT0tMT6DV4ODg1iDcIFbPC9GT05UPjwv
+        UD4NCjxIUj4NCjxQIGFsaWduPWxlZnQ+PEZPTlQgU2l6ZT0tMT6CUIJQgUaC
+        T4JPgXyCUIJQgUaCUoJPPEJSPoNug2KDc4Fbgs2CwYLSgWCDb4Fbg1iDZoFb
+        gnKCZ4JugnaBaYJQgmWBajwvRk9OVD48QlI+PEZPTlQgQ29sb3I9I0ZGMDAw
+        MCBTaXplPS0xPmh0dHA6Ly93d3cucHVyb2xhbmQuanAvbGl2ZXNob3cvaGFw
+        cHlfaGFwcHlfYmlydGhkYXlfc2hvdzwvRk9OVD48L1A+PEJSPg0KDQo8QlI+
+        PEJSPg0KPFAgYWxpZ249Y2VudGVyPjxGT05UIFNpemU9LTE+PEEgaHJlZj1j
+        aGFyYV9zZW50YWt1LmFzcD9UQ0hLPTIwMTUzMz6W34LpPC9BPjwvRk9OVD48
+        L1A+DQoNCg0KICAgIDxkaXYgaWQ9ImRhdGU1Ij4mY29weTsyMDE0IFNBTlJJ
+        TyBFTlRFUlRBSU5NRU5UIENPLixMVEQuPC9kaXY+DQogDQoJPCEtLYyfj9iD
+        XoNPLS0+DQoJPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCIgdHlwZT0i
+        dGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii8vby5hZHZnLmpwL29qcz9haWQ9MTAx
+        MzYmcGlkPTEma2V5PSIgY2hhcnNldD0iVVRGLTgiPg0KCTwvc2NyaXB0Pg0K
+        DQoJPG5vc2NyaXB0Pg0KCTxpZnJhbWUgc3JjPSIvL28uYWR2Zy5qcC9vaWY/
+        YWlkPTEwMTM2JnBpZD0xIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIj4NCgk8L2lm
+        cmFtZT4NCgk8L25vc2NyaXB0Pg0KDQo8IS0tjJ+P2INeg08tLT4NCjwvYm9k
+        eT4NCjwvaHRtbD4NCg==
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 14:10:22 GMT
+- request:
+    method: get
+    uri: http://www.puroland.co.jp/chara_gre/chara_sentaku_nextday.asp?TCHK=201533
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - iPhone (Ruby; http://greeting.sucretown.net/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - ASPSESSIONIDSCRBRCBT=JPAEJIBCCBJFPPPHBJBGEDGB
+      Host:
+      - www.puroland.co.jp
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '5056'
+      Content-Type:
+      - text/html
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 03 Mar 2015 14:10:25 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQo8IURPQ1RZUEUgaHRtbD4NCgk8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9
+        IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PVNo
+        aWZ0X0pJUyIgLz4NCjxtZXRhIG5hbWU9ImtleXdvcmRzIiBjb250ZW50PSKD
+        VIOTg4qDSSyDc4OFgVuDjYOJg5ODaCxTQU5SSU8gUFVST0xBTkQsg2WBW4N9
+        g3CBW4NOLINug42BW4NMg2WDQiyDVIOTg4qDSYNeg0WDkyI+DQo8IS0tLWZh
+        Y2Vib29rLS0tPg0KPG1ldGEgcHJvcGVydHk9Im9nOnRpdGxlIiBjb250ZW50
+        PSKDTIODg4mDToNegVuDT4OKgVuDZYNCg5ODT4/ulfGBYoNUg5ODioNJg3OD
+        hYFbg42DiYOTg2giIC8+DQo8bWV0YSBwcm9wZXJ0eT0ib2c6dHlwZSIgY29u
+        dGVudD0iYXJ0aWNsZSIgLz4NCjxtZXRhIHByb3BlcnR5PSJvZzp1cmwiIGNv
+        bnRlbnQ9Imh0dHA6Ly93d3cucHVyb2xhbmQuanAvY2hhcmFfZ3JlLyIgLz4N
+        CjxtZXRhIHByb3BlcnR5PSJvZzppbWFnZSIgY29udGVudD0iaHR0cDovL3d3
+        dy5wdXJvbGFuZC5qcC9zcC9jaGFyYV9ncmUvaW1nL3Zpc3VhbC5qcGciIC8+
+        DQo8bWV0YSBwcm9wZXJ0eT0ib2c6ZGVzY3JpcHRpb24iIGNvbnRlbnQ9IoNM
+        g4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8YFig1SDk4OKg0mDc4OFgVuD
+        jYOJg5ODaCIgLz4NCjwhLS0tZmFjZWJvb2stLS0+DQo8dGl0bGU+g0yDg4OJ
+        g06DXoFbg0+DioFbg2WDQoOTg0+P7pXxgWKDVIOTg4qDSYNzg4WBW4ONg4mD
+        k4NoPC90aXRsZT4NCjxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3
+        aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wLCBtaW5pbXVt
+        LXNjYWxlPTEuMCwgbWF4aW11bS1zY2FsZT0xLjAsIHVzZXItc2NhbGFibGU9
+        bm8iPg0KPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIg
+        aHJlZj0iLi4vLi4vY29tbW9uL2Nzcy9yZXNldC5jc3MiPg0KPGxpbmsgcmVs
+        PSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgaHJlZj0ic3AuY3NzIj4N
+        CjwhLS08c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJqcXVl
+        cnktMS44LjMubWluLmpzIj48L3NjcmlwdD4tLT4NCjxzY3JpcHQgdHlwZT0i
+        dGV4dC9qYXZhc2NyaXB0IiBzcmM9ImpzL2pxdWVyeS0xLjEwLjIubWluLmpz
+        Ij48L3NjcmlwdD4NCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBz
+        cmM9ImpzL2pxdWVyeS1taWdyYXRlLTEuMi4xLm1pbi5qcyI+PC9zY3JpcHQ+
+        DQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJqcy9qcXVl
+        cnkudGlueVRpcHMuanMiPjwvc2NyaXB0Pg0KPHNjcmlwdCB0eXBlPSJ0ZXh0
+        L2phdmFzY3JpcHQiIHNyYz0ianMvdGhpY2tib3guanMiPjwvc2NyaXB0Pg0K
+        PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0ianMvanF1ZXJ5
+        LnNvY2lhbGJ1dHRvbi0xLjkuMC5qcyI+PC9zY3JpcHQ+DQoNCjxzY3JpcHQg
+        dHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0KICB2YXIgX2dhcSA9IF9nYXEg
+        fHwgW107DQogIF9nYXEucHVzaChbJ19zZXRBY2NvdW50JywgJ1VBLTMzNTg0
+        NzE0LTEnXSk7DQoNCiAgX2dhcS5wdXNoKFsnX3NldERvbWFpbk5hbWUnLCAn
+        cHVyb2xhbmQuanAnXSk7DQogIF9nYXEucHVzaChbJ190cmFja1BhZ2V2aWV3
+        J10pOw0KDQogIChmdW5jdGlvbigpIHsNCiAgICB2YXIgZ2EgPSBkb2N1bWVu
+        dC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsgZ2EudHlwZSA9DQondGV4dC9q
+        YXZhc2NyaXB0JzsgZ2EuYXN5bmMgPSB0cnVlOw0KICAgIGdhLnNyYyA9ICgn
+        aHR0cHM6JyA9PSBkb2N1bWVudC5sb2NhdGlvbi5wcm90b2NvbCA/ICdodHRw
+        czovL3NzbCcgOg0KJ2h0dHA6Ly93d3cnKSArICcuZ29vZ2xlLWFuYWx5dGlj
+        cy5jb20vZ2EuanMnOw0KICAgIHZhciBzID0gZG9jdW1lbnQuZ2V0RWxlbWVu
+        dHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOw0Kcy5wYXJlbnROb2RlLmluc2Vy
+        dEJlZm9yZShnYSwgcyk7DQogIH0pKCk7DQoNCjwvc2NyaXB0Pg0KPC9oZWFk
+        Pg0KPEJPRFk+DQoJPGRpdiBjbGFzcz0idG9wIj4NCgkJPGltZyBzcmM9Imlt
+        YWdlcy8wMS5wbmciIHdpZHRoPSIxMDAlIj4NCgk8L2Rpdj4NCiAgICANCiAg
+        IDwhLS2OnorUgUCCsYKxgqmC5y0tPg0KPGRpdiBpZD0iZGF0ZSI+DQoJMjAx
+        NZROM4yOM5P6KInOKYFAMjOBRjEwjp6TXw0KPC9kaXY+DQoNCg0KPCEtLYNM
+        g4ODiYNOg16BW4FAgrGCsYKpguctLT4NCgk8ZGl2IGlkPSJuZXdzV3JhcDIi
+        Pg0KCQk8ZGl2IGNsYXNzPSJuZXdzVG9wMyI+MjAxNZROM4yONJP6gs08YnI+
+        grGCv4LngsyDTIODg4mDToNegVuCqpNvj+qXXJLogsWCtzwhLS08aW1nIHNy
+        Yz0iaW1hZ2VzLzAzLnBuZyIgd2lkdGg9IjEwMCUiPi0tPjwvZGl2Pg0KCQk8
+        YnI+DQo8dGFibGUgd2lkdGg9JzEwMCUnPjx0ciBhbGlnbj1jZW50ZXI+PHRk
+        PjxpbWcgc3JjPWltYWdlcy9jX0tJVFRZLmpwZyB3aWR0aD05MCUgPjwvdGQ+
+        PHRkPjxpbWcgc3JjPWltYWdlcy9jX0RBTklFTC5qcGcgd2lkdGg9OTAlID48
+        L3RkPjx0ZD48aW1nIHNyYz1pbWFnZXMvY19GTE9SQS5qcGcgd2lkdGg9OTAl
+        ID48L3RkPjwvdHI+PHRyIGFsaWduPWNlbnRlcj48dGQ+g0yDZYNCgUWDeoOP
+        g0ODZzwvdGQ+PHRkPoNfg2qDR4OLgUWDWINegVs8L3RkPjx0ZD6DiYOJg4mD
+        dIONgVuDiTwvdGQ+PC90cj48L3RhYmxlPjxicj48dGFibGUgd2lkdGg9JzEw
+        MCUnPjx0ciBhbGlnbj1jZW50ZXI+PHRkPjxpbWcgc3JjPWltYWdlcy9jX1JJ
+        Qk9OLmpwZyB3aWR0aD05MCUgPjwvdGQ+PHRkPjxpbWcgc3JjPWltYWdlcy9j
+        X01JTUkuanBnIHdpZHRoPTkwJSA+PC90ZD48dGQ+PGltZyBzcmM9aW1hZ2Vz
+        L2NfUlVCWS5qcGcgd2lkdGg9OTAlID48L3RkPjwvdHI+PHRyIGFsaWduPWNl
+        bnRlcj48dGQ+gtqC8YLagvGC6ILagvE8L3RkPjx0ZD6DfoOLg0yBW4N+g348
+        L3RkPjx0ZD6Di4NygVs8L3RkPjwvdHI+PC90YWJsZT48YnI+PHRhYmxlIHdp
+        ZHRoPScxMDAlJz48dHIgYWxpZ249Y2VudGVyPjx0ZD48aW1nIHNyYz1pbWFn
+        ZXMvY19BTkdFTEEuanBnIHdpZHRoPTkwJSA+PC90ZD48dGQ+PGltZyBzcmM9
+        aW1hZ2VzL2NfTFVSRS5qcGcgd2lkdGg9OTAlID48L3RkPjx0ZD48aW1nIHNy
+        Yz1pbWFnZXMvY19NWU1FTE9EWS5qcGcgd2lkdGg9OTAlID48L3RkPjwvdHI+
+        PHRyIGFsaWduPWNlbnRlcj48dGQ+g0eDk4NXg0aDiTwvdGQ+PHRkPoOLgVuD
+        QTwvdGQ+PHRkPoN9g0ODgYONg2aDQjwvdGQ+PC90cj48L3RhYmxlPjxicj48
+        dGFibGUgd2lkdGg9JzEwMCUnPjx0ciBhbGlnbj1jZW50ZXI+PHRkPjxpbWcg
+        c3JjPWltYWdlcy9jX0tVUk9NSS5qcGcgd2lkdGg9OTAlID48L3RkPjx0ZD48
+        aW1nIHNyYz1pbWFnZXMvY19LSUtJTEFMQS5qcGcgd2lkdGg9OTAlID48L3Rk
+        Pjx0ZD48aW1nIHNyYz1pbWFnZXMvY19NRUxMLmpwZyB3aWR0aD05MCUgPjwv
+        dGQ+PC90cj48dHIgYWxpZ249Y2VudGVyPjx0ZD6DToONg348L3RkPjx0ZD6D
+        ioNng4uDY4NDg5ODWINegVuDWTwvdGQ+PHRkPoNFg0KDYoNWg4WDfoFbg4GD
+        izwvdGQ+PC90cj48L3RhYmxlPjxicj48dGFibGUgd2lkdGg9JzEwMCUnPjx0
+        ciBhbGlnbj1jZW50ZXI+PHRkPjxpbWcgc3JjPWltYWdlcy9jX0NJTk5BTU9O
+        LmpwZyB3aWR0aD05MCUgPjwvdGQ+PHRkPjxpbWcgc3JjPWltYWdlcy9jX01P
+        Q0hBLmpwZyB3aWR0aD05MCUgPjwvdGQ+PHRkPjxpbWcgc3JjPWltYWdlcy9j
+        X01PTktJQ0hJLmpwZyB3aWR0aD05MCUgPjwvdGQ+PC90cj48dHIgYWxpZ249
+        Y2VudGVyPjx0ZD6DVoNpg4KDkzwvdGQ+PHRkPoOCg0o8L3RkPjx0ZD6CqIKz
+        gumCzILggvGCq4K/PC90ZD48L3RyPjwvdGFibGU+PGJyPjx0YWJsZSB3aWR0
+        aD0nMTAwJSc+PHRyIGFsaWduPWNlbnRlcj48dGQ+PGltZyBzcmM9aW1hZ2Vz
+        L2NfS1VSSVJJTi5qcGcgd2lkdGg9OTAlID48L3RkPjx0ZD48aW1nIHNyYz1p
+        bWFnZXMvY19QT0NIQUNDTy5qcGcgd2lkdGg9OTAlID48L3RkPjx0ZD48aW1n
+        IHNyYz1pbWFnZXMvY19KQVNQRVIuanBnIHdpZHRoPTkwJSA+PC90ZD48L3Ry
+        Pjx0ciBhbGlnbj1jZW50ZXI+PHRkPoNSg42DUoONg06DioOKg5M8L3RkPjx0
+        ZD6DfINgg4ODYoNSPC90ZD48dGQ+g1eDg4NYg3CBWzwvdGQ+PC90cj48L3Rh
+        YmxlPjxicj4NCgkJPHRhYmxlIHdpZHRoPSIxMDAlIj48dHI+PHRkPoFAgUCB
+        ppNvj+qCt4Lpjp6K1ILGj+qPioLNgUGTlpP6grKKbZRGgq2CvoKzgqKBQjwv
+        dGQ+PC90cj48L3RhYmxlPg0KCQk8L2Rpdj48IS0tg0yDg4OJg06DXoFbgrGC
+        sYLcgsUtLT4NCg0KPGZvcm0gYWN0aW9uPSJjaGFyYV9zZW50YWt1LmFzcCIg
+        bWV0aG9kPSJwb3N0Ij4NCjxJTlBVVCB0eXBlPSJoaWRkZW4iIG5hbWU9IlRD
+        SEsiIHZhbHVlPSIyMDE1MzMiPg0KPElOUFVUIHR5cGU9aGlkZGVuIG5hbWU9
+        TU9ERSB2YWx1ZT0iIj4NCjxkaXYgaWQ9ZGF0ZT48SU5QVVQgdHlwZT0ic3Vi
+        bWl0IiB2YWx1ZT0ilt+C6SI+PC9kaXY+DQo8L2Zvcm0+DQoNCjwhLS0NCjxo
+        cj4NCjxhIGhyZWY9Imh0dHA6Ly93d3cucHVyb2xhbmQuanAvc2NoZWR1bGUi
+        Pjxmb250IHNpemU9Ii0xIj6Dc4OFgVuDjYOJg5ODaILMiWOLxoNYg1CDV4OF
+        gVuDizwvZm9udD48L2E+PGJyPg0KLS0+DQo8ZGl2IGlkPSJsaW5rIj4NCgk8
+        YSBocmVmPSJodHRwOi8vd3d3LnB1cm9sYW5kLmpwLyI+PGltZyBzcmM9Imlt
+        YWdlcy9wdXJvX2xvZ28ucG5nIiB3aWR0aD0iODAlIj48L2E+DQo8L2Rpdj4N
+        CjxkaXYgaWQ9ImRhdGU1Ij4NCgkmY29weTsnMTQgU0FOUklPL1NFR0EgVE9Z
+        UyBTgUVTL1eBRVRYgUVKTFBDPGJyPiZjb3B5Oyc3NiwnODgsJzkwLCc5Mywn
+        OTgsJzk5LCcwMSwnMDIsJzA0LCcwNSwnMDksJzExLCcxMiwnMTMsJzE0IFNB
+        TlJJTw0KPC9kaXY+DQo8IS0tjJ+P2INeg08tLT4NCjxzY3JpcHQgbGFuZ3Vh
+        Z2U9IkphdmFTY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIv
+        L28uYWR2Zy5qcC9vanM/YWlkPTEwMTM2JnBpZD0xJmtleT0iIGNoYXJzZXQ9
+        IlVURi04Ij48L3NjcmlwdD4NCjxub3NjcmlwdD48aWZyYW1lIHNyYz0iLy9v
+        LmFkdmcuanAvb2lmP2FpZD0xMDEzNiZwaWQ9MSIgd2lkdGg9IjEiIGhlaWdo
+        dD0iMSI+PC9pZnJhbWU+PC9ub3NjcmlwdD4NCjwhLS2Mn4/Yg16DTy0tPg0K
+        PC9ib2R5Pg0KPC9odG1sPg==
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 14:10:25 GMT
 recorded_with: VCR 2.9.3

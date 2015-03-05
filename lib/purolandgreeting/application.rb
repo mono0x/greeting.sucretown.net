@@ -59,9 +59,11 @@ module PurolandGreeting
     get '/' do
       today = Date.today
       today_schedule = Schedule.find_by_date(today)
+      temporary_schedule = today_schedule ? TemporarySchedule.where('date > ?', today).order('date ASC').first : TemporarySchedule.where('date >= ? ', today).order('date DESC').first
       haml :index, locals: {
         today: today,
         today_schedule: today_schedule,
+        temporary_schedule: temporary_schedule,
       }
     end
 
@@ -105,6 +107,22 @@ module PurolandGreeting
         in_session: greetings.in_session(time),
         after_the_end: greetings.after_the_end(time),
         deleted: schedule.greetings.deleted
+      }
+    end
+
+    get %r{\A/schedule/(\d{4})/(\d{2})/(\d{2})/character\z} do |year, month, day|
+      date = Date.new(year.to_i, month.to_i, day.to_i)
+      temporary_schedule = TemporarySchedule.find_by_date(date) or not_found
+      today_schedule = Schedule.find_by_date(date)
+      characters = temporary_schedule.characters.where('temporary_appearances.deleted = false')
+      deleted_characters = temporary_schedule.characters.where('temporary_appearances.deleted = true')
+      @title = "#{date.strftime('%Y/%m/%d')} の登場キャラクター"
+      @description = "登場キャラクター: #{characters.map(&:name).join(' ')}"[0, 200]
+      haml :temporary_schedule, locals: {
+        today_schedule: today_schedule,
+        temporary_schedule: temporary_schedule,
+        characters: characters,
+        deleted_characters: deleted_characters,
       }
     end
 
