@@ -96,7 +96,7 @@ module PurolandGreeting
             character_name, costume_name = normalizer.character(item[:character])
             character = Character.where(name: character_name).first_or_create
             schedule = TemporarySchedule.where(date: item[:date]).first_or_create
-            TemporaryAppearance.where(character_id: character.id, temporary_schedule_id: schedule.id).update_attribute :deleted, true
+            TemporaryAppearance.where(character_id: character.id, temporary_schedule_id: schedule.id).update_all deleted: true
           end
 
           (after_nextday - before_nextday).each do |item|
