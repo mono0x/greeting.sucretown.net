@@ -29,10 +29,12 @@ module PurolandGreeting
         config.digest = true
       end
 
-      sprockets.append_path 'bower_components'
       sprockets.append_path 'assets/images'
       sprockets.append_path 'assets/javascripts'
       sprockets.append_path 'assets/stylesheets'
+      RailsAssets.load_paths.each do |path|
+        sprockets.append_path path
+      end
     end
 
     helpers Sprockets::Helpers

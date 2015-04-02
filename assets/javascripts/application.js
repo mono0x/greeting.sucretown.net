@@ -1,5 +1,5 @@
-//= require jquery/dist/jquery.min.js
-//= require jquery.scrollTo/jquery.scrollTo.js
-//= require bootstrap/dist/js/bootstrap.min.js
+//= require jquery
+//= require jquery.scrollTo
+//= require bootstrap
 //= require statistics.js
 //= require greetings.js

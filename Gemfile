@@ -31,6 +31,12 @@ gem 'unicorn'
 gem 'unicorn-worker-killer', require: false
 gem 'varnish-client', github: 'mono0x/varnish-client'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootswatch'
+  gem 'rails-assets-jquery'
+  gem 'rails-assets-jquery.scrollTo'
+end
+
 group :schedule do
   gem 'gmail'
   gem 'rufus-scheduler', require: 'rufus/scheduler'
