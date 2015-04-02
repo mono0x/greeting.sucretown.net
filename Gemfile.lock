@@ -78,7 +78,9 @@ GEM
     guard-rake (1.0.0)
       guard
       rake
-    haml (4.0.5)
+    hamlit (0.3.3)
+      temple (~> 0.7.3)
+      thor
       tilt
     hashie (3.3.1)
     hike (1.2.3)
@@ -190,6 +192,7 @@ GEM
     sprockets-sass (1.2.0)
       sprockets (~> 2.0)
       tilt (~> 1.1)
+    temple (0.7.5)
     test-unit (3.0.8)
       power_assert
     test-unit-rr (1.0.1)
@@ -247,7 +250,7 @@ DEPENDENCIES
   gmail
   guard
   guard-rake
-  haml
+  hamlit
   hashie
   ltsv
   mechanize
