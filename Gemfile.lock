@@ -78,7 +78,7 @@ GEM
     guard-rake (1.0.0)
       guard
       rake
-    hamlit (0.3.3)
+    hamlit (0.4.1)
       temple (~> 0.7.3)
       thor
       tilt
