@@ -78,7 +78,8 @@ GEM
     guard-rake (1.0.0)
       guard
       rake
-    hamlit (0.4.1)
+    hamlit (1.0.0)
+      escape_utils
       temple (~> 0.7.3)
       thor
       tilt
