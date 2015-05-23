@@ -104,7 +104,7 @@ module PurolandGreeting
       greetings = schedule.greetings.active.eager_load(:place)
       time = Time.now
       @title = "#{date.strftime('%Y/%m/%d')} の予定"
-      @description = "登場キャラクター: #{characters.map(&:name).join(' ')}"[0, 200]
+      @description = "登場キャラクター: #{characters.map(&:name).join(' ')}"
       haml :schedule, locals: {
         schedule: schedule,
         characters: characters,
@@ -123,7 +123,7 @@ module PurolandGreeting
       characters = temporary_schedule.characters.where('temporary_appearances.deleted = false')
       deleted_characters = temporary_schedule.characters.where('temporary_appearances.deleted = true')
       @title = "#{date.strftime('%Y/%m/%d')} の登場キャラクター"
-      @description = "登場キャラクター: #{characters.map(&:name).join(' ')}"[0, 200]
+      @description = "登場キャラクター: #{characters.map(&:name).join(' ')}"
       haml :temporary_schedule, locals: {
         today_schedule: today_schedule,
         temporary_schedule: temporary_schedule,
