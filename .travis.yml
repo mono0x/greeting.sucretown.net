@@ -13,6 +13,9 @@ before_script:
   - bundle exec rake db:schema:config
   - bundle exec rake db:schema:apply
 
+script:
+  - bundle exec rake test
+
 notifications:
   email:
     recipients:
