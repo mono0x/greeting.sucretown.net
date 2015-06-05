@@ -1,0 +1,21 @@
+language: ruby
+rvm:
+  - 2.2.1
+
+addons:
+  postgresql: "9.3"
+
+env:
+  - DATABASE_URL=postgres://postgres@localhost:5432/travis_ci_test
+
+before_script:
+  - psql -U postgres -c 'CREATE DATABASE travis_ci_test'
+  - rake db:schema:config
+  - rake db:schema:apply
+
+notifications:
+  email:
+    recipients:
+      - mono@monoweb.info
+    on_success: change
+    on_failure: always
