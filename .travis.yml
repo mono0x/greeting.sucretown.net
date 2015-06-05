@@ -10,8 +10,8 @@ env:
 
 before_script:
   - psql -U postgres -c 'CREATE DATABASE travis_ci_test'
-  - rake db:schema:config
-  - rake db:schema:apply
+  - bundle exec rake db:schema:config
+  - bundle exec rake db:schema:apply
 
 notifications:
   email:
