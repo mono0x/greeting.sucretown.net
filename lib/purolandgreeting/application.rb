@@ -69,6 +69,10 @@ module PurolandGreeting
       }
     end
 
+    get '/official/attraction/today' do
+      redirect "http://www.puroland.jp/pdf/schedule/#{Date.today.strftime('%Y%m%d')}.pdf"
+    end
+
     get '/export' do
       content_type 'text/ltsv'
       Database.export
