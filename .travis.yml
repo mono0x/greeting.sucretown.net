@@ -6,6 +6,7 @@ addons:
   postgresql: "9.3"
 
 env:
+  - RACK_ENV=test
   - DATABASE_URL=postgres://postgres@localhost:5432/travis_ci_test
 
 before_script:
