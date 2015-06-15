@@ -8,8 +8,6 @@ require 'rake/testtask'
 
 $:.push File.expand_path('lib', __dir__)
 
-require 'purolandgreeting'
-
 Rake::TestTask.new do |t|
   t.libs << 'test'
   t.test_files = Dir['test/**/test_*.rb'].sort
@@ -22,6 +20,7 @@ task :coverage do |t|
 end
 
 task :console do |t|
+  require 'purolandgreeting'
   TOPLEVEL_BINDING.eval 'include PurolandGreeting'
   Pry.start
 end
@@ -32,28 +31,34 @@ end
 
 namespace :crawler do
   task :register do
+    require 'purolandgreeting'
     PurolandGreeting::CrawlerTask.register
   end
 
   task :update do
+    require 'purolandgreeting'
     PurolandGreeting::CrawlerTask.update
   end
 end
 
 namespace :db do
   task :import do
+    require 'purolandgreeting'
     PurolandGreeting::Database.import STDIN
   end
 
   task :import_ohtake_csv do
+    require 'purolandgreeting'
     PurolandGreeting::Database.import_ohtake_csv STDIN
   end
 
   task :export do
+    require 'purolandgreeting'
     STDOUT.puts PurolandGreeting::Database.export
   end
 
   task :normalize do
+    require 'purolandgreeting'
     PurolandGreeting::Database.normalize
   end
 
@@ -101,6 +106,7 @@ namespace :backup do
   end
 
   task :run do
+    require 'purolandgreeting'
     Dir.mktmpdir do |dir|
       sql = File.join(dir, 'database.sql')
       ltsv = File.join(dir, 'database.ltsv')
@@ -127,6 +133,7 @@ end
 
 namespace :varnish do
   task :purge do
+    require 'purolandgreeting'
     PurolandGreeting::VarnishCachePurger.new.run if ENV['VARNISH_URL']
   end
 end
