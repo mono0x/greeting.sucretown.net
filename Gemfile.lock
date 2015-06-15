@@ -63,7 +63,7 @@ GEM
       mail (>= 2.2.1)
     gmail_xoauth (0.4.1)
       oauth (>= 0.3.6)
-    guard (2.12.5)
+    guard (2.12.6)
       formatador (>= 0.2.4)
       listen (~> 2.7)
       lumberjack (~> 1.0)
@@ -75,7 +75,7 @@ GEM
     guard-rake (1.0.0)
       guard
       rake
-    hamlit (1.5.9)
+    hamlit (1.6.5)
       escape_utils
       temple (~> 0.7.6)
       thor
@@ -114,7 +114,7 @@ GEM
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (4.7.5)
-    multi_json (1.11.0)
+    multi_json (1.11.1)
     multipart-post (2.0.0)
     naught (1.0.0)
     nenv (0.2.0)
@@ -146,7 +146,7 @@ GEM
     rails-assets-bootswatch (3.3.4.1)
       rails-assets-bootstrap (~> 3.3.4)
     rails-assets-jquery (2.1.4)
-    rails-assets-jquery.scrollTo (2.1.0)
+    rails-assets-jquery.scrollTo (2.1.1)
       rails-assets-jquery (>= 1.8)
     raindrops (0.13.0)
     rake (10.4.2)
@@ -189,7 +189,7 @@ GEM
       sprockets (~> 2.0)
       tilt (~> 1.1)
     temple (0.7.6)
-    test-unit (3.1.1)
+    test-unit (3.1.2)
       power_assert
     test-unit-rr (1.0.3)
       rr (>= 1.1.1)
