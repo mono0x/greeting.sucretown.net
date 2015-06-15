@@ -26,7 +26,7 @@ task :console do |t|
 end
 
 task :server do |t|
-  system "unicorn -c unicorn.conf -E #{ENV['RACK_ENV']} -p #{ENV['PORT']}"
+  exec "unicorn -c unicorn.conf -E #{ENV['RACK_ENV']} -p #{ENV['PORT']}"
 end
 
 namespace :crawler do
@@ -79,11 +79,11 @@ namespace :db do
     end
 
     task :export do
-      system 'ridgepole -c database.yml --o Schemafile --enable-foreigner --export'
+      exec 'ridgepole -c database.yml --o Schemafile --enable-foreigner --export'
     end
 
     task :apply do
-      system 'ridgepole -c database.yml --o Schemafile --enable-foreigner --apply'
+      exec 'ridgepole -c database.yml --o Schemafile --enable-foreigner --apply'
     end
   end
 end
