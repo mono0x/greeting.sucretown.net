@@ -22,10 +22,6 @@ end
 
 add_index "costumes", ["name"], name: "index_costumes_on_name", using: :btree
 
-create_table "places", force: true do |t|
-  t.string "name", null: false
-end
-
 create_table "greetings", force: true do |t|
   t.datetime "start_at",       null: false
   t.datetime "end_at",         null: false
@@ -44,11 +40,24 @@ add_index "greetings", ["start_at", "end_at"], name: "index_greetings_time_delet
 add_index "greetings", ["start_at", "end_at"], name: "index_greetings_time_not_deleted", where: "(NOT deleted)", using: :btree
 add_index "greetings", ["start_at"], name: "index_greetings_on_start_at", using: :btree
 
+create_table "places", force: true do |t|
+  t.string "name", null: false
+end
+
 create_table "schedules", force: true do |t|
   t.date "date", null: false
 end
 
 add_index "schedules", ["date"], name: "index_schedules_on_date", unique: true, using: :btree
+
+create_table "temporary_appearances", force: true do |t|
+  t.integer "character_id",                          null: false
+  t.integer "temporary_schedule_id",                 null: false
+  t.string  "raw_character_name",                    null: false
+  t.boolean "deleted",               default: false, null: false
+end
+
+add_index "temporary_appearances", ["character_id", "temporary_schedule_id"], name: "index_temporary_appearances_uniqueness", unique: true, using: :btree
 
 create_table "temporary_schedules", force: true do |t|
   t.date "date", null: false
@@ -56,17 +65,9 @@ end
 
 add_index "temporary_schedules", ["date"], name: "index_temporary_schedules_on_date", unique: true, using: :btree
 
-create_table "temporary_appearances", force: true do |t|
-  t.integer "character_id",          null: false
-  t.integer "temporary_schedule_id", null: false
-  t.string  "raw_character_name",    null: false
-  t.boolean "deleted",               null: false, default: false
-end
-
-add_index "temporary_appearances", ["character_id", "temporary_schedule_id"], name: "index_temporary_appearances_uniqueness", unique: true, using: :btree
-
 add_foreign_key "appearances", "characters", name: "foreign_key_appearances_characters", dependent: :delete
 add_foreign_key "appearances", "costumes", name: "foreign_key_appearances_costumes", dependent: :delete
 add_foreign_key "appearances", "greetings", name: "foreign_key_appearnaces_greetings", dependent: :delete
+
 add_foreign_key "greetings", "places", name: "foreign_key_greetings_places", dependent: :delete
 add_foreign_key "greetings", "schedules", name: "foreign_key_greetings_schedules", dependent: :delete
