@@ -82,9 +82,9 @@ module PurolandGreeting
       date = Date.today
       schedule = Schedule.where('date = ?', date).first
       if schedule
-        redirect date.strftime('/schedule/%Y/%m/%d/')
+        redirect "#{ENV['ROOT_URI']}#{date.strftime('/schedule/%Y/%m/%d/')}"
       else
-        redirect '/'
+        redirect "#{ENV['ROOT_URI']}/"
       end
     end
 
