@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.1'
 
-gem 'activerecord', '~> 4.0.2'
+gem 'activerecord'
 gem 'activesupport', require: 'active_support/all'
 gem 'coffee-script'
 gem 'dotenv'
