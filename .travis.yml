@@ -6,7 +6,7 @@ addons:
   postgresql: "9.3"
 
 env:
-  - RACK_ENV=test DATABASE_URL=postgres://postgres@localhost:5432/travis_ci_test
+  - RACK_ENV=test DATABASE_URL=postgres://postgres@localhost:5432/travis_ci_test ROOT_URI=http://greeting.sucretown.net
 
 before_script:
   - psql -U postgres -c 'CREATE DATABASE travis_ci_test'
