@@ -1,5 +1,4 @@
 /coverage
-/database.yml
 /.env
 /.env.test
 /.sass-cache

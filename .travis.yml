@@ -10,7 +10,6 @@ env:
 
 before_script:
   - psql -U postgres -c 'CREATE DATABASE travis_ci_test'
-  - bundle exec rake db:schema:config
   - bundle exec rake db:schema:apply
 
 script:

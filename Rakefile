@@ -1,6 +1,7 @@
 require 'bundler'
 Bundler.require
 require 'pry'
+require 'tempfile'
 require 'tmpdir'
 require 'uri'
 require 'yaml'
@@ -64,10 +65,9 @@ namespace :db do
   end
 
   namespace :schema do
-    task :config do
-      database_url = URI.parse(ENV['DATABASE_URL'])
-
-      open('database.yml', 'w') do |f|
+    def database_config
+      Tempfile.open([ 'database', '.yml' ]) do |f|
+        database_url = URI.parse(ENV['DATABASE_URL'])
         YAML.dump({
           'adapter' => 'postgresql',
           'encoding' => 'utf8',
@@ -76,15 +76,22 @@ namespace :db do
           'database' => database_url.path.delete('/'),
           'username' => database_url.user,
         }, f)
+        f.flush
+
+        yield f.path
       end
     end
 
     task :export do
-      exec 'ridgepole -c database.yml --o Schemafile --export'
+      database_config do |file|
+        system "ridgepole -c #{file} --o Schemafile --export"
+      end
     end
 
     task :apply do
-      exec 'ridgepole -c database.yml --o Schemafile --apply'
+      database_config do |file|
+        system "ridgepole -c #{file} --o Schemafile --apply"
+      end
     end
   end
 end
