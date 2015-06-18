@@ -80,11 +80,11 @@ namespace :db do
     end
 
     task :export do
-      exec 'ridgepole -c database.yml --o Schemafile --enable-foreigner --export'
+      exec 'ridgepole -c database.yml --o Schemafile --export'
     end
 
     task :apply do
-      exec 'ridgepole -c database.yml --o Schemafile --enable-foreigner --apply'
+      exec 'ridgepole -c database.yml --o Schemafile --apply'
     end
   end
 end

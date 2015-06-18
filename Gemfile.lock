@@ -50,8 +50,6 @@ GEM
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.8)
-    foreigner (1.7.4)
-      activerecord (>= 3.0.0)
     foreman (0.78.0)
       thor (~> 0.19.1)
     formatador (0.2.5)
@@ -242,7 +240,6 @@ DEPENDENCIES
   dropbox-sdk
   escape_utils
   factory_girl
-  foreigner
   foreman
   gctools
   gmail
