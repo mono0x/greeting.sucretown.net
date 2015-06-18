@@ -19,3 +19,7 @@ VCR.configure do |config|
   config.cassette_library_dir = 'test/fixtures/vcr_cassettes'
   config.hook_into :webmock
 end
+
+system 'rake db:schema:apply'
+DatabaseCleaner.clean_with :truncation
+DatabaseCleaner.strategy = :transaction
