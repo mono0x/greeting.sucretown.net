@@ -25,6 +25,7 @@ class TestApplication < Test::Unit::TestCase
     get '/'
     assert last_response.ok?
     assert last_response.body.include?('2015/03/03 の予定')
+    assert !last_response.body.include?('2015/03/03 の予定は公開されていません')
     assert last_response.body.include?('2015/03/04 の登場キャラクター')
 
     Timecop.freeze Time.local(2015, 3, 4, 15, 0) do
