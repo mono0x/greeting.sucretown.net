@@ -25,7 +25,7 @@ def execute_command(command)
   end
 end
 
-scheduler = Rufus::Scheduler.start_new
+scheduler = Rufus::Scheduler.new
 mutex = Mutex.new
 
 scheduler.cron '*/15 8-21 * * *', mutex: mutex do
