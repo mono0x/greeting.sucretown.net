@@ -65,33 +65,9 @@ namespace :db do
   end
 
   namespace :schema do
-    def database_config
-      Tempfile.open([ 'database', '.yml' ]) do |f|
-        database_url = URI.parse(ENV['DATABASE_URL'])
-        YAML.dump({
-          'adapter' => 'postgresql',
-          'encoding' => 'utf8',
-          'host' => database_url.host,
-          'port' => 5432,
-          'database' => database_url.path.delete('/'),
-          'username' => database_url.user,
-        }, f)
-        f.flush
-
-        yield f.path
-      end
-    end
-
-    task :export do
-      database_config do |file|
-        system "ridgepole -c #{file} --o Schemafile --export"
-      end
-    end
-
-    task :apply do
-      database_config do |file|
-        system "ridgepole -c #{file} --o Schemafile --apply"
-      end
+    require 'ridgepoleraketask'
+    RidgepoleRakeTask.new do |t|
+      t.database_uri = ENV['DATABASE_URL']
     end
   end
 end
