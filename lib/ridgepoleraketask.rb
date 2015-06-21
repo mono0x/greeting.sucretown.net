@@ -32,6 +32,7 @@ class RidgepoleRakeTask < Rake::TaskLib
   private
 
   def database_config
+    raise 'block is required' unless block_given?
     Tempfile.open([ 'database', '.yml' ]) do |f|
       uri = URI.parse(@database_uri.to_s)
       YAML.dump({
