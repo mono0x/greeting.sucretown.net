@@ -73,21 +73,8 @@ namespace :db do
 end
 
 namespace :backup do
-  task :setup do
-    flow = DropboxOAuth2FlowNoRedirect.new(ENV['DROPBOX_CONSUMER_KEY'], ENV['DROPBOX_CONSUMER_SECRET'])
-    authorize_url = flow.start()
-
-    # Have the user sign in and authorize this app
-    STDERR.puts '1. Go to: ' + authorize_url
-    STDERR.puts '2. Click "Allow" (you might have to log in first)'
-    STDERR.puts '3. Copy the authorization code'
-    STDERR.print 'Enter the authorization code here: '
-    code = STDIN.gets.strip
-
-    # This will fail if the user gave us an invalid authorization code
-    access_token, user_id = flow.finish(code)
-    puts access_token
-  end
+  require 'dropboxraketask'
+  DropboxRakeTask.new
 
   task :run do
     require 'purolandgreeting'
