@@ -1,23 +1,30 @@
 require 'rake/tasklib'
 
 class RidgepoleRakeTask < Rake::TaskLib
-  attr_accessor :database_uri
+  attr_accessor :ridgepole_command
+  attr_accessor :database_uri, :schemafile_path
+  attr_accessor :export_name, :apply_name
 
   def initialize
+    @ridgepole_command = 'ridgepole'
+    @database_uri = ENV['DATABASE_URL']
+    @schemafile_path = 'Schemafile'
+    @export_name = :export
+    @apply_name = :apply
     yield self if block_given?
     define
   end
 
   def define
-    task :export do
+    task @export_name do
       database_config do |file|
-        system "ridgepole -c #{file} --o Schemafile --export"
+        system "#@ridgepole_command -c #{file} --o #@schemafile_path --export"
       end
     end
 
-    task :apply do
+    task @apply_name do
       database_config do |file|
-        system "ridgepole -c #{file} --o Schemafile --apply"
+        system "#@ridgepole_command -c #{file} --o #@schemafile_path --apply"
       end
     end
   end
