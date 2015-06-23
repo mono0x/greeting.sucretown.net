@@ -70,7 +70,13 @@ module PurolandGreeting
     end
 
     get '/official/attraction/today' do
-      redirect "http://www.puroland.jp/pdf/schedule/#{Date.today.strftime('%Y%m%d')}.pdf"
+      today = Date.today
+      prefix = 'http://www.puroland.jp/pdf/schedule'
+      if today < Date.new(2015, 6, 27)
+        redirect "#{prefix}/#{today.strftime('%Y%m%d')}.pdf"
+      else
+        redirect "#{prefix}/tf_0627_0731_schedule.jpg"
+      end
     end
 
     get '/export' do
