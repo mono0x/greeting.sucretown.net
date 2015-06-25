@@ -3,3 +3,4 @@
 //= require bootstrap
 //= require statistics.js
 //= require greetings.js
+//= require report.js

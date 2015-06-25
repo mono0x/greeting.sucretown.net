@@ -1,0 +1,14 @@
+%form#report-form
+  .form-group
+    %label{for: 'place_id'} 場所
+    %select.form-control{name: 'place_id'}
+      - places.each do |place|
+        %option{value: place.id}= place.name
+
+  .form-group
+    %label{for: 'character_id'} キャラクター
+    %select.form-control{name: 'character_id'}
+      - characters.each do |character|
+        %option{value: character.id}= character.name
+
+  %button.btn.btn-default{type: 'submit'} 投稿

@@ -103,6 +103,13 @@ module PurolandGreeting
       }
     end
 
+    get '/schedule/report' do
+      haml :schedule_report, locals: {
+        characters: Character.order('name').all,
+        places: Place.all.sort_by {|place| [ place.floor, place.name_without_floor ] },
+      }
+    end
+
     get %r{\A/schedule/(\d{4})/(\d{2})/(\d{2})/\z} do |year, month, day|
       date = Date.new(year.to_i, month.to_i, day.to_i)
       schedule = Schedule.where('date = ?', date).first or not_found
