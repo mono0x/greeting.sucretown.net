@@ -3,25 +3,46 @@ $(function() {
     return;
   }
 
+  var tabs = [
+    {
+      hash: 'timetable',
+      tabElement: $('#timetable-tab'),
+      contentElement: $('#timetable')
+    },
+    {
+      hash: 'character',
+      tabElement: $('#character-tab'),
+      contentElement: $('#character')
+    }
+  ];
+  var twitterTab = {
+    hash: 'twitter',
+    tabElement: $('#twitter-tab'),
+    contentElement: $('#twitter')
+  };
+  if (twitterTab.tabElement.size() !== 0) {
+    tabs.push(twitterTab);
+  }
+
   var updateTab = function(hash) {
-    var isTimetable = (hash.indexOf('#timetable/') === 0);
-    var isCharacter = (hash.indexOf('#character/') === 0);
-    var isTwitter = (hash.indexOf('#twitter/') === 0);
-
-    if (!isTimetable && !isCharacter && !isTwitter) {
-      isTimetable = true;
+    var tab = (function() {
+      var i, n = tabs.length;
+      for (i = 0; i < n; ++i) {
+        if (hash.indexOf('#' + tabs[i].hash + '/') === 0) {
+          return tabs[i];
+        }
+      }
+    })();
+    if (tab === undefined) {
+      tab = tabs[0];
     }
-    if (isTwitter && $('#twitter').size() === 0) {
-      isTwitter = false;
-      isTimetable = true;
-    }
 
-    $('#timetable').toggle(isTimetable);
-    $('#timetable-tab').toggleClass('active', isTimetable);
-    $('#character').toggle(isCharacter);
-    $('#character-tab').toggleClass('active', isCharacter);
-    $('#twitter').toggle(isTwitter);
-    $('#twitter-tab').toggleClass('active', isTwitter);
+    tabs.filter(function(t) { return t.hash != tab.hash; }).forEach(function(t) {
+      t.tabElement.removeClass('active');
+      t.contentElement.hide();
+    });
+    tab.tabElement.addClass('active');
+    tab.contentElement.show();
   };
 
   var hashchange = function() {
