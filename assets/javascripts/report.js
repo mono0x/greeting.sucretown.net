@@ -7,11 +7,10 @@ $(function() {
     var height = 400;
     var left = ($(window).width() - width) / 2;
     var top = ($(window).height() - height) / 2;
-    var url = 'http://greeting.sucretown.net/schedule/report';
     window.open(
       'https://twitter.com/share?via=puro_greeting&' + [
         'text=' + encodeURIComponent(status),
-        'url=' + encodeURIComponent(url),
+        'url=',
         'hashtags=' + encodeURIComponent('ピューログリ')
       ].join('&'),
       'twitter',

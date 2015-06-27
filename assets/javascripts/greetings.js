@@ -6,8 +6,13 @@ $(function() {
   var updateTab = function(hash) {
     var isTimetable = (hash.indexOf('#timetable/') === 0);
     var isCharacter = (hash.indexOf('#character/') === 0);
+    var isTwitter = (hash.indexOf('#twitter/') === 0);
 
-    if (!isTimetable && !isCharacter) {
+    if (!isTimetable && !isCharacter && !isTwitter) {
+      isTimetable = true;
+    }
+    if (isTwitter && $('#twitter').size() === 0) {
+      isTwitter = false;
       isTimetable = true;
     }
 
@@ -15,6 +20,8 @@ $(function() {
     $('#timetable-tab').toggleClass('active', isTimetable);
     $('#character').toggle(isCharacter);
     $('#character-tab').toggleClass('active', isCharacter);
+    $('#twitter').toggle(isTwitter);
+    $('#twitter-tab').toggleClass('active', isTwitter);
   };
 
   var hashchange = function() {

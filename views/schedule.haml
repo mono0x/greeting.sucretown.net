@@ -6,6 +6,9 @@
     %a{href: '#timetable/'} タイムテーブル
   %li#character-tab
     %a{href: '#character/'} キャラクター
+  - if is_today
+    %li#twitter-tab
+      %a{href: '#twitter/'} Twitter
 
 #timetable
   %section.greeting-category.greeting-category-in-session
@@ -55,3 +58,17 @@
           .clearfix.visible-md-block.visible-lg-block
         - if index % 2 == 1
           .clearfix.visible-sm-block
+
+- if is_today
+  #twitter
+    %section
+      %h2 知らせる
+      %p キャラクターと会ったことをハッシュタグ <a href="https://twitter.com/search?q=%23%E3%83%94%E3%83%A5%E3%83%BC%E3%83%AD%E3%82%B0%E3%83%AA&src=typd&vertical=default&f=tweets">#ピューログリ</a> で共有しませんか。
+
+      != haml :'_partial/report'
+
+      %h2 見つける
+      %p みんなの投稿を見ることができます。
+      %p
+        %a.btn.btn-block.btn-default{target: '_blank', href: 'https://twitter.com/search?q=%23%E3%83%94%E3%83%A5%E3%83%BC%E3%83%AD%E3%82%B0%E3%83%AA&src=typd&vertical=default&f=tweets'}
+          Twitter (#ピューログリ)
