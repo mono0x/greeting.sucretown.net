@@ -2,14 +2,18 @@ $(function() {
   $('#report-form').submit(function() {
     var place = $('select[name="place_id"] option:selected', this).text();
     var character = $('select[name="character_id"] option:selected', this).text();
-    var status = place + ' で ' + character + ' に会ったよ！ #ピューログリ';
+    var status = place + ' で ' + character + ' に会ったよ！';
     var width = 575;
     var height = 400;
     var left = ($(window).width() - width) / 2;
     var top = ($(window).height() - height) / 2;
     var url = 'http://greeting.sucretown.net/schedule/report';
     window.open(
-      'https://twitter.com/share?via=puro_greeting&text=' + encodeURIComponent(status) + '&url=' + encodeURIComponent(url),
+      'https://twitter.com/share?via=puro_greeting&' + [
+        'text=' + encodeURIComponent(status),
+        'url=' + encodeURIComponent(url),
+        'hashtags=' + encodeURIComponent('ピューログリ')
+      ].join('&'),
       'twitter',
       [
         'status=1',
