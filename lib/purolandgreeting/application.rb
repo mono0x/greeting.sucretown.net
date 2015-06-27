@@ -110,6 +110,7 @@ module PurolandGreeting
       greetings = schedule.greetings.active.eager_load(:place)
       time = Time.now
       @title = "#{date.strftime('%Y/%m/%d')} の予定"
+      @canonical = "#{ENV['ROOT_URI']}#{date.strftime('/schedule/%Y/%m/%d/')}"
       @description = "登場キャラクター: #{characters.map(&:name).join(' ')}"
       haml :schedule, locals: {
         is_today: schedule.date == Date.today,
