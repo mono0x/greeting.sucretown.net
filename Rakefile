@@ -103,6 +103,7 @@ namespace :backup do
 
       ]
 
+      dropbox = DropboxClient.new(ENV['DROPBOX_ACCESS_TOKEN'])
       tasks.each do |task|
         errors = []
         begin
