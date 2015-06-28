@@ -91,12 +91,35 @@ namespace :backup do
       end
       system "xz #{ltsv}"
 
-      dropbox = DropboxClient.new(ENV['DROPBOX_ACCESS_TOKEN'])
-      open("#{sql}.xz") do |f|
-        dropbox.put_file File.join(dropbox_dir, 'database.sql.xz'), f, true
-      end
-      open("#{ltsv}.xz") do |f|
-        dropbox.put_file File.join(dropbox_dir, 'database.ltsv.xz'), f, true
+      tasks = [
+        {
+          src: "#{sql}.xz",
+          dest: File.join(dropbox_dir, 'database.sql.xz'),
+        },
+        {
+          src: "#{ltsv}.xz",
+          dest: File.join(dropbox_dir, 'database.ltsv.xz'),
+        },
+
+      ]
+
+      tasks.each do |task|
+        errors = []
+        begin
+          open(task[:src]) do |f|
+            dropbox.put_file task[:dest], f, true
+          end
+        rescue DropboxError => e
+          if errors.size >= 5
+            errors.each do |error|
+              STDERR.puts error.class, error.message, error.backtrace
+            end
+          else
+            sleep 2 ** errors.size
+            errors.push e
+            retry
+          end
+        end
       end
     end
   end
