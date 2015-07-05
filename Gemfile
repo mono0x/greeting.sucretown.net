@@ -3,7 +3,6 @@ ruby '2.2.2'
 
 gem 'activerecord'
 gem 'activesupport', require: 'active_support/all'
-gem 'coffee-script'
 gem 'dotenv'
 gem 'dropbox-sdk', require: 'dropbox_sdk'
 gem 'escape_utils'

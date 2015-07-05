@@ -29,10 +29,6 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.9.1.1)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     database_cleaner (1.4.1)
@@ -235,7 +231,6 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   activesupport
-  coffee-script
   database_cleaner
   dotenv
   dropbox-sdk
@@ -282,4 +277,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.10.4
+   1.10.5
