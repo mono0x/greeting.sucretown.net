@@ -2,3 +2,4 @@
 /.env
 /.env.test
 /.sass-cache
+/shared/unicorn.pid

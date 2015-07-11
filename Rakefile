@@ -28,7 +28,7 @@ task :console do |t|
 end
 
 task :server do |t|
-  exec "rackup -s Rhebok -E #{ENV['RACK_ENV']} -o 127.0.0.1 -p #{ENV['PORT']} -O MaxWorkers=2 -O MaxRequestPerChild=1000 config.ru"
+  exec "unicorn -c unicorn.conf -E #{ENV['RACK_ENV']} -p #{ENV['PORT']}"
 end
 
 namespace :crawler do
