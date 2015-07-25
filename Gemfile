@@ -35,11 +35,6 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-jquery.scrollTo'
 end
 
-group :schedule do
-  gem 'gmail'
-  gem 'rufus-scheduler', require: 'rufus/scheduler'
-end
-
 group :development do
   gem 'guard'
   gem 'guard-rake'
