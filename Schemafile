@@ -6,9 +6,7 @@ create_table "appearances", force: :cascade do |t|
 end
 
 add_index "appearances", ["character_id", "costume_id"], name: "index_appearances_on_character_id_and_costume_id", using: :btree
-add_index "appearances", ["character_id"], name: "index_appearances_on_character_id", using: :btree
 add_index "appearances", ["greeting_id", "character_id", "costume_id"], name: "index_appearances_uniqueness", unique: true, using: :btree
-add_index "appearances", ["greeting_id"], name: "index_appearances_on_greeting_id", using: :btree
 
 create_table "characters", force: :cascade do |t|
   t.string "name", limit: 255, null: false
@@ -31,14 +29,9 @@ create_table "greetings", force: :cascade do |t|
   t.boolean  "deleted",                    null: false
 end
 
-add_index "greetings", ["id"], name: "index_greetings_on_id", where: "(NOT deleted)", using: :btree
-add_index "greetings", ["place_id"], name: "index_greetings_place_id_deleted", where: "deleted", using: :btree
-add_index "greetings", ["place_id"], name: "index_greetings_place_id_not_deleted", where: "(NOT deleted)", using: :btree
-add_index "greetings", ["schedule_id"], name: "index_greetings_on_schedule_id", where: "(NOT deleted)", using: :btree
-add_index "greetings", ["start_at", "end_at", "place_id", "schedule_id", "deleted"], name: "index_greetings_uniqueness", unique: true, using: :btree
-add_index "greetings", ["start_at", "end_at"], name: "index_greetings_time_deleted", where: "deleted", using: :btree
-add_index "greetings", ["start_at", "end_at"], name: "index_greetings_time_not_deleted", where: "(NOT deleted)", using: :btree
-add_index "greetings", ["start_at"], name: "index_greetings_on_start_at", using: :btree
+add_index "greetings", ["deleted", "id"], name: "index_greetings_on_id", using: :btree
+add_index "greetings", ["deleted", "place_id"], name: "index_greetings_place_id_deleted", unique: true, using: :btree
+add_index "greetings", ["deleted", "schedule_id", "place_id", "start_at", "end_at"], name: "index_greetings_uniqueness", unique: true, using: :btree
 
 create_table "places", force: :cascade do |t|
   t.string "name", limit: 255, null: false
