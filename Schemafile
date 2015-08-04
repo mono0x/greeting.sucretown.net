@@ -30,7 +30,7 @@ create_table "greetings", force: :cascade do |t|
 end
 
 add_index "greetings", ["deleted", "id"], name: "index_greetings_on_id", using: :btree
-add_index "greetings", ["deleted", "place_id"], name: "index_greetings_place_id_deleted", unique: true, using: :btree
+add_index "greetings", ["deleted", "place_id"], name: "index_greetings_place_id_deleted", using: :btree
 add_index "greetings", ["deleted", "schedule_id", "place_id", "start_at", "end_at"], name: "index_greetings_uniqueness", unique: true, using: :btree
 
 create_table "places", force: :cascade do |t|
