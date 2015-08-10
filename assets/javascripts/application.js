@@ -1,3 +1,4 @@
+//= require vue
 //= require jquery
 //= require jquery.scrollTo
 //= require bootstrap

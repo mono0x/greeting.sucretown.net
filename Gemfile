@@ -31,6 +31,7 @@ gem 'varnish-client', github: 'mono0x/varnish-client'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootswatch'
+  gem 'rails-assets-vue'
   gem 'rails-assets-jquery'
   gem 'rails-assets-jquery.scrollTo'
 end
