@@ -133,6 +133,8 @@ GEM
     rails-assets-jquery (2.1.4)
     rails-assets-jquery.scrollTo (2.1.1)
       rails-assets-jquery (>= 1.8)
+    rails-assets-momentjs (2.10.6)
+    rails-assets-underscore (1.8.3)
     rails-assets-vue (0.12.10)
     raindrops (0.13.0)
     rake (10.4.2)
@@ -245,6 +247,8 @@ DEPENDENCIES
   rails-assets-bootswatch!
   rails-assets-jquery!
   rails-assets-jquery.scrollTo!
+  rails-assets-momentjs!
+  rails-assets-underscore!
   rails-assets-vue!
   rake
   ridgepole
