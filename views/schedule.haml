@@ -144,7 +144,6 @@
       },
       groupedGreetingsAfterTheEnd: function() {
         var epoch = this.epoch;
-        console.log(epoch);
 
         return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
           return !greeting.deleted && epoch > (+new Date(greeting.end_at));
@@ -163,7 +162,7 @@
           });
         });
 
-        var result = _.chain(grouped).pairs().sortBy(function(pair) {
+        return _.chain(grouped).pairs().sortBy(function(pair) {
           return pair[0];
         }).map(function(pair) {
           return {
@@ -173,9 +172,6 @@
             greetings: pair[1]
           };
         }).value();
-
-        console.log(result);
-        return result;
       }
     }
   });
