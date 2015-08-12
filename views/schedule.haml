@@ -10,65 +10,174 @@
     %li#twitter-tab
       %a{href: '#twitter/'} Twitter
 
-#timetable
-  %section.greeting-category.greeting-category-in-session
-    %h2 開催中
-    .greetings
-      != haml :'_partial/greetings', layout: false, locals: { greetings: in_session, panel: 'panel-primary' }
+#contents
+  #timetable
+    %section.greeting-category.greeting-category-in-session
+      != haml :'_partial/greetings', layout: false, locals: { data: 'groupedGreetingsInSession', panel: 'panel-primary', title: '開催中' }
 
-  %section.greeting-category.greeting-category-before-the-start
-    %h2 開始前
-    .greetings
-      != haml :'_partial/greetings', layout: false, locals: { greetings: before_the_start, panel: 'panel-info' }
+    %section.greeting-category.greeting-category-before-the-start
+      != haml :'_partial/greetings', layout: false, locals: { data: 'groupedGreetingsBeforeTheStart', panel: 'panel-info', title: '開始前' }
 
-  %section.greeting-category.greeting-category-after-the-end
-    %h2 終了
-    .greetings
-      != haml :'_partial/greetings', layout: false, locals: { greetings: after_the_end, panel: 'panel-success' }
+    %section.greeting-category.greeting-category-after-the-end
+      != haml :'_partial/greetings', layout: false, locals: { data: 'groupedGreetingsAfterTheEnd', panel: 'panel-success', title: '終了' }
 
-  %section.greeting-category.greeting-category-deleted
-    %h2 中止
-    .greetings
-      != haml :'_partial/greetings', layout: false, locals: { greetings: deleted, panel: 'panel-default' }
+    %section.greeting-category.greeting-category-deleted
+      != haml :'_partial/greetings', layout: false, locals: { data: 'groupedGreetingsDeleted', panel: 'panel-default', title: '中止' }
 
-#character
-  %section
-    %h2 キャラクター
-    .list-group
-      - characters.each do |character|
-        %a.list-group-item{href: "#character/#{character.name}/"}
-          = character.name
-          %span.badge= schedule.greetings.active.joins(:characters).where('characters.id = ?', character.id).count(:id)
-
-  %section
-    %h2 スケジュール
-    .row
-      - characters.each_with_index do |character, index|
-        %section.col-sm-6.col-md-4{name: "character/#{character.name}/"}
-          .panel.panel-info
-            .panel-heading
-              %h3.panel-title= character.name
-            .list-group
-              - greetings.joins(:characters).where('characters.id = ?', character.id).order('end_at, start_at').each do |greeting|
-                %a.list-group-item{href: "#timetable/#{greeting.start_at.strftime('%H%M')}-#{greeting.end_at.strftime('%H%M')}-#{greeting.place.name}/"}
-                  = greeting.place.name
-                  %br
-                  %small #{greeting.start_at.strftime('%H:%M')}-#{greeting.end_at.strftime('%H:%M')}
-        - if index % 3 == 2
-          .clearfix.visible-md-block.visible-lg-block
-        - if index % 2 == 1
-          .clearfix.visible-sm-block
-
-- if is_today
-  #twitter
+  #character
     %section
-      %h2 知らせる
-      %p キャラクターと会ったことをハッシュタグ <a href="https://twitter.com/search?q=%23%E3%83%94%E3%83%A5%E3%83%BC%E3%83%AD%E3%82%B0%E3%83%AA&src=typd&vertical=default&f=tweets">#ピューログリ</a> で共有しませんか。
+      %h2 キャラクター
+      .list-group
+        %template{:'v-repeat' => 'groupedGreetingsByCharacter'}
+          %a.list-group-item{href: '#character/{{ character.name }}/'}
+            {{ character.name }}
+            %span.badge {{ greetings.length }}
 
-      != haml :'_partial/report'
+      %h2 スケジュール
+      .row
+        %template{:'v-repeat' => 'groupedGreetingsByCharacter'}
+          %section.col-sm-6.col-md-4{name: 'character/{{ character.name }}/'}
+            .panel.panel-info
+              .panel-heading
+                %h3.panel-title {{ character.name }}
+              .list-group
+                %a.list-group-item{:'v-repeat' => 'greetings', :href => '#timetable/{{ start_at | to_time }}-{{ end_at | to_time }}-{{ place.name }}/'}
+                  {{ place.name }}
+                  %br
+                  %small {{ start_at | to_time }}-{{ end_at | to_time }}
 
-      %h2 見つける
-      %p みんなの投稿を見ることができます。
-      %p
-        %a.btn.btn-block.btn-default{target: '_blank', href: 'https://twitter.com/search?q=%23%E3%83%94%E3%83%A5%E3%83%BC%E3%83%AD%E3%82%B0%E3%83%AA&src=typd&vertical=default&f=tweets'}
-          Twitter (#ピューログリ)
+          .clearfix.visible-md-block.visible-lg-block{:'v-if' => '$index % 3 == 2'}
+          .clearfix.visible-sm-block{:'v-if' => '$index % 2 == 1'}
+
+  - if is_today
+    #twitter
+      %section
+        %h2 知らせる
+        %p キャラクターと会ったことをハッシュタグ <a href="https://twitter.com/search?q=%23%E3%83%94%E3%83%A5%E3%83%BC%E3%83%AD%E3%82%B0%E3%83%AA&src=typd&vertical=default&f=tweets">#ピューログリ</a> で共有しませんか。
+
+        != haml :'_partial/report'
+
+        %h2 見つける
+        %p みんなの投稿を見ることができます。
+        %p
+          %a.btn.btn-block.btn-default{target: '_blank', href: 'https://twitter.com/search?q=%23%E3%83%94%E3%83%A5%E3%83%BC%E3%83%AD%E3%82%B0%E3%83%AA&src=typd&vertical=default&f=tweets'}
+            Twitter (#ピューログリ)
+
+:javascript
+  $(function() {
+  Vue.filter('to_time', function(value) {
+    return moment(value).format('HH:mm');
+  });
+
+  var groupGreetings = function(greetings) {
+    var table = {};
+    _.each(greetings, function(greeting) {
+      if (!(greeting.end_at in table)) {
+        table[greeting.end_at] = {};
+      }
+      if (!(greeting.start_at in table[greeting.end_at])) {
+        table[greeting.end_at][greeting.start_at] = [];
+      }
+      table[greeting.end_at][greeting.start_at].push(greeting);
+    });
+
+    var result = [];
+    _.chain(table).keys().sort().each(function(end_at) {
+      _.chain(table[end_at]).keys().sort().each(function(start_at) {
+        result.push({
+          start_at: start_at,
+          end_at: end_at,
+          greetings: _.sortBy(table[end_at][start_at], function(greeting) {
+            return greeting.place.name;
+          })
+        });
+      });
+    });
+    return result;
+  };
+
+  var vm = new Vue({
+    el: '#contents',
+    data: {
+      rawGreetings: #{greetings},
+      epoch: +new Date()
+    },
+    created: function() {
+      if (#{!!is_today}) {
+        setInterval(function() {
+          $.ajax({
+            url: '/api' + location.pathname,
+            dataType: 'json'
+          }).done(function(data) {
+            vm.$set('rawGreetings', data);
+            vm.$set('epoch', +new Date());
+          });
+        }, 5 * 60 * 1000);
+
+        var interval = 5 * 60 * 1000;
+        setInterval(function() {
+          vm.$set('epoch', Math.floor((+new Date()) / interval) * interval);
+        }, 1000);
+      }
+    },
+    computed: {
+      groupedGreetingsDeleted: function() {
+        var epoch = this.epoch;
+
+        return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
+          return greeting.deleted;
+        }));
+      },
+      groupedGreetingsBeforeTheStart: function() {
+        var epoch = this.epoch;
+
+        return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
+          return !greeting.deleted && epoch < (+new Date(greeting.start_at));
+        }));
+      },
+      groupedGreetingsInSession: function() {
+        var epoch = this.epoch;
+
+        return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
+          return !greeting.deleted && epoch >= (+new Date(greeting.start_at)) && epoch <= (+new Date(greeting.end_at));
+        }));
+      },
+      groupedGreetingsAfterTheEnd: function() {
+        var epoch = this.epoch;
+        console.log(epoch);
+
+        return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
+          return !greeting.deleted && epoch > (+new Date(greeting.end_at));
+        }));
+      },
+      groupedGreetingsByCharacter: function() {
+        var grouped = {};
+        _.chain(this.rawGreetings).filter(function(greeting) {
+          return !greeting.deleted;
+        }).each(function(greeting) {
+          _.each(greeting.characters, function(character) {
+            if (!(character.name in grouped)) {
+              grouped[character.name] = [];
+            }
+            grouped[character.name].push(greeting);
+          });
+        });
+
+        var result = _.chain(grouped).pairs().sortBy(function(pair) {
+          return pair[0];
+        }).map(function(pair) {
+          return {
+            character: _.find(pair[1][0].characters, function(character) {
+              return character.name == pair[0];
+            }),
+            greetings: pair[1]
+          };
+        }).value();
+
+        console.log(result);
+        return result;
+      }
+    }
+  });
+
+  });

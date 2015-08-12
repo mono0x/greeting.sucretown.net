@@ -1,7 +1,9 @@
 //= require vue
+//= require momentjs
 //= require jquery
 //= require jquery.scrollTo
 //= require bootstrap
+//= require underscore
 //= require statistics.js
 //= require greetings.js
 //= require report.js

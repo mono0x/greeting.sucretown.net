@@ -1,19 +1,19 @@
-- greetings.order('end_at, start_at').group_by {|g| [ g.start_at, g.end_at ] }.each do |t, greetings|
-  .row.greeting-group{data: {start_at: t[0].iso8601, end_at: t[1].iso8601}}
-    - greetings.sort_by {|greeting| [ greeting.place.floor, greeting.place.name_without_floor ] }.each_with_index do |greeting, index|
-      %section.col-sm-6.col-md-4{name: "timetable/#{greeting.start_at.strftime('%H%M')}-#{greeting.end_at.strftime('%H%M')}-#{greeting.place.name}/"}
-        .panel{class: panel}
-          .panel-heading
-            %h3.panel-title
-              = greeting.place.name
-            %small
-              %time{datetime: greeting.start_at.iso8601}= greeting.start_at.strftime('%H:%M')
-              \-
-              %time{datetime: greeting.end_at.iso8601}= greeting.end_at.strftime('%H:%M')
-          .list-group
-            - greeting.characters.uniq.each do |character|
-              %a.list-group-item{href: "#character/#{character.name}/"}= character.name
-      - if index % 3 == 2
-        .clearfix.visible-md-block.visible-lg-block
-      - if index % 2 == 1
-        .clearfix.visible-sm-block
+%template{:'v-if' => "#{data}.length > 0"}
+  %h2= title
+  .greetings
+    .row.greeting-group{:'v-repeat' => data}
+      %template{:'v-repeat' => 'greetings'}
+        %section.col-sm-6.col-md-4{name: 'timetable/{{ start_at | to_time }}-{{ end_at | to_time }}-{{ place.name }}/'}
+          .panel{class: panel}
+            .panel-heading
+              %h3.panel-title
+                {{ place.name }}
+              %small
+                %time {{ $parent.start_at | to_time }}
+                \-
+                %time {{ $parent.end_at | to_time }}
+            .list-group
+              %a.list-group-item{:'v-repeat' => 'characters', :href => '#character/{{ name }}/'}
+                {{ name }}
+        .clearfix.visible-md-block.visible-lg-block{:'v-if' => '$index % 3 == 2'}
+        .clearfix.visible-sm-block{:'v-if' => '$index % 2 == 1'}

@@ -94,6 +94,7 @@ module PurolandGreeting
       end
     end
 
+
     get '/schedule/' do
       months = Schedule.months
       schedules = Schedule.order('date DESC')
@@ -103,24 +104,33 @@ module PurolandGreeting
       }
     end
 
+    get %r{\A/api/schedule/(\d{4})/(\d{2})/(\d{2})/\z} do |year, month, day|
+      date = Date.new(year.to_i, month.to_i, day.to_i)
+      schedule = Schedule.where('date = ?', date).first or not_found
+      greetings = schedule.greetings.all.eager_load(:place, :characters)
+
+      greetings.to_json(only: [ :start_at, :end_at, ], include: {
+        place: { only: [ :name, ] },
+        characters: { only: [ :name, ] },
+      })
+    end
+
     get %r{\A/schedule/(\d{4})/(\d{2})/(\d{2})/\z} do |year, month, day|
       date = Date.new(year.to_i, month.to_i, day.to_i)
       schedule = Schedule.where('date = ?', date).first or not_found
       characters = schedule.characters.uniq
-      greetings = schedule.greetings.active.eager_load(:place)
-      time = Time.now
+      greetings = schedule.greetings.all.eager_load(:place, :characters)
+
       @title = "#{date.strftime('%Y/%m/%d')} の予定"
       @canonical = "#{ENV['ROOT_URI']}#{date.strftime('/schedule/%Y/%m/%d/')}"
       @description = "登場キャラクター: #{characters.map(&:name).join(' ')}"
       haml :schedule, locals: {
         is_today: schedule.date == Date.today,
         schedule: schedule,
-        characters: characters,
-        greetings: greetings,
-        before_the_start: greetings.before_the_start(time),
-        in_session: greetings.in_session(time),
-        after_the_end: greetings.after_the_end(time),
-        deleted: schedule.greetings.deleted
+        greetings: greetings.to_json(only: [ :start_at, :end_at, ], include: {
+          place: { only: [ :name, ] },
+          characters: { only: [ :name, ] },
+        }),
       }
     end
 
