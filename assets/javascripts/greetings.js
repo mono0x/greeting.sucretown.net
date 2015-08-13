@@ -106,15 +106,16 @@ $(function() {
     },
     created: function() {
       setInterval(function() {
-        $.ajax({
-          url: '/api' + location.pathname,
-          dataType: 'json'
-        }).done(function(data) {
-          vm.$set('rawGreetings', data);
-        });
+        if (moment().format('YYYY-MM-DD') == moment(DATA.date).format('YYYY-MM-DD')) {
+          $.ajax({
+            url: '/api' + location.pathname,
+            dataType: 'json'
+          }).done(function(data) {
+            vm.$set('rawGreetings', data);
+          });
+        }
       }, 5 * 60 * 1000);
 
-      var interval = 5 * 60 * 1000;
       setInterval(function() {
         var date = new Date();
         date.setMinutes(Math.floor(date.getMinutes() / 5) * 5);

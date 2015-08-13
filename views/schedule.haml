@@ -1,7 +1,8 @@
 :javascript
   window.DATA = {
     type: 'schedule',
-    greetings: #{greetings}
+    greetings: #{greetings},
+    date: moment('#{schedule.date.strftime('%F')}')
   };
 
 %header.page-header
