@@ -1,3 +1,9 @@
+:javascript
+  window.DATA = {
+    type: 'schedule',
+    greetings: #{greetings}
+  };
+
 %header.page-header
   %h1 #{schedule.date.strftime('%Y/%m/%d')} の予定
 
@@ -62,117 +68,3 @@
         %p
           %a.btn.btn-block.btn-default{target: '_blank', href: 'https://twitter.com/search?q=%23%E3%83%94%E3%83%A5%E3%83%BC%E3%83%AD%E3%82%B0%E3%83%AA&src=typd&vertical=default&f=tweets'}
             Twitter (#ピューログリ)
-
-:javascript
-  $(function() {
-  Vue.filter('to_time', function(value) {
-    return moment(value).format('HH:mm');
-  });
-
-  var groupGreetings = function(greetings) {
-    var table = {};
-    _.each(greetings, function(greeting) {
-      if (!(greeting.end_at in table)) {
-        table[greeting.end_at] = {};
-      }
-      if (!(greeting.start_at in table[greeting.end_at])) {
-        table[greeting.end_at][greeting.start_at] = [];
-      }
-      table[greeting.end_at][greeting.start_at].push(greeting);
-    });
-
-    var result = [];
-    _.chain(table).keys().sort().each(function(end_at) {
-      _.chain(table[end_at]).keys().sort().each(function(start_at) {
-        result.push({
-          start_at: start_at,
-          end_at: end_at,
-          greetings: _.sortBy(table[end_at][start_at], function(greeting) {
-            return greeting.place.name;
-          })
-        });
-      });
-    });
-    return result;
-  };
-
-  var vm = new Vue({
-    el: '#contents',
-    data: {
-      rawGreetings: #{greetings},
-      epoch: +new Date()
-    },
-    created: function() {
-      if (#{!!is_today}) {
-        setInterval(function() {
-          $.ajax({
-            url: '/api' + location.pathname,
-            dataType: 'json'
-          }).done(function(data) {
-            vm.$set('rawGreetings', data);
-          });
-        }, 5 * 60 * 1000);
-
-        var interval = 5 * 60 * 1000;
-        setInterval(function() {
-          vm.$set('epoch', Math.floor((+new Date()) / interval) * interval);
-        }, 1000);
-      }
-    },
-    computed: {
-      groupedGreetingsDeleted: function() {
-        var epoch = this.epoch;
-
-        return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
-          return greeting.deleted;
-        }));
-      },
-      groupedGreetingsBeforeTheStart: function() {
-        var epoch = this.epoch;
-
-        return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
-          return !greeting.deleted && epoch < (+new Date(greeting.start_at));
-        }));
-      },
-      groupedGreetingsInSession: function() {
-        var epoch = this.epoch;
-
-        return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
-          return !greeting.deleted && epoch >= (+new Date(greeting.start_at)) && epoch <= (+new Date(greeting.end_at));
-        }));
-      },
-      groupedGreetingsAfterTheEnd: function() {
-        var epoch = this.epoch;
-
-        return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
-          return !greeting.deleted && epoch > (+new Date(greeting.end_at));
-        }));
-      },
-      groupedGreetingsByCharacter: function() {
-        var grouped = {};
-        _.chain(this.rawGreetings).filter(function(greeting) {
-          return !greeting.deleted;
-        }).each(function(greeting) {
-          _.each(greeting.characters, function(character) {
-            if (!(character.name in grouped)) {
-              grouped[character.name] = [];
-            }
-            grouped[character.name].push(greeting);
-          });
-        });
-
-        return _.chain(grouped).pairs().sortBy(function(pair) {
-          return pair[0];
-        }).map(function(pair) {
-          return {
-            character: _.find(pair[1][0].characters, function(character) {
-              return character.name == pair[0];
-            }),
-            greetings: pair[1]
-          };
-        }).value();
-      }
-    }
-  });
-
-  });
