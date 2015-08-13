@@ -6,8 +6,27 @@
 
   %section
     %h3 月別
-    .chart.chart-bar{data: {chart: count_by_month, options: {}.to_json}}
+    %table.table.table-striped.table-bordered.table-condensed
+      %thead
+        %tr
+          %th 年月
+          %th 回数
+      %tbody
+        - count_by_month.each do |item|
+          %tr
+            %td= sprintf('%04d/%02d', item.year, item.month)
+            %td.table-cell-number= currency item.appearances
 
   %section
     %h3 キャラクター別
-    .chart.chart-bar{data: {chart: ranking, options: { height: 1000 }.to_json}}
+    %table.table.table-striped.table-bordered.table-condensed
+      %thead
+        %tr
+          %th キャラクター
+          %th 回数
+      %tbody
+        - ranking.each do |item|
+          %tr
+            %td
+              %a{href: "/character/#{item.name}/"}= item.name
+            %td.table-cell-number= currency item.score

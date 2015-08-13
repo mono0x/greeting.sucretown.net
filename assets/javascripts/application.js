@@ -4,6 +4,5 @@
 //= require jquery.scrollTo
 //= require bootstrap
 //= require underscore
-//= require statistics
 //= require greetings
 //= require report

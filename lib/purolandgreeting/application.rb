@@ -56,6 +56,15 @@ module PurolandGreeting
           block: block,
         }
       end
+
+      def currency(i)
+        i.to_s.sub(/\A([\-\+])?(\d*)(\.\d+)?\z/) {
+          sign = $1
+          int = $2
+          real = $3
+          "#{sign}#{int.reverse.gsub(/(\d{3})(?=\d)/, '\1,').reverse}#{real}"
+        }
+      end
     end
 
     get '/' do
@@ -191,24 +200,8 @@ module PurolandGreeting
         today: today,
         character: character,
         timespans: timespans,
-        greetings_by_month: {
-          columns: [
-            { type: 'string', name: '月', },
-            { type: 'number', name: '登場回数', },
-          ],
-          rows: greetings_by_month.map {|item|
-            [ "#{item.year.to_i}/#{item.month.to_i}", item.count.to_i, ]
-          },
-        }.to_json,
-        places: {
-          columns: [
-            { type: 'string', name: '場所', },
-            { type: 'number', name: '登場回数', },
-          ],
-          rows: places.map {|item|
-            [ item.name, item.score, ]
-          },
-        }.to_json,
+        greetings_by_month: greetings_by_month,
+        places: places,
       }
     end
 
@@ -218,24 +211,8 @@ module PurolandGreeting
 
       @title = '統計'
       haml :statistics, locals: {
-        count_by_month: {
-          columns: [
-            { type: 'string', name: '月', },
-            { type: 'number', name: '登場回数', },
-          ],
-          rows: count_by_month.map {|item|
-            [ "#{item.year}/#{item.month}", item.appearances, ]
-          },
-        }.to_json,
-        ranking: {
-          columns: [
-            { type: 'string', name: 'キャラクター', },
-            { type: 'number', name: '登場回数', },
-          ],
-          rows: ranking.map {|item|
-            [ item.name, item.score, ]
-          },
-        }.to_json,
+        count_by_month: count_by_month,
+        ranking: ranking,
       }
     end
 
