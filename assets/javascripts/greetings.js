@@ -106,7 +106,7 @@ $(function() {
     },
     created: function() {
       setInterval(function() {
-        if (moment().format('YYYY-MM-DD') == moment(DATA.date).format('YYYY-MM-DD')) {
+        if (moment().format('YYYY-MM-DD') == DATA.date) {
           $.ajax({
             url: '/api' + location.pathname,
             dataType: 'json'
