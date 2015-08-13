@@ -1,26 +1,29 @@
-%table.table
-  %tr
-    %th.calendar-header.calendar-header-sunday 日
-    %th.calendar-header.calendar-header-monday 月
-    %th.calendar-header.calendar-header-tuesday 火
-    %th.calendar-header.calendar-header-wednesday 水
-    %th.calendar-header.calendar-header-thursday 木
-    %th.calendar-header.calendar-header-friday 金
-    %th.calendar-header.calendar-header-saturday 土
-  - days.each_slice(7) do |list|
+%table.table.table-bordered.table-striped.table-condensed
+  - if caption
+    %caption= caption
+  %thead
     %tr
-      - list.each do |day|
-        - if day
-          - date = month + (day - 1)
-          - if date < first || date > last
-            %td.calendar-cell.calendar-cell-unavailable= day
-          - elsif item = block.call(date)
-            %td.calendar-cell.calendar-cell-active
-              %a{:href => item[:href]} #{day.to_s}
-          - elsif !workdays.include?(date)
-            %td.calendar-cell.calendar-cell-holiday= day
+      %th.calendar-header.calendar-header-sunday 日
+      %th.calendar-header.calendar-header-monday 月
+      %th.calendar-header.calendar-header-tuesday 火
+      %th.calendar-header.calendar-header-wednesday 水
+      %th.calendar-header.calendar-header-thursday 木
+      %th.calendar-header.calendar-header-friday 金
+      %th.calendar-header.calendar-header-saturday 土
+  %tbody
+    - days.each_slice(7) do |list|
+      %tr
+        - list.each do |day|
+          - if day
+            - date = month + (day - 1)
+            - if date < first || date > last
+              %td.calendar-cell.calendar-cell-unavailable= day
+            - elsif item = block.call(date)
+              %td.calendar-cell.calendar-cell-active
+                %a{:href => item[:href]} #{day.to_s}
+            - elsif !workdays.include?(date)
+              %td.calendar-cell.calendar-cell-holiday= day
+            - else
+              %td.calendar-cell.calendar-cell-inactive #{day.to_s}
           - else
-            %td.calendar-cell.calendar-cell-inactive #{day.to_s}
-        - else
-          %td.calendar-cell.calender-cell-empty
-
+            %td.calendar-cell.calender-cell-empty

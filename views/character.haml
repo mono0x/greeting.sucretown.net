@@ -4,49 +4,45 @@
 %section
   %h2 統計
 
-  %section
-    %h3 概要
-
-    %table.table.table-striped.table-bordered.table-condensed
-      %thead
+  %table.table.table-striped.table-bordered.table-condensed
+    %caption 概要
+    %thead
+      %tr
+        %th 期間
+        %th 日数
+        %th 確率 [%]
+        %th 回数
+    %tbody
+      - timespans.each do |item|
         %tr
-          %th 期間
-          %th 日数
-          %th 確率 [%]
-          %th 回数
-      %tbody
-        - timespans.each do |item|
-          %tr
-            %td= item[:label]
-            %td.table-cell-number= currency item[:appearances]
-            %td.table-cell-number= currency '%.1f' % (item[:appearance_probability] * 100)
-            %td.table-cell-number= currency item[:appearance_dates]
+          %td= item[:label]
+          %td.table-cell-number= currency item[:appearances]
+          %td.table-cell-number= currency '%.1f' % (item[:appearance_probability] * 100)
+          %td.table-cell-number= currency item[:appearance_dates]
 
-  %section
-    %h3 月別
-    %table.table.table-striped.table-bordered.table-condensed
-      %thead
+  %table.table.table-striped.table-bordered.table-condensed
+    %caption 月別
+    %thead
+      %tr
+        %th 年月
+        %th 回数
+    %tbody
+      - greetings_by_month.each do |item|
         %tr
-          %th 年月
-          %th 回数
-      %tbody
-        - greetings_by_month.each do |item|
-          %tr
-            %td= sprintf('%04d/%02d', item.year, item.month)
-            %td.table-cell-number= currency item.count
+          %td= sprintf('%04d/%02d', item.year, item.month)
+          %td.table-cell-number= currency item.count
 
-  %section
-    %h3 場所別
-    %table.table.table-striped.table-bordered.table-condensed
-      %thead
+  %table.table.table-striped.table-bordered.table-condensed
+    %caption 場所別
+    %thead
+      %tr
+        %th 年月
+        %th 回数
+    %tbody
+      - places.each do |item|
         %tr
-          %th 年月
-          %th 回数
-      %tbody
-        - places.each do |item|
-          %tr
-            %td= item.name
-            %td.table-cell-number= currency item.score
+          %td= item.name
+          %td.table-cell-number= currency item.score
 
 %section
   %h2 カレンダー
@@ -55,8 +51,7 @@
       - next_month = month >> 1
       - schedule_days = character.greetings.active.joins(:schedule).where('date >= ? AND date < ?', month, next_month).select("DATE_PART('day', date) AS day").group("DATE_PART('day', date)").order('day').map {|c| month + (c.day.to_i - 1) }
       %section.col-sm-6.col-md-4
-        %h3= month.strftime('%Y/%m')
-        != calendar(month) {|day| schedule_days.include?(day) && { href: day.strftime('/schedule/%Y/%m/%d/') } }
+        != calendar(month, caption: month.strftime('%Y/%m')) {|day| schedule_days.include?(day) && { href: day.strftime('/schedule/%Y/%m/%d/') } }
 
       - if index % 3 == 2
         .clearfix.visible-md-block.visible-lg-block

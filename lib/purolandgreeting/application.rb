@@ -40,7 +40,7 @@ module PurolandGreeting
     helpers Sprockets::Helpers
 
     helpers do
-      def calendar(month, &block)
+      def calendar(month, caption: nil, &block)
         next_month = month >> 1
         days = [ nil ] * month.wday + (1..(next_month - month)).to_a + [ nil ] * ((7 - next_month.wday) % 7)
         workdays = Schedule.where('date >= ? AND date < ?', month, next_month).pluck(:date).to_set
@@ -48,6 +48,7 @@ module PurolandGreeting
         last = Schedule.order('date ASC').last.date
 
         haml :'_partial/calendar', layout: false, locals: {
+          caption: caption,
           month: month,
           days: days,
           workdays: workdays,

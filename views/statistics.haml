@@ -4,29 +4,27 @@
 %section
   %h2 グリーティング数
 
-  %section
-    %h3 月別
-    %table.table.table-striped.table-bordered.table-condensed
-      %thead
+  %table.table.table-striped.table-bordered.table-condensed
+    %caption 月別
+    %thead
+      %tr
+        %th 年月
+        %th 回数
+    %tbody
+      - count_by_month.each do |item|
         %tr
-          %th 年月
-          %th 回数
-      %tbody
-        - count_by_month.each do |item|
-          %tr
-            %td= sprintf('%04d/%02d', item.year, item.month)
-            %td.table-cell-number= currency item.appearances
+          %td= sprintf('%04d/%02d', item.year, item.month)
+          %td.table-cell-number= currency item.appearances
 
-  %section
-    %h3 キャラクター別
-    %table.table.table-striped.table-bordered.table-condensed
-      %thead
+  %table.table.table-striped.table-bordered.table-condensed
+    %caption キャラクター別
+    %thead
+      %tr
+        %th キャラクター
+        %th 回数
+    %tbody
+      - ranking.each do |item|
         %tr
-          %th キャラクター
-          %th 回数
-      %tbody
-        - ranking.each do |item|
-          %tr
-            %td
-              %a{href: "/character/#{item.name}/"}= item.name
-            %td.table-cell-number= currency item.score
+          %td
+            %a{href: "/character/#{item.name}/"}= item.name
+          %td.table-cell-number= currency item.score
