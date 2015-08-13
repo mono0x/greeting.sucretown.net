@@ -108,7 +108,7 @@ $(function() {
       setInterval(function() {
         if (moment().format('YYYY-MM-DD') == DATA.date) {
           $.ajax({
-            url: '/api' + location.pathname,
+            url: '/api/schedule/' + moment(DATA.date).format('YYYY/MM/DD') + '/',
             dataType: 'json'
           }).done(function(data) {
             vm.$set('rawGreetings', data);
