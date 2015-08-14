@@ -1,5 +1,5 @@
 $(function() {
-  if (DATA.type != 'schedule') {
+  if (DATA !== undefined && DATA.type != 'schedule') {
     return;
   }
 
