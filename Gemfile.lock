@@ -51,6 +51,11 @@ GEM
     formatador (0.2.5)
     gctools (0.2.3)
     get_process_mem (0.2.0)
+    gmail (0.5.0)
+      gmail_xoauth (>= 0.3.0)
+      mail (>= 2.2.1)
+    gmail_xoauth (0.4.1)
+      oauth (>= 0.3.6)
     guard (2.12.6)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -85,6 +90,8 @@ GEM
       rb-inotify (>= 0.9)
     ltsv (0.1.0)
     lumberjack (1.0.9)
+    mail (2.6.3)
+      mime-types (>= 1.16, < 3)
     mechanize (2.7.3)
       domain_name (~> 0.5, >= 0.5.1)
       http-cookie (~> 1.0)
@@ -112,6 +119,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     ntlm-http (0.1.1)
+    oauth (0.4.7)
     pg (0.18.2)
     power_assert (0.2.3)
     pry (0.10.1)
@@ -144,6 +152,7 @@ GEM
     ridgepole (0.6.2)
       activerecord (~> 4.2.1)
     rr (1.1.2)
+    rufus-scheduler (3.1.2)
     safe_yaml (1.0.4)
     sass (3.4.14)
     shellany (0.0.1)
@@ -232,6 +241,7 @@ DEPENDENCIES
   factory_girl
   foreman
   gctools
+  gmail
   guard
   guard-rake
   hamlit
@@ -253,6 +263,7 @@ DEPENDENCIES
   rake
   ridgepole
   rr
+  rufus-scheduler
   sass
   simplecov
   sinatra
