@@ -84,14 +84,12 @@ $(function() {
     });
 
     var result = [];
-    _.chain(table).keys().sort().each(function(end_at) {
-      _.chain(table[end_at]).keys().sort().each(function(start_at) {
+    _.chain(table).keys().each(function(end_at) {
+      _.chain(table[end_at]).keys().each(function(start_at) {
         result.push({
           start_at: start_at,
           end_at: end_at,
-          greetings: _.sortBy(table[end_at][start_at], function(greeting) {
-            return greeting.place.name;
-          })
+          greetings: table[end_at][start_at]
         });
       });
     });
@@ -164,9 +162,7 @@ $(function() {
           });
         });
 
-        return _.chain(grouped).pairs().sortBy(function(pair) {
-          return pair[0];
-        }).map(function(pair) {
+        return _.chain(grouped).pairs().map(function(pair) {
           return {
             character: _.find(pair[1][0].characters, function(character) {
               return character.name == pair[0];

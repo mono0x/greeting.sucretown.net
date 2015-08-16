@@ -1,8 +1,8 @@
 %template{:'v-if' => "#{data}.length > 0"}
   %h2= title
   .greetings
-    .row.greeting-group{:'v-repeat' => data}
-      %template{:'v-repeat' => 'greetings'}
+    .row.greeting-group{:'v-repeat' => "#{data} | orderBy 'start_at' | orderBy 'end_at'"}
+      %template{:'v-repeat' => 'greetings | orderBy "place.name"'}
         %section.col-sm-6.col-md-4{name: 'timetable/{{ start_at | to_time }}-{{ end_at | to_time }}-{{ place.name }}/'}
           .panel{class: panel}
             .panel-heading
@@ -13,7 +13,7 @@
                 \-
                 %time {{ $parent.end_at | to_time }}
             .list-group
-              %a.list-group-item{:'v-repeat' => 'characters', :href => '#character/{{ name }}/'}
+              %a.list-group-item{:'v-repeat' => 'characters | orderBy "name"', :href => '#character/{{ name }}/'}
                 {{ name }}
         .clearfix.visible-md-block.visible-lg-block{:'v-if' => '$index % 3 == 2'}
         .clearfix.visible-sm-block{:'v-if' => '$index % 2 == 1'}
