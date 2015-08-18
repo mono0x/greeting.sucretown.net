@@ -117,9 +117,10 @@ $(function() {
       setInterval(function() {
         var date = new Date();
         date.setMinutes(Math.floor(date.getMinutes() / 5) * 5);
-        if (moment(date).format('YYYY-MM-DD') == DATA.date) {
-          vm.$set('epoch', +date);
+        if (moment(date).format('YYYY-MM-DD') != DATA.date) {
+          date = moment(DATA.date).add(1, 'days').toDate();
         }
+        vm.$set('epoch', +date);
       }, 1000);
     },
     computed: {
