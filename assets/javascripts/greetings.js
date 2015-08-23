@@ -181,5 +181,4 @@ $(function() {
       }
     }
   });
-  window.vm = vm;
 });
