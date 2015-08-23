@@ -147,7 +147,7 @@ $(function() {
         var epoch = this.epoch;
 
         return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
-          return !greeting.deleted && epoch >= (+new Date(greeting.start_at)) && epoch <= (+new Date(greeting.end_at));
+          return !greeting.deleted && epoch >= (+new Date(greeting.start_at)) && epoch < (+new Date(greeting.end_at));
         }));
       },
       groupedGreetingsAfterTheEnd: function() {
