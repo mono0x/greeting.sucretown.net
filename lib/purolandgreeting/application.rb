@@ -109,9 +109,9 @@ module PurolandGreeting
       schedule = Schedule.where('date = ?', date).first or not_found
       greetings = schedule.greetings.all.eager_load(:place, :characters)
 
-      greetings.to_json(only: [ :start_at, :end_at, ], include: {
-        place: { only: [ :name, ] },
-        characters: { only: [ :name, ] },
+      greetings.to_json(only: [ :id, :start_at, :end_at, ], include: {
+        place: { only: [ :id, :name, ] },
+        characters: { only: [ :id, :name, ] },
       })
     end
 
@@ -127,9 +127,9 @@ module PurolandGreeting
       haml :schedule, locals: {
         is_today: schedule.date == Date.today,
         schedule: schedule,
-        greetings: greetings.to_json(only: [ :start_at, :end_at, ], include: {
-          place: { only: [ :name, ] },
-          characters: { only: [ :name, ] },
+        greetings: greetings.to_json(only: [ :id, :start_at, :end_at, ], include: {
+          place: { only: [ :id, :name, ] },
+          characters: { only: [ :id, :name, ] },
         }),
       }
     end

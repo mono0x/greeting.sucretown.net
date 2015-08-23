@@ -2,7 +2,7 @@
   %h2= title
   .greetings
     .row.greeting-group{:'v-repeat' => "#{data} | orderBy 'start_at' | orderBy 'end_at'"}
-      %template{:'v-repeat' => 'greetings | orderBy "place.name"'}
+      %template{:'v-repeat' => 'greetings | orderBy "place.name"', :'track-by' => 'id'}
         %section.col-sm-6.col-md-4{name: 'timetable/{{ start_at | to_time }}-{{ end_at | to_time }}-{{ place.name }}/'}
           .panel{class: panel}
             .panel-heading
