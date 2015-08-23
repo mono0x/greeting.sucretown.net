@@ -154,7 +154,7 @@ $(function() {
         var epoch = this.epoch;
 
         return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
-          return !greeting.deleted && epoch > (+new Date(greeting.end_at));
+          return !greeting.deleted && epoch >= (+new Date(greeting.end_at));
         }));
       },
       groupedGreetingsByCharacter: function() {
