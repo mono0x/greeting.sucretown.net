@@ -115,12 +115,17 @@ $(function() {
       }, 5 * 60 * 1000);
 
       setInterval(function() {
-        var date = new Date();
-        date.setMinutes(Math.floor(date.getMinutes() / 5) * 5);
-        if (moment(date).format('YYYY-MM-DD') != DATA.date) {
+        var date;
+        if (moment(date).format('YYYY-MM-DD') == DATA.date) {
+          date = new Date();
+          date.setMinutes(Math.floor(date.getMinutes() / 5) * 5);
+          date.setSeconds(0);
+          date.setMilliseconds(0);
+        }
+        else {
           date = moment(DATA.date).add(1, 'days').toDate();
         }
-        vm.$set('epoch', +date);
+        vm.$data.epoch = +date;
       }, 1000);
     },
     computed: {
@@ -176,4 +181,5 @@ $(function() {
       }
     }
   });
+  window.vm = vm;
 });
