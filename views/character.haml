@@ -15,10 +15,10 @@
     %tbody
       - timespans.each do |item|
         %tr
-          %td= item[:label]
-          %td.table-cell-number= currency item[:appearances]
-          %td.table-cell-number= currency '%.1f' % (item[:appearance_probability] * 100)
-          %td.table-cell-number= currency item[:appearance_dates]
+          %td= item.label
+          %td.table-cell-number= currency item.appearance_dates
+          %td.table-cell-number= currency '%.1f' % (item.appearance_probability * 100)
+          %td.table-cell-number= currency item.appearances
 
   %table.table.table-striped.table-bordered.table-condensed
     %caption 月別

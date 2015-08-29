@@ -12,6 +12,20 @@ class PurolandGreeting::Schedule < ActiveRecord::Base
     select("DATE_TRUNC('month', date) AS month").group("DATE_TRUNC('month', date)").order('month DESC').map { |c| c.month.to_date }
   end
 
+  def self.count_dates(date_from)
+    find_by_sql([
+      %q{
+        SELECT COUNT(schedules.id) AS count
+        FROM schedules
+        WHERE
+          schedules.date > :date_from
+      },
+      {
+        date_from: date_from,
+      }
+    ])[0].count
+  end
+
   def next_schedule
     self.class.where('date > ?', date).order('date ASC').first
   end

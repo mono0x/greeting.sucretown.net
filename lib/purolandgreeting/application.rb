@@ -170,19 +170,21 @@ module PurolandGreeting
       ].map {|item|
         from = item[:from]
         greetings = character.greetings.active
-        a = greetings.active.joins(:schedule).where('schedules.date > ?', from)
-        appearances = a.count('DISTINCT schedules.date')
-        dates = Schedule.where('date > ?', from).count('DISTINCT date')
-        appearance_dates = a.count
-        appearance_probability = dates > 0 ? Rational(appearances, dates) : 0
-        item.merge(
+
+        dates = Schedule.count_dates(from)
+        appearances = Character.count_appeparances(character.id, from)
+        appearance_dates = Character.count_appeparance_dates(character.id, from)
+
+        appearance_probability = dates > 0 ? Rational(appearance_dates, dates) : 0
+        Hashie::Mash.new(item.merge(
           appearances: appearances,
           dates: dates,
           appearance_dates: appearance_dates,
-          appearance_probability: appearance_probability)
+          appearance_probability: appearance_probability
+        ))
       }
 
-      greetings_by_month = character.greetings.active.joins(:schedule).order("year, month").group("year, month").select("DATE_PART('year', date) AS year, DATE_PART('month', date) AS month, COUNT(greetings.id) AS count")
+      greetings_by_month = Character.count_greetings_by_month(character.id, today << 12)
 
       places = character.place_ranking
 
