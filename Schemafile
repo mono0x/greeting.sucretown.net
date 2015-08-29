@@ -43,6 +43,10 @@ end
 
 add_index "schedules", ["date"], name: "index_schedules_on_date", unique: true, using: :btree
 
+execute("CREATE INDEX index_schedules_date_year_month ON schedules USING btree (date_part('year'::text, date), date_part('month'::text, date))") do |c|
+  c.raw_connection.query("SELECT 1 FROM pg_indexes WHERE tablename = 'schedules' AND indexname = 'index_schedules_date_year_month'").each.size == 0
+end
+
 create_table "temporary_appearances", force: :cascade do |t|
   t.integer "character_id",                                      null: false
   t.integer "temporary_schedule_id",                             null: false
