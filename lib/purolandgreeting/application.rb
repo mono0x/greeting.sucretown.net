@@ -200,7 +200,7 @@ module PurolandGreeting
 
     get '/statistics/' do
       count_by_month = Appearance.count_by_month
-      ranking = Character.ranking
+      ranking = Greeting.ranking
 
       @title = '統計'
       haml :statistics, locals: {

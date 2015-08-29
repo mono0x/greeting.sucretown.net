@@ -25,4 +25,30 @@ class PurolandGreeting::Greeting < ActiveRecord::Base
     where 'end_at < ?', time
   end
 
+  def self.ranking
+    find_by_sql([
+      %q{
+        SELECT
+          characters.name,
+          x.count
+        FROM (
+          SELECT
+            appearances.character_id AS character_id,
+            COUNT(character_id) AS count
+          FROM greetings
+          JOIN appearances ON appearances.greeting_id = greetings.id
+          WHERE NOT greetings.deleted
+          GROUP BY character_id
+        ) x
+        JOIN characters ON characters.id = character_id
+        ORDER BY x.count
+      },
+    ])
+    PurolandGreeting::Appearance.joins(:character, :greeting).where('greetings.deleted = FALSE').order('score DESC').group(:character_name).select("characters.name AS character_name, COUNT(character_id) AS score").map {|item|
+      Hashie::Mash.new(
+        name: item.character_name,
+        score: item.score.to_i
+      )
+    }
+  end
 end

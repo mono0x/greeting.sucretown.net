@@ -7,15 +7,6 @@ class PurolandGreeting::Character < ActiveRecord::Base
     order('name ASC')
   }
 
-  def self.ranking
-    PurolandGreeting::Appearance.joins(:character, :greeting).where('greetings.deleted = FALSE').order('score DESC').group(:character_name).select("characters.name AS character_name, COUNT(character_id) AS score").map {|item|
-      Hashie::Mash.new(
-        name: item.character_name,
-        score: item.score.to_i
-      )
-    }
-  end
-
   def self.count_appeparances_by_place(character_id)
     PurolandGreeting::Greeting.find_by_sql([
       %q{
