@@ -15,7 +15,7 @@
       %tbody
         - count_by_month.group_by {|item| item.year }.each do |year, items|
           %tr
-            %td= '%04d' % year
+            %th= '%04d' % year
             - (1..12).each do |i|
               - if item = items.find {|it| it.month == i }
                 %td.table-cell-number= currency item.appearances

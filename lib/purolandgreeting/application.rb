@@ -184,7 +184,7 @@ module PurolandGreeting
         ))
       }
 
-      greetings_by_month = Character.count_greetings_by_month(character.id, today << 12)
+      greetings_by_month = Character.count_greetings_by_month(character.id)
 
       places = character.place_ranking
 

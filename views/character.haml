@@ -20,17 +20,23 @@
           %td.table-cell-number= currency '%.1f' % (item.appearance_probability * 100)
           %td.table-cell-number= currency item.appearances
 
-  %table.table.table-striped.table-bordered.table-condensed
-    %caption 月別
-    %thead
-      %tr
-        %th 年月
-        %th 回数
-    %tbody
-      - greetings_by_month.each do |item|
+  .scrollable-table-wrapper
+    %table.table.table-striped.table-bordered.table-condensed
+      %caption 月別
+      %thead
         %tr
-          %td= sprintf('%04d/%02d', item.year, item.month)
-          %td.table-cell-number= currency item.count
+          %th
+          - (1..12).each do |i|
+            %th= '%02d' % i
+      %tbody
+        - greetings_by_month.group_by {|item| item.year }.each do |year, items|
+          %tr
+            %th= '%04d' % year
+            - (1..12).each do |i|
+              - if item = items.find {|it| it.month == i }
+                %td.table-cell-number= currency item.count
+              - else
+                %td
 
   %table.table.table-striped.table-bordered.table-condensed
     %caption 場所別

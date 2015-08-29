@@ -63,7 +63,7 @@ class PurolandGreeting::Character < ActiveRecord::Base
     ])[0].count
   end
 
-  def self.count_greetings_by_month(character_id, date_from)
+  def self.count_greetings_by_month(character_id)
     PurolandGreeting::Schedule.find_by_sql([
       %q{
         SELECT
@@ -75,13 +75,11 @@ class PurolandGreeting::Character < ActiveRecord::Base
         JOIN appearances ON appearances.greeting_id = greetings.id
         JOIN characters ON characters.id = appearances.character_id
         WHERE
-          date > :date_from
-          AND characters.id = :character_id
+          characters.id = :character_id
         GROUP BY year, month
         ORDER BY year, month
       },
       {
-        date_from: date_from,
         character_id: character_id,
       }
     ])
