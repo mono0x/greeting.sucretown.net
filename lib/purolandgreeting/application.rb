@@ -14,6 +14,7 @@ module PurolandGreeting
     configure :development do
       Bundler.require :development
       register Sinatra::Reloader
+      also_reload './lib/**/*.rb'
     end
 
     configure do
