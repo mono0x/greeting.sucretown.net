@@ -4,17 +4,23 @@
 %section
   %h2 グリーティング数
 
-  %table.table.table-striped.table-bordered.table-condensed
-    %caption 月別
-    %thead
-      %tr
-        %th 年月
-        %th 回数
-    %tbody
-      - count_by_month.each do |item|
+  .scrollable-table-wrapper
+    %table.table.table-striped.table-bordered.table-condensed
+      %caption 月別
+      %thead
         %tr
-          %td= sprintf('%04d/%02d', item.year, item.month)
-          %td.table-cell-number= currency item.appearances
+          %th
+          - (1..12).each do |i|
+            %th= '%02d' % i
+      %tbody
+        - count_by_month.group_by {|item| item.year }.each do |year, items|
+          %tr
+            %td= '%04d' % year
+            - (1..12).each do |i|
+              - if item = items.find {|it| it.month == i }
+                %td.table-cell-number= currency item.appearances
+              - else
+                %td
 
   %table.table.table-striped.table-bordered.table-condensed
     %caption キャラクター別
