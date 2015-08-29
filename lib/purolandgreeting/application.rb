@@ -186,7 +186,7 @@ module PurolandGreeting
 
       greetings_by_month = Character.count_greetings_by_month(character.id)
 
-      places = character.place_ranking
+      places = Character.count_appeparances_by_place(character.id)
 
       @title = character.name
       haml :character, locals: {

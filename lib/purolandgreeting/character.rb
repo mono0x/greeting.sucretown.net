@@ -16,13 +16,31 @@ class PurolandGreeting::Character < ActiveRecord::Base
     }
   end
 
-  def place_ranking
-    greetings.active.joins(:place).where('greetings.deleted = FALSE').group('place_name').order('score DESC').select("places.name AS place_name, COUNT(place_id) AS score").map {|item|
-      Hashie::Mash.new(
-        name: item.place_name,
-        score: item.score.to_i
-      )
-    }
+  def self.count_appeparances_by_place(character_id)
+    PurolandGreeting::Greeting.find_by_sql([
+      %q{
+        SELECT
+          places.name,
+          x.count
+        FROM (
+          SELECT
+            places.id AS place_id,
+            COUNT(places.id) AS count
+          FROM greetings
+          JOIN places ON places.id = greetings.place_id
+          JOIN appearances ON appearances.greeting_id = greetings.id
+          JOIN characters ON characters.id = appearances.character_id
+          WHERE
+            characters.id = :character_id
+          GROUP BY places.id
+        ) x
+        JOIN places ON places.id = x.place_id
+        ORDER BY x.count DESC
+      },
+      {
+        character_id: character_id,
+      }
+    ])
   end
 
   def self.count_appeparances(character_id, date_from)
