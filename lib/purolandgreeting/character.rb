@@ -32,6 +32,7 @@ class PurolandGreeting::Character < ActiveRecord::Base
           JOIN characters ON characters.id = appearances.character_id
           WHERE
             characters.id = :character_id
+            AND NOT greetings.deleted
           GROUP BY places.id
         ) x
         JOIN places ON places.id = x.place_id
@@ -54,6 +55,7 @@ class PurolandGreeting::Character < ActiveRecord::Base
         WHERE
           schedules.date > :date_from
           AND characters.id = :character_id
+          AND NOT greetings.deleted
       },
       {
         date_from: date_from,
@@ -73,6 +75,7 @@ class PurolandGreeting::Character < ActiveRecord::Base
         WHERE
           schedules.date > :date_from
           AND characters.id = :character_id
+          AND NOT greetings.deleted
       },
       {
         date_from: date_from,
@@ -94,6 +97,7 @@ class PurolandGreeting::Character < ActiveRecord::Base
         JOIN characters ON characters.id = appearances.character_id
         WHERE
           characters.id = :character_id
+          AND NOT greetings.deleted
         GROUP BY year, month
         ORDER BY year, month
       },
