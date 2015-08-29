@@ -28,16 +28,16 @@ class PurolandGreeting::Character < ActiveRecord::Base
   def self.count_appeparances(character_id, date_from)
     PurolandGreeting::Schedule.find_by_sql([
       %q{
-            SELECT COUNT(schedules.id) AS count
-            FROM schedules
-            JOIN greetings ON greetings.schedule_id = schedules.id
-            JOIN appearances ON appearances.greeting_id = greetings.id
-            JOIN characters ON characters.id = appearances.character_id
-            WHERE
-              schedules.date > :date_from
-              AND characters.id = :character_id
+        SELECT COUNT(schedules.id) AS count
+        FROM schedules
+        JOIN greetings ON greetings.schedule_id = schedules.id
+        JOIN appearances ON appearances.greeting_id = greetings.id
+        JOIN characters ON characters.id = appearances.character_id
+        WHERE
+          schedules.date > :date_from
+          AND characters.id = :character_id
       },
-        {
+      {
         date_from: date_from,
         character_id: character_id,
       }
