@@ -52,7 +52,7 @@ end
 
 group :test do
   gem 'database_cleaner'
-  gem 'factory_girl'
+  gem 'factory_girl', '~> 4.0'
   gem 'rack-test', require: 'rack/test'
   gem 'rr', require: false
   gem 'simplecov', require: false

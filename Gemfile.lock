@@ -234,7 +234,7 @@ DEPENDENCIES
   dotenv
   dropbox-sdk
   escape_utils
-  factory_girl
+  factory_girl (~> 4.0)
   foreman
   gctools
   gmail
