@@ -20,11 +20,11 @@ VCR.configure do |config|
   config.hook_into :webmock
 end
 
+FactoryGirl.find_definitions
 class Test::Unit::TestCase
   include FactoryGirl::Syntax::Methods
 end
 
 system 'rake db:schema:apply'
 DatabaseCleaner.clean_with :truncation
-FactoryGirl.lint
 DatabaseCleaner.strategy = :transaction
