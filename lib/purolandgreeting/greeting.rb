@@ -41,14 +41,8 @@ class PurolandGreeting::Greeting < ActiveRecord::Base
           GROUP BY character_id
         ) x
         JOIN characters ON characters.id = character_id
-        ORDER BY x.count
+        ORDER BY x.count DESC
       },
     ])
-    PurolandGreeting::Appearance.joins(:character, :greeting).where('greetings.deleted = FALSE').order('score DESC').group(:character_name).select("characters.name AS character_name, COUNT(character_id) AS score").map {|item|
-      Hashie::Mash.new(
-        name: item.character_name,
-        score: item.score.to_i
-      )
-    }
   end
 end
