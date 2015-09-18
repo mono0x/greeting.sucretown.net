@@ -20,10 +20,10 @@ class SlackClient
 
   def send(text, options = {})
     payload = {}
-    payload['username']   = @username   if @username
-    payload['channel']    = @channel    if @channel
-    payload['icon_url']   = @icon_uri   if @icon_uri
-    payload['icon_emoji'] = @icon_emoji if @icon_emoji
+    payload[:username]   = @username   if @username
+    payload[:channel]    = @channel    if @channel
+    payload[:icon_url]   = @icon_uri   if @icon_uri
+    payload[:icon_emoji] = @icon_emoji if @icon_emoji
 
     payload = payload.merge(options)
 

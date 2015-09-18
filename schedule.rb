@@ -3,6 +3,8 @@ Bundler.require :schedule
 
 require 'logger'
 
+require_relative 'lib/slackclient'
+
 def execute_command(command)
   logger = Logger.new(STDERR)
   logger.info command
@@ -11,18 +13,18 @@ def execute_command(command)
   logger.error "status = #$?" unless $? == 0
   return if result.empty?
 
-  if $? == 0
-    logger.info result
-  else
+  error = ($? != 0)
+  if error
     logger.error result
+  else
+    logger.info result
   end
 
-  gmail = Gmail.connect!(ENV['GMAIL_ADDRESS'], ENV['GMAIL_PASSWORD'])
-  gmail.deliver! do
-    to      ENV['GMAIL_ADDRESS']
-    subject "Schedule #{command}"
-    body    result
-  end
+  slack = SlackClient.new
+  slack.send("`$ #{command}`\n```#{result}```", {
+    username: 'puroland-greeting',
+    icon_emoji: error ? ':sob:' : ':innocent:',
+  })
 end
 
 scheduler = Rufus::Scheduler.new

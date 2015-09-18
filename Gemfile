@@ -39,7 +39,6 @@ source 'https://rails-assets.org' do
 end
 
 group :schedule do
-  gem 'gmail'
   gem 'rufus-scheduler', require: 'rufus/scheduler'
 end
 
