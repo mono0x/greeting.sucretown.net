@@ -160,6 +160,39 @@ module PurolandGreeting
       dump.map {|item| LTSV.dump(item) }.join("\n")
     end
 
+    def self.dump_by_date(date)
+      Appearance.find_by_sql([
+        %{
+          SELECT
+            appearances.raw_character_name AS raw_character_name,
+            greetings.raw_place_name AS raw_place_name,
+            greetings.start_at AS start_at,
+            greetings.end_at AS end_at
+          FROM appearances
+          JOIN greetings ON greetings.id = appearances.greeting_id
+          JOIN schedules ON schedules.id = greetings.schedule_id
+          WHERE
+            schedules.date = :date
+            AND greetings.deleted = FALSE
+          ORDER BY end_at, start_at, raw_place_name, raw_character_name
+        },
+        {
+          date: date,
+        }
+      ]).map {|a|
+        {
+          character: a.raw_character_name,
+          place: a.raw_place_name,
+          start_at: a.start_at,
+          end_at: a.end_at,
+        }
+      }
+    end
+
+    def self.export_by_date(date)
+      dump_by_date(date).map {|item| LTSV.dump(item) }.join("\n")
+    end
+
     def self.normalize
       ActiveRecord::Base.transaction do
         normalizer = Normalizer.new

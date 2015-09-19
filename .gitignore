@@ -3,3 +3,4 @@
 /.env.test
 /.sass-cache
 /shared/unicorn.pid
+/shared/puroland-greeting-schedule

@@ -18,6 +18,7 @@ module PurolandGreeting
       sub_tasks = []
       sub_tasks << TwitterUpdater.new if ENV['TWITTER_CONSUMER_KEY']
       sub_tasks << VarnishCachePurger.new if ENV['VARNISH_URL']
+      sub_tasks << GitBackuper.new
 
       sub_tasks.each do |task|
         task.run today, now, registered, diff
