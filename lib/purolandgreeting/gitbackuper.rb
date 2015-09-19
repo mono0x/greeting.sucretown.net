@@ -15,7 +15,9 @@ module PurolandGreeting
         end
         message = "#{registered ? 'Add' : 'Update'} #{file}"
         system "git add '#{path}' && git commit -m '#{message}'"
-        system "git push origin master"
+        if private_key = ENV['SSH_PRIVATE_KEY_PATH']
+          system %{ssh-agent sh -c "ssh-add #{private_key} && git push origin master"}
+        end
       end
     rescue
       STDERR.puts $!
