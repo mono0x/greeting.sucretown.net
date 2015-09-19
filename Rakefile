@@ -72,11 +72,6 @@ namespace :db do
   end
 end
 
-namespace :notification do
-  require 'slackraketask'
-  SlackRakeTask.new
-end
-
 namespace :backup do
   require 'dropboxraketask'
   DropboxRakeTask.new
