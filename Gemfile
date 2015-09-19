@@ -41,7 +41,6 @@ end
 
 group :schedule do
   gem 'rufus-scheduler', require: 'rufus/scheduler'
-  gem 'slack-notifier'
 end
 
 group :development do

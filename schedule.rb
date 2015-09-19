@@ -2,6 +2,7 @@ require 'bundler'
 Bundler.require :schedule
 
 require 'logger'
+require 'slack-notifier'
 
 def execute_command(command)
   logger = Logger.new(STDERR)
