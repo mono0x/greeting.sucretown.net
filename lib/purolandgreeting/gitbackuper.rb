@@ -1,4 +1,4 @@
-require 'uri'
+require 'fileutils'
 
 module PurolandGreeting
   class GitBackuper
@@ -9,7 +9,9 @@ module PurolandGreeting
 
       Dir.chdir('shared/puroland-greeting-schedule') do
         file = "#{today.strftime('%F')}.ltsv"
-        path = "#{today.strftime('%Y/%m')}/#{file}"
+        dir = schedule.date.strftime('%Y/%m')
+        FileUtils.mkdir_p dir
+        path = "#{dir}/#{file}"
         open(path, 'w') do |f|
           f << ltsv
         end
