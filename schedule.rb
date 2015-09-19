@@ -3,8 +3,6 @@ Bundler.require :schedule
 
 require 'logger'
 
-require_relative 'lib/slackclient'
-
 def execute_command(command)
   logger = Logger.new(STDERR)
   logger.info command
@@ -20,11 +18,16 @@ def execute_command(command)
     logger.info result
   end
 
-  slack = SlackClient.new
-  slack.send("`$ #{command}`\n```#{result}```", {
-    username: 'puroland-greeting',
-    icon_emoji: error ? ':sob:' : ':innocent:',
-  })
+  slack = Slack::Notifier.new(
+    ENV['SLACK_WEBHOOK_URL'],
+    channel:  '#general',
+    username: 'puroland-greeting'
+  )
+
+  slack.ping(
+    "`$ #{command}`\n```#{result}```",
+    icon_emoji: error ? ':sob:' : ':innocent:'
+  )
 end
 
 scheduler = Rufus::Scheduler.new

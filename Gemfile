@@ -20,6 +20,7 @@ gem 'rake'
 gem 'ridgepole'
 gem 'sass'
 gem 'sinatra', require: 'sinatra/base'
+gem 'slack-notifier'
 gem 'sprockets', '~> 2.10.0'
 gem 'sprockets-helpers'
 gem 'sprockets-sass'
@@ -40,6 +41,7 @@ end
 
 group :schedule do
   gem 'rufus-scheduler', require: 'rufus/scheduler'
+  gem 'slack-notifier'
 end
 
 group :development do
