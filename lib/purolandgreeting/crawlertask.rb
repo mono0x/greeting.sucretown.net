@@ -21,7 +21,12 @@ module PurolandGreeting
       sub_tasks << GitBackuper.new
 
       sub_tasks.each do |task|
-        task.run today, now, registered, diff
+        begin
+          task.run today, now, registered, diff
+        rescue
+          STDERR.puts $!
+          STDERR.puts $!.backtrace
+        end
       end
     end
   end

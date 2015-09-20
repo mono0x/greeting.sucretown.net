@@ -8,8 +8,6 @@ module PurolandGreeting
       if !diff || !diff.empty?
         varnish.purge '.*'
       end
-    rescue
-      STDERR.puts $!
     end
   end
 end

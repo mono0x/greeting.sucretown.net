@@ -21,8 +21,6 @@ module PurolandGreeting
           system %{ssh-agent sh -c "ssh-add #{private_key} && git push origin master"}
         end
       end
-    rescue
-      STDERR.puts $!
     end
   end
 end
