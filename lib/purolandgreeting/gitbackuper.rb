@@ -9,7 +9,7 @@ module PurolandGreeting
 
       Dir.chdir('shared/puroland-greeting-schedule') do
         file = "#{today.strftime('%F')}.ltsv"
-        dir = schedule.date.strftime('%Y/%m')
+        dir = today.strftime('%Y/%m')
         FileUtils.mkdir_p dir
         path = "#{dir}/#{file}"
         open(path, 'w') do |f|
