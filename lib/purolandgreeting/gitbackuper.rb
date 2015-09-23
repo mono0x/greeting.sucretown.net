@@ -17,8 +17,8 @@ module PurolandGreeting
         end
         message = "#{registered ? 'Add' : 'Update'} #{file}"
         system "git add '#{path}' && git commit -m '#{message}' --author='mono <mono0x@users.noreply.github.com>'"
-        if private_key = ENV['SSH_PRIVATE_KEY_PATH']
-          system %{ssh-agent sh -c "ssh-add #{private_key} && git push origin master"}
+        if File.exists?('../id_rsa')
+          system %{ssh-agent sh -c "ssh-add '../id_rsa' && git push origin master"}
         end
       end
     end
