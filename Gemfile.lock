@@ -142,7 +142,6 @@ GEM
     ridgepole (0.6.2)
       activerecord (~> 4.2.1)
     rr (1.1.2)
-    rufus-scheduler (3.1.4)
     safe_yaml (1.0.4)
     sass (3.4.18)
     shellany (0.0.1)
@@ -251,7 +250,6 @@ DEPENDENCIES
   rake
   ridgepole
   rr
-  rufus-scheduler
   sass
   simplecov
   sinatra
