@@ -35,23 +35,23 @@
     %section
       %h2 キャラクター
       .list-group
-        %template{:'v-repeat' => 'groupedGreetingsByCharacter | orderBy "character.name"'}
-          %a.list-group-item{href: '#character/{{ character.name }}/'}
-            {{ character.name }}
-            %span.badge {{ greetings.length }}
+        %template{:'v-for' => 'group in groupedGreetingsByCharacter | orderBy "character.name"'}
+          %a.list-group-item{href: '#character/{{ group.character.name }}/'}
+            {{ group.character.name }}
+            %span.badge {{ group.greetings.length }}
 
       %h2 スケジュール
       .row
-        %template{:'v-repeat' => 'groupedGreetingsByCharacter | orderBy "character.name"'}
-          %section.col-sm-6.col-md-4{name: 'character/{{ character.name }}/'}
+        %template{:'v-for' => 'group in groupedGreetingsByCharacter | orderBy "character.name"'}
+          %section.col-sm-6.col-md-4{name: 'character/{{ group.character.name }}/'}
             .panel.panel-info
               .panel-heading
-                %h3.panel-title {{ character.name }}
+                %h3.panel-title {{ group.character.name }}
               .list-group
-                %a.list-group-item{:'v-repeat' => 'greetings | orderBy "end_at"', :href => '#timetable/{{ start_at | to_time }}-{{ end_at | to_time }}-{{ place.name }}/'}
-                  {{ place.name }}
+                %a.list-group-item{:'v-for' => 'greeting in group.greetings | orderBy "end_at"', :href => '#timetable/{{ greeting.start_at | to_time }}-{{ greeting.end_at | to_time }}-{{ greeting.place.name }}/'}
+                  {{ greeting.place.name }}
                   %br
-                  %small {{ start_at | to_time }}-{{ end_at | to_time }}
+                  %small {{ greeting.start_at | to_time }}-{{ greeting.end_at | to_time }}
 
           .clearfix.visible-md-block.visible-lg-block{:'v-if' => '$index % 3 == 2'}
           .clearfix.visible-sm-block{:'v-if' => '$index % 2 == 1'}
