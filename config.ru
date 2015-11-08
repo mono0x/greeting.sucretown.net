@@ -8,9 +8,7 @@ require 'purolandgreeting'
 
 case ENV['RACK_ENV']
 when 'production'
-  require 'gctools/oobgc'
   require 'unicorn/worker_killer'
-  use GC::OOB::UnicornMiddleware
   use Unicorn::WorkerKiller::MaxRequests
   use Unicorn::WorkerKiller::Oom, 128 * (1024 ** 2), 256 * (1024 ** 2)
 end
