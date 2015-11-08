@@ -13,6 +13,7 @@ gem 'hashie'
 gem 'ltsv'
 gem 'mechanize'
 gem 'pg'
+gem 'pry', require: false
 gem 'rack'
 gem 'rack-contrib', require: 'rack/contrib'
 gem 'rack-timeout'
@@ -43,7 +44,6 @@ group :development do
   gem 'guard'
   gem 'guard-rake'
   gem 'sinatra-contrib', require: 'sinatra/reloader'
-  gem 'pry'
 end
 
 group :test do
