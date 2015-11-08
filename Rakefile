@@ -1,6 +1,5 @@
 require 'bundler'
 Bundler.require
-require 'pry'
 require 'tempfile'
 require 'tmpdir'
 require 'uri'
@@ -22,6 +21,7 @@ task :coverage do |t|
 end
 
 task :console do |t|
+  require 'pry'
   require 'purolandgreeting'
   TOPLEVEL_BINDING.eval 'include PurolandGreeting'
   Pry.start
