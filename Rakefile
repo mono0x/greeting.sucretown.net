@@ -28,7 +28,7 @@ task :console do |t|
 end
 
 task :server do |t|
-  exec "unicorn -c unicorn.conf -E #{ENV['RACK_ENV']} -p #{ENV['PORT']}"
+  exec "start_server --port=#{ENV['PORT']} --signal-on-hup=CONT -- unicorn -c unicorn.conf -E #{ENV['RACK_ENV']}"
 end
 
 namespace :crawler do

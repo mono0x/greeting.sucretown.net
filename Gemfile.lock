@@ -149,6 +149,7 @@ GEM
     rr (1.1.2)
     safe_yaml (1.0.4)
     sass (3.4.19)
+    server-starter (0.1.4)
     shellany (0.0.1)
     simple_oauth (0.3.1)
     simplecov (0.10.0)
@@ -257,6 +258,7 @@ DEPENDENCIES
   ridgepole
   rr
   sass
+  server-starter
   simplecov
   sinatra
   sinatra-contrib
