@@ -59,7 +59,7 @@ module PurolandGreeting
         }
       end
 
-      def currency(i)
+      def number_with_delimiter(i)
         i.to_s.sub(/\A([\-\+])?(\d*)(\.\d+)?\z/) {
           sign = $1
           int = $2
