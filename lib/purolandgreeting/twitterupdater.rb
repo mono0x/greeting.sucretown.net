@@ -10,43 +10,50 @@ module PurolandGreeting
 
       uri = "#{ENV['ROOT_URI']}#{today.strftime('/schedule/%Y/%m/%d/')}"
 
-      if registered
-        tweet = twitter.update("#{today.strftime('%Y/%m/%d')} の予定が公開されました。 #{uri} #ピューロランド")
-
-        header = "#{today.strftime('%Y/%m/%d')} の登場キャラクター"
-        update_items twitter, diff.characters.to_a, header, tweet
-      else
-        unless diff.empty?
-          time = now.strftime('%H:%M')
-          tweet = twitter.update("#{today.strftime('%Y/%m/%d')} の予定が変更されました。 (#{time}) #{uri} #ピューロランド")
-
-          header = "#{today.strftime('%Y/%m/%d')} の変更対象キャラクター (#{time})"
-          tweet = update_items(twitter, diff.characters.to_a, header, tweet)
-
-          tables = [ '追加', '中止' ].zip([ diff.added_by_greeting, diff.deleted_by_greeting ])
-
-          tables.each do |title, table|
-            table.group_by {|greeting, characters|
-              characters
-            }.map {|characters, pairs|
-              [ characters, pairs.map {|pair| pair[0] }.to_a ]
-            }.sort_by {|characters, greetings|
-              greetings.map {|g|
-                g.values_at(:end_at, :start_at)
-              }.flatten
-            }.each do |characters, greetings|
-              header = "#{characters.join('と')} の#{title}分 (#{time})"
-              parts = greetings.sort_by {|greeting| greeting.values_at(:end_at, :start_at) }.map {|greeting|
-                "#{greeting[:start_at].strftime('%H:%M')}-#{greeting[:end_at].strftime('%H:%M')} #{greeting[:place]}"
-              }
-              update_items twitter, parts, header, tweet
-            end
-          end
-        end
+      case
+      when registered
+        update_registered twitter, today, now, uri, diff
+      when !diff.empty?
+        update_changed twitter, today, now, uri, diff
       end
     end
 
     private
+
+    def update_registered(twitter, today, now, uri, diff)
+      tweet = twitter.update("#{today.strftime('%Y/%m/%d')} の予定が公開されました。 #{uri} #ピューロランド")
+
+      header = "#{today.strftime('%Y/%m/%d')} の登場キャラクター"
+      update_items twitter, diff.characters.to_a, header, tweet
+    end
+
+    def update_changed(twitter, today, now, uri, diff)
+      time = now.strftime('%H:%M')
+      tweet = twitter.update("#{today.strftime('%Y/%m/%d')} の予定が変更されました。 (#{time}) #{uri} #ピューロランド")
+
+      header = "#{today.strftime('%Y/%m/%d')} の変更対象キャラクター (#{time})"
+      tweet = update_items(twitter, diff.characters.to_a, header, tweet)
+
+      tables = [ '追加', '中止' ].zip([ diff.added_by_greeting, diff.deleted_by_greeting ])
+
+      tables.each do |title, table|
+        table.group_by {|greeting, characters|
+          characters
+        }.map {|characters, pairs|
+          [ characters, pairs.map {|pair| pair[0] }.to_a ]
+        }.sort_by {|characters, greetings|
+          greetings.map {|g|
+            g.values_at(:end_at, :start_at)
+          }.flatten
+        }.each do |characters, greetings|
+          header = "#{characters.join('と')} の#{title}分 (#{time})"
+          parts = greetings.sort_by {|greeting| greeting.values_at(:end_at, :start_at) }.map {|greeting|
+            "#{greeting[:start_at].strftime('%H:%M')}-#{greeting[:end_at].strftime('%H:%M')} #{greeting[:place]}"
+          }
+          update_items twitter, parts, header, tweet
+        end
+      end
+    end
 
     def update_items(twitter, items, header, footer = nil, tweet)
       separator = "\n"
