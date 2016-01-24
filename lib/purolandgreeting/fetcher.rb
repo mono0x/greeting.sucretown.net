@@ -14,7 +14,7 @@ module PurolandGreeting
 
     def create_agent
       agent = Mechanize.new
-      agent.user_agent = 'iPhone (Ruby; http://greeting.sucretown.net/)'
+      agent.user_agent = 'iPhone (Ruby; https://greeting.sucretown.net/)'
       agent
     end
 
