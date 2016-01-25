@@ -1,6 +1,3 @@
-require 'date'
-require 'mechanize'
-require 'nkf'
 
 module PurolandGreeting
   class Fetcher
