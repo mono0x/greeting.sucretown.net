@@ -9,10 +9,6 @@ module PurolandGreeting
       self.new.fetch
     end
 
-    def self.fetch_detail(uri)
-      self.new.fetch_detail(uri)
-    end
-
     def create_agent
       agent = Mechanize.new
       agent.user_agent = 'iPhone (Ruby; https://greeting.sucretown.net/)'
@@ -29,6 +25,7 @@ module PurolandGreeting
       date = Date.strptime(index_page.search('.tabBnrBlock ul li.yesterday a').attr('href').value.match(/date=(\d{8})/).to_a[1], '%Y%m%d')
 
       items = []
+      details = {}
       index_page.search('.todaysList .todaysItemBox').each do |item|
         title = item.search('.todaysItemTitle').text
         time = item.search('dl.start dd').text
@@ -37,17 +34,22 @@ module PurolandGreeting
         start_at = date.to_time + (m[:hour].to_i(10) * 60 + m[:minute].to_i(10)) * 60
 
         uri = item.search('.itemDetailBtn a.basicBtn').attr('href').value
+        detail = (details[uri] ||= fetch_detail(uri))
         if start_at
           items << {
             title: title,
             start_at: start_at,
             uri: uri,
+            place: detail[:place],
+            time: detail[:time],
           }
         end
       end
 
       items
     end
+
+    private
 
     def fetch_detail(uri)
       agent = create_agent
@@ -65,8 +67,6 @@ module PurolandGreeting
         time: m[:time].to_i(10),
       }
     end
-
-    private
 
     def try_request(n = 10, &block)
       delays = (0...n).map {|i| [ 2 ** i, 30 ].min }
