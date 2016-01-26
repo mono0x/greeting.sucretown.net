@@ -22,7 +22,7 @@ module PurolandGreeting
         agent.get(BASE_URI)
       }
 
-      date = Date.strptime(index_page.search('.tabBnrBlock ul li.yesterday a').attr('href').value.match(/date=(\d{8})/).to_a[1], '%Y%m%d')
+      date = Date.strptime(index_page.search('.tabBnrBlock ul li.yesterday a').attr('href').value.match(/date=(\d{8})/).to_a[1], '%Y%m%d') + 1
 
       items = []
       details = {}
