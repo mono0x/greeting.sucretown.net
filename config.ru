@@ -12,8 +12,7 @@ when 'production'
   use Unicorn::WorkerKiller::Oom, 128 * (1024 ** 2), 256 * (1024 ** 2)
 end
 
-use Rack::Timeout
-Rack::Timeout.timeout = 20
+use Rack::Timeout, service_timeout: 20
 
 map '/' do
   run PurolandGreeting::Application
