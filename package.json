@@ -1,0 +1,37 @@
+{
+  "name": "puroland-greeting",
+  "version": "1.0.0",
+  "description": "Puroland Greeting",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap-loader": "^1.0.10",
+    "bootstrap-sass": "^3.3.6",
+    "bootswatch": "^3.3.6",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "imports-loader": "^0.6.5",
+    "jquery": "^2.2.3",
+    "jquery.scrollto": "^2.1.2",
+    "moment": "^2.12.0",
+    "node-sass": "^3.4.2",
+    "resolve-url-loader": "^1.4.3",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.0",
+    "underscore": "^1.8.3",
+    "url-loader": "^0.5.7",
+    "vue": "^1.0.21",
+    "webpack": "^1.12.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "node_modules/.bin/webpack -p --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mono0x/greeting.sucretown.net.git"
+  },
+  "author": "mono",
+  "license": "MIT",
+  "homepage": "https://greeting.sucretown.net/"
+}

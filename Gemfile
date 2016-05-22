@@ -18,27 +18,14 @@ gem 'rack-contrib', require: 'rack/contrib'
 gem 'rack-timeout'
 gem 'rake'
 gem 'ridgepole'
-gem 'sass'
 gem 'server-starter'
 gem 'sinatra', require: 'sinatra/base'
 gem 'slack-notifier'
-gem 'sprockets', '~> 2.10.0'
-gem 'sprockets-helpers'
-gem 'sprockets-sass'
 gem 'twitter'
 gem 'uglifier'
 gem 'unicorn'
 gem 'unicorn-worker-killer', require: false
 gem 'varnish-client', github: 'mono0x/varnish-client'
-
-source 'https://rails-assets.org' do
-  gem 'rails-assets-bootswatch'
-  gem 'rails-assets-jquery'
-  gem 'rails-assets-jquery.scrollTo'
-  gem 'rails-assets-momentjs'
-  gem 'rails-assets-underscore'
-  gem 'rails-assets-vue'
-end
 
 group :development do
   gem 'guard'

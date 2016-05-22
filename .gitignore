@@ -3,3 +3,5 @@
 /.env.test
 /.sass-cache
 /shared/
+/node_modules/
+/public/

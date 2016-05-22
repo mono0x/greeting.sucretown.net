@@ -6,9 +6,6 @@ module PurolandGreeting
 
     set :root, PurolandGreeting.root
 
-    set :assets_prefix, '/assets'
-    set :sprockets, Sprockets::Environment.new
-
     set :haml, format: :html5, attr_quote: '"'
 
     configure :development do
@@ -19,26 +16,7 @@ module PurolandGreeting
 
     configure do
       Database.connect
-
-      Sprockets::Sass.options = {
-        :style => (production? ? :compressed : :nested),
-      }
-      Sprockets::Helpers.configure do |config|
-        config.environment = Application.sprockets
-        config.public_path = public_folder
-        config.prefix = assets_prefix
-        config.digest = true
-      end
-
-      sprockets.append_path 'assets/images'
-      sprockets.append_path 'assets/javascripts'
-      sprockets.append_path 'assets/stylesheets'
-      RailsAssets.load_paths.each do |path|
-        sprockets.append_path path
-      end
     end
-
-    helpers Sprockets::Helpers
 
     helpers do
       def calendar(month, caption: nil, &block)
