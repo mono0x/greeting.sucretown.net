@@ -3,10 +3,10 @@ ruby '2.3.1'
 
 gem 'activerecord'
 gem 'activesupport', require: 'active_support/all'
-gem 'dotenv'
+gem 'dotenv', require: false
 gem 'dropbox-sdk', require: 'dropbox_sdk'
 gem 'escape_utils'
-gem 'foreman'
+gem 'foreman', require: false
 gem 'hamlit'
 gem 'hashie'
 gem 'ltsv'
@@ -16,7 +16,7 @@ gem 'pry', require: false
 gem 'rack'
 gem 'rack-contrib', require: 'rack/contrib'
 gem 'rack-timeout'
-gem 'rake'
+gem 'rake', require: false
 gem 'ridgepole'
 gem 'server-starter'
 gem 'sinatra', require: 'sinatra/base'

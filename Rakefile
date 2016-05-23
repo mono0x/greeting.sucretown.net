@@ -1,5 +1,6 @@
 require 'bundler'
 Bundler.require
+require 'dotenv'
 require 'tempfile'
 require 'tmpdir'
 require 'uri'
