@@ -22,7 +22,6 @@ gem 'server-starter'
 gem 'sinatra', require: 'sinatra/base'
 gem 'slack-notifier'
 gem 'twitter'
-gem 'uglifier'
 gem 'unicorn'
 gem 'unicorn-worker-killer', require: false
 gem 'varnish-client', github: 'mono0x/varnish-client'
