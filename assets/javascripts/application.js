@@ -1,7 +1,7 @@
-var Vue = require('vue');
-var moment = require('moment');
-var $ = require('jquery');
-var _ = require('underscore');
+let Vue = require('vue');
+let moment = require('moment');
+let $ = require('jquery');
+let _ = require('underscore');
 
 require('jquery.scrollto');
 require('bootstrap-loader/extractStyles');
@@ -13,7 +13,7 @@ $(function() {
     return;
   }
 
-  var tabs = [
+  let tabs = [
     {
       hash: 'timetable',
       tabElement: $('#timetable-tab'),
@@ -25,7 +25,7 @@ $(function() {
       contentElement: $('#character')
     }
   ];
-  var twitterTab = {
+  let twitterTab = {
     hash: 'twitter',
     tabElement: $('#twitter-tab'),
     contentElement: $('#twitter')
@@ -34,9 +34,9 @@ $(function() {
     tabs.push(twitterTab);
   }
 
-  var updateTab = function(hash) {
-    var tab = (function() {
-      var i, n = tabs.length;
+  let updateTab = function(hash) {
+    let tab = (function() {
+      let i, n = tabs.length;
       for (i = 0; i < n; ++i) {
         if (hash.indexOf('#' + tabs[i].hash + '/') === 0) {
           return tabs[i];
@@ -47,7 +47,7 @@ $(function() {
       tab = tabs[0];
     }
 
-    tabs.filter(function(t) { return t.hash != tab.hash; }).forEach(function(t) {
+    tabs.filter(t => t.hash != tab.hash).forEach(t => {
       t.tabElement.removeClass('active');
       t.contentElement.hide();
     });
@@ -55,14 +55,14 @@ $(function() {
     tab.contentElement.show();
   };
 
-  var hashchange = function() {
+  let hashchange = function() {
     updateTab(location.hash);
   };
 
   $(window).on('hashchange', hashchange).triggerHandler('hashchange');
 
   $(document).on('click', 'a[href^="#"]', function() {
-    var hash = $(this).attr('href');
+    let hash = $(this).attr('href');
 
     updateTab(hash);
 
@@ -70,7 +70,7 @@ $(function() {
     location.hash = hash;
     $(window).on('hashchange', hashchange);
 
-    var target = $('*[name="' + decodeURI(hash.substring(1)) + '"]');
+    let target = $('*[name="' + decodeURI(hash.substring(1)) + '"]');
     if (target.size() > 0) {
       $.scrollTo(target);
     }
@@ -81,9 +81,9 @@ $(function() {
     return moment(value).format('HH:mm');
   });
 
-  var groupGreetings = function(greetings) {
-    var table = {};
-    _.each(greetings, function(greeting) {
+  let groupGreetings = function(greetings) {
+    let table = {};
+    _.each(greetings, greeting => {
       if (!(greeting.end_at in table)) {
         table[greeting.end_at] = {};
       }
@@ -93,9 +93,9 @@ $(function() {
       table[greeting.end_at][greeting.start_at].push(greeting);
     });
 
-    var result = [];
-    _.chain(table).keys().each(function(end_at) {
-      _.chain(table[end_at]).keys().each(function(start_at) {
+    let result = [];
+    _.chain(table).keys().each(end_at => {
+      _.chain(table[end_at]).keys().each(start_at => {
         result.push({
           start_at: start_at,
           end_at: end_at,
@@ -106,7 +106,7 @@ $(function() {
     return result;
   };
 
-  var vm = new Vue({
+  let vm = new Vue({
     el: '#contents',
     data: {
       rawGreetings: DATA.greetings,
@@ -125,7 +125,7 @@ $(function() {
       }, 5 * 60 * 1000);
 
       setInterval(function() {
-        var date;
+        let date;
         if (moment(date).format('YYYY-MM-DD') == DATA.date) {
           date = new Date();
           date.setMinutes(Math.floor(date.getMinutes() / 5) * 5);
@@ -140,39 +140,39 @@ $(function() {
     },
     computed: {
       groupedGreetingsDeleted: function() {
-        var epoch = this.epoch;
+        let epoch = this.epoch;
 
-        return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
+        return groupGreetings(_.filter(this.rawGreetings, greeting => {
           return greeting.deleted;
         }));
       },
       groupedGreetingsBeforeTheStart: function() {
-        var epoch = this.epoch;
+        let epoch = this.epoch;
 
-        return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
+        return groupGreetings(_.filter(this.rawGreetings, greeting => {
           return !greeting.deleted && epoch < (+new Date(greeting.start_at));
         }));
       },
       groupedGreetingsInSession: function() {
-        var epoch = this.epoch;
+        let epoch = this.epoch;
 
-        return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
+        return groupGreetings(_.filter(this.rawGreetings, greeting => {
           return !greeting.deleted && epoch >= (+new Date(greeting.start_at)) && epoch < (+new Date(greeting.end_at));
         }));
       },
       groupedGreetingsAfterTheEnd: function() {
-        var epoch = this.epoch;
+        let epoch = this.epoch;
 
-        return groupGreetings(_.filter(this.rawGreetings, function(greeting) {
+        return groupGreetings(_.filter(this.rawGreetings, greeting => {
           return !greeting.deleted && epoch >= (+new Date(greeting.end_at));
         }));
       },
       groupedGreetingsByCharacter: function() {
-        var grouped = {};
-        _.chain(this.rawGreetings).filter(function(greeting) {
+        let grouped = {};
+        _.chain(this.rawGreetings).filter(greeting => {
           return !greeting.deleted;
         }).each(function(greeting) {
-          _.each(greeting.characters, function(character) {
+          _.each(greeting.characters, character => {
             if (!(character.name in grouped)) {
               grouped[character.name] = [];
             }
@@ -180,9 +180,9 @@ $(function() {
           });
         });
 
-        return _.chain(grouped).pairs().map(function(pair) {
+        return _.chain(grouped).pairs().map(pair => {
           return {
-            character: _.find(pair[1][0].characters, function(character) {
+            character: _.find(pair[1][0].characters, character => {
               return character.name == pair[0];
             }),
             greetings: pair[1]
@@ -195,13 +195,13 @@ $(function() {
 
 $(function() {
   $('#report-form').submit(function() {
-    var place = $('select[name="place_id"] option:selected', this).text();
-    var character = $('select[name="character_id"] option:selected', this).text();
-    var status = place + ' で ' + character + ' に会ったよ！';
-    var width = 575;
-    var height = 400;
-    var left = ($(window).width() - width) / 2;
-    var top = ($(window).height() - height) / 2;
+    let place = $('select[name="place_id"] option:selected', this).text();
+    let character = $('select[name="character_id"] option:selected', this).text();
+    let status = place + ' で ' + character + ' に会ったよ！';
+    let width = 575;
+    let height = 400;
+    let left = ($(window).width() - width) / 2;
+    let top = ($(window).height() - height) / 2;
     window.open(
       'https://twitter.com/share?via=puro_greeting&' + [
         'text=' + encodeURIComponent(status),
