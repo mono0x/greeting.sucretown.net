@@ -1,12 +1,12 @@
-let Vue = require('vue');
-let moment = require('moment');
-let $ = require('jquery');
-let _ = require('underscore');
+import Vue  from 'vue';
+import moment from 'moment';
+import $  from 'jquery';
+import _ from 'underscore';
 
-require('jquery.scrollto');
-require('bootstrap-loader/extractStyles');
+import 'jquery.scrollto';
+import 'bootstrap-loader/extractStyles';
 
-require('../stylesheets/application.css');
+import '../stylesheets/application.css';
 
 $(function() {
   if (window.DATA === undefined || DATA.type != 'schedule') {
