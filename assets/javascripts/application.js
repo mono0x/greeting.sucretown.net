@@ -113,18 +113,18 @@ $(function() {
       epoch: +new Date()
     },
     created: function() {
-      setInterval(function() {
+      setInterval(() => {
         if (moment().format('YYYY-MM-DD') == DATA.date) {
           $.ajax({
             url: '/api/schedule/' + moment(DATA.date).format('YYYY/MM/DD') + '/',
             dataType: 'json'
-          }).done(function(data) {
+          }).done(data => {
             vm.$set('rawGreetings', data);
           });
         }
       }, 5 * 60 * 1000);
 
-      setInterval(function() {
+      setInterval(() => {
         let date;
         if (moment(date).format('YYYY-MM-DD') == DATA.date) {
           date = new Date();
@@ -142,9 +142,7 @@ $(function() {
       groupedGreetingsDeleted: function() {
         let epoch = this.epoch;
 
-        return groupGreetings(_.filter(this.rawGreetings, greeting => {
-          return greeting.deleted;
-        }));
+        return groupGreetings(_.filter(this.rawGreetings, greeting => greeting.deleted));
       },
       groupedGreetingsBeforeTheStart: function() {
         let epoch = this.epoch;
@@ -169,9 +167,7 @@ $(function() {
       },
       groupedGreetingsByCharacter: function() {
         let grouped = {};
-        _.chain(this.rawGreetings).filter(greeting => {
-          return !greeting.deleted;
-        }).each(function(greeting) {
+        _.chain(this.rawGreetings).filter(greeting => !greeting.deleted).each(greeting => {
           _.each(greeting.characters, character => {
             if (!(character.name in grouped)) {
               grouped[character.name] = [];
@@ -182,9 +178,7 @@ $(function() {
 
         return _.chain(grouped).pairs().map(pair => {
           return {
-            character: _.find(pair[1][0].characters, character => {
-              return character.name == pair[0];
-            }),
+            character: _.find(pair[1][0].characters, character => character.name == pair[0]),
             greetings: pair[1]
           };
         }).value();
