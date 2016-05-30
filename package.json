@@ -27,7 +27,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "node_modules/.bin/webpack --progress --colors --optimize-minimize",
+    "build": "node_modules/.bin/webpack --progress --colors --optimize-minimize --optimize-occurrence-order --optimize-dedupe",
     "watch": "node_modules/.bin/webpack --progress --colors --watch"
   },
   "repository": {
