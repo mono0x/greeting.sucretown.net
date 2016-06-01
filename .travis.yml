@@ -5,13 +5,20 @@ rvm:
 addons:
   postgresql: '9.3'
 bundler_args: --without development --deployment --jobs=3 --retry=3
-cache: bundler
+cache:
+  directories:
+  - node_nodules
+  - vendor/bundle
 env:
 - RACK_ENV=test DATABASE_URL=postgresql://postgres@localhost:5432/travis_ci_test ROOT_URI=http://greeting.sucretown.net
+install:
+- npm install
+- bundle install --jobs=3 --retry=3 --path=vendor/bundle
 before_script:
 - psql -U postgres -c 'CREATE DATABASE travis_ci_test'
 - bundle exec rake db:schema:apply
 script:
+- npm run build
 - bundle exec rake test
 notifications:
   slack:
