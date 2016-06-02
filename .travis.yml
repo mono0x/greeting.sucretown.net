@@ -19,7 +19,7 @@ before_script:
 - psql -U postgres -c 'CREATE DATABASE travis_ci_test'
 - bundle exec rake db:schema:apply
 script:
-- npm run lint
+- node_nodules/.bin/eslint assets/javascripts/*.js
 - bundle exec rake test
 notifications:
   slack:
