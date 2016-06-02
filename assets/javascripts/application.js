@@ -9,7 +9,7 @@ import 'bootstrap-loader/extractStyles';
 import '../stylesheets/application.css';
 
 $(function() {
-  if (window.DATA === undefined || DATA.type != 'schedule') {
+  if (window.DATA === undefined || window.DATA.type != 'schedule') {
     return;
   }
 
@@ -109,14 +109,14 @@ $(function() {
   let vm = new Vue({
     el: '#contents',
     data: {
-      rawGreetings: DATA.greetings,
+      rawGreetings: window.DATA.greetings,
       epoch: +new Date()
     },
     created: function() {
       setInterval(() => {
-        if (moment().format('YYYY-MM-DD') == DATA.date) {
+        if (moment().format('YYYY-MM-DD') == window.DATA.date) {
           $.ajax({
-            url: '/api/schedule/' + moment(DATA.date).format('YYYY/MM/DD') + '/',
+            url: '/api/schedule/' + moment(window.DATA.date).format('YYYY/MM/DD') + '/',
             dataType: 'json'
           }).done(data => {
             vm.$set('rawGreetings', data);
@@ -126,22 +126,20 @@ $(function() {
 
       setInterval(() => {
         let date;
-        if (moment(date).format('YYYY-MM-DD') == DATA.date) {
+        if (moment(date).format('YYYY-MM-DD') == window.DATA.date) {
           date = new Date();
           date.setMinutes(Math.floor(date.getMinutes() / 5) * 5);
           date.setSeconds(0);
           date.setMilliseconds(0);
         }
         else {
-          date = moment(DATA.date).add(1, 'days').toDate();
+          date = moment(window.DATA.date).add(1, 'days').toDate();
         }
         vm.$data.epoch = +date;
       }, 1000);
     },
     computed: {
       groupedGreetingsDeleted: function() {
-        let epoch = this.epoch;
-
         return groupGreetings(_.filter(this.rawGreetings, greeting => greeting.deleted));
       },
       groupedGreetingsBeforeTheStart: function() {
