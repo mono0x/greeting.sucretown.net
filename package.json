@@ -28,9 +28,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "node_modules/.bin/webpack --progress --colors --optimize-minimize --optimize-occurrence-order --optimize-dedupe",
-    "lint": "node_modules/.bin/eslint --color *.js assets/javascripts/*.js",
-    "watch": "node_modules/.bin/webpack --progress --colors --watch"
+    "build": "webpack --progress --colors --optimize-minimize --optimize-occurrence-order --optimize-dedupe",
+    "lint": "eslint --color *.js assets/javascripts/*.js",
+    "watch": "webpack --progress --colors --watch"
   },
   "repository": {
     "type": "git",
