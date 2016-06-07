@@ -5,7 +5,8 @@ module.exports = {
     application: './assets/javascripts/application.js'
   },
   output: {
-    path: 'public/',
+    path: 'public/assets/',
+    publicPath: '/assets/',
     filename: '[name].js',
     chunkFilename: '[id].js'
   },
