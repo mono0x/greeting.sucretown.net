@@ -28,7 +28,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "webpack --progress --colors --optimize-minimize --optimize-occurrence-order --optimize-dedupe",
+    "build": "NODE_ENV=production webpack --progress --colors",
     "lint": "eslint --color assets/javascripts/*.js || exit 0",
     "watch": "webpack --progress --colors --watch"
   },
