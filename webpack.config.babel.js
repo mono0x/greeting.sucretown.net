@@ -1,9 +1,9 @@
-const webpack = require('webpack');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-module.exports = {
+export default {
   entry: {
     application: './assets/javascripts/application.js'
   },
@@ -20,12 +20,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: [
-            'es2015'
-          ]
-        }
+        loader: 'babel'
       },
       {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
