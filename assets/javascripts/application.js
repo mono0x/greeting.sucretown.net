@@ -1,6 +1,6 @@
 import Vue  from 'vue';
 import moment from 'moment';
-import $  from 'jquery';
+import $ from 'jquery';
 import _ from 'underscore';
 
 import 'jquery.scrollto';
@@ -30,7 +30,7 @@ $(function() {
     tabElement: $('#twitter-tab'),
     contentElement: $('#twitter')
   };
-  if (twitterTab.tabElement.size() !== 0) {
+  if (twitterTab.tabElement.length !== 0) {
     tabs.push(twitterTab);
   }
 
