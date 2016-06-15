@@ -38,6 +38,11 @@ export default {
   plugins: [
     new ExtractTextPlugin("[name].css"),
     ...(isProduction ? [
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        },
+      }),
       new webpack.optimize.UglifyJsPlugin({
         compress: {
           warnings: false
