@@ -93,17 +93,15 @@ $(function() {
       table[greeting.end_at][greeting.start_at].push(greeting);
     });
 
-    let result = [];
-    _.chain(table).keys().each(end_at => {
-      _.chain(table[end_at]).keys().each(start_at => {
-        result.push({
+    return _.flatMap(table, (t, end_at) => {
+      return _.flatMap(t, (g, start_at) => {
+        return {
           start_at: start_at,
           end_at: end_at,
-          greetings: table[end_at][start_at]
-        });
+          greetings: g
+        };
       });
     });
-    return result;
   };
 
   let vm = new Vue({
@@ -164,22 +162,27 @@ $(function() {
         }));
       },
       groupedGreetingsByCharacter: function() {
-        let grouped = {};
-        _.chain(this.rawGreetings).filter(greeting => !greeting.deleted).each(greeting => {
-          _.each(greeting.characters, character => {
-            if (!(character.name in grouped)) {
-              grouped[character.name] = [];
-            }
-            grouped[character.name].push(greeting);
+        let characters = _.reduce(this.rawGreetings, (result, greeting) => {
+          return _.reduce(greeting.characters, (result, character) => {
+            result[character.id] = character;
+            return result;
+          }, result);
+        }, {});
+
+        let characterIdGreetingPairs = _.flatMap(this.rawGreetings, greeting => {
+          return _.map(greeting.characters, character => {
+            return [ character.id, greeting ];
           });
         });
 
-        return _.chain(grouped).toPairs().map(pair => {
-          return {
-            character: _.find(pair[1][0].characters, character => character.name == pair[0]),
-            greetings: pair[1]
-          };
-        }).value();
+        let grouped = _.reduce(characterIdGreetingPairs, (result, pair) => {
+          (result[pair[0]] || (result[pair[0]] = [])).push(pair[1]);
+          return result;
+        }, {});
+
+        return _.map(grouped, (greetings, id) => {
+          return { character: characters[id], greetings: greetings };
+        });
       }
     }
   });
