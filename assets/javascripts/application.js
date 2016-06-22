@@ -71,7 +71,7 @@ $(function() {
     $(window).on('hashchange', hashchange);
 
     let target = $('*[name="' + decodeURI(hash.substring(1)) + '"]');
-    if (target.size() > 0) {
+    if (target.length > 0) {
       $.scrollTo(target);
     }
     return false;
