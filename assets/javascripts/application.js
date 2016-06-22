@@ -174,7 +174,7 @@ $(function() {
           });
         });
 
-        return _.chain(grouped).pairs().map(pair => {
+        return _.chain(grouped).toPairs().map(pair => {
           return {
             character: _.find(pair[1][0].characters, character => character.name == pair[0]),
             greetings: pair[1]
