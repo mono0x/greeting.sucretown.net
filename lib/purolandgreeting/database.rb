@@ -11,7 +11,7 @@ module PurolandGreeting
       ActiveRecord::Base.default_timezone = :local
     end
 
-    def self.register(items = [], nextday_items = [])
+    def self.register(items: [], nextday_items: [], new_items: [], new_nextday_items: [])
       normalizer = Normalizer.new
 
       keys = [ :character, :place, :start_at, :end_at, :deleted ].freeze
@@ -19,6 +19,9 @@ module PurolandGreeting
 
       deleted_items = nil
       added_items = nil
+
+      items.concat(new_items.select {|item| !normalizer.ignored_in_new_site?(item[:character]) })
+      nextday_items.concat(new_nextday_items.select {|item| !normalizer.ignored_in_new_site?(item[:character]) })
 
       ActiveRecord::Base.transaction do
         dates = items.map {|item| item[:start_at].to_date }.uniq
@@ -117,7 +120,7 @@ module PurolandGreeting
     end
 
     def self.import(src)
-      register(LTSV.load(src).map {|item|
+      register(items: LTSV.load(src).map {|item|
         {
           character: item[:character],
           place: item[:place],
@@ -131,7 +134,7 @@ module PurolandGreeting
     def self.import_ohtake_csv(src)
       src = src.each_line.to_a[1..-1].join
       csv = CSV.new(src, headers: true, header_converters: :symbol)
-      register(csv.map {|item|
+      register(items: csv.map {|item|
         {
           character: item[:name],
           place: item[:location],

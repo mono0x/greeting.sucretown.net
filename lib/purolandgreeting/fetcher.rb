@@ -4,8 +4,9 @@ require 'nkf'
 
 module PurolandGreeting
   class Fetcher
-    BASE_URI = 'http://www.puroland.co.jp/chara_gre/mobile/'
-    NEXTDAY_URI = 'http://www.puroland.co.jp/chara_gre/chara_sentaku_nextday.asp'
+    OLD_INDEX_URL = 'http://www.puroland.co.jp/chara_gre/mobile/'
+    NEW_INDEX_URL = 'http://www.puroland.jp/schedule/greeting/'
+    NEXTDAY_URI_BASE = 'http://www.puroland.jp/schedule/greeting/?base='
     INTERVAL = 0.5
 
     def self.fetch(wait = true)
@@ -21,23 +22,22 @@ module PurolandGreeting
     def fetch(wait = true)
       agent = create_agent
 
-      index_page = try_request {
-        agent.get(BASE_URI)
+      old_index_page = try_request {
+        agent.get(OLD_INDEX_URL)
       }
-      if index_page.search('p').any? {|p| p.text.include? '本日のｷｬﾗｸﾀｰ情報は公開されておりません。P' }
-        index_page = try_request {
-          agent.get("#{BASE_URI}?para=#{Date.today.strftime('%Y%m%d')}")
+      if old_index_page.search('p').any? {|p| p.text.include? '本日のｷｬﾗｸﾀｰ情報は公開されておりません。P' }
+        old_index_page = try_request {
+          agent.get("#{OLD_INDEX_URL}?para=#{Date.today.strftime('%Y%m%d')}")
         }
       end
-      #index_page = agent.get('http://www.puroland.co.jp/chara_gre/?para=20130627')
-      return [ [], [] ] if index_page.forms.empty?
+      #old_index_page = agent.get('http://www.puroland.co.jp/chara_gre/?para=20130627')
+      return {} if old_index_page.forms.empty?
 
-      date = parse_date(normalize_string(index_page.search('p[align="center"] font[size="-1"]').first.text)) or return [ [], [] ]
+      date = parse_date(normalize_string(old_index_page.search('p[align="center"] font[size="-1"]').first.text)) or return {}
 
       menu_page = try_request {
-        agent.submit(index_page.forms.first)
+        agent.submit(old_index_page.forms.first)
       }
-
       items = []
       menu_page.links_with(:href => /^chara_sche\.asp\?/).each do |link|
         sleep INTERVAL if wait
@@ -59,6 +59,34 @@ module PurolandGreeting
         agent.back
       end
 
+      new_index_page = try_request {
+        agent.get(NEW_INDEX_URL)
+      }
+      new_items = []
+      new_index_page.search('.characterList li').each do |li|
+        uri = li.search('a').attr('href')
+        next unless uri
+
+        character = li.search('.charaName').text
+        next if character.empty?
+
+        sleep INTERVAL if wait
+
+        schedule_page = try_request {
+          agent.get(uri)
+        }
+        schedule_page.search('.subColorBG .itemDetailBox').each do |box|
+          place = normalize_string(box.search('.itemTitle').text)
+          box.search('.itemContent dd').text.split("\n").each do |t|
+            t.strip.match(%r{(?<hour>\d+):(?<minute>\d+)}) do |m|
+              start_at = Time.local(date.year, date.month, date.day, Integer(m[:hour]), Integer(m[:minute]))
+              end_at = start_at + 30 * 60
+              new_items << { character: character, place: place, start_at: start_at, end_at: end_at, }
+            end
+          end
+        end
+      end
+
       tchk = menu_page.uri.to_s.match(/TCHK=(\d+)/).to_a[1]
       nextday_page = try_request {
         agent.get("#{NEXTDAY_URI}?TCHK=#{tchk}")
@@ -70,7 +98,21 @@ module PurolandGreeting
         nextday_items << { character: td.text, date: nextday }
       end
 
-      [ items, nextday_items ]
+      new_nextday_page = try_request {
+        agent.get("#{NEXTDAY_URI_BASE}?date=#{nextday.strftime('%Y%m%d')}")
+      }
+      new_nextday_items = []
+      new_nextday_page.search('.characterList li .charaName').each do |name|
+        next if name.text.empty?
+        new_nextday_items << { character: name.text, date: nextday }
+      end
+
+      {
+        items: items,
+        new_items: new_items,
+        nextday_items: nextday_items,
+        new_nextday_items: new_nextday_items,
+      }
     end
 
     def parse_date(t)
