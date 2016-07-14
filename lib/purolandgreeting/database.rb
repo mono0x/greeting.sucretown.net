@@ -20,8 +20,15 @@ module PurolandGreeting
       deleted_items = nil
       added_items = nil
 
-      items.concat(new_items.select {|item| !normalizer.ignored_in_new_site?(item[:character]) })
-      nextday_items.concat(new_nextday_items.select {|item| !normalizer.ignored_in_new_site?(item[:character]) })
+      items = [
+        items.select {|item| !normalizer.ignored_in_old_site?(item[:character]) },
+        new_items.select {|item| !normalizer.ignored_in_new_site?(item[:character]) },
+      ].flatten(1)
+
+      nextday_items = [
+        nextday_items.select {|item| !normalizer.ignored_in_old_site?(item[:character]) },
+        new_nextday_items.select {|item| !normalizer.ignored_in_new_site?(item[:character]) },
+      ].flatten(1)
 
       ActiveRecord::Base.transaction do
         dates = items.map {|item| item[:start_at].to_date }.uniq

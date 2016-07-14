@@ -26,6 +26,9 @@
     "ポムポムプリンフォトスポット": "PNフォト(4F)",
     "マイメロディショップきゃらぐり": "4Fマイメロディショップ前(4F)"
   },
+  "ignore_character_in_old_site": [
+    "リトルフォレストフェロォ"
+  ],
   "ignore_character_in_new_site": [
     "KIRIMIちゃん.",
     "あひるのペックル",
