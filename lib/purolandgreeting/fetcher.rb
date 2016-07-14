@@ -4,9 +4,10 @@ require 'nkf'
 
 module PurolandGreeting
   class Fetcher
-    OLD_INDEX_URL = 'http://www.puroland.co.jp/chara_gre/mobile/'
-    NEW_INDEX_URL = 'http://www.puroland.jp/schedule/greeting/'
-    NEXTDAY_URI_BASE = 'http://www.puroland.jp/schedule/greeting/?base='
+    OLD_INDEX_URI = 'http://www.puroland.co.jp/chara_gre/mobile/'
+    NEW_INDEX_URI = 'http://www.puroland.jp/schedule/greeting/'
+    OLD_NEXTDAY_URI = 'http://www.puroland.co.jp/chara_gre/chara_sentaku_nextday.asp'
+    NEW_NEXTDAY_URI = 'http://www.puroland.jp/schedule/greeting/'
     INTERVAL = 0.5
 
     def self.fetch(wait = true)
@@ -23,11 +24,11 @@ module PurolandGreeting
       agent = create_agent
 
       old_index_page = try_request {
-        agent.get(OLD_INDEX_URL)
+        agent.get(OLD_INDEX_URI)
       }
       if old_index_page.search('p').any? {|p| p.text.include? '本日のｷｬﾗｸﾀｰ情報は公開されておりません。P' }
         old_index_page = try_request {
-          agent.get("#{OLD_INDEX_URL}?para=#{Date.today.strftime('%Y%m%d')}")
+          agent.get("#{OLD_INDEX_URI}?para=#{Date.today.strftime('%Y%m%d')}")
         }
       end
       #old_index_page = agent.get('http://www.puroland.co.jp/chara_gre/?para=20130627')
@@ -60,7 +61,7 @@ module PurolandGreeting
       end
 
       new_index_page = try_request {
-        agent.get(NEW_INDEX_URL)
+        agent.get(NEW_INDEX_URI)
       }
       new_items = []
       new_index_page.search('.characterList li').each do |li|
@@ -89,7 +90,7 @@ module PurolandGreeting
 
       tchk = menu_page.uri.to_s.match(/TCHK=(\d+)/).to_a[1]
       nextday_page = try_request {
-        agent.get("#{NEXTDAY_URI}?TCHK=#{tchk}")
+        agent.get("#{OLD_NEXTDAY_URI}?TCHK=#{tchk}")
       }
       nextday = parse_date(nextday_page.search('.newsTop3').first.text)
       nextday_items = []
@@ -99,7 +100,7 @@ module PurolandGreeting
       end
 
       new_nextday_page = try_request {
-        agent.get("#{NEXTDAY_URI_BASE}?date=#{nextday.strftime('%Y%m%d')}")
+        agent.get("#{NEW_NEXTDAY_URI}?date=#{nextday.strftime('%Y%m%d')}")
       }
       new_nextday_items = []
       new_nextday_page.search('.characterList li .charaName').each do |name|
