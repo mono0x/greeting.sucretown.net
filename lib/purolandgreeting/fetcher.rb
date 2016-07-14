@@ -78,7 +78,7 @@ module PurolandGreeting
         }
         schedule_page.search('.subColorBG .itemDetailBox').each do |box|
           place = normalize_string(box.search('.itemTitle').text)
-          box.search('.itemContent dd').text.split("\n").each do |t|
+          box.search('.itemContent dd').text.split("～").each do |t|
             t.strip.match(%r{(?<hour>\d+):(?<minute>\d+)}) do |m|
               start_at = Time.local(date.year, date.month, date.day, Integer(m[:hour]), Integer(m[:minute]))
               end_at = start_at + 30 * 60
@@ -87,6 +87,7 @@ module PurolandGreeting
           end
         end
       end
+      exit
 
       tchk = menu_page.uri.to_s.match(/TCHK=(\d+)/).to_a[1]
       nextday_page = try_request {
