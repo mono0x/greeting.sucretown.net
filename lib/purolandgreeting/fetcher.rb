@@ -87,7 +87,6 @@ module PurolandGreeting
           end
         end
       end
-      exit
 
       tchk = menu_page.uri.to_s.match(/TCHK=(\d+)/).to_a[1]
       nextday_page = try_request {

@@ -26,7 +26,7 @@ module PurolandGreeting
       ].flatten(1)
 
       items.each do |item|
-        item[:end_at] = item[:start_at] + (normalizer.default_minutes_by_place(item[:place]) || 30) * 60
+        item[:end_at] ||= item[:start_at] + (normalizer.default_minutes_by_place(item[:place]) || 30) * 60
       end
 
       nextday_items = [

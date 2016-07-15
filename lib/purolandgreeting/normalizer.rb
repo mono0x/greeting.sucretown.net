@@ -43,7 +43,7 @@ module PurolandGreeting
     end
 
     def default_minutes_by_place(name)
-      name = convert(name)
+      name = place(name)
       @default_minutes_by_place_table[name]
     end
 
