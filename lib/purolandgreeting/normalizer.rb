@@ -13,7 +13,7 @@ module PurolandGreeting
         @place_table = json['place']
         @default_minutes_by_place_table = json['default_minutes_by_place']
         @ignore_old_site_table = json['ignore_character_in_old_site'].to_set
-        @ignore_new_site_table = json['ignore_character_in_new_site'].to_set
+        @include_new_site_table = json['include_character_in_new_site'].to_set
       end
     end
 
@@ -51,8 +51,8 @@ module PurolandGreeting
       @ignore_old_site_table.include? name
     end
 
-    def ignored_in_new_site?(name)
-      @ignore_new_site_table.include? name
+    def include_in_new_site?(name)
+      @include_new_site_table.include? name
     end
 
     private

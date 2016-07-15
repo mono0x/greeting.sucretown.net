@@ -22,7 +22,7 @@ module PurolandGreeting
 
       items = [
         items.select {|item| !normalizer.ignored_in_old_site?(item[:character]) },
-        new_items.select {|item| !normalizer.ignored_in_new_site?(item[:character]) },
+        new_items.select {|item| normalizer.include_in_new_site?(item[:character]) },
       ].flatten(1)
 
       items.each do |item|
@@ -31,7 +31,7 @@ module PurolandGreeting
 
       nextday_items = [
         nextday_items.select {|item| !normalizer.ignored_in_old_site?(item[:character]) },
-        new_nextday_items.select {|item| !normalizer.ignored_in_new_site?(item[:character]) },
+        new_nextday_items.select {|item| normalizer.include_in_new_site?(item[:character]) },
       ].flatten(1)
 
       ActiveRecord::Base.transaction do
