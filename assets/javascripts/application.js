@@ -162,7 +162,7 @@ $(function() {
         }));
       },
       groupedGreetingsByCharacter: function() {
-        let characters = _.reduce(_.filter(this.rawGreetings, greeting => !greeting.deleted), (result, greeting) => {
+        let characters = _.reduce(this.rawGreetings, (result, greeting) => {
           return _.reduce(greeting.characters, (result, character) => {
             result[character.id] = character;
             return result;
