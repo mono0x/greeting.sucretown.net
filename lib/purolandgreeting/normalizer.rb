@@ -11,6 +11,7 @@ module PurolandGreeting
         @character_table = json['character']
         @ignore_costume_table = json['ignore_costume'].to_set
         @place_table = json['place']
+        @default_minutes_by_place_table = json['default_minutes_by_place']
         @ignore_old_site_table = json['ignore_character_in_old_site'].to_set
         @ignore_new_site_table = json['ignore_character_in_new_site'].to_set
       end
@@ -39,6 +40,11 @@ module PurolandGreeting
     def place(name)
       name = convert(name)
       @place_table[name] || name
+    end
+
+    def default_minutes_by_place(name)
+      name = convert(name)
+      @default_minutes_by_place_table[name]
     end
 
     def ignored_in_old_site?(name)

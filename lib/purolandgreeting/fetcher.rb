@@ -81,7 +81,7 @@ module PurolandGreeting
           box.search('.itemContent dd').text.split("～").each do |t|
             t.strip.match(%r{(?<hour>\d+):(?<minute>\d+)}) do |m|
               start_at = Time.local(date.year, date.month, date.day, Integer(m[:hour]), Integer(m[:minute]))
-              end_at = start_at + 30 * 60
+              end_at = nil
               new_items << { character: character, place: place, start_at: start_at, end_at: end_at, }
             end
           end
