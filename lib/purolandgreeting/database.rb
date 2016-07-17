@@ -107,14 +107,14 @@ module PurolandGreeting
           }.to_set
 
           (before_nextday - after_nextday).select {|item| !item[:deleted] }.each do |item|
-            character_name, costume_name = normalizer.character(item[:character])
+            character_name, _ = normalizer.character(item[:character])
             character = Character.where(name: character_name).first_or_create
             schedule = TemporarySchedule.where(date: item[:date]).first_or_create
             TemporaryAppearance.where(character_id: character.id, temporary_schedule_id: schedule.id).update_all deleted: true
           end
 
           (after_nextday - before_nextday).each do |item|
-            character_name, costume_name = normalizer.character(item[:character])
+            character_name, _ = normalizer.character(item[:character])
             character = Character.where(name: character_name).first_or_create
             schedule = TemporarySchedule.where(date: item[:date]).first_or_create
             TemporaryAppearance.where(character_id: character.id, temporary_schedule_id: schedule.id, raw_character_name: item[:character], deleted: item[:deleted]).first_or_create
