@@ -12,7 +12,7 @@ http_interactions:
       Accept:
       - "*/*"
       User-Agent:
-      - iPhone (Ruby; http://greeting.sucretown.net/)
+      - iPhone (Ruby; https://greeting.sucretown.net/)
       Accept-Charset:
       - ISO-8859-1,utf-8;q=0.7,*;q=0.7
       Accept-Language:
@@ -31,15 +31,15 @@ http_interactions:
       Cache-Control:
       - private
       Content-Length:
-      - '1131'
+      - '1132'
       Content-Type:
       - text/html
       X-Powered-By:
       - ASP.NET
       Set-Cookie:
-      - ASPSESSIONIDSCTARACS=OHLBNLADHEHDJMCMIAHLILCF; path=/
+      - ASPSESSIONIDQCBRQRCC=PLCDDAEBEIPPNGIBFCCKHHDH; path=/
       Date:
-      - Sun, 01 Feb 2015 15:02:01 GMT
+      - Sun, 17 Jul 2016 15:02:45 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -65,10 +65,10 @@ http_interactions:
         bmtha3UgeyBpbWUtbW9kZTogZGlzYWJsZWQgfQ0KLS0+DQo8L1NUWUxFPg0K
         PC9IRUFEPg0KPEJPRFk+DQo8UCBhbGlnbj1jZW50ZXI+PEZPTlQgU2l6ZT0i
         LTEiPjxCPoNMg4ODiYNOg16BW4NPg4qBW4Nlg0KDk4NPj+6V8TwvQj48QlI+
-        DQo8QlI+DQoyMDE1lE4yjI4yk/oojI4pDQo8L0ZPTlQ+PC9QPg0KPFA+lnuT
-        +oLMt6zXuMCwj+6V8YLNjPaKSoKzguqCxIKoguiC3IK5gvGBQjxCUj48QlI+
-        MI6eMpWqjLuN3TwvUD48IS0tICNpbmNsdWRlIGZpbGU9aW5jX2Zvb3Rlci5h
-        c3AgLS0+
+        DQo8QlI+DQoyMDE2lE43jI4xOJP6KIyOKQ0KPC9GT05UPjwvUD4NCjxQPpZ7
+        k/qCzLes17jAsI/ulfGCzYz2ikqCs4LqgsSCqILogtyCuYLxgUI8QlI+PEJS
+        PjCOnjKVqoy7jd08L1A+PCEtLSAjaW5jbHVkZSBmaWxlPWluY19mb290ZXIu
+        YXNwIC0tPg==
     http_version: 
-  recorded_at: Sun, 01 Feb 2015 15:02:02 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Sun, 17 Jul 2016 15:02:45 GMT
+recorded_with: VCR 3.0.3

@@ -32,9 +32,24 @@ module PurolandGreeting
         }
       end
       #old_index_page = agent.get('http://www.puroland.co.jp/chara_gre/?para=20130627')
-      return {} if old_index_page.forms.empty?
+      if old_index_page.forms.empty?
+        return {
+          items: [],
+          nextday_items: [],
+          new_items: [],
+          new_nextday_items: [],
+        }
+      end
 
-      date = parse_date(normalize_string(old_index_page.search('p[align="center"] font[size="-1"]').first.text)) or return {}
+      date = parse_date(normalize_string(old_index_page.search('p[align="center"] font[size="-1"]').first.text))
+      unless date
+        return {
+          items: [],
+          nextday_items: [],
+          new_items: [],
+          new_nextday_items: [],
+        }
+      end
 
       menu_page = try_request {
         agent.submit(old_index_page.forms.first)
