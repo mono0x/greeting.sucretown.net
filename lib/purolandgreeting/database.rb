@@ -88,7 +88,7 @@ module PurolandGreeting
             schedule_id: schedule.id,
             raw_place_name: item[:place],
             deleted: item[:deleted]).first_or_create
-          appearance = Appearance.where(
+          Appearance.where(
             character_id: character.id,
             costume_id: costume && costume.id,
             greeting_id: greeting.id,

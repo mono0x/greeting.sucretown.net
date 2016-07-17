@@ -148,7 +148,6 @@ module PurolandGreeting
         { label: '1年以内',   from: today << 12, },
       ].map {|item|
         from = item[:from]
-        greetings = character.greetings.active
 
         dates = Schedule.count_dates(from)
         appearances = Character.count_appeparances(character.id, from)

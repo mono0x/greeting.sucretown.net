@@ -26,8 +26,8 @@ module PurolandGreeting
     private
 
     def by_greeting(items)
-      Hash[items.group_by {|item| item.reject {|k, v| k == :character } }.map {|greeting, items|
-        [ greeting, items.map {|item| item[:character] } ]
+      Hash[items.group_by {|item| item.reject {|k, v| k == :character } }.map {|greeting, grouped_items|
+        [ greeting, grouped_items.map {|item| item[:character] } ]
       }]
     end
   end

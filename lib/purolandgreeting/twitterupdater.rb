@@ -74,9 +74,9 @@ module PurolandGreeting
       end
       groups << group unless group.empty?
 
-      groups.each_with_index do |group, i|
+      groups.each_with_index do |g, i|
         pager = " (#{i + 1}/#{groups.size})" if groups.size >= 2
-        tweet = twitter.update([ "#{header}#{pager}:", group, footer ].flatten.compact.join(separator), in_reply_to_status: tweet)
+        tweet = twitter.update([ "#{header}#{pager}:", g, footer ].flatten.compact.join(separator), in_reply_to_status: tweet)
       end
 
       tweet
