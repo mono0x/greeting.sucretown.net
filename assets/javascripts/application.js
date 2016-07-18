@@ -133,7 +133,7 @@ $(function() {
         else {
           date = moment(window.DATA.date).add(1, 'days').toDate();
         }
-        vm.$data.epoch = +date;
+        vm.$set('epoch', +date);
       }, 1000);
     },
     computed: {
@@ -162,14 +162,15 @@ $(function() {
         }));
       },
       groupedGreetingsByCharacter: function() {
-        let characters = _.reduce(_.filter(this.rawGreetings, greeting => !greeting.deleted), (result, greeting) => {
+        let existingGreetings = _.filter(this.rawGreetings, greeting => !greeting.deleted);
+        let characters = _.reduce(existingGreetings, (result, greeting) => {
           return _.reduce(greeting.characters, (result, character) => {
             result[character.id] = character;
             return result;
           }, result);
         }, {});
 
-        let characterIdGreetingPairs = _.flatMap(this.rawGreetings, greeting => {
+        let characterIdGreetingPairs = _.flatMap(existingGreetings, greeting => {
           return _.map(greeting.characters, character => {
             return [ character.id, greeting ];
           });
