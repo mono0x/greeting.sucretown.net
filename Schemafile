@@ -54,7 +54,7 @@ create_table "temporary_appearances", force: :cascade do |t|
   t.boolean "deleted",                           default: false, null: false
 end
 
-add_index "temporary_appearances", ["temporary_schedule_id", "character_id"], name: "index_temporary_appearances_uniqueness", unique: true, using: :btree
+add_index "temporary_appearances", ["temporary_schedule_id", "character_id", "deleted"], name: "index_temporary_appearances_uniqueness", unique: true, using: :btree
 
 create_table "temporary_schedules", force: :cascade do |t|
   t.date "date", null: false
