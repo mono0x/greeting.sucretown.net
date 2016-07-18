@@ -7,6 +7,7 @@ end
 
 require 'bundler'
 Bundler.require :default, :test
+require 'dotenv'
 require 'rr'
 require 'test/unit'
 require 'test/unit/rr'
