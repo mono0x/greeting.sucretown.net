@@ -67,7 +67,9 @@ module PurolandGreeting
             end_at: item[:end_at],
             place_id: place.id,
             schedule_id: schedule.id,
-            deleted: true).first_or_create(raw_place_name: item[:place])
+            deleted: true).first_or_initialize
+          deleted_greeting.raw_place_name = item[:place]
+          deleted_greeting.save!
 
           appearance.update_attribute :greeting_id, deleted_greeting.id
           greeting.destroy if greeting.characters.empty?
@@ -85,14 +87,19 @@ module PurolandGreeting
             end_at: item[:end_at],
             place_id: place.id,
             schedule_id: schedule.id,
-            deleted: item[:deleted]).first_or_create(raw_place_name: item[:place])
-          Appearance.where(
+            deleted: item[:deleted]).first_or_initialize
+          greeting.raw_place_name = item[:place]
+          greeting.save!
+
+          appearance = Appearance.where(
             character_id: character.id,
             costume_id: costume && costume.id,
             greeting_id: greeting.id
-          ).first_or_create(raw_character_name: item[:character]) {
+          ).first_or_initialize {
             added_items << item
           }
+          appearance.raw_character_name = item[:character]
+          appearance.save!
         end
 
         unless nextday_items.empty?
@@ -115,7 +122,9 @@ module PurolandGreeting
             character_name, _ = normalizer.character(item[:character])
             character = Character.where(name: character_name).first_or_create
             schedule = TemporarySchedule.where(date: item[:date]).first_or_create
-            TemporaryAppearance.where(character_id: character.id, temporary_schedule_id: schedule.id, deleted: item[:deleted]).first_or_create(raw_character_name: item[:character])
+            appearance = TemporaryAppearance.where(character_id: character.id, temporary_schedule_id: schedule.id, deleted: item[:deleted]).first_or_initialize
+            appearance.raw_character_name = item[:character]
+            appearance.save!
           end
 
           nextday_items.map {|item| item[:date] }.uniq.each do |date|
