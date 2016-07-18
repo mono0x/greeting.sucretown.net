@@ -18,13 +18,13 @@ class RidgepoleRakeTask < Rake::TaskLib
   def define
     task @export_name do
       database_config do |file|
-        system "#@ridgepole_command -c #{file} --o #@schemafile_path --export"
+        system @ridgepole_command, '-c', file, '--o', @schemafile_path, '--export'
       end
     end
 
     task @apply_name do
       database_config do |file|
-        system "#@ridgepole_command -c #{file} --o #@schemafile_path --apply"
+        system @ridgepole_command, '-c', file, '--o', @schemafile_path, '--apply'
       end
     end
   end
