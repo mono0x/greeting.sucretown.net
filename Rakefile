@@ -10,7 +10,6 @@ require 'rake/testtask'
 $:.push File.expand_path('lib', __dir__)
 
 Rake::TestTask.new do |t|
-  Dotenv.overload '.env.test'
   t.libs << 'test'
   t.test_files = Dir['test/**/test_*.rb'].sort
   t.verbose = true

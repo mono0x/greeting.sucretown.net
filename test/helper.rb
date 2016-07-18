@@ -11,6 +11,8 @@ require 'rr'
 require 'test/unit'
 require 'test/unit/rr'
 
+Dotenv.overload '.env.test'
+
 $:.push File.expand_path('../lib', __dir__)
 
 require 'purolandgreeting'
