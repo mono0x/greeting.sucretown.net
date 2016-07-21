@@ -2,11 +2,8 @@ import Vue  from 'vue';
 import moment from 'moment';
 import $ from 'jquery';
 
-import each from 'lodash/each';
-import filter from 'lodash/filter';
 import flatMap from 'lodash/flatMap';
 import map from 'lodash/map';
-import reduce from 'lodash/reduce';
 
 import 'jquery.scrollto';
 import 'bootstrap-loader/extractStyles';
@@ -88,7 +85,7 @@ $(function() {
 
   let groupGreetings = function(greetings) {
     let table = {};
-    each(greetings, greeting => {
+    greetings.forEach(greeting => {
       if (!(greeting.end_at in table)) {
         table[greeting.end_at] = {};
       }
@@ -143,45 +140,45 @@ $(function() {
     },
     computed: {
       groupedGreetingsDeleted: function() {
-        return groupGreetings(filter(this.rawGreetings, greeting => greeting.deleted));
+        return groupGreetings(this.rawGreetings.filter(greeting => greeting.deleted));
       },
       groupedGreetingsBeforeTheStart: function() {
         let epoch = this.epoch;
 
-        return groupGreetings(filter(this.rawGreetings, greeting => {
+        return groupGreetings(this.rawGreetings.filter(greeting => {
           return !greeting.deleted && epoch < (+new Date(greeting.start_at));
         }));
       },
       groupedGreetingsInSession: function() {
         let epoch = this.epoch;
 
-        return groupGreetings(filter(this.rawGreetings, greeting => {
+        return groupGreetings(this.rawGreetings.filter(greeting => {
           return !greeting.deleted && epoch >= (+new Date(greeting.start_at)) && epoch < (+new Date(greeting.end_at));
         }));
       },
       groupedGreetingsAfterTheEnd: function() {
         let epoch = this.epoch;
 
-        return groupGreetings(filter(this.rawGreetings, greeting => {
+        return groupGreetings(this.rawGreetings.filter(greeting => {
           return !greeting.deleted && epoch >= (+new Date(greeting.end_at));
         }));
       },
       groupedGreetingsByCharacter: function() {
-        let existingGreetings = filter(this.rawGreetings, greeting => !greeting.deleted);
-        let characters = reduce(existingGreetings, (result, greeting) => {
-          return reduce(greeting.characters, (result, character) => {
+        let existingGreetings = this.rawGreetings.filter(greeting => !greeting.deleted);
+        let characters = existingGreetings.reduce((result, greeting) => {
+          return greeting.characters.reduce((result, character) => {
             result[character.id] = character;
             return result;
           }, result);
         }, {});
 
         let characterIdGreetingPairs = flatMap(existingGreetings, greeting => {
-          return map(greeting.characters, character => {
+          return greeting.characters.map(character => {
             return [ character.id, greeting ];
           });
         });
 
-        let grouped = reduce(characterIdGreetingPairs, (result, pair) => {
+        let grouped = characterIdGreetingPairs.reduce((result, pair) => {
           (result[pair[0]] || (result[pair[0]] = [])).push(pair[1]);
           return result;
         }, {});
