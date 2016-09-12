@@ -2,6 +2,7 @@
   "name": "puroland-greeting",
   "version": "1.0.0",
   "description": "Puroland Greeting",
+  "private": true,
   "main": "assets/javascripts/application.js",
   "dependencies": {
     "babel-core": "^6.9.0",
