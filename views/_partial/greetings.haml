@@ -1,19 +1,19 @@
 %template{:'v-if' => "#{data}.length > 0"}
   %h2= title
   .greetings
-    .row.greeting-group{:'v-for' => "group in #{data} | orderBy 'start_at' | orderBy 'end_at'"}
-      %template{:'v-for' => 'greeting in group.greetings | orderBy "place.name"', :'track-by' => 'id'}
-        %section.col-sm-6.col-md-4{name: 'timetable/{{ greeting.start_at | to_time }}-{{ greeting.end_at | to_time }}-{{ greeting.place.name }}/'}
+    .row.greeting-group{:'v-for' => "group in #{data}"}
+      %template{:'v-for' => '(greeting, index) in group.greetings', :'track-by' => 'id'}
+        %section.col-sm-6.col-md-4{:'v-bind:name' => "'timetable/' + greeting.start_at + '-' + greeting.end_at + '-' + greeting.place.name + '/'"}
           .panel{class: panel}
             .panel-heading
               %h3.panel-title
                 {{ greeting.place.name }}
               %small
-                %time {{ greeting.start_at | to_time }}
+                %time {{ greeting.start_at | formatTime }}
                 \-
-                %time {{ greeting.end_at | to_time }}
+                %time {{ greeting.end_at | formatTime }}
             .list-group
-              %a.list-group-item{:'v-for' => 'character in greeting.characters | orderBy "name"', :href => '#character/{{ character.name }}/'}
+              %a.list-group-item{:'v-for' => 'character in greeting.characters', :'v-bind:href' => "'#character/' + character.name + '/'"}
                 {{ character.name }}
-        .clearfix.visible-md-block.visible-lg-block{:'v-if' => '$index % 3 == 2'}
-        .clearfix.visible-sm-block{:'v-if' => '$index % 2 == 1'}
+        .clearfix.visible-md-block.visible-lg-block{:'v-if' => 'index % 3 == 2'}
+        .clearfix.visible-sm-block{:'v-if' => 'index % 2 == 1'}

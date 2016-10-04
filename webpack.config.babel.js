@@ -51,5 +51,10 @@ export default {
       new webpack.optimize.OccurenceOrderPlugin(),
       new webpack.optimize.DedupePlugin()
     ] : [])
-  ]
+  ],
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.js' // TODO: use runtime-only build
+    }
+  }
 };

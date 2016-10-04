@@ -4,6 +4,7 @@ import $ from 'jquery';
 
 import flatMap from 'lodash/flatMap';
 import map from 'lodash/map';
+import orderBy from 'lodash/orderBy';
 
 import 'jquery.scrollto';
 import 'bootstrap-loader/extractStyles';
@@ -18,19 +19,19 @@ $(function() {
   let tabs = [
     {
       hash: 'timetable',
-      tabElement: $('#timetable-tab'),
-      contentElement: $('#timetable')
+      tabElement: '#timetable-tab',
+      contentElement: '#timetable'
     },
     {
       hash: 'character',
-      tabElement: $('#character-tab'),
-      contentElement: $('#character')
+      tabElement: '#character-tab',
+      contentElement: '#character'
     }
   ];
   let twitterTab = {
     hash: 'twitter',
-    tabElement: $('#twitter-tab'),
-    contentElement: $('#twitter')
+    tabElement: '#twitter-tab',
+    contentElement: '#twitter'
   };
   if (twitterTab.tabElement.length !== 0) {
     tabs.push(twitterTab);
@@ -50,11 +51,11 @@ $(function() {
     }
 
     tabs.filter(t => t.hash != tab.hash).forEach(t => {
-      t.tabElement.removeClass('active');
-      t.contentElement.hide();
+      $(t.tabElement).removeClass('active');
+      $(t.contentElement).hide();
     });
-    tab.tabElement.addClass('active');
-    tab.contentElement.show();
+    $(tab.tabElement).addClass('active');
+    $(tab.contentElement).show();
   };
 
   let hashchange = function() {
@@ -79,10 +80,6 @@ $(function() {
     return false;
   });
 
-  Vue.filter('to_time', function(value) {
-    return moment(value).format('HH:mm');
-  });
-
   let groupGreetings = function(greetings) {
     let table = {};
     greetings.forEach(greeting => {
@@ -95,15 +92,28 @@ $(function() {
       table[greeting.end_at][greeting.start_at].push(greeting);
     });
 
-    return flatMap(table, (t, end_at) => {
-      return flatMap(t, (g, start_at) => {
-        return {
-          start_at: start_at,
-          end_at: end_at,
-          greetings: g
-        };
-      });
-    });
+    return orderBy(
+      flatMap(table, (t, end_at) => {
+        return flatMap(t, (g, start_at) => {
+          return {
+            start_at: start_at,
+            end_at: end_at,
+            greetings: orderBy(g, [
+              (greeting) => {
+                const m = /\((\d)F\)/.exec(greeting.place.name);
+                if (m) {
+                  return parseInt(m[1], 10);
+                } else {
+                  return Infinity;
+                }
+              },
+              'place.name'
+            ])
+          };
+        });
+      }),
+      [ 'end_at', 'start_at' ]
+    );
   };
 
   let vm = new Vue({
@@ -112,14 +122,14 @@ $(function() {
       rawGreetings: window.DATA.greetings,
       epoch: +new Date()
     },
-    created: function() {
+    mounted: function() {
       setInterval(() => {
         if (moment().format('YYYY-MM-DD') == window.DATA.date) {
           $.ajax({
             url: '/api/schedule/' + moment(window.DATA.date).format('YYYY/MM/DD') + '/',
             dataType: 'json'
           }).done(data => {
-            vm.$set('rawGreetings', data);
+            Vue.set(vm, 'rawGreetings', data);
           });
         }
       }, 5 * 60 * 1000);
@@ -135,8 +145,13 @@ $(function() {
         else {
           date = moment(window.DATA.date).add(1, 'days').toDate();
         }
-        vm.$set('epoch', +date);
+        Vue.set(vm, 'epoch', +date);
       }, 1000);
+    },
+    filters: {
+      formatTime: function(value) {
+        return moment(value).format('HH:mm');
+      }
     },
     computed: {
       groupedGreetingsDeleted: function() {
@@ -183,9 +198,12 @@ $(function() {
           return result;
         }, {});
 
-        return map(grouped, (greetings, id) => {
-          return { character: characters[id], greetings: greetings };
-        });
+        return orderBy(
+          map(grouped, (greetings, id) => {
+            return { character: characters[id], greetings: orderBy(greetings, 'end_at') };
+          }),
+          'character.name'
+        );
       }
     }
   });
