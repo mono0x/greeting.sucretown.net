@@ -37,6 +37,7 @@ export default {
   },
   plugins: [
     new ExtractTextPlugin("[name].css"),
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ja/),
     ...(isProduction ? [
       new webpack.DefinePlugin({
         'process.env': {
