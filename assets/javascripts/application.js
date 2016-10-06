@@ -28,14 +28,6 @@ $(function() {
       contentElement: '#character'
     }
   ];
-  let twitterTab = {
-    hash: 'twitter',
-    tabElement: '#twitter-tab',
-    contentElement: '#twitter'
-  };
-  if (twitterTab.tabElement.length !== 0) {
-    tabs.push(twitterTab);
-  }
 
   let updateTab = function(hash) {
     let tab = (function() {
@@ -206,33 +198,5 @@ $(function() {
         );
       }
     }
-  });
-});
-
-$(function() {
-  $('#report-form').submit(function() {
-    let place = $('select[name="place_id"] option:selected', this).text();
-    let character = $('select[name="character_id"] option:selected', this).text();
-    let status = place + ' で ' + character + ' に会ったよ！';
-    let width = 575;
-    let height = 400;
-    let left = ($(window).width() - width) / 2;
-    let top = ($(window).height() - height) / 2;
-    window.open(
-      'https://twitter.com/share?via=puro_greeting&' + [
-        'text=' + encodeURIComponent(status),
-        'url=',
-        'hashtags=' + encodeURIComponent('ピューログリ')
-      ].join('&'),
-      'twitter',
-      [
-        'status=1',
-        'width=' + width,
-        'height=' + height,
-        'left=' + left,
-        'top=' + top
-      ].join(',')
-    );
-    return false;
   });
 });
