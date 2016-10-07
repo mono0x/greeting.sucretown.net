@@ -1,9 +1,9 @@
-/coverage
 /.bundle/
 /.env
 /.env.test
 /.sass-cache
 /shared/
 /node_modules/
+/npm-debug.log
 /public/assets/
 /vendor/
