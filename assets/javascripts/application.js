@@ -81,7 +81,14 @@ $(function() {
       if (!(greeting.start_at in table[greeting.end_at])) {
         table[greeting.end_at][greeting.start_at] = [];
       }
-      table[greeting.end_at][greeting.start_at].push(greeting);
+      table[greeting.end_at][greeting.start_at].push({
+        id: greeting.id,
+        start_at: greeting.start_at,
+        end_at: greeting.end_at,
+        deleted: greeting.deleted,
+        place: greeting.place,
+        characters: orderBy(greeting.characters, 'name')
+      });
     });
 
     return orderBy(
