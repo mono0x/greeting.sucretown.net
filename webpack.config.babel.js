@@ -5,13 +5,13 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 export default {
   entry: {
-    application: './assets/javascripts/application.js'
+    application: './assets/javascripts/application.js',
   },
   output: {
     path: 'public/assets/',
     publicPath: '/assets/',
     filename: '[name].js',
-    chunkFilename: '[id].js'
+    chunkFilename: '[id].js',
   },
   module: {
     loaders: [
@@ -20,20 +20,20 @@ export default {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel',
       },
       {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         // Limiting the size of the woff fonts breaks font-awesome ONLY for the extract text plugin
         // loader: "url?limit=10000"
-        loader: 'url'
+        loader: 'url',
       },
       {
         test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
-        loader: 'file'
+        loader: 'file',
       },
-      { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' }
-    ]
+      { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
+    ],
   },
   plugins: [
     new ExtractTextPlugin("[name].css"),
@@ -46,16 +46,16 @@ export default {
       }),
       new webpack.optimize.UglifyJsPlugin({
         compress: {
-          warnings: false
-        }
+          warnings: false,
+        },
       }),
       new webpack.optimize.OccurenceOrderPlugin(),
-      new webpack.optimize.DedupePlugin()
-    ] : [])
+      new webpack.optimize.DedupePlugin(),
+    ] : []),
   ],
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.js' // TODO: use runtime-only build
-    }
-  }
+      vue: 'vue/dist/vue.js', // TODO: use runtime-only build
+    },
+  },
 };
