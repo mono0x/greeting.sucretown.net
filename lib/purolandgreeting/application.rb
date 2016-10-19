@@ -45,6 +45,13 @@ module PurolandGreeting
           "#{sign}#{int.reverse.gsub(/(\d{3})(?=\d)/, '\1,').reverse}#{real}"
         }
       end
+
+      def public_file_path(name)
+        real_path = File.join(settings.public_folder, name)
+        @public_file_cache ||= {}
+        mtime = (@public_file_cache[name] ||= (File::Stat.new(real_path).mtime.to_i || 0))
+        mtime != 0 ? "#{name}?_=#{mtime}" : name
+      end
     end
 
     get '/' do
