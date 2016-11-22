@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '2.3.3'
 
 gem 'activerecord'
 gem 'activesupport', require: 'active_support/all'
@@ -24,7 +24,7 @@ gem 'slack-notifier'
 gem 'twitter'
 gem 'unicorn'
 gem 'unicorn-worker-killer', require: false
-gem 'varnish-client', github: 'mono0x/varnish-client'
+gem 'varnish-client', git: 'https://github.com/mono0x/varnish-client'
 
 group :development do
   gem 'guard'

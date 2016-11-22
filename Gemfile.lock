@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/mono0x/varnish-client.git
+  remote: https://github.com/mono0x/varnish-client
   revision: 1f64794b1302699a929dc9e9c81984f6a3754174
   specs:
     varnish-client (0.0.1)
@@ -242,7 +242,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.3.3p222
 
 BUNDLED WITH
-   1.12.3
+   1.13.6
