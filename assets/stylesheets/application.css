@@ -2,7 +2,7 @@
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: -apple-system, '.SFNSDisplay-Regular', Lato, 'Helvetica Neue', Helvetica, Meiryo, Arial, sans-serif;
-  font-feature-setting: "pkna";
+  font-feature-settings: "pkna";
 }
 
 h1 {
