@@ -11,9 +11,12 @@ cache:
   - vendor/bundle
 env:
 - RACK_ENV=test DATABASE_URL=postgresql://postgres@localhost:5432/travis_ci_test ROOT_URI=http://greeting.sucretown.net
-install:
+before_install:
 - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install 6.2.0
-- npm install
+- curl -o- -L https://yarnpkg.com/install.sh | bash
+- export PATH=$HOME/.yarn/bin:$PATH
+install:
+- yarn install
 - bundle install --jobs=3 --retry=3 --path=vendor/bundle
 before_script:
 - psql -U postgres -c 'CREATE DATABASE travis_ci_test'
