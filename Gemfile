@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.3.3'
+ruby '2.4.0'
 
-gem 'activerecord'
-gem 'activesupport', require: 'active_support/all'
+gem 'activerecord', '~> 5.0.0'
+gem 'activesupport', '~> 5.0.0', require: 'active_support/all'
 gem 'dotenv', require: false
 gem 'dropbox-sdk', require: 'dropbox_sdk'
 gem 'escape_utils'
