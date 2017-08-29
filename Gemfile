@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.4.0'
+ruby '2.4.1'
 
 git 'https://github.com/rails/rails', branch: '5-0-stable' do
   gem 'activerecord'
