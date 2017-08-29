@@ -143,7 +143,7 @@ module PurolandGreeting
       }
     end
 
-    get %r{/character/([^/]+)/} do |name|
+    get '/character/:name/' do |name|
       today = Date.today
       character = Character.where('name = ?', name).first or not_found
 
