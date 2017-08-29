@@ -90,7 +90,7 @@ module PurolandGreeting
       }
     end
 
-    get %r{\A/api/schedule/(\d{4})/(\d{2})/(\d{2})/\z} do |year, month, day|
+    get %r{/api/schedule/(\d{4})/(\d{2})/(\d{2})/} do |year, month, day|
       date = Date.new(year.to_i, month.to_i, day.to_i)
       schedule = Schedule.where('date = ?', date).first or not_found
       greetings = schedule.greetings.all.eager_load(:place, :characters)
@@ -101,7 +101,7 @@ module PurolandGreeting
       })
     end
 
-    get %r{\A/schedule/(\d{4})/(\d{2})/(\d{2})/\z} do |year, month, day|
+    get %r{/schedule/(\d{4})/(\d{2})/(\d{2})/} do |year, month, day|
       date = Date.new(year.to_i, month.to_i, day.to_i)
       schedule = Schedule.where('date = ?', date).first or not_found
       characters = schedule.characters.uniq
@@ -120,7 +120,7 @@ module PurolandGreeting
       }
     end
 
-    get %r{\A/schedule/(\d{4})/(\d{2})/(\d{2})/character\z} do |year, month, day|
+    get %r{/schedule/(\d{4})/(\d{2})/(\d{2})/character} do |year, month, day|
       date = Date.new(year.to_i, month.to_i, day.to_i)
       temporary_schedule = TemporarySchedule.find_by_date(date) or not_found
       today_schedule = Schedule.find_by_date(date)
@@ -143,7 +143,7 @@ module PurolandGreeting
       }
     end
 
-    get %r{\A/character/([^/]+)/\z} do |name|
+    get %r{/character/([^/]+)/} do |name|
       today = Date.today
       character = Character.where('name = ?', name).first or not_found
 
