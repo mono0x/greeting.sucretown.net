@@ -13,6 +13,7 @@ gem 'hamlit'
 gem 'hashie'
 gem 'ltsv'
 gem 'mechanize'
+gem 'octokit', '~> 4.0'
 gem 'pg'
 gem 'pry', require: false
 gem 'rack'
