@@ -221,6 +221,7 @@ module PurolandGreeting
           before_character = Character.find_by_name(before) or next
           after_character = Character.where(name: after).first_or_create
           Appearance.where('character_id = ?', before_character.id).update_all character_id: after_character.id
+          TemporaryAppearance.where('character_id = ?', before_character.id).update_all character_id: after_character.id
           before_character.destroy
         end
         normalizer.place_table.each do |before, after|
