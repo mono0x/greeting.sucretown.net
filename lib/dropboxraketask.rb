@@ -14,8 +14,8 @@ class DropboxRakeTask < Rake::TaskLib
 
   def define
     task @authorize_name do
-      flow = DropboxOAuth2FlowNoRedirect.new(@consumer_key, @consumer_secret)
-      authorize_url = flow.start()
+      authenticator = DropboxApi::Authenticator.new(ENV['DROPBOX_CONSUMER_KEY'], ENV['DROPBOX_CONSUMER_SECRET'])
+      authorize_url = authenticator.authorize_url
 
       # Have the user sign in and authorize this app
       STDERR.puts '1. Go to: ' + authorize_url
@@ -25,7 +25,7 @@ class DropboxRakeTask < Rake::TaskLib
       code = STDIN.gets.strip
 
       # This will fail if the user gave us an invalid authorization code
-      access_token, user_id = flow.finish(code)
+      access_token = authenticator.get_token(code)
       puts access_token
     end
   end

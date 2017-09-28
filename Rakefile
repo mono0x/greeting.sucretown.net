@@ -103,14 +103,14 @@ namespace :backup do
 
       ]
 
-      dropbox = DropboxClient.new(ENV['DROPBOX_ACCESS_TOKEN'])
+      dropbox = DropboxApi::Client.new(ENV['DROPBOX_ACCESS_TOKEN'])
       tasks.each do |task|
         errors = []
         begin
           open(task[:src]) do |f|
-            dropbox.put_file task[:dest], f, true
+            dropbox.upload task[:dest], f.read
           end
-        rescue DropboxError => e
+        rescue => e
           if errors.size >= 5
             errors.each do |error|
               STDERR.puts error.class, error.message, error.backtrace

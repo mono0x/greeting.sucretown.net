@@ -6,7 +6,7 @@ git 'https://github.com/rails/rails', branch: '5-0-stable' do
   gem 'activesupport', require: 'active_support/all'
 end
 gem 'dotenv', require: false
-gem 'dropbox-sdk', require: 'dropbox_sdk'
+gem 'dropbox_api'
 gem 'escape_utils'
 gem 'foreman', require: false
 gem 'hamlit'
