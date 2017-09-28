@@ -14,7 +14,7 @@ class DropboxRakeTask < Rake::TaskLib
 
   def define
     task @authorize_name do
-      authenticator = DropboxApi::Authenticator.new(ENV['DROPBOX_CONSUMER_KEY'], ENV['DROPBOX_CONSUMER_SECRET'])
+      authenticator = DropboxApi::Authenticator.new(@consumer_key, @consumer_secret)
       authorize_url = authenticator.authorize_url
 
       # Have the user sign in and authorize this app
