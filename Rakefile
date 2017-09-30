@@ -108,7 +108,7 @@ namespace :backup do
         errors = []
         begin
           open(task[:src]) do |f|
-            dropbox.upload task[:dest], f.read
+            dropbox.upload task[:dest], f.read, mode: :overwrite
           end
         rescue => e
           if errors.size >= 5
