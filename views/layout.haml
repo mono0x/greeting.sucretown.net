@@ -2,6 +2,7 @@
 %html
   %head
     %meta{charset: 'UTF-8'}
+    %link{rel: 'dns-prefetch', href: '//www.google-analytics.com/'}
     %title= [ @title, 'Puroland Greeting: サンリオピューロランドのキャラクターグリーティング情報' ].flatten.compact.join(' - ')
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     - if @description

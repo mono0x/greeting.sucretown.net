@@ -1,4 +1,5 @@
 - if today_schedule
+  %link{rel: 'prerender', href: today_schedule.date.strftime('/schedule/%Y/%m/%d/')}
   %p
     %a.btn.btn-block.btn-primary.btn-lg{href: today_schedule.date.strftime('/schedule/%Y/%m/%d/')}
       #{today_schedule.date.strftime('%Y/%m/%d')} の予定
@@ -7,6 +8,8 @@
     #{today.strftime('%Y/%m/%d')} の予定は公開されていません。
 
 - if temporary_schedule
+  - unless today_schedule
+    %link{rel: 'prerender', href: temporary_schedule.date.strftime('/schedule/%Y/%m/%d/character')}
   %p
     %a.btn.btn-block.btn-default.btn-lg{href: temporary_schedule.date.strftime('/schedule/%Y/%m/%d/character')}
       %small
