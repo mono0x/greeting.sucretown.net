@@ -6,14 +6,14 @@
   "main": "assets/javascripts/application.js",
   "dependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^6.2.4",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
-    "bootstrap-loader": "^1.0.10",
+    "bootstrap-loader": "^2.2.0",
     "bootstrap-sass": "^3.3.6",
     "bootswatch": "^3.3.6",
-    "css-loader": "^0.23.1",
+    "css-loader": "^0.28.11",
     "eslint": "^2.11.1",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^0.8.5",
     "imports-loader": "^0.6.5",
     "jquery": "^3.3.1",
@@ -22,11 +22,11 @@
     "moment": "^2.22.1",
     "node-sass": "^4.9.0",
     "resolve-url-loader": "^1.4.3",
-    "sass-loader": "^4.1.0",
-    "style-loader": "^0.13.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
     "url-loader": "^0.5.7",
     "vue": "^2.5.16",
-    "webpack": "^1.12.14"
+    "webpack": "^3.11.0"
   },
   "devDependencies": {},
   "scripts": {

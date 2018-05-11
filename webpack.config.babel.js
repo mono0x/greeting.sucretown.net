@@ -1,3 +1,4 @@
+import path from 'path';
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
@@ -8,31 +9,61 @@ export default {
     application: './assets/javascripts/application.js',
   },
   output: {
-    path: 'public/assets/',
+    path: path.join(__dirname, 'public/assets/'),
     publicPath: '/assets/',
     filename: '[name].js',
     chunkFilename: '[id].js',
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
-      { test: /\.scss$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader') },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: {
+            loader: 'css-loader',
+            options: {
+              minimize: true,
+            },
+          },
+        })
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                minimize: true,
+              },
+            },
+            {
+              loader: 'sass-loader',
+            },
+          ],
+        })
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel-loader',
       },
       {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         // Limiting the size of the woff fonts breaks font-awesome ONLY for the extract text plugin
         // loader: "url?limit=10000"
-        loader: 'url',
+        loader: 'url-loader',
       },
       {
         test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
-        loader: 'file',
+        loader: 'file-loader',
       },
-      { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
+      {
+        test: /bootstrap-sass\/assets\/javascripts\//,
+        loader: 'imports-loader?jQuery=jquery',
+      },
     ],
   },
   plugins: [
@@ -49,8 +80,7 @@ export default {
           warnings: false,
         },
       }),
-      new webpack.optimize.OccurenceOrderPlugin(),
-      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.OccurrenceOrderPlugin()
     ] : []),
   ],
   resolve: {
