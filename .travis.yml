@@ -12,6 +12,7 @@ cache:
 env:
 - RACK_ENV=test DATABASE_URL=postgresql://postgres@localhost:5432/travis_ci_test ROOT_URI=http://greeting.sucretown.net
 before_install:
+- bash -c "yes | gem uninstall -i /home/travis/.rvm/gems/ruby-2.5.1@global rake" # https://github.com/travis-ci/travis-ci/issues/8978#issuecomment-354035321
 - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install 10.1.0
 install:
 - npm install
