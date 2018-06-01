@@ -85,7 +85,7 @@ export default {
   ],
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.js', // TODO: use runtime-only build
+      vue: 'vue/dist/vue.min.js', // TODO: use runtime-only build
     },
   },
 };
