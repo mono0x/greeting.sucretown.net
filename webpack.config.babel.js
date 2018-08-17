@@ -69,18 +69,16 @@ export default {
   plugins: [
     new ExtractTextPlugin("[name].css"),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ja/),
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'development',
+    }),
     ...(isProduction ? [
-      new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-        },
-      }),
       new webpack.optimize.UglifyJsPlugin({
         compress: {
           warnings: false,
         },
       }),
-      new webpack.optimize.OccurrenceOrderPlugin()
+      new webpack.optimize.OccurrenceOrderPlugin(),
     ] : []),
   ],
   resolve: {
