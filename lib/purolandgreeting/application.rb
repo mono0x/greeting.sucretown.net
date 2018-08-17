@@ -51,7 +51,7 @@ module PurolandGreeting
         real_path = File.join(settings.public_folder, name)
         @public_file_cache ||= {}
         mtime = (@public_file_cache[name] ||= (File::Stat.new(real_path).mtime.to_i || 0))
-        params = params.merge(mtime: mtime) if mtime != 0
+        params = params.merge(_: mtime) if mtime != 0
         if params.empty?
           name
         else
