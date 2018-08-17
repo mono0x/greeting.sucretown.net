@@ -11,6 +11,7 @@
       %meta{name: 'twitter:title', content: @title || 'Puroland Greeting'}
       %meta{name: 'twitter:description', content: @description}
     %link{rel: 'stylesheet', type: 'text/css', href: public_file_path('/assets/application.css')}
+    %link{rel: 'stylesheet', type: 'text/css', media: 'print', href: public_file_path('/assets/application.css', print: true)}
     %link{rel: 'shortcut icon', type: 'image/png', href: public_file_path('/favicon.png')}
     - if @canonical
       %link{rel: 'canonical', href: @canonical}

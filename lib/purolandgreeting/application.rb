@@ -1,4 +1,5 @@
 require 'set'
+require 'uri'
 
 module PurolandGreeting
   class Application < Sinatra::Base
@@ -46,11 +47,16 @@ module PurolandGreeting
         }
       end
 
-      def public_file_path(name)
+      def public_file_path(name, params = {})
         real_path = File.join(settings.public_folder, name)
         @public_file_cache ||= {}
         mtime = (@public_file_cache[name] ||= (File::Stat.new(real_path).mtime.to_i || 0))
-        mtime != 0 ? "#{name}?_=#{mtime}" : name
+        params = params.merge(mtime: mtime) if mtime != 0
+        if params.empty?
+          name
+        else
+          "#{name}?#{URI.encode_www_form params}"
+        end
       end
     end
 
