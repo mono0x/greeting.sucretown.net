@@ -1,10 +1,4 @@
 GIT
-  remote: https://github.com/mono0x/varnish-client
-  revision: 1f64794b1302699a929dc9e9c81984f6a3754174
-  specs:
-    varnish-client (0.0.1)
-
-GIT
   remote: https://github.com/rails/rails
   revision: 5a0fce7d4ecd152e883877bc5a6a11af54207fde
   branch: 5-0-stable
@@ -259,7 +253,6 @@ DEPENDENCIES
   twitter
   unicorn
   unicorn-worker-killer
-  varnish-client!
   vcr
   webmock
 

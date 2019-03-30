@@ -27,7 +27,6 @@ gem 'slack-notifier'
 gem 'twitter'
 gem 'unicorn'
 gem 'unicorn-worker-killer', require: false
-gem 'varnish-client', git: 'https://github.com/mono0x/varnish-client'
 
 group :development do
   gem 'guard'
