@@ -1,6 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -15,63 +15,70 @@ export default {
     chunkFilename: '[id].js',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: {
-            loader: 'css-loader',
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: !isProduction,
+            },
           },
-        })
+          'css-loader',
+        ],
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: !isProduction,
             },
-            {
-              loader: 'sass-loader',
-            },
-          ],
-        })
+          },
+          'css-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: [
+          'babel-loader',
+        ],
       },
       {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         // Limiting the size of the woff fonts breaks font-awesome ONLY for the extract text plugin
         // loader: "url?limit=10000"
-        loader: 'url-loader',
+        use: [
+          'url-loader',
+        ],
       },
       {
         test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
-        loader: 'file-loader',
+        use: [
+          'file-loader',
+        ],
       },
       {
         test: /bootstrap-sass\/assets\/javascripts\//,
-        loader: 'imports-loader?jQuery=jquery',
+        use: [
+          'imports-loader?jQuery=jquery',
+        ],
       },
     ],
   },
   plugins: [
-    new ExtractTextPlugin("[name].css"),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ja/),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development',
     }),
     ...(isProduction ? [
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false,
-        },
-      }),
       new webpack.optimize.OccurrenceOrderPlugin(),
     ] : []),
   ],

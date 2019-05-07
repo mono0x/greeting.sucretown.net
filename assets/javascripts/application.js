@@ -7,7 +7,7 @@ import map from 'lodash/map';
 import orderBy from 'lodash/orderBy';
 
 import 'jquery.scrollto';
-import 'bootstrap-loader/extractStyles';
+import 'bootstrap-loader';
 
 import '../stylesheets/application.css';
 
