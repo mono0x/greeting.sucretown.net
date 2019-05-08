@@ -23,7 +23,6 @@ gem 'rake', require: false
 gem 'ridgepole'
 gem 'server-starter'
 gem 'sinatra', require: 'sinatra/base'
-gem 'slack-notifier'
 gem 'twitter'
 gem 'unicorn'
 gem 'unicorn-worker-killer', require: false

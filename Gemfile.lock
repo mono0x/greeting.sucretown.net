@@ -146,7 +146,6 @@ GEM
       rack-protection (= 2.0.5)
       sinatra (= 2.0.5)
       tilt (>= 1.3, < 3)
-    slack-notifier (2.3.2)
     temple (0.8.1)
     test-unit (3.3.0)
       power_assert
@@ -216,7 +215,6 @@ DEPENDENCIES
   simplecov
   sinatra
   sinatra-contrib
-  slack-notifier
   test-unit (~> 3.0)
   test-unit-rr
   timecop
