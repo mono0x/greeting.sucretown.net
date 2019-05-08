@@ -76,9 +76,6 @@ export default (env, argv) => {
         filename: '[name].css',
       }),
       new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ja/),
-      new webpack.EnvironmentPlugin({
-        NODE_ENV: 'development',
-      }),
       ...(isProduction ? [
         new OptimizeCssAssetsPlugin({
           assetNameRegExp: /\.css$/g,
