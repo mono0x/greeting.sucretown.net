@@ -38,7 +38,6 @@ GEM
       faraday (>= 0.8, <= 0.15.4)
       oauth2 (~> 1.1)
     equalizer (0.0.11)
-    escape_utils (1.2.1)
     factory_girl (4.9.0)
       activesupport (>= 3.0.0)
     faraday (0.15.4)
@@ -194,7 +193,6 @@ DEPENDENCIES
   database_cleaner
   dotenv
   dropbox_api
-  escape_utils
   factory_girl (~> 4.0)
   foreman
   hamlit

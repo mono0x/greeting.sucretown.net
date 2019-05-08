@@ -7,7 +7,6 @@ git 'https://github.com/rails/rails', branch: '5-0-stable' do
 end
 gem 'dotenv', require: false
 gem 'dropbox_api'
-gem 'escape_utils'
 gem 'foreman', require: false
 gem 'hamlit'
 gem 'hashie'
