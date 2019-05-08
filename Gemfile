@@ -29,8 +29,6 @@ gem 'unicorn'
 gem 'unicorn-worker-killer', require: false
 
 group :development do
-  gem 'guard'
-  gem 'guard-rake'
   gem 'sinatra-contrib', require: 'sinatra/reloader'
 end
 
