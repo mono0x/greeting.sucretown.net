@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.6.1'
 
-git 'https://github.com/rails/rails', branch: '5-0-stable' do
-  gem 'activerecord'
-  gem 'activesupport', require: 'active_support/all'
-end
+gem 'activerecord', '~> 5.0'
+gem 'activesupport', '~> 5.0', require: 'active_support/all'
 gem 'dotenv', require: false
 gem 'dropbox_api'
 gem 'foreman', require: false
