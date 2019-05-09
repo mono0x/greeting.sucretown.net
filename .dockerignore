@@ -1,0 +1,6 @@
+.git
+coverage
+node_modules
+postgresql
+public/assets
+vendor

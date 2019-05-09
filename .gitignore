@@ -2,6 +2,7 @@
 /.env
 /.env.test
 /.sass-cache
+/coverage/
 /node_modules/
 /npm-debug.log
 /public/assets/

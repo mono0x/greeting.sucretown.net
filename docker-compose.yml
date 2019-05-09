@@ -1,0 +1,20 @@
+version: '2'
+services:
+  web:
+    build: .
+    command: sh -c 'exec dockerize -wait tcp://db:5432 sh -c "rake db:schema:apply && exec unicorn -c unicorn.conf -E development"'
+    depends_on:
+      - db
+    environment:
+      RACK_ENV: development
+      PORT: 11000
+      DATABASE_URL: postgresql://postgres:a8iqGo7j@db:5432/postgres
+    ports:
+      - "11000:11000"
+  db:
+    image: postgres:9.5-alpine
+    environment:
+      POSTGRES_PASSWORD: a8iqGo7j
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
+    ports:
+      - "5432:5432"
