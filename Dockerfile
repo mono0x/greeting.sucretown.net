@@ -9,6 +9,7 @@ ADD package-lock.json package-lock.json
 RUN npm install
 
 ADD .babelrc .babelrc
+ADD .bootstraprc .bootstraprc
 ADD webpack.config.babel.js webpack.config.babel.js
 ADD assets assets
 
