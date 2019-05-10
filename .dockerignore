@@ -1,7 +1,8 @@
+.bundle
 .env
 .git
+.sass-cache
 coverage
 node_modules
-postgresql
 public/assets
 vendor
