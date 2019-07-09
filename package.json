@@ -5,8 +5,8 @@
   "private": true,
   "main": "assets/javascripts/application.js",
   "dependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.3",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.0",
     "bootstrap-loader": "^3.0.4",
@@ -28,7 +28,7 @@
     "style-loader": "^0.23.0",
     "url-loader": "^1.1.2",
     "vue": "^2.6.10",
-    "webpack": "^4.35.2",
+    "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"
   },
   "devDependencies": {},
