@@ -13,8 +13,6 @@ env:
 - RACK_ENV=test DATABASE_URL=postgresql://postgres@localhost:5432/travis_ci_test ROOT_URI=http://greeting.sucretown.net NVM_DIR=/home/travis/.nvm
 before_install:
 - rm -rf $NVM_DIR && mkdir $NVM_DIR && (curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash) && (source $NVM_DIR/nvm.sh || true) && nvm install $(cat .nvmrc)
-- which nvm
-- nvm list-remote
 install:
 - npm install
 - bundle install --jobs=3 --retry=3 --path=vendor/bundle
