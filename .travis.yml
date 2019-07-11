@@ -12,7 +12,7 @@ cache:
 env:
 - RACK_ENV=test DATABASE_URL=postgresql://postgres@localhost:5432/travis_ci_test ROOT_URI=http://greeting.sucretown.net
 before_install:
-- rm -rf ~/.nvm && git clone https://github.com/nvm-sh/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $(cat .nvmrc)
+- rm -rf ~/.nvm && (curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash) && (source ~/.nvm/nvm.sh || true) && nvm install $(cat .nvmrc)
 - which nvm
 - nvm list-remote
 install:
