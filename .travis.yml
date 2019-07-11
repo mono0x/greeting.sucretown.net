@@ -12,7 +12,7 @@ cache:
 env:
 - RACK_ENV=test DATABASE_URL=postgresql://postgres@localhost:5432/travis_ci_test ROOT_URI=http://greeting.sucretown.net
 before_install:
-- rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $(.nvmrc)
+- rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $(cat .nvmrc)
 install:
 - npm install
 - bundle install --jobs=3 --retry=3 --path=vendor/bundle
